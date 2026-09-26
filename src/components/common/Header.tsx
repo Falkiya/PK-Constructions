@@ -22,8 +22,8 @@ export const Header: React.FC = () => {
   const [projectsDropdownOpen, setProjectsDropdownOpen] = useState(false);
   const location = useLocation();
 
-  const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const projectsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const servicesTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const projectsTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
