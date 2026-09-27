@@ -25,7 +25,7 @@ import { ProjectCard } from '../components/common/ProjectCard';
 import { CTASection } from '../components/common/CTASection';
 import { projectsData } from '../data/projectsData';
 import { servicesData } from '../data/servicesData';
-import { companyStats, companyValues, processSteps, contactInfo } from '../data/companyData';
+import { companyStats, companyValues, processSteps } from '../data/companyData';
 import { galleryItems } from '../data/galleryData';
 
 export const HomePage: React.FC = () => {
@@ -387,97 +387,6 @@ export const HomePage: React.FC = () => {
         secondaryButtonText="Explore Verified Inventory"
         secondaryButtonLink="/projects"
       />
-
-      {/* CONTACT PREVIEW */}
-      <section className="py-20 bg-stone-950 border-t border-stone-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            <div className="lg:col-span-5 space-y-5">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-wider">
-                Get In Touch
-              </div>
-              <h2 className="text-3xl font-extrabold text-white">
-                Visit Our Property Advisory Desk or Schedule a Private Inspection
-              </h2>
-              <p className="text-sm text-stone-400 leading-relaxed">
-                Whether you are acquiring a luxury villa, leasing commercial office space, or looking to sell prime real estate with verified clear titles, our advisory team is at your service.
-              </p>
-
-              <div className="space-y-3 pt-2 text-sm">
-                <div className="flex items-center gap-3 text-stone-300">
-                  <Phone className="w-4 h-4 text-amber-500" />
-                  <a href={`tel:${contactInfo.phone}`} className="hover:text-amber-400">{contactInfo.phone}</a>
-                </div>
-                <div className="flex items-center gap-3 text-stone-300">
-                  <Mail className="w-4 h-4 text-amber-500" />
-                  <a href={`mailto:${contactInfo.email}`} className="hover:text-amber-400">{contactInfo.email}</a>
-                </div>
-                <div className="flex items-start gap-3 text-stone-300">
-                  <MapPin className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
-                  <span>{contactInfo.address}</span>
-                </div>
-              </div>
-
-              <div className="pt-2">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-amber-400 hover:text-amber-300"
-                >
-                  <span>Go to full contact page & interactive form</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-
-            <div className="lg:col-span-7 bg-stone-900 border border-stone-800 rounded-2xl p-6 sm:p-8">
-              <h3 className="text-lg font-bold text-white mb-2">Quick Consultation Request</h3>
-              <p className="text-xs text-stone-400 mb-6">Leave your coordinates and an engineer will connect within 2 business hours.</p>
-              
-              <form onSubmit={(e) => { e.preventDefault(); alert('Thank you for reaching out! A PK Developers engineer will contact you shortly.'); }} className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-semibold text-stone-300 mb-1">Your Name</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="e.g. Ramesh Kumar"
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-600 text-sm focus:outline-none focus:border-amber-500"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-stone-300 mb-1">Phone Number</label>
-                    <input
-                      type="tel"
-                      required
-                      placeholder="+91 98765 43210"
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-600 text-sm focus:outline-none focus:border-amber-500"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-stone-300 mb-1">Project Type</label>
-                  <select
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-stone-950 border border-stone-800 text-white text-sm focus:outline-none focus:border-amber-500"
-                  >
-                    <option value="residential">Residential Villa / Home</option>
-                    <option value="commercial">Commercial Office / Hub</option>
-                    <option value="renovation">Renovation & Remodeling</option>
-                    <option value="architecture">Architectural Planning Only</option>
-                  </select>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm shadow-lg shadow-amber-500/20 transition-all"
-                >
-                  Send Consultation Request
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 };
