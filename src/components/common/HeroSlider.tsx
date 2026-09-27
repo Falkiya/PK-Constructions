@@ -35,79 +35,79 @@ interface SlideData {
 const slides: SlideData[] = [
   {
     id: 1,
-    badge: 'Civil Infrastructure & Luxury Architecture',
-    titlePrefix: 'Building With ',
-    titleHighlight: 'Purpose,',
-    titleSuffix: ' Precision & Permanence.',
-    subtitle: 'PK Developers crafts bespoke residential villas, high-performance commercial hubs, and architectural marvels engineered to stand the test of time.',
-    image: 'https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=2000&q=80',
+    badge: 'Premier Property Dealing & Real Estate Advisory',
+    titlePrefix: 'Connecting You With ',
+    titleHighlight: 'Verified,',
+    titleSuffix: ' Prime Properties.',
+    subtitle: 'PK Properties specializes in high-value residential villas, Grade-A commercial tech hubs, and high-appreciation investment plots with 100% legal title verification.',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80',
     primaryCta: {
-      label: 'Start Your Project',
-      path: '/get-a-quote',
-    },
-    secondaryCta: {
-      label: 'Explore Projects',
+      label: 'Explore Properties',
       path: '/projects',
     },
-    category: 'Civil Infrastructure',
-    statBadge: '150+ Projects Handed Over',
+    secondaryCta: {
+      label: 'Property Consultation',
+      path: '/contact',
+    },
+    category: 'Property Dealing',
+    statBadge: '500+ Deals Closed',
   },
   {
     id: 2,
-    badge: 'Bespoke Residential Living',
-    titlePrefix: 'Crafting ',
+    badge: 'Luxury Residential Buying & Selling',
+    titlePrefix: 'Discover ',
     titleHighlight: 'Ultra-Luxury',
     titleSuffix: ' Villas & Dream Residencies.',
-    subtitle: 'Turnkey luxury homes designed with architectural brilliance, climate-responsive layouts, and uncompromising Italian marble and teakwood finishes.',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80',
+    subtitle: 'Curated portfolio of ready-to-move architectural villas, duplex penthouses, and gated community estates across Bengaluru\'s most coveted pin codes.',
+    image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=2000&q=80',
     primaryCta: {
-      label: 'View Residential Works',
+      label: 'View Luxury Villas',
       path: '/projects/residential',
     },
     secondaryCta: {
-      label: 'Get Cost Estimate',
+      label: 'Inquire Now',
       path: '/get-a-quote',
     },
-    category: 'Luxury Residential',
-    statBadge: '100% On-Time Delivery',
+    category: 'Luxury Villas',
+    statBadge: '100% Clear Titles',
   },
   {
     id: 3,
-    badge: 'Next-Gen Commercial Workspaces',
-    titlePrefix: 'Engineering ',
-    titleHighlight: 'Future-Ready',
-    titleSuffix: ' Commercial & Corporate Spaces.',
-    subtitle: 'State-of-the-art office tech parks, retail complexes, and commercial towers built to LEED sustainability standards with seismic-rated structural engineering.',
+    badge: 'Commercial Real Estate & Corporate Leasing',
+    titlePrefix: 'Acquire ',
+    titleHighlight: 'High-Yield',
+    titleSuffix: ' Commercial & Tech Spaces.',
+    subtitle: 'Strategic corporate office tech parks, retail lifestyle showrooms, and pre-leased investment assets yielding 8% - 10% guaranteed rental returns.',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80',
     primaryCta: {
-      label: 'View Commercial Works',
+      label: 'View Commercial Deals',
       path: '/projects/commercial',
     },
     secondaryCta: {
       label: 'Corporate Inquiry',
       path: '/contact',
     },
-    category: 'Commercial Tech Hubs',
-    statBadge: 'Grade-A Structural Specs',
+    category: 'Commercial Assets',
+    statBadge: '8-10% Rental Yields',
   },
   {
     id: 4,
-    badge: 'Adaptive Structural Remodeling',
-    titlePrefix: 'Transforming Spaces With ',
-    titleHighlight: 'Precision',
-    titleSuffix: ' Architectural Renovation.',
-    subtitle: 'Comprehensive structural retrofitting, interior transformations, and space modernization executed with zero compromise on foundation integrity.',
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=80',
+    badge: 'Approved Plots & Land Acquisition',
+    titlePrefix: 'Verified ',
+    titleHighlight: 'Plots & Land',
+    titleSuffix: ' For Building & Investment.',
+    subtitle: 'RERA, BDA, and BMRDA sanctioned residential layout plots, commercial highway frontage land, and high-appreciation development parcels.',
+    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=80',
     primaryCta: {
-      label: 'Renovation Services',
-      path: '/services/renovation-remodeling',
+      label: 'Explore Plots & Land',
+      path: '/services/architecture-planning',
     },
     secondaryCta: {
-      label: 'Schedule Inspection',
-      path: '/contact',
+      label: 'Turnkey Villa Build',
+      path: '/get-a-quote',
     },
-    category: 'Renovation & Fit-Outs',
-    statBadge: '10-Year Warranty',
+    category: 'Plots & Land Deals',
+    statBadge: 'RERA & BDA Approved',
   },
 ];
 
@@ -354,19 +354,19 @@ export const HeroSlider: React.FC = () => {
         <div className="mt-10 sm:mt-12 pt-8 border-t border-stone-800/80 max-w-4xl w-full grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-left">
           <div className="flex items-center gap-2.5">
             <ShieldCheck className="w-5 h-5 text-amber-500 shrink-0" />
-            <span className="text-xs sm:text-sm text-stone-300 font-medium">10-Year Structural Guarantee</span>
+            <span className="text-xs sm:text-sm text-stone-300 font-medium">100% Clear Title Guarantee</span>
           </div>
           <div className="flex items-center gap-2.5">
             <Award className="w-5 h-5 text-amber-500 shrink-0" />
-            <span className="text-xs sm:text-sm text-stone-300 font-medium">ISO 9001:2015 Certified QA</span>
+            <span className="text-xs sm:text-sm text-stone-300 font-medium">RERA & Legal Due-Diligence</span>
           </div>
           <div className="flex items-center gap-2.5">
             <CheckCircle className="w-5 h-5 text-amber-500 shrink-0" />
-            <span className="text-xs sm:text-sm text-stone-300 font-medium">Transparent Itemized BOQ</span>
+            <span className="text-xs sm:text-sm text-stone-300 font-medium">Zero Hidden Brokerage</span>
           </div>
           <div className="flex items-center gap-2.5">
             <Sparkles className="w-5 h-5 text-amber-500 shrink-0" />
-            <span className="text-xs sm:text-sm text-stone-300 font-medium">Turnkey Civil Delivery</span>
+            <span className="text-xs sm:text-sm text-stone-300 font-medium">500+ Deals Successfully Closed</span>
           </div>
         </div>
       </div>

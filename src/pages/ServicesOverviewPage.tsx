@@ -36,8 +36,8 @@ export const ServicesOverviewPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Construction & Development Services | PK Developers"
-        description="Explore PK Developers full suite of civil construction services: residential villas, commercial complexes, structural renovations, architectural planning, and project management."
+        title="Real Estate & Property Dealing Services | PK Properties"
+        description="Explore PK Properties full suite of property dealing services: residential villas, commercial leasing, approved layout plots, real estate investment advisory, and turnkey villa development."
         canonicalPath="/services"
       />
 
@@ -46,7 +46,7 @@ export const ServicesOverviewPage: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=2000&q=80"
-            alt="PK Developers Construction Services"
+            alt="PK Properties Real Estate Services"
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-stone-950/90" />
@@ -54,13 +54,13 @@ export const ServicesOverviewPage: React.FC = () => {
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-6">
-            End-to-End Capabilities
+            Property & Advisory Capabilities
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
-            Comprehensive Construction Services
+            Real Estate & Property Services
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-stone-300 max-w-3xl mx-auto leading-relaxed">
-            From groundbreaking geotechnical foundations to master architectural envelopes and turnkey interiors, discover our specialized divisions.
+            From verified residential villa acquisitions and corporate office leasing to approved plotted developments and strategic investment advisory, explore our core property divisions.
           </p>
         </div>
       </section>
@@ -140,17 +140,17 @@ export const ServicesOverviewPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-4xl mx-auto">
           <ShieldCheck className="w-12 h-12 text-amber-400 mx-auto mb-4" />
           <h2 className="text-3xl font-extrabold text-white">
-            Integrated Design-Build Delivery Model
+            100% Clear Titles & Institutional Due Diligence
           </h2>
           <p className="mt-4 text-base text-stone-300 leading-relaxed">
-            By unifying architectural planning, engineering calculation, procurement, and site execution under one single roof, PK Developers eliminates subcontractor blame-shifting, tightens construction schedules, and delivers superior quality control with a guaranteed 10-year structural warranty.
+            By unifying property sourcing, 30-year title legal verification, direct owner negotiation, and registrar paperwork under one roof, PK Properties eliminates hidden middlemen, prevents fraud, and delivers verified real estate assets with peace of mind.
           </p>
           <div className="mt-8">
             <Link
               to="/get-a-quote"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm shadow-xl"
             >
-              <span>Request Detailed Service Proposal</span>
+              <span>Request Property Consultation</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -158,9 +158,9 @@ export const ServicesOverviewPage: React.FC = () => {
       </section>
 
       <CTASection
-        title="Have a Specific Construction Requirement?"
-        subtitle="Schedule a consultation with our senior project estimators and structural engineers to review your plot, drawings, and budget specifications."
-        primaryButtonText="Request a Consultation"
+        title="Have a Specific Property or Land Requirement?"
+        subtitle="Schedule a consultation with our senior property advisors and legal team to review available inventory and off-market opportunities."
+        primaryButtonText="Inquire About Properties"
         primaryButtonLink="/get-a-quote"
       />
     </>

@@ -86,6 +86,11 @@ export const ProjectDetailPage: React.FC = () => {
             <span className="px-3.5 py-1 rounded-full bg-amber-500 text-stone-950 text-xs font-bold uppercase tracking-wider">
               {project.subCategory}
             </span>
+            {project.transactionType && (
+              <span className="px-3 py-1 rounded-full text-xs font-bold bg-amber-400/20 text-amber-300 border border-amber-400/40 uppercase tracking-wider">
+                {project.transactionType}
+              </span>
+            )}
             <span
               className={`px-3 py-1 rounded-full text-xs font-semibold border ${
                 project.status === 'Completed'
@@ -95,11 +100,24 @@ export const ProjectDetailPage: React.FC = () => {
             >
               {project.status}
             </span>
+            {project.possession && (
+              <span className="px-3 py-1 rounded-full text-xs font-medium bg-stone-900/90 text-stone-300 border border-stone-700">
+                {project.possession}
+              </span>
+            )}
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
-            {project.name}
-          </h1>
+          <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-4">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
+              {project.name}
+            </h1>
+            {project.price && (
+              <div className="shrink-0 px-4 py-2 rounded-2xl bg-amber-500/10 border border-amber-500/30">
+                <span className="text-xs uppercase text-amber-400/80 font-semibold block">Guide Price / Value</span>
+                <span className="text-2xl sm:text-3xl font-extrabold text-amber-400 font-mono">{project.price}</span>
+              </div>
+            )}
+          </div>
 
           <div className="mt-4 flex flex-wrap items-center gap-6 text-sm text-stone-300">
             <span className="flex items-center gap-2">
@@ -114,6 +132,12 @@ export const ProjectDetailPage: React.FC = () => {
               <Calendar className="w-4 h-4 text-amber-400" />
               Completed {project.completionDate}
             </span>
+            {project.reraId && (
+              <span className="flex items-center gap-2 text-xs font-mono text-emerald-400">
+                <ShieldCheck className="w-4 h-4" />
+                RERA: {project.reraId}
+              </span>
+            )}
           </div>
         </div>
       </section>
@@ -127,24 +151,27 @@ export const ProjectDetailPage: React.FC = () => {
               <span className="text-sm font-bold text-white mt-0.5 block">{project.location}</span>
             </div>
             <div>
-              <span className="text-[11px] uppercase tracking-wider text-stone-500 font-semibold block">Project Type</span>
-              <span className="text-sm font-bold text-amber-400 mt-0.5 block">{project.subCategory}</span>
+              <span className="text-[11px] uppercase tracking-wider text-stone-500 font-semibold block">Deal / Category</span>
+              <span className="text-sm font-bold text-amber-400 mt-0.5 block">{project.transactionType || project.subCategory}</span>
             </div>
             <div>
-              <span className="text-[11px] uppercase tracking-wider text-stone-500 font-semibold block">Built-Up Area</span>
+              <span className="text-[11px] uppercase tracking-wider text-stone-500 font-semibold block">Built-Up / Land Area</span>
               <span className="text-sm font-bold text-white mt-0.5 block">{project.area}</span>
             </div>
             <div>
-              <span className="text-[11px] uppercase tracking-wider text-stone-500 font-semibold block">Completion</span>
-              <span className="text-sm font-bold text-white mt-0.5 block">{project.completionDate}</span>
+              <span className="text-[11px] uppercase tracking-wider text-stone-500 font-semibold block">Price / Investment</span>
+              <span className="text-sm font-bold text-amber-400 font-mono mt-0.5 block">{project.price || 'Contact for Price'}</span>
             </div>
             <div>
-              <span className="text-[11px] uppercase tracking-wider text-stone-500 font-semibold block">Status</span>
-              <span className="text-sm font-bold text-white mt-0.5 block">{project.status}</span>
+              <span className="text-[11px] uppercase tracking-wider text-stone-500 font-semibold block">Possession</span>
+              <span className="text-sm font-bold text-white mt-0.5 block">{project.possession || project.status}</span>
             </div>
             <div>
-              <span className="text-[11px] uppercase tracking-wider text-stone-500 font-semibold block">Client Type</span>
-              <span className="text-sm font-bold text-white mt-0.5 block">{project.clientType}</span>
+              <span className="text-[11px] uppercase tracking-wider text-stone-500 font-semibold block">Title Status</span>
+              <span className="text-sm font-bold text-emerald-400 mt-0.5 flex items-center gap-1">
+                <ShieldCheck className="w-3.5 h-3.5" />
+                100% Clear & Vetted
+              </span>
             </div>
           </div>
         </div>
@@ -194,16 +221,24 @@ export const ProjectDetailPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Quick Consultation Sidebar */}
+            {/* Quick Property Inquiry Sidebar */}
             <div className="lg:col-span-5">
               <div className="p-8 rounded-3xl bg-stone-900/70 border border-stone-800 sticky top-28 space-y-6">
-                <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center">
-                  <ShieldCheck className="w-6 h-6" />
+                <div className="flex items-center justify-between">
+                  <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center">
+                    <ShieldCheck className="w-6 h-6" />
+                  </div>
+                  {project.price && (
+                    <div className="text-right">
+                      <span className="text-[10px] uppercase font-bold text-stone-400 block">Offer Price</span>
+                      <span className="text-xl font-extrabold text-amber-400 font-mono">{project.price}</span>
+                    </div>
+                  )}
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">Have a Similar Project?</h3>
+                  <h3 className="text-xl font-bold text-white">Interested in this Property?</h3>
                   <p className="text-xs text-stone-400 mt-2 leading-relaxed">
-                    Our civil engineering team can review your site parameters, blueprints, or commercial requirements to provide a preliminary feasibility report and budget framework.
+                    Connect directly with our designated property consultant to receive verified title deeds, sanctioned layout blueprints, exact site coordinates, and private inspection slots.
                   </p>
                 </div>
 
@@ -212,7 +247,7 @@ export const ProjectDetailPage: React.FC = () => {
                     to="/get-a-quote"
                     className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm shadow-xl transition-all"
                   >
-                    <span>Request a Consultation</span>
+                    <span>Inquire About This Property</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
 
@@ -220,13 +255,13 @@ export const ProjectDetailPage: React.FC = () => {
                     to="/contact"
                     className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-semibold transition-all"
                   >
-                    <span>Book On-Site Visit</span>
+                    <span>Schedule Private Site Inspection</span>
                   </Link>
                 </div>
 
                 <div className="pt-4 border-t border-stone-800 text-[11px] text-stone-500 flex items-center gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
-                  <span>Backed by 10-Year PK Structural Guarantee</span>
+                  <span>100% Clear Legal Title Guarantee & Direct Deal</span>
                 </div>
               </div>
             </div>

@@ -39,8 +39,8 @@ export const ProcessPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Our 9-Step Construction Process | From Concept to Handover | PK Developers"
-        description="Discover how PK Developers guarantees predictable timelines, zero cost overruns, and superior quality through our disciplined 9-step construction roadmap."
+        title="Our 6-Step Property Transaction Process | Clean Titles & Registration | PK Properties"
+        description="Discover how PK Properties guarantees 100% clear titles, transparent valuation, and effortless registration through our disciplined 6-step property transaction roadmap."
         canonicalPath="/process"
       />
 
@@ -49,7 +49,7 @@ export const ProcessPage: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=2000&q=80"
-            alt="PK Developers Construction Process"
+            alt="PK Properties Transaction Process"
             className="w-full h-full object-cover opacity-25"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-stone-950/90" />
@@ -57,13 +57,13 @@ export const ProcessPage: React.FC = () => {
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-6">
-            Disciplined Roadmap
+            Proven Transaction Roadmap
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
-            Our 9-Step Construction Process
+            Our 6-Step Property Transaction Process
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-stone-300 max-w-3xl mx-auto leading-relaxed">
-            From the initial handshake to final handover, every milestone is structured for total clarity, absolute quality, and zero surprise.
+            From initial requirement mapping and 30-year title diligence to commercial negotiation and registered deed handover, every step is built on 100% transparency.
           </p>
         </div>
       </section>
@@ -134,17 +134,17 @@ export const ProcessPage: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <ShieldCheck className="w-12 h-12 text-amber-400 mx-auto mb-4" />
           <h2 className="text-3xl font-extrabold text-white">
-            “From First Conversation to Final Handover.”
+            “From First Consultation to Registered Deed Handover.”
           </h2>
           <p className="mt-4 text-base text-stone-300 leading-relaxed">
-            Our 9-step structure is proven across 180+ completed projects. It protects your time, your capital investment, and guarantees zero post-construction defects.
+            Our 6-step framework is proven across 500+ closed deals and ₹650 Cr+ transacted volume. It protects your capital, eliminates legal uncertainty, and delivers verified real estate assets.
           </p>
           <div className="mt-8">
             <Link
               to="/get-a-quote"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm shadow-xl"
             >
-              <span>Initiate Step 01: Consultation</span>
+              <span>Initiate Step 01: Property Requirement Session</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -153,9 +153,9 @@ export const ProcessPage: React.FC = () => {
 
       {/* CTA */}
       <CTASection
-        title="Ready to Begin Step 01?"
-        subtitle="Book a consultation with our senior project engineers. We review your land, drawings, and prepare a custom project roadmap."
-        primaryButtonText="Start Your Project"
+        title="Ready to Buy, Sell, or Invest in Verified Real Estate?"
+        subtitle="Book a consultation with our senior property advisors. We evaluate your budget, legal criteria, and recommend prime vetted properties."
+        primaryButtonText="Inquire Property"
         primaryButtonLink="/get-a-quote"
       />
     </>

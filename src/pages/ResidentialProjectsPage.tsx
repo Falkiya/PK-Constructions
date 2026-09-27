@@ -47,8 +47,8 @@ export const ResidentialProjectsPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Residential Projects | Luxury Villas & Homes Portfolio | PK Developers"
-        description="Explore our dedicated portfolio of residential villas, independent bungalows, duplexes, and luxury residential estates."
+        title="Residential Properties & Luxury Villas | Buy & Invest | PK Properties"
+        description="Explore our verified residential portfolio of luxury villas, independent bungalows, and premium gated estates across Bengaluru with 100% clear titles."
         canonicalPath="/projects/residential"
       />
 
@@ -57,7 +57,7 @@ export const ResidentialProjectsPage: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80"
-            alt="Residential Projects Portfolio"
+            alt="Residential Properties Portfolio"
             className="w-full h-full object-cover opacity-25"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-stone-950/90" />
@@ -66,13 +66,13 @@ export const ResidentialProjectsPage: React.FC = () => {
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-6">
             <Home className="w-3.5 h-3.5" />
-            Residential Portfolio
+            Verified Residential Inventory
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
-            Residential Projects
+            Residential Properties & Villas
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-stone-300 max-w-3xl mx-auto leading-relaxed">
-            From cantilevered modernist sanctuaries to sprawling courtyard estates, explore our residential craftsmanship.
+            From signature contemporary designer villas to sprawling courtyard estates, explore verified luxury residential properties for sale and high-yield investment.
           </p>
         </div>
       </section>

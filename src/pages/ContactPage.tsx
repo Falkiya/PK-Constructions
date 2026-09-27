@@ -35,8 +35,8 @@ export const ContactPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Contact Us | Let's Build Something Great | PK Developers"
-        description="Get in touch with PK Developers. Speak with senior civil engineers, book a site inspection, or visit our engineering studio in Bengaluru."
+        title="Contact Us | Real Estate & Property Advisory | PK Properties"
+        description="Get in touch with PK Properties. Speak with senior real estate consultants, schedule a private property inspection, or visit our advisory office in Bengaluru."
         canonicalPath="/contact"
       />
 
@@ -44,8 +44,8 @@ export const ContactPage: React.FC = () => {
       <section className="relative py-28 bg-stone-950 overflow-hidden border-b border-stone-800">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=2000&q=80"
-            alt="Contact PK Developers"
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80"
+            alt="Contact PK Properties"
             className="w-full h-full object-cover opacity-25"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-stone-950/90" />
@@ -53,13 +53,13 @@ export const ContactPage: React.FC = () => {
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-6">
-            Direct Engineering Desk
+            Property Advisory Desk
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
-            “Let’s Build Something Great.”
+            “Let’s Find Your Next Property.”
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-stone-300 max-w-3xl mx-auto leading-relaxed">
-            Have an architectural blueprint, land plot to evaluate, or a commercial development to tender? Our senior structural team is ready to assist.
+            Looking to buy a luxury villa, lease prime commercial tech space, invest in approved plots, or sell your property? Our property advisors are at your service.
           </p>
         </div>
       </section>
@@ -244,33 +244,33 @@ export const ContactPage: React.FC = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-1.5">
-                          Project Type
+                          Property Requirement
                         </label>
                         <select
                           value={formData.projectType}
                           onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
                           className="w-full px-4 py-3 rounded-xl bg-stone-950 border border-stone-800 text-white text-sm focus:outline-none focus:border-amber-500"
                         >
-                          <option value="Residential Villa">Residential Luxury Villa</option>
-                          <option value="Independent House">Independent House / Bungalow</option>
-                          <option value="Apartment Complex">Apartment Complex</option>
-                          <option value="Commercial Office">Commercial Office Tower</option>
-                          <option value="Retail Facility">Retail / Shopping Mall</option>
-                          <option value="Renovation">Renovation & Remodeling</option>
-                          <option value="Architectural Planning">Architectural Planning Only</option>
-                          <option value="Project Management PMC">Project Management (PMC)</option>
+                          <option value="Residential Luxury Villa">Buy Luxury Villa / House</option>
+                          <option value="Apartment / Penthouse">Buy Luxury Apartment / Penthouse</option>
+                          <option value="Commercial Office Space">Lease Commercial Office Space</option>
+                          <option value="Retail Facility">Buy Commercial Showroom / Retail</option>
+                          <option value="Plots & Land">Buy Approved Plot / Land Parcel</option>
+                          <option value="Sell Property">Sell My Property With PK Properties</option>
+                          <option value="Real Estate Investment">Real Estate Investment / Pre-Leased</option>
+                          <option value="Turnkey Construction">Turnkey Villa Construction on My Plot</option>
                         </select>
                       </div>
 
                       <div>
                         <label className="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-1.5">
-                          Approximate Project Size
+                          Approximate Size / Config
                         </label>
                         <input
                           type="text"
                           value={formData.projectSize}
                           onChange={(e) => setFormData({ ...formData, projectSize: e.target.value })}
-                          placeholder="e.g. 5,000 sq.ft or 3 Floors"
+                          placeholder="e.g. 4BHK Villa / 2,400 sq.ft Plot / 15,000 sq.ft Office"
                           className="w-full px-4 py-3 rounded-xl bg-stone-950 border border-stone-800 text-white text-sm placeholder-stone-600 focus:outline-none focus:border-amber-500"
                         />
                       </div>
@@ -287,12 +287,11 @@ export const ContactPage: React.FC = () => {
                           className="w-full px-4 py-3 rounded-xl bg-stone-950 border border-stone-800 text-white text-sm focus:outline-none focus:border-amber-500"
                         >
                           <option value="Select Budget Range">Select Budget Framework</option>
-                          <option value="Under ₹1 Crore">Under ₹1 Crore</option>
-                          <option value="₹1 Crore – ₹3 Crores">₹1 Crore – ₹3 Crores</option>
-                          <option value="₹3 Crores – ₹7 Crores">₹3 Crores – ₹7 Crores</option>
-                          <option value="₹7 Crores – ₹15 Crores">₹7 Crores – ₹15 Crores</option>
-                          <option value="₹15+ Crores (Commercial)">₹15+ Crores (Commercial)</option>
-                          <option value="To Be Determined">To Be Determined During Feasibility</option>
+                          <option value="₹50 Lakhs – ₹1.5 Crores">₹50 Lakhs – ₹1.5 Crores</option>
+                          <option value="₹1.5 Crores – ₹4 Crores">₹1.5 Crores – ₹4 Crores</option>
+                          <option value="₹4 Crores – ₹10 Crores">₹4 Crores – ₹10 Crores</option>
+                          <option value="₹10+ Crores">₹10+ Crores (Commercial / Large Estates)</option>
+                          <option value="Flexible / Pre-Leased Yield">Flexible / Pre-Leased Yield</option>
                         </select>
                       </div>
 

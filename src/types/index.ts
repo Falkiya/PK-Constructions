@@ -39,6 +39,11 @@ export interface Project {
   galleryImages: ProjectImage[];
   timeline: ProjectTimelineStage[];
   featured: boolean;
+  price?: string;
+  propertyType?: string;
+  transactionType?: 'For Sale' | 'For Lease' | 'Investment' | 'Exclusive Listing';
+  possession?: string;
+  reraId?: string;
 }
 
 export interface ServiceItem {

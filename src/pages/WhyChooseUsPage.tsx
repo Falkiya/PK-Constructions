@@ -20,43 +20,43 @@ import { CTASection } from '../components/common/CTASection';
 export const WhyChooseUsPage: React.FC = () => {
   const differentiators = [
     {
-      title: 'Quality Construction',
-      description: 'Zero tolerance for substandard workmanship. We enforce seismic design codes, calibrated concrete mix formulations, and certified welding across every square foot.',
+      title: '100% Clear Title Guarantee',
+      description: 'Zero litigation risk. Every property in our inventory undergoes a rigorous 30-year title search, Encumbrance Certificate (EC) scrutiny, and vetting by senior High Court advocates.',
       icon: ShieldCheck
     },
     {
-      title: 'Experienced Professionals',
-      description: 'Over 20 years of collective leadership in South Indian civil engineering, high-rise structural mechanics, and modern architectural design.',
-      icon: Users
+      title: 'Curated Prime Inventory',
+      description: 'We do not flood you with unverified listings. We curate only premium residential villas, A-grade commercial spaces, and high-appreciation layout plots in Bengaluru’s growth corridors.',
+      icon: Award
     },
     {
-      title: 'Transparent Communication',
-      description: 'No hidden escalation clauses or vague invoices. We provide locked itemized BOQs, shared procurement invoices, and daily photo logs.',
+      title: 'Direct Negotiation & Transparent Pricing',
+      description: 'No inflated brokerage fees, phantom middle-agents, or hidden deal costs. We ensure direct owner/developer negotiations and market-aligned valuations.',
       icon: Eye
     },
     {
-      title: 'Modern Architecture & Design',
-      description: 'Harmonizing bioclimatic thermal performance with breathtaking volumetric cantilevers, double-height atriums, and natural stone textures.',
-      icon: Compass
-    },
-    {
-      title: 'Structured Project Management',
-      description: 'Critical Path Method (CPM) baseline scheduling and automated milestone tracking to guarantee on-time completion without compromising safety.',
+      title: 'Complete Legal & Documentation Support',
+      description: 'From drafting standard Sale Agreements to stamp duty verification, Khata transfers, and registration representation at the sub-registrar office, we handle everything.',
       icon: ClipboardCheck
     },
     {
-      title: 'Certified Quality Materials',
-      description: 'Primary-grade steel (Tata Tiscon / JSW Fe 550D), 53-grade OPC cement, and European fenestration systems verified through independent laboratory tests.',
-      icon: Box
+      title: 'RERA & Master Plan Compliance',
+      description: 'Strict adherence to RERA guidelines, BDA/BMRDA approvals, and master plan zoning norms, ensuring your capital is shielded from municipal violations.',
+      icon: Compass
     },
     {
-      title: 'Dedicated Site Supervision',
-      description: 'Full-time licensed civil engineers stationed on site to supervise every cubic meter of concrete casting, shuttering stability, and worker safety.',
+      title: 'High-Yield Investment Advisory',
+      description: 'Leverage our proprietary micro-market analysis, infrastructure pipeline data (Metro, Peripheral Ring Road), and projected rental yields to maximize ROI.',
+      icon: Users
+    },
+    {
+      title: 'Turnkey Development Capabilities',
+      description: 'Buying an approved plot? Our in-house master builder team can seamlessly design, permit, and construct your bespoke luxury villa on the land you acquire.',
       icon: HardHat
     },
     {
-      title: 'Lifetime Customer Support',
-      description: 'Our relationship does not end at handover. We provide 1 year of complimentary maintenance inspections and a 10-year structural warranty.',
+      title: 'End-to-End Asset Stewardship',
+      description: 'Our relationship does not end at registration. We assist with Khata transfer, property tax documentation, tenant sourcing, and resale advisory for life.',
       icon: HeartHandshake
     }
   ];
@@ -64,8 +64,8 @@ export const WhyChooseUsPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Why Choose PK Developers | Trust, Precision & Quality Guaranteed"
-        description="Discover why leading homeowners, corporate enterprises, and institutions trust PK Developers as their primary civil construction and development partner."
+        title="Why Choose PK Properties | Verified Real Estate & Clear Title Assurance"
+        description="Discover why discerning homebuyers, commercial tenants, and high-net-worth investors choose PK Properties as their trusted real estate dealers and property consultants."
         canonicalPath="/why-choose-us"
       />
 
@@ -74,7 +74,7 @@ export const WhyChooseUsPage: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=2000&q=80"
-            alt="PK Developers Quality Construction"
+            alt="PK Properties Quality Real Estate"
             className="w-full h-full object-cover opacity-25"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-stone-950/90" />
@@ -85,10 +85,10 @@ export const WhyChooseUsPage: React.FC = () => {
             The PK Advantage
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
-            Why Choose PK Developers
+            Why Choose PK Properties
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-stone-300 max-w-3xl mx-auto leading-relaxed">
-            Constructing a home or corporate facility is a monumental investment. Here is how we engineer confidence into every stage of your build.
+            Acquiring real estate or selling high-value property requires absolute legal certainty, accurate market valuation, and ethical representation. Here is why clients rely on PK Properties.
           </p>
         </div>
       </section>
@@ -118,7 +118,7 @@ export const WhyChooseUsPage: React.FC = () => {
         </div>
       </section>
 
-      {/* LARGE VISUAL SECTION: "FROM FIRST CONVERSATION TO FINAL HANDOVER" */}
+      {/* LARGE VISUAL SECTION: "100% CLEAR TITLES. ZERO COMPROMISES" */}
       <section className="py-24 bg-stone-900/50 border-t border-stone-800 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="p-8 sm:p-14 rounded-3xl bg-gradient-to-br from-stone-900 to-stone-950 border border-amber-500/30 relative overflow-hidden shadow-2xl">
@@ -130,24 +130,24 @@ export const WhyChooseUsPage: React.FC = () => {
                 Our Signature Promise
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
-                “From First Conversation to Final Handover.”
+                “100% Clear Titles. Zero Compromises.”
               </h2>
               <p className="text-base sm:text-lg text-stone-300 leading-relaxed">
-                When you partner with PK Developers, you gain more than a contractor; you gain a team of structural stewards who treat your project with the dedication, precision, and financial integrity it deserves. We stand behind every beam, every joint, and every cubic meter of concrete.
+                When you partner with PK Properties, you gain more than a property broker; you gain an institutional real estate advisor committed to protecting your capital. We examine every survey number, verify every parent deed, and ensure every transaction is completely secure.
               </p>
 
               <div className="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="p-4 rounded-xl bg-stone-950/80 border border-stone-800">
-                  <h4 className="text-xl font-bold text-amber-400 font-mono">10 Years</h4>
-                  <p className="text-xs text-stone-400 mt-1 font-medium">Structural Integrity Warranty</p>
+                  <h4 className="text-xl font-bold text-amber-400 font-mono">100%</h4>
+                  <p className="text-xs text-stone-400 mt-1 font-medium">Clear Title Guarantee</p>
                 </div>
                 <div className="p-4 rounded-xl bg-stone-950/80 border border-stone-800">
-                  <h4 className="text-xl font-bold text-white font-mono">Zero</h4>
-                  <p className="text-xs text-stone-400 mt-1 font-medium">Unexpected Cost Escalations</p>
+                  <h4 className="text-xl font-bold text-white font-mono">₹650 Cr+</h4>
+                  <p className="text-xs text-stone-400 mt-1 font-medium">Real Estate Transacted</p>
                 </div>
                 <div className="p-4 rounded-xl bg-stone-950/80 border border-stone-800">
-                  <h4 className="text-xl font-bold text-emerald-400 font-mono">250+ Points</h4>
-                  <p className="text-xs text-stone-400 mt-1 font-medium">Snag Free Pre-Handover Audit</p>
+                  <h4 className="text-xl font-bold text-emerald-400 font-mono">500+</h4>
+                  <p className="text-xs text-stone-400 mt-1 font-medium">Deals Successfully Closed</p>
                 </div>
               </div>
 
@@ -156,7 +156,7 @@ export const WhyChooseUsPage: React.FC = () => {
                   to="/get-a-quote"
                   className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm shadow-xl"
                 >
-                  <span>Start Your Journey With Us</span>
+                  <span>Connect With a Property Advisor</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -167,11 +167,11 @@ export const WhyChooseUsPage: React.FC = () => {
 
       {/* CTA */}
       <CTASection
-        title="Experience The PK Developers Difference"
-        subtitle="Let’s discuss your construction timeline, land survey, and budget requirements with our senior engineering directors."
-        primaryButtonText="Request Project Consultation"
+        title="Experience The PK Properties Difference"
+        subtitle="Let’s discuss your property acquisition, plot investment, or commercial requirement with our senior real estate consultants."
+        primaryButtonText="Inquire About Properties"
         primaryButtonLink="/get-a-quote"
-        secondaryButtonText="Explore Projects"
+        secondaryButtonText="Explore Inventory"
         secondaryButtonLink="/projects"
       />
     </>

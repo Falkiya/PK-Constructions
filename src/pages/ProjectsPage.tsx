@@ -23,31 +23,31 @@ export const ProjectsPage: React.FC = () => {
 
   const filterOptions = [
     'All',
+    'For Sale',
+    'For Lease',
     'Residential',
     'Commercial',
-    'Villas',
-    'Renovation',
-    'Completed',
-    'Ongoing'
+    'Plots / Land',
+    'Investment'
   ];
 
   const filteredProjects = useMemo(() => {
     return projectsData.filter((project) => {
-      // Category / Status Filter
+      // Category / Status / Transaction Filter
       if (selectedFilter === 'All') {
         // keep all
+      } else if (selectedFilter === 'For Sale') {
+        if (project.transactionType !== 'For Sale') return false;
+      } else if (selectedFilter === 'For Lease') {
+        if (project.transactionType !== 'For Lease') return false;
       } else if (selectedFilter === 'Residential') {
         if (project.category !== 'residential' && project.category !== 'villas') return false;
       } else if (selectedFilter === 'Commercial') {
         if (project.category !== 'commercial') return false;
-      } else if (selectedFilter === 'Villas') {
-        if (project.subCategory?.toLowerCase() !== 'villas' && project.category !== 'villas') return false;
-      } else if (selectedFilter === 'Renovation') {
-        if (project.category !== 'renovation') return false;
-      } else if (selectedFilter === 'Completed') {
-        if (project.status !== 'Completed') return false;
-      } else if (selectedFilter === 'Ongoing') {
-        if (project.status !== 'Ongoing') return false;
+      } else if (selectedFilter === 'Plots / Land') {
+        if (project.propertyType !== 'Plot' && project.propertyType !== 'Land' && project.category !== 'renovation') return false;
+      } else if (selectedFilter === 'Investment') {
+        if (project.transactionType !== 'Investment' && project.transactionType !== 'Exclusive Listing') return false;
       }
 
       // Search Query
@@ -56,7 +56,8 @@ export const ProjectsPage: React.FC = () => {
         const matchesName = project.name.toLowerCase().includes(query);
         const matchesLocation = project.location.toLowerCase().includes(query);
         const matchesSubCategory = project.subCategory.toLowerCase().includes(query);
-        if (!matchesName && !matchesLocation && !matchesSubCategory) return false;
+        const matchesType = project.propertyType?.toLowerCase().includes(query);
+        if (!matchesName && !matchesLocation && !matchesSubCategory && !matchesType) return false;
       }
 
       return true;
@@ -74,8 +75,8 @@ export const ProjectsPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Our Projects | Civil & Real Estate Portfolio | PK Developers"
-        description="Browse our portfolio of completed and ongoing residential luxury villas, commercial towers, corporate hubs, and heritage renovations."
+        title="Verified Properties & Deals | Real Estate Inventory | PK Properties"
+        description="Browse our curated inventory of verified residential luxury villas, Grade-A commercial towers, approved plotted developments, and high-yield real estate investments."
         canonicalPath="/projects"
       />
 
@@ -84,7 +85,7 @@ export const ProjectsPage: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80"
-            alt="PK Developers Projects Portfolio"
+            alt="PK Properties Real Estate Portfolio"
             className="w-full h-full object-cover opacity-25"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-stone-950/90" />
@@ -92,13 +93,13 @@ export const ProjectsPage: React.FC = () => {
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-6">
-            Engineering Portfolio
+            Curated Real Estate Inventory
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
-            Our Projects
+            Verified Properties & Deals
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-stone-300 max-w-3xl mx-auto leading-relaxed">
-            A showcase of architectural vision, civil engineering mastery, and uncompromising craftsmanship across South India.
+            A premier showcase of verified residential luxury villas, Grade-A commercial spaces, approved layout plots, and strategic investments across Bengaluru with 100% clear legal titles.
           </p>
         </div>
       </section>

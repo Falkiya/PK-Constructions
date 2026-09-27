@@ -72,8 +72,8 @@ export const ResidentialConstructionPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Residential Construction Services | Luxury Villas & Homes | PK Developers"
-        description="Build your dream home with PK Developers. Specialized in luxury villas, independent bungalows, and multi-unit residential buildings with a 10-year structural warranty."
+        title="Residential Property Dealing & Acquisition | Luxury Villas | PK Properties"
+        description="Acquire verified luxury residential properties, independent villas, and penthouses in Bengaluru with PK Properties. 100% clear titles and expert real estate advisory."
         canonicalPath="/services/residential-construction"
       />
 
@@ -82,7 +82,7 @@ export const ResidentialConstructionPage: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80"
-            alt="Residential Luxury Villa Construction"
+            alt="Residential Luxury Villas"
             className="w-full h-full object-cover opacity-25"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-stone-950/90" />
@@ -90,13 +90,13 @@ export const ResidentialConstructionPage: React.FC = () => {
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-6">
-            Residential Division
+            Residential Property Dealing & Sales
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
-            Residential Construction
+            Residential Property Dealing
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-stone-300 max-w-3xl mx-auto leading-relaxed">
-            Crafting architectural residences and private family estates with engineered longevity, transparent budgets, and peerless craftsmanship.
+            Curating verified architectural residences, luxury independent villas, and prime apartments with 100% clear titles and transparent market valuation.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -104,14 +104,14 @@ export const ResidentialConstructionPage: React.FC = () => {
               to="/get-a-quote"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-base shadow-xl shadow-amber-500/25 transition-all"
             >
-              <span>Discuss Your Home Project</span>
+              <span>Inquire Residential Properties</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               to="/projects/residential"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-stone-900 border border-stone-700 text-stone-200 hover:text-white font-medium text-base transition-all"
             >
-              <span>View Residential Portfolio</span>
+              <span>Browse Residential Inventory</span>
             </Link>
           </div>
         </div>
@@ -123,16 +123,16 @@ export const ResidentialConstructionPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 text-amber-400 text-xs font-semibold uppercase tracking-wider">
-                Our Construction Approach
+                Our Acquisition Approach
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                Homes Engineered For Generations, Not Just Decades
+                Homes Verified For Generational Peace of Mind
               </h2>
               <p className="text-base text-stone-300 leading-relaxed">
-                Building a private home is one of life’s most profound milestones. At PK Developers, we treat every residence with the reverence of a signature civic project. Our approach fuses structural analysis, climate-responsive bioclimatic architecture, and master artisanal finishes.
+                Acquiring a luxury residence is one of life’s most profound milestones. At PK Properties, we treat every transaction with institutional due diligence. Our advisory model integrates 30-year title searches, RERA compliance checks, encumbrance verification, and fair-market valuation.
               </p>
               <p className="text-base text-stone-400 leading-relaxed">
-                Whether creating a cantilevered minimalist villa with seamless glass walls or a serene courtyard estate enveloped by natural stone, our team manages the entire process—eliminating common contractor headaches through structured weekly milestones.
+                Whether purchasing a cantilevered modernist sanctuary in Whitefield, an exclusive manor in Sadashivanagar, or a gated golf estate, our team manages the entire transaction lifecycle—from title deed vetting to registrar office execution.
               </p>
 
               <div className="pt-2 space-y-3">

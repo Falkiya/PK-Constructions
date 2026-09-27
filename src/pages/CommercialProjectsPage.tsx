@@ -40,8 +40,8 @@ export const CommercialProjectsPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Commercial Projects | Office Towers & Retail Hubs | PK Developers"
-        description="Explore our portfolio of Grade-A commercial office buildings, technology parks, and lifestyle retail gallerias engineered by PK Developers."
+        title="Commercial Real Estate & Office Spaces | For Lease & Sale | PK Properties"
+        description="Explore Grade-A commercial tech parks, corporate office headquarters, and high-footfall retail destinations across Bengaluru available for lease and institutional investment."
         canonicalPath="/projects/commercial"
       />
 
@@ -50,7 +50,7 @@ export const CommercialProjectsPage: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80"
-            alt="Commercial Projects Portfolio"
+            alt="Commercial Real Estate Portfolio"
             className="w-full h-full object-cover opacity-25"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-stone-950/90" />
@@ -59,13 +59,13 @@ export const CommercialProjectsPage: React.FC = () => {
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-6">
             <Building2 className="w-3.5 h-3.5" />
-            Commercial Portfolio
+            Commercial & Leasing Inventory
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
-            Commercial Projects
+            Commercial Real Estate & Leasing
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-stone-300 max-w-3xl mx-auto leading-relaxed">
-            High-efficiency office towers, retail lifestyle centers, and enterprise tech campuses built for long-term operational performance.
+            Grade-A enterprise tech parks, corporate office spaces, and high-footfall retail complexes across Bengaluru available for lease, sale, and high-yield institutional investment.
           </p>
         </div>
       </section>

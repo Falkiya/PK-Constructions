@@ -79,7 +79,7 @@ export const Header: React.FC = () => {
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              RERA Approved & ISO 9001:2015 Certified Construction Company
+              RERA Registered Property Dealers & Real Estate Consultants
             </span>
             <span className="text-stone-600">|</span>
             <span>Bengaluru & South India</span>
@@ -90,7 +90,7 @@ export const Header: React.FC = () => {
               <span>{contactInfo.phone}</span>
             </a>
             <Link to="/contact" className="hover:text-amber-400 transition-colors">
-              Site Inspection Desk
+              Property Consultation Desk
             </Link>
           </div>
         </div>
@@ -113,11 +113,11 @@ export const Header: React.FC = () => {
             <div>
               <div className="flex items-center gap-1">
                 <span className="text-xl font-bold tracking-tight text-white group-hover:text-amber-400 transition-colors">
-                  PK DEVELOPERS
+                  PK PROPERTIES
                 </span>
               </div>
               <p className="text-[10px] tracking-widest uppercase text-stone-400 font-medium">
-                Construction & Development
+                Real Estate & Property Dealing
               </p>
             </div>
           </Link>
@@ -169,7 +169,7 @@ export const Header: React.FC = () => {
                 <div className="absolute top-full left-0 mt-1 w-80 bg-stone-900 border border-stone-800 rounded-xl shadow-2xl p-2.5 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                   <div className="px-3 py-2 border-b border-stone-800/80 mb-1">
                     <span className="text-[11px] font-semibold uppercase tracking-wider text-stone-400">
-                      Our Construction Services
+                      Property & Advisory Services
                     </span>
                   </div>
                   <div className="space-y-1">
@@ -182,9 +182,9 @@ export const Header: React.FC = () => {
                       </div>
                       <div>
                         <div className="text-sm font-medium text-stone-200 group-hover:text-amber-400">
-                          Residential Construction
+                          Residential Property Dealing
                         </div>
-                        <div className="text-xs text-stone-400">Villas, bungalows & apartments</div>
+                        <div className="text-xs text-stone-400">Villas, penthouses & luxury resale</div>
                       </div>
                     </Link>
 
@@ -197,24 +197,9 @@ export const Header: React.FC = () => {
                       </div>
                       <div>
                         <div className="text-sm font-medium text-stone-200 group-hover:text-amber-400">
-                          Commercial Construction
+                          Commercial Real Estate & Leasing
                         </div>
                         <div className="text-xs text-stone-400">Offices, retail & tech towers</div>
-                      </div>
-                    </Link>
-
-                    <Link
-                      to="/services/renovation-remodeling"
-                      className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-stone-800 transition-colors group"
-                    >
-                      <div className="p-2 rounded-md bg-stone-800 group-hover:bg-amber-500/20 text-amber-400">
-                        <Hammer className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-medium text-stone-200 group-hover:text-amber-400">
-                          Renovation & Remodeling
-                        </div>
-                        <div className="text-xs text-stone-400">Structural upgrades & fit-outs</div>
                       </div>
                     </Link>
 
@@ -227,9 +212,9 @@ export const Header: React.FC = () => {
                       </div>
                       <div>
                         <div className="text-sm font-medium text-stone-200 group-hover:text-amber-400">
-                          Architecture & Planning
+                          Plots & Land Acquisition
                         </div>
-                        <div className="text-xs text-stone-400">3D renders, blueprints & permits</div>
+                        <div className="text-xs text-stone-400">RERA & BDA approved layout plots</div>
                       </div>
                     </Link>
 
@@ -242,9 +227,24 @@ export const Header: React.FC = () => {
                       </div>
                       <div>
                         <div className="text-sm font-medium text-stone-200 group-hover:text-amber-400">
-                          Project Management (PMC)
+                          Real Estate Investment Advisory
                         </div>
-                        <div className="text-xs text-stone-400">Supervision, budget & QA/QC</div>
+                        <div className="text-xs text-stone-400">High-yield & pre-leased assets</div>
+                      </div>
+                    </Link>
+
+                    <Link
+                      to="/services/renovation-remodeling"
+                      className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-stone-800 transition-colors group"
+                    >
+                      <div className="p-2 rounded-md bg-stone-800 group-hover:bg-amber-500/20 text-amber-400">
+                        <Hammer className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <div className="text-sm font-medium text-stone-200 group-hover:text-amber-400">
+                          Turnkey Property Development
+                        </div>
+                        <div className="text-xs text-stone-400">Custom villa build on your plot</div>
                       </div>
                     </Link>
                   </div>
@@ -275,7 +275,7 @@ export const Header: React.FC = () => {
                     : 'text-stone-300 hover:text-white hover:bg-stone-900/40'
                 }`}
               >
-                Projects
+                Properties
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${projectsDropdownOpen ? 'rotate-180 text-amber-400' : ''}`} />
               </Link>
 
@@ -283,7 +283,7 @@ export const Header: React.FC = () => {
                 <div className="absolute top-full left-0 mt-1 w-64 bg-stone-900 border border-stone-800 rounded-xl shadow-2xl p-2.5 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                   <div className="px-3 py-2 border-b border-stone-800/80 mb-1">
                     <span className="text-[11px] font-semibold uppercase tracking-wider text-stone-400">
-                      Portfolio Portals
+                      Property Portals
                     </span>
                   </div>
                   <div className="space-y-1">
@@ -296,9 +296,9 @@ export const Header: React.FC = () => {
                       </div>
                       <div>
                         <div className="text-sm font-medium text-stone-200 group-hover:text-amber-400">
-                          All Projects
+                          All Properties
                         </div>
-                        <div className="text-xs text-stone-400">Full portfolio showcase</div>
+                        <div className="text-xs text-stone-400">Verified deals & listings</div>
                       </div>
                     </Link>
 
@@ -311,9 +311,9 @@ export const Header: React.FC = () => {
                       </div>
                       <div>
                         <div className="text-sm font-medium text-stone-200 group-hover:text-amber-400">
-                          Residential Projects
+                          Luxury Residential
                         </div>
-                        <div className="text-xs text-stone-400">Villas, houses & apartments</div>
+                        <div className="text-xs text-stone-400">Villas, penthouses & houses</div>
                       </div>
                     </Link>
 
@@ -326,9 +326,9 @@ export const Header: React.FC = () => {
                       </div>
                       <div>
                         <div className="text-sm font-medium text-stone-200 group-hover:text-amber-400">
-                          Commercial Projects
+                          Commercial Spaces
                         </div>
-                        <div className="text-xs text-stone-400">Corporate & retail spaces</div>
+                        <div className="text-xs text-stone-400">Corporate & retail assets</div>
                       </div>
                     </Link>
                   </div>
@@ -370,6 +370,17 @@ export const Header: React.FC = () => {
             </Link>
 
             <Link
+              to="/testimonials"
+              className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                isActive('/testimonials')
+                  ? 'text-amber-400 bg-stone-900/60'
+                  : 'text-stone-300 hover:text-white hover:bg-stone-900/40'
+              }`}
+            >
+              Reviews
+            </Link>
+
+            <Link
               to="/contact"
               className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                 isActive('/contact')
@@ -387,7 +398,7 @@ export const Header: React.FC = () => {
               to="/get-a-quote"
               className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-semibold text-sm shadow-lg shadow-amber-500/25 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
             >
-              <span>Get a Quote</span>
+              <span>Inquire Property</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -398,7 +409,7 @@ export const Header: React.FC = () => {
               to="/get-a-quote"
               className="px-3.5 py-1.5 rounded-lg bg-amber-500 text-stone-950 font-semibold text-xs shadow-md"
             >
-              Quote
+              Inquire
             </Link>
             <button
               type="button"

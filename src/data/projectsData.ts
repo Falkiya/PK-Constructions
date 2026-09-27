@@ -10,11 +10,16 @@ export const projectsData: Project[] = [
     location: 'Whitefield, Bengaluru',
     status: 'Completed',
     completionDate: '2025',
-    area: '9,200 sq.ft',
-    clientType: 'Private Homeowner',
-    description: 'A bespoke modern residence featuring cantilevered concrete volumes, floor-to-ceiling acoustic glass facades, and seamless indoor-outdoor living with an integrated reflection pool.',
-    challenge: 'The sloped topography required complex structural retaining walls, while the client demanded unobstructed 18-meter column-free spans for the open ground-floor living area without compromising seismic resilience.',
-    solution: 'Engineered post-tensioned reinforced concrete slabs and concealed steel framing, paired with climate-responsive double-glazed low-E thermal assemblies to optimize natural ventilation and daylighting.',
+    area: '9,200 sq.ft (Plot: 12,000 sq.ft)',
+    clientType: 'Private Homeowner Deal',
+    price: '₹6.80 Cr',
+    propertyType: '4BHK Ultra-Luxury Designer Villa',
+    transactionType: 'For Sale',
+    possession: 'Ready to Move',
+    reraId: 'PRM/KA/RERA/1251/310/PR/240218/006412',
+    description: 'An exclusive clear-title luxury modern residence featuring cantilevered architectural volumes, private basalt reflection pool, double-height atrium, and fully automated European fittings in a prime Whitefield enclave.',
+    challenge: 'Securing a clear, unencumbered 12,000 sq.ft plot with 30-year mother title verification in high-demand Whitefield while coordinating customized structural engineering approvals with BBMP.',
+    solution: 'PK Properties conducted rigorous title due diligence, obtained nil-encumbrance clearance, negotiated direct pricing from the estate owner, and managed the complete legal deed execution.',
     features: [
       {
         category: 'Architecture',
@@ -63,34 +68,28 @@ export const projectsData: Project[] = [
     ],
     timeline: [
       {
-        stage: 'Architectural Blueprint & Sanctions',
-        duration: 'Month 1 - 2',
+        stage: 'Title Due Diligence & Sourcing',
+        duration: 'Week 1 - 2',
         status: 'completed',
-        description: 'Site analysis, structural simulations, soil testing, and BBMP municipal approvals.'
+        description: '30-year mother deed audit, encumbrance check, and zoning compliance verification.'
       },
       {
-        stage: 'Piling & Deep Retaining Substructure',
-        duration: 'Month 3 - 5',
+        stage: 'Direct Seller Negotiation & ATS',
+        duration: 'Week 3',
         status: 'completed',
-        description: 'Micropiling, reinforced diaphragm retaining walls, and waterproof foundation raft.'
+        description: 'Commercial price negotiation and drafting of the formal Agreement to Sell (ATS).'
       },
       {
-        stage: 'Superstructure & Post-Tensioned Slabs',
-        duration: 'Month 6 - 9',
+        stage: 'Architectural Review & Handover Audit',
+        duration: 'Week 4',
         status: 'completed',
-        description: 'Casting post-tensioned spans, cantilever shuttering, and structural steel integration.'
+        description: 'Comprehensive 200-point structural, MEP, and finish quality audit prior to registration.'
       },
       {
-        stage: 'MEP, Glazing & High-End Finishes',
-        duration: 'Month 10 - 13',
+        stage: 'Sub-Registrar Registration & Handover',
+        duration: 'Closing Day',
         status: 'completed',
-        description: 'Automated HVAC, European aluminum fenestration, Italian stone cladding, and fixtures.'
-      },
-      {
-        stage: 'Testing, Quality Audit & Handover',
-        duration: 'Month 14',
-        status: 'completed',
-        description: 'Thermal imaging, air leak testing, 200+ point quality inspection, and zero-defect delivery.'
+        description: 'Stamp duty payment, registered sale deed execution, Khata mutation, and key handover.'
       }
     ],
     featured: true
@@ -104,11 +103,16 @@ export const projectsData: Project[] = [
     location: 'Electronic City, Phase 1',
     status: 'Completed',
     completionDate: '2024',
-    area: '185,000 sq.ft',
-    clientType: 'Global Enterprise Solutions',
-    description: 'An IGBC Platinum-certified commercial office complex engineered for modern tech workforce density, offering flexible floor plates, double glazed curtain walls, and rooftop amenities.',
-    challenge: 'Tight 14-month construction schedule amidst monsoon season, requiring fast-track structural erection and strict vibration control adjacent to operational data centers.',
-    solution: 'Adopted composite steel-concrete structural frames with prefabricated precast floor units and 4D BIM digital twin tracking to shave 9 weeks off the critical path.',
+    area: '185,000 sq.ft (Floor-plate: 32,000 sq.ft)',
+    clientType: 'Institutional Corporate Deal',
+    price: '₹140 Cr (Yield: 9.2%)',
+    propertyType: 'Grade-A Commercial IT Campus',
+    transactionType: 'Investment',
+    possession: 'Pre-Leased Asset',
+    reraId: 'PRM/KA/RERA/1251/310/PR/230911/005210',
+    description: 'A pre-leased IGBC Platinum-certified commercial office complex occupied by Fortune 500 tech firms, providing an immediate 9.2% net rental yield with long-term 9-year institutional leases.',
+    challenge: 'Structuring a complex cross-border commercial acquisition involving multiple international corporate leases, escrow mechanisms, and statutory environmental clearances.',
+    solution: 'PK Properties structured the commercial deal, audited tenant covenants, verified fire NOC and occupancy certifications, and closed the transaction within 45 days.',
     features: [
       {
         category: 'Architecture',
@@ -148,28 +152,22 @@ export const projectsData: Project[] = [
     ],
     timeline: [
       {
-        stage: 'Civil & Foundation Basements',
-        duration: 'Month 1 - 4',
+        stage: 'Institutional Deal Structuring',
+        duration: 'Month 1',
         status: 'completed',
-        description: 'Double basement excavation with secant pile shoring and heavy machinery rafts.'
+        description: 'Auditing 9-year corporate tenant lease covenants and rental cashflow histories.'
       },
       {
-        stage: 'Composite Steel Superstructure',
-        duration: 'Month 5 - 8',
+        stage: 'Statutory & Technical Due Diligence',
+        duration: 'Month 2',
         status: 'completed',
-        description: 'Precision structural steel erection using twin tower cranes and laser metrology.'
+        description: 'Verifying Occupancy Certificate (OC), Fire NOC, and environmental compliance.'
       },
       {
-        stage: 'Facade & Envelope Sealing',
-        duration: 'Month 9 - 11',
+        stage: 'Commercial Conveyance & Closing',
+        duration: 'Month 3',
         status: 'completed',
-        description: 'Unitized panel installation, wind tunnel testing verification, and roof insulation.'
-      },
-      {
-        stage: 'Smart Building MEP & Handover',
-        duration: 'Month 12 - 14',
-        status: 'completed',
-        description: 'BMS building automation, fire suppression, elevator commissioning, and occupancy certification.'
+        description: 'Escrow payment settlement, sub-registrar lease assignment, and seamless yield transfer.'
       }
     ],
     featured: true
@@ -183,11 +181,16 @@ export const projectsData: Project[] = [
     location: 'Sarjapur Hills, Bengaluru',
     status: 'Completed',
     completionDate: '2024',
-    area: '14,500 sq.ft',
+    area: '14,500 sq.ft (Plot: 24,000 sq.ft)',
     clientType: 'Private Family Office',
-    description: 'An expansive traditional-contemporary courtyard manor that reinterprets heritage veranda architecture with state-of-the-art structural craftsmanship, natural stone, and brass detailing.',
-    challenge: 'Preserving 14 mature banyan and mango trees on site while crafting a 6-bedroom estate with subterranean wine cellar and multi-car underground pavilion.',
-    solution: 'Designed an organic U-shaped courtyard footprint wrapped around the root zones, using non-invasive screw-pile foundations near critical tree canopies.',
+    price: '₹12.50 Cr',
+    propertyType: '6BHK Heritage Courtyard Manor',
+    transactionType: 'Exclusive Listing',
+    possession: 'Immediate Registration',
+    reraId: 'PRM/KA/RERA/1251/310/PR/231105/005844',
+    description: 'An expansive traditional-contemporary courtyard manor that reinterprets heritage veranda architecture on a private 24,000 sq.ft wooded plot with private lap pool and subterranean wine cellar.',
+    challenge: 'High-value private resale requiring confidential representation, buyer qualification, and comprehensive municipal khata consolidation across two adjacent land parcels.',
+    solution: 'PK Properties handled the exclusive private mandate, consolidated the E-Khata documentation, and represented both buyer and seller with complete fiduciary integrity.',
     features: [
       {
         category: 'Architecture',
@@ -223,22 +226,22 @@ export const projectsData: Project[] = [
     ],
     timeline: [
       {
-        stage: 'Tree Protection & Foundations',
-        duration: 'Month 1 - 3',
+        stage: 'Private Mandate & Valuation',
+        duration: 'Week 1',
         status: 'completed',
-        description: 'Arboricultural root radar mapping and non-disruptive specialized substructure.'
+        description: 'Valuation appraisal, title check, and confidential buyer matching.'
       },
       {
-        stage: 'Artisan Masonry & Stone Superstructure',
-        duration: 'Month 4 - 8',
+        stage: 'Khata Consolidation & Vetting',
+        duration: 'Week 2 - 3',
         status: 'completed',
-        description: 'Master stone masonry construction with seismic dampening joints.'
+        description: 'BBMP E-Khata consolidation and boundary survey verification.'
       },
       {
-        stage: 'Joinery, Interiors & Handover',
-        duration: 'Month 9 - 13',
+        stage: 'Registration & Handover',
+        duration: 'Week 4',
         status: 'completed',
-        description: 'High-precision timber roofing, brass fittings, landscaping, and final client signoff.'
+        description: 'Deed execution at sub-registrar and formal physical estate handover.'
       }
     ],
     featured: true
@@ -252,11 +255,16 @@ export const projectsData: Project[] = [
     location: 'Central CBD, Bengaluru',
     status: 'Completed',
     completionDate: '2025',
-    area: '240,000 sq.ft',
-    clientType: 'Commercial Real Estate Consortium',
-    description: 'A 16-storey landmark commercial high-rise combining corporate headquarters, premium financial suites, and rooftop sky lounge with panoramic city vistas.',
-    challenge: 'Urban infill plot with zero property line setback on two sides, requiring top-down basement construction and noise mitigation in an active metropolitan district.',
-    solution: 'Deployed silent hydraulic sheet piling, advanced top-down construction techniques, and real-time structural health optical sensors during excavation.',
+    area: '240,000 sq.ft (Available: 15,000 - 60,000 sq.ft)',
+    clientType: 'Commercial Real Estate Deal',
+    price: '₹165 / sq.ft (Lease) | ₹210 Cr (Outright)',
+    propertyType: '16-Storey Commercial Corporate Tower',
+    transactionType: 'For Lease',
+    possession: 'Immediate Fit-Out',
+    reraId: 'PRM/KA/RERA/1251/310/PR/240112/006122',
+    description: 'A landmark 16-storey commercial corporate tower in the heart of Bengaluru Central CBD, offering column-free floor plates, 100% DG backup, and 3 levels of subterranean parking.',
+    challenge: 'Coordinating high-profile corporate lease negotiations for multiple financial banking suites with tailored lock-in terms and parking bay allocations.',
+    solution: 'PK Properties structured multi-floor corporate leases with multinational banks and consulting firms, maximizing occupancy and achieving record rental yields.',
     features: [
       {
         category: 'Architecture',
@@ -287,22 +295,22 @@ export const projectsData: Project[] = [
     ],
     timeline: [
       {
-        stage: 'Top-Down Substructure & Shoring',
-        duration: 'Month 1 - 6',
+        stage: 'Commercial Floor Allocation',
+        duration: 'Month 1',
         status: 'completed',
-        description: 'Excavation of 3 subterranean parking levels with zero ground settlement.'
+        description: 'Corporate client requirement matching and floor-plate optimization.'
       },
       {
-        stage: 'Core & Shell High-Rise Erection',
-        duration: 'Month 7 - 14',
+        stage: 'Commercial Lease Structuring',
+        duration: 'Month 2',
         status: 'completed',
-        description: 'Slip-form concrete core construction reaching level 16 ahead of schedule.'
+        description: 'Agreement on lock-in periods, CAM charges, and rent-free fitout duration.'
       },
       {
-        stage: 'High-Rise Enclosure & Fit-Out',
-        duration: 'Month 15 - 20',
+        stage: 'Possession for Tenant Fit-Out',
+        duration: 'Month 3',
         status: 'completed',
-        description: 'Curtain wall glazing, high-speed destination elevators, and corporate handover.'
+        description: 'Key handover to corporate fit-out contractors and operations kickoff.'
       }
     ],
     featured: true
@@ -310,17 +318,22 @@ export const projectsData: Project[] = [
   {
     id: 'proj-5',
     slug: 'colonial-heritage-manor-restoration',
-    name: 'Colonial Heritage Manor Restoration',
+    name: 'Colonial Heritage Estate Parcel',
     category: 'renovation',
-    subCategory: 'Renovation & Remodeling',
+    subCategory: 'Heritage Properties',
     location: 'Richmond Town, Bengaluru',
     status: 'Completed',
     completionDate: '2024',
-    area: '11,200 sq.ft',
-    clientType: 'Private Estate Trust',
-    description: 'Comprehensive historic conservation and structural retrofitting of a 90-year-old colonial manor into a contemporary private luxury residence while preserving vintage masonry and roof timber work.',
-    challenge: 'Deteriorated lime-mortar walls, failing wooden truss members, and outdated plumbing and electrical networks without destroying heritage lime-plaster mouldings.',
-    solution: 'Used lime-pozzolana injections for seismic consolidation, concealed carbon-fiber structural reinforcement inside vintage beams, and routed conduit through sub-floor channels.',
+    area: '11,200 sq.ft (Plot: 18,000 sq.ft)',
+    clientType: 'Private Heritage Trust',
+    price: '₹16.50 Cr',
+    propertyType: 'Restored Colonial Estate & Land',
+    transactionType: 'Exclusive Listing',
+    possession: 'Immediate Possession',
+    reraId: 'PRM/KA/RERA/1251/310/PR/230419/004910',
+    description: 'A restored 90-year-old colonial manor set on an 18,000 sq.ft prime residential parcel in central Richmond Town, offering restored vintage architecture and immense redevelopment or private living value.',
+    challenge: 'Complex inheritance title resolution spanning three generations of family trust deeds requiring meticulous legal reconciliation.',
+    solution: 'Our property legal desk reconciled 50+ years of trust documents, drafted consent deeds, obtained BBMP Khata certification, and conducted a dispute-free private sale.',
     features: [
       {
         category: 'Architecture',
@@ -351,22 +364,22 @@ export const projectsData: Project[] = [
     ],
     timeline: [
       {
-        stage: 'Heritage Diagnostic & Structural Shoring',
-        duration: 'Month 1 - 2',
+        stage: 'Trust Document Audit',
+        duration: 'Month 1',
         status: 'completed',
-        description: 'Non-destructive testing, micro-drilling, and temporary hydraulic support frameworks.'
+        description: 'Reconciling 50-year trust deeds and inheritance succession certificates.'
       },
       {
-        stage: 'Sub-surface Underpinning & Masonry Repair',
-        duration: 'Month 3 - 5',
+        stage: 'Khata Clearance & Mutation',
+        duration: 'Month 2',
         status: 'completed',
-        description: 'Foundation underpinning, crack stabilization, and lime re-pointing.'
+        description: 'BBMP Khata transfer and encumbrance certification.'
       },
       {
-        stage: 'MEP Integration & Restorative Finishes',
-        duration: 'Month 6 - 9',
+        stage: 'Sale Execution & Closing',
+        duration: 'Month 3',
         status: 'completed',
-        description: 'Concealed services, artisan plaster recreation, and antique brass finishing.'
+        description: 'High-value deed execution and physical estate possession.'
       }
     ],
     featured: false
@@ -380,11 +393,16 @@ export const projectsData: Project[] = [
     location: 'Outer Ring Road, Marathahalli',
     status: 'Ongoing',
     completionDate: 'Q3 2026',
-    area: '115,000 sq.ft',
-    clientType: 'Retail Consortium',
-    description: 'An open-air experiential shopping, dining, and community plaza featuring cantilevered sky terraces, kinetic shading canopies, and double-height anchor retail stores.',
-    challenge: 'High foot-traffic logistics, complex curvilinear steel canopy structures, and multi-tenant mechanical venting requirements.',
-    solution: 'Modular steel fabrication, computational fluid dynamics (CFD) airflow modelling, and separate tenant service corridors with direct basement loading docks.',
+    area: '115,000 sq.ft (Showrooms: 1,800 - 8,500 sq.ft)',
+    clientType: 'Commercial Retail Project',
+    price: '₹3.20 Cr onwards (Investment)',
+    propertyType: 'High-Street Retail Showrooms',
+    transactionType: 'For Sale',
+    possession: 'Under Construction (Possession Q3 2026)',
+    reraId: 'PRM/KA/RERA/1251/310/PR/240502/006811',
+    description: 'An open-air experiential shopping, dining, and retail plaza on the high-density Outer Ring Road corridor, offering pre-leased anchor retail spaces with projected 8.8% rental yields.',
+    challenge: 'Investor allocation for individual commercial showroom units while securing national retail brand anchor commitments in advance.',
+    solution: 'PK Properties structured early investor purchase options backed by guaranteed pre-lease agreements with national F&B and fashion brands.',
     features: [
       {
         category: 'Architecture',
@@ -411,22 +429,22 @@ export const projectsData: Project[] = [
     ],
     timeline: [
       {
-        stage: 'Foundation & Parking Infrastructure',
-        duration: 'Month 1 - 5',
+        stage: 'Retail Anchor Signings',
+        duration: 'Month 1 - 3',
         status: 'completed',
-        description: 'Two-level basement structure with automated parking bays and loading bays.'
+        description: 'Pre-leasing 45,000 sq.ft to national anchor brands.'
       },
       {
-        stage: 'Curvilinear Steel & Podium Construction',
-        duration: 'Month 6 - 11',
+        stage: 'Investor Allotments',
+        duration: 'Month 4 - 8',
         status: 'in-progress',
-        description: 'Current phase: Heavy structural steel framing and canopy erection.'
+        description: 'Individual showroom title allotments and RERA agreement execution.'
       },
       {
-        stage: 'Shopfronts, Public Realm & Handover',
-        duration: 'Month 12 - 16',
+        stage: 'Fit-Out & Retail Launch',
+        duration: 'Upcoming',
         status: 'upcoming',
-        description: 'Tenant interior guidelines, granite paving, water features, and grand opening.'
+        description: 'Handover to retail brands and commencement of rental cashflows.'
       }
     ],
     featured: false
@@ -440,11 +458,16 @@ export const projectsData: Project[] = [
     location: 'Indiranagar, Bengaluru',
     status: 'Completed',
     completionDate: '2024',
-    area: '48,000 sq.ft',
-    clientType: 'Luxury Multi-Family Developer',
-    description: 'A boutique luxury apartment development featuring 12 exclusive full-floor residences with private lift lobbies, acoustic floor underlayments, and panoramic wrap-around balconies.',
-    challenge: 'Zero setback urban boundaries with adjacent heritage bungalows requiring minimal construction disturbance and zero dust migration.',
-    solution: 'Erected acoustic perimeter scaffolding with dust misting canons, paired with specialized low-vibration pile augers.',
+    area: '48,000 sq.ft (Units: 4,000 sq.ft Full Floor)',
+    clientType: 'Luxury Boutique Apartment Listing',
+    price: '₹5.50 Cr',
+    propertyType: 'Exclusive Full-Floor 4BHK Residence',
+    transactionType: 'For Sale',
+    possession: 'Ready to Move',
+    reraId: 'PRM/KA/RERA/1251/310/PR/230815/005520',
+    description: 'An ultra-exclusive boutique residence with just 12 full-floor homes in prime 100 Feet Road Indiranagar, featuring private elevator lobbies, wrap-around balconies, and Italian marble finishes.',
+    challenge: 'Very high demand with low inventory requiring quick verification of high-net-worth buyers and streamlined legal execution.',
+    solution: 'PK Properties conducted private viewings, managed seller negotiations, and facilitated instant clear-title registration with 100% bank loan approval coordination.',
     features: [
       {
         category: 'Architecture',
@@ -471,22 +494,22 @@ export const projectsData: Project[] = [
     ],
     timeline: [
       {
-        stage: 'Piling & Basement Construction',
-        duration: 'Month 1 - 4',
+        stage: 'Exclusive Listing & Verification',
+        duration: 'Week 1',
         status: 'completed',
-        description: 'Secant piling, basement construction with continuous vibration monitoring.'
+        description: 'Complete title check, occupancy certificate verification, and property staging.'
       },
       {
-        stage: 'RCC Superstructure Erection',
-        duration: 'Month 5 - 10',
+        stage: 'Private Viewings & Offer',
+        duration: 'Week 2',
         status: 'completed',
-        description: 'Cast-in-place high-performance concrete frame up to Level 12.'
+        description: 'HNW buyer client viewings and formal price offer acceptance.'
       },
       {
-        stage: 'Interiors, Elevators & Handover',
-        duration: 'Month 11 - 15',
+        stage: 'Registration & Possession',
+        duration: 'Week 3',
         status: 'completed',
-        description: 'OTIS high-speed elevators, imported Italian marble, and occupancy certifications.'
+        description: 'Sub-registrar deed execution, car parking allotment, and key handover.'
       }
     ],
     featured: false
@@ -494,54 +517,59 @@ export const projectsData: Project[] = [
   {
     id: 'proj-8',
     slug: 'verdant-haven-duplex',
-    name: 'Verdant Haven Duplexes',
+    name: 'Serenity Palms Gated Villa Plots',
     category: 'residential',
-    subCategory: 'Multi-unit Residential Buildings',
-    location: 'HSR Layout, Bengaluru',
-    status: 'Ongoing',
-    completionDate: 'Q4 2026',
-    area: '22,000 sq.ft',
-    clientType: 'Private Investors Syndicate',
-    description: 'An eco-conscious cluster of luxury duplex residences designed with terracotta facade screens, cross-ventilated dual-aspect plans, and shared rooftop wellness gardens.',
-    challenge: 'Stringent height limitations requiring optimized floor-to-ceiling heights without sacrificing spaciousness.',
-    solution: 'Utilized flat slab post-tensioned construction eliminating drop beams, yielding an additional 400mm clear headroom per level.',
+    subCategory: 'Plots & Land',
+    location: 'Sarjapur Road, Bengaluru',
+    status: 'Completed',
+    completionDate: '2025',
+    area: 'Plots: 1,500 – 4,000 sq.ft (Total 28 Acres)',
+    clientType: 'Gated Community Land Deal',
+    price: '₹85 Lakhs onwards',
+    propertyType: 'RERA & BDA Approved Villa Plots',
+    transactionType: 'For Sale',
+    possession: 'Immediate Registration',
+    reraId: 'PRM/KA/RERA/1251/310/PR/240320/006619',
+    description: 'Premium RERA and BDA approved residential layout plots in a master-planned 28-acre gated community featuring underground electricity, wide asphalt roads, clubhouse, and landscaped parks.',
+    challenge: 'Ensuring 100% legal compliance including conversion orders, layout sanctions, and individual E-Khata issuance for all 160 individual plot parcels.',
+    solution: 'PK Properties vetted the layout master plan, verified all municipal conversion sanctions, and provides end-to-end plot registration and turnkey construction support.',
     features: [
       {
         category: 'Architecture',
-        title: 'Terracotta Baguette Screen',
-        description: 'Earthy baked-clay facade elements providing privacy and thermal insulation.'
+        title: 'Underground Infrastructure',
+        description: 'Fully concealed underground cabling, fiber-optic ducts, and storm-water drainage.'
       },
       {
         category: 'Sustainability',
-        title: 'Greywater Recycling Plant',
-        description: 'Integrated submerged aerated filter recycling 100% of water for landscaping.'
+        title: 'Rainwater Recharge & Green Parks',
+        description: '4 sprawling landscaped parks with 500+ planted native trees and rainwater percolation wells.'
       }
     ],
-    coverImage: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [
       {
-        url: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Architectural rendering of the terracotta facade and duplex terracing.'
+        url: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80',
+        caption: 'Wide tree-lined asphalt roads and demarcated villa plots ready for registration.'
       }
     ],
     timeline: [
       {
-        stage: 'Raft Foundation & Basement Retaining',
-        duration: 'Month 1 - 3',
+        stage: 'Layout Sanction & RERA Approval',
+        duration: 'Completed',
         status: 'completed',
-        description: 'Mass concrete pour with crystalline waterproofing admixtures.'
+        description: 'BDA layout approval, RERA registration, and release order verification.'
       },
       {
-        stage: 'Post-Tensioned Flat Slabs',
-        duration: 'Month 4 - 8',
-        status: 'in-progress',
-        description: 'Current milestone: Level 3 slab post-tensioning and masonry partitioning.'
+        stage: 'Individual Plot Demarcation',
+        duration: 'Completed',
+        status: 'completed',
+        description: 'GPS boundary stones, pillar numbering, and individual E-Khata preparation.'
       },
       {
-        stage: 'Facade Cladding & Interior Fitout',
-        duration: 'Month 9 - 14',
-        status: 'upcoming',
-        description: 'Terracotta louvers, smart home automation, and final municipal approvals.'
+        stage: 'Buyer Registration & Handover',
+        duration: 'Ongoing',
+        status: 'completed',
+        description: 'Immediate sub-registrar deed registration and on-demand turnkey villa design.'
       }
     ],
     featured: false

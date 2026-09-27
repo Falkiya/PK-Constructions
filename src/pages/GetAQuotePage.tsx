@@ -6,14 +6,13 @@ import {
   ArrowLeft, 
   ShieldCheck, 
   Sparkles, 
-  Home, 
-  Building2, 
-  Hammer, 
-  Compass, 
   Send,
   FileCheck2,
   Calendar,
-  Layers
+  Layers,
+  Building,
+  Home,
+  Tag
 } from 'lucide-react';
 import { SEOHead } from '../components/common/SEOHead';
 import { contactInfo } from '../data/companyData';
@@ -28,17 +27,17 @@ export const GetAQuotePage: React.FC = () => {
     fullName: '',
     phone: '',
     email: '',
-    // Step 2: Project Details
-    projectType: 'Residential Construction',
+    // Step 2: Property Requirements
+    requirementType: 'Buy Luxury Villa / House',
     location: '',
     approximateArea: '',
-    constructionNature: 'New Construction', // New Construction or Renovation
-    // Step 3: Budget
+    transactionIntent: 'Buying / Investing', // Buying / Investing or Selling / Listing
+    // Step 3: Budget & Timeline
     budgetTier: '',
-    timelinePreference: 'Immediate (Within 30 Days)',
-    // Step 4: Requirements
+    timelinePreference: 'Immediate (Ready to Move / 30 Days)',
+    // Step 4: Specific Requirements
     requirements: '',
-    hasArchitecturalDrawings: 'No / Need PK Architects'
+    possessionPreference: 'Ready to Move / Immediate'
   });
 
   const nextStep = () => {
@@ -49,8 +48,8 @@ export const GetAQuotePage: React.FC = () => {
       }
     }
     if (currentStep === 2) {
-      if (!formData.location || !formData.approximateArea) {
-        alert('Please provide project location and approximate area.');
+      if (!formData.location) {
+        alert('Please specify your preferred property location.');
         return;
       }
     }
@@ -73,18 +72,18 @@ export const GetAQuotePage: React.FC = () => {
   };
 
   const budgetOptions = [
-    { id: 'tier-1', title: 'Consultation & Planning Stage', desc: 'Seeking feasibility, soil testing & initial budgeting' },
-    { id: 'tier-2', title: 'Standard Luxury Specification', desc: 'High-grade RCC, premium vitrified/granite, branded fittings' },
-    { id: 'tier-3', title: 'Ultra-Luxury Bespoke Specification', desc: 'Post-tensioned spans, Italian marble, custom glass & smart automation' },
-    { id: 'tier-4', title: 'Commercial & Institutional Scale', desc: 'High-rise structural steel, unitized curtain walling, Grade-A finish' },
-    { id: 'tier-5', title: 'Custom Budget Discussion', desc: 'Direct technical consultation with PK estimating director' }
+    { id: 'tier-1', title: '₹50 Lakhs – ₹1.5 Cr', desc: 'Approved villa plots, gated layout land, starter residential properties' },
+    { id: 'tier-2', title: '₹1.5 Cr – ₹4.0 Cr', desc: 'Premium gated community villas, luxury 3/4 BHK apartments' },
+    { id: 'tier-3', title: '₹4.0 Cr – ₹10 Cr', desc: 'Ultra-luxury designer estates, penthouses, high-street retail spaces' },
+    { id: 'tier-4', title: '₹10 Cr+', desc: 'Commercial tech parks, corporate buildings, large development land parcels' },
+    { id: 'tier-5', title: 'Custom / High-Yield Portfolio', desc: 'Pre-leased institutional assets & tailored real estate investments' }
   ];
 
   return (
     <>
       <SEOHead
-        title="Request a Quote & Cost Estimation | PK Developers"
-        description="Submit your construction requirements for a comprehensive feasibility review, itemized Bill of Quantities (BOQ), and timeline roadmap from PK Developers."
+        title="Property Inquiry & Real Estate Advisory | PK Properties"
+        description="Submit your property requirements to receive verified clear-title listings, market valuation reports, and personalized real estate guidance from PK Properties."
         canonicalPath="/get-a-quote"
       />
 
@@ -92,8 +91,8 @@ export const GetAQuotePage: React.FC = () => {
       <section className="relative py-24 bg-stone-950 overflow-hidden border-b border-stone-800">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=2000&q=80"
-            alt="Request a Construction Quote"
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80"
+            alt="Property Inquiry PK Properties"
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-stone-950/90" />
@@ -101,13 +100,13 @@ export const GetAQuotePage: React.FC = () => {
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-6">
-            Lead Generation & Estimation
+            Property Consultation & Inquiry
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
-            “Tell Us About Your Project.”
+            “Find Your Ideal Property.”
           </h1>
           <p className="mt-4 text-base sm:text-lg text-stone-300 max-w-2xl mx-auto leading-relaxed">
-            Complete our multi-step lead intake form below to receive a disciplined project assessment, budget feasibility model, and architectural roadmap.
+            Share your property buying, selling, leasing, or investment requirements below to receive a curated portfolio of verified, clear-title properties.
           </p>
         </div>
       </section>
@@ -119,68 +118,54 @@ export const GetAQuotePage: React.FC = () => {
           {/* STEP PROGRESS INDICATOR */}
           {!submitted && (
             <div className="mb-12">
-              <div className="flex items-center justify-between mb-4">
-                {['Your Details', 'Project Details', 'Budget', 'Requirements', 'Submission'].map((name, idx) => (
-                  <div key={idx} className="flex flex-col items-center">
+              <div className="flex items-center justify-between max-w-2xl mx-auto">
+                {[1, 2, 3, 4].map((step) => (
+                  <div key={step} className="flex flex-col items-center">
                     <div
-                      className={`w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center font-bold text-xs sm:text-sm transition-all ${
-                        currentStep > idx + 1
+                      className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm transition-all ${
+                        currentStep === step
+                          ? 'bg-amber-500 text-stone-950 ring-4 ring-amber-500/20 shadow-lg shadow-amber-500/30'
+                          : currentStep > step
                           ? 'bg-emerald-500 text-stone-950'
-                          : currentStep === idx + 1
-                          ? 'bg-amber-500 text-stone-950 ring-4 ring-amber-500/20 shadow-lg'
                           : 'bg-stone-900 border border-stone-800 text-stone-500'
                       }`}
                     >
-                      {currentStep > idx + 1 ? '✓' : `0${idx + 1}`}
+                      {currentStep > step ? <CheckCircle2 className="w-5 h-5" /> : step}
                     </div>
-                    <span className="text-[10px] sm:text-xs font-semibold mt-2 hidden sm:block text-stone-400">
-                      {name}
+                    <span className="text-[11px] font-medium text-stone-400 mt-2">
+                      {step === 1 && 'Contact'}
+                      {step === 2 && 'Property'}
+                      {step === 3 && 'Budget'}
+                      {step === 4 && 'Details'}
                     </span>
                   </div>
                 ))}
-              </div>
-              <div className="w-full bg-stone-900 h-1.5 rounded-full overflow-hidden">
-                <div
-                  className="bg-amber-500 h-full transition-all duration-300"
-                  style={{ width: `${((currentStep - 1) / 4) * 100}%` }}
-                />
               </div>
             </div>
           )}
 
           {/* FORM CARD */}
-          <div className="p-8 sm:p-12 rounded-3xl bg-stone-900 border border-stone-800 shadow-2xl">
+          <div className="p-8 sm:p-12 rounded-3xl bg-stone-900/60 border border-stone-800 shadow-2xl backdrop-blur-md">
             {submitted ? (
-              /* CONFIRMATION STATE */
-              <div className="py-12 text-center space-y-6 animate-in fade-in duration-300">
-                <div className="w-20 h-20 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 flex items-center justify-center mx-auto shadow-2xl shadow-emerald-500/20">
-                  <FileCheck2 className="w-10 h-10" />
+              <div className="text-center py-12 space-y-6 animate-in zoom-in-95 duration-300">
+                <div className="w-20 h-20 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mx-auto">
+                  <CheckCircle2 className="w-10 h-10" />
                 </div>
+                <h2 className="text-3xl font-extrabold text-white">
+                  Property Inquiry Received!
+                </h2>
+                <p className="text-base text-stone-300 max-w-xl mx-auto leading-relaxed">
+                  Thank you, <strong className="text-white">{formData.fullName}</strong>. Our senior real estate advisor has received your property request and will contact you within <strong>2 business hours</strong> with verified property options.
+                </p>
 
-                <div className="space-y-2">
-                  <span className="text-xs uppercase font-mono tracking-wider text-amber-500 font-bold block">
-                    Submission Confirmed
-                  </span>
-                  <h3 className="text-3xl font-extrabold text-white">
-                    Thank You, {formData.fullName}!
-                  </h3>
-                  <p className="text-base text-stone-300 max-w-lg mx-auto leading-relaxed">
-                    Your project enquiry has been registered in the PK Developers engineering queue. A senior structural consultant will review your site parameters and contact you at <span className="text-amber-400 font-semibold">{formData.phone}</span> within 2 to 4 business hours.
-                  </p>
-                </div>
-
-                <div className="p-6 rounded-2xl bg-stone-950 border border-stone-800 max-w-md mx-auto text-left text-xs space-y-2">
+                <div className="max-w-md mx-auto p-4 rounded-xl bg-stone-950 border border-stone-800 text-left text-xs space-y-2">
                   <div className="flex justify-between text-stone-400">
-                    <span>Project Type:</span>
-                    <span className="text-white font-medium">{formData.projectType} ({formData.constructionNature})</span>
+                    <span>Requirement:</span>
+                    <span className="text-white font-medium">{formData.requirementType}</span>
                   </div>
                   <div className="flex justify-between text-stone-400">
-                    <span>Location:</span>
+                    <span>Target Location:</span>
                     <span className="text-white font-medium">{formData.location}</span>
-                  </div>
-                  <div className="flex justify-between text-stone-400">
-                    <span>Approx Area:</span>
-                    <span className="text-white font-medium">{formData.approximateArea}</span>
                   </div>
                   <div className="flex justify-between text-stone-400">
                     <span>Budget Tier:</span>
@@ -199,7 +184,7 @@ export const GetAQuotePage: React.FC = () => {
                     to="/projects"
                     className="px-6 py-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-white font-medium text-sm transition-all"
                   >
-                    Explore Projects
+                    Explore Properties
                   </Link>
                 </div>
               </div>
@@ -210,7 +195,7 @@ export const GetAQuotePage: React.FC = () => {
                   <div className="space-y-6 animate-in fade-in duration-200">
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-1">Step 1 — Your Details</h3>
-                      <p className="text-xs text-stone-400">Provide your contact coordinates for project communication.</p>
+                      <p className="text-xs text-stone-400">Provide your contact coordinates for customized property recommendations.</p>
                     </div>
 
                     <div className="space-y-4">
@@ -261,61 +246,62 @@ export const GetAQuotePage: React.FC = () => {
                   </div>
                 )}
 
-                {/* STEP 2: PROJECT DETAILS */}
+                {/* STEP 2: PROPERTY REQUIREMENTS */}
                 {currentStep === 2 && (
                   <div className="space-y-6 animate-in fade-in duration-200">
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-1">Step 2 — Project Details</h3>
-                      <p className="text-xs text-stone-400">Tell us what and where you are planning to build.</p>
+                      <h3 className="text-2xl font-bold text-white mb-1">Step 2 — Property Requirement</h3>
+                      <p className="text-xs text-stone-400">Tell us what type of property you are looking for.</p>
                     </div>
 
                     <div className="space-y-4">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                           <label className="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-1.5">
-                            Project Type *
+                            Property Category *
                           </label>
                           <select
-                            value={formData.projectType}
-                            onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
+                            value={formData.requirementType}
+                            onChange={(e) => setFormData({ ...formData, requirementType: e.target.value })}
                             className="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white text-sm focus:outline-none focus:border-amber-500"
                           >
-                            <option value="Residential Construction">Residential Luxury Villa</option>
-                            <option value="Independent House">Independent Bungalow</option>
-                            <option value="Apartment Building">Multi-Unit Apartments</option>
-                            <option value="Commercial Office">Commercial Office Complex</option>
-                            <option value="Retail Facility">Retail / Lifestyle Showroom</option>
-                            <option value="Renovation & Remodeling">Renovation & Remodeling</option>
-                            <option value="Architecture & Planning">Architecture & Planning Only</option>
+                            <option value="Buy Luxury Villa / House">Buy Luxury Villa / House</option>
+                            <option value="Buy Premium Apartment / Penthouse">Buy Luxury Apartment / Penthouse</option>
+                            <option value="Lease Commercial Office Space">Lease Commercial Office Space</option>
+                            <option value="Buy Commercial Showroom / Retail Space">Buy Commercial Showroom / Retail</option>
+                            <option value="Buy Approved Plot / Land Parcel">Buy Approved Plot / Land Parcel</option>
+                            <option value="Sell My Property">Sell My Property With PK Properties</option>
+                            <option value="Real Estate Investment / Pre-Leased">Real Estate Investment / Pre-Leased Asset</option>
+                            <option value="Turnkey Villa Construction on My Plot">Turnkey Villa Construction on My Plot</option>
                           </select>
                         </div>
 
                         <div>
                           <label className="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-1.5">
-                            Nature of Work *
+                            Transaction Intent *
                           </label>
                           <div className="grid grid-cols-2 gap-2">
                             <button
                               type="button"
-                              onClick={() => setFormData({ ...formData, constructionNature: 'New Construction' })}
+                              onClick={() => setFormData({ ...formData, transactionIntent: 'Buying / Investing' })}
                               className={`py-3 px-3 rounded-xl text-xs font-bold border transition-all ${
-                                formData.constructionNature === 'New Construction'
+                                formData.transactionIntent === 'Buying / Investing'
                                   ? 'bg-amber-500 text-stone-950 border-amber-400 shadow-md'
                                   : 'bg-stone-950 text-stone-300 border-stone-800 hover:border-stone-700'
                               }`}
                             >
-                              New Construction
+                              Buying / Investing
                             </button>
                             <button
                               type="button"
-                              onClick={() => setFormData({ ...formData, constructionNature: 'Renovation' })}
+                              onClick={() => setFormData({ ...formData, transactionIntent: 'Selling / Listing' })}
                               className={`py-3 px-3 rounded-xl text-xs font-bold border transition-all ${
-                                formData.constructionNature === 'Renovation'
+                                formData.transactionIntent === 'Selling / Listing'
                                   ? 'bg-amber-500 text-stone-950 border-amber-400 shadow-md'
                                   : 'bg-stone-950 text-stone-300 border-stone-800 hover:border-stone-700'
                               }`}
                             >
-                              Renovation / Retrofit
+                              Selling / Listing
                             </button>
                           </div>
                         </div>
@@ -324,28 +310,27 @@ export const GetAQuotePage: React.FC = () => {
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                           <label className="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-1.5">
-                            Plot / Project Location *
+                            Target Location / Pin Code *
                           </label>
                           <input
                             type="text"
                             required
                             value={formData.location}
                             onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                            placeholder="e.g. Indiranagar, Bengaluru or Mysore"
+                            placeholder="e.g. Whitefield, Indiranagar, Sarjapur, ORR"
                             className="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-600 text-sm focus:outline-none focus:border-amber-500"
                           />
                         </div>
 
                         <div>
                           <label className="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-1.5">
-                            Approximate Built-up Area *
+                            Approximate Size / Configuration
                           </label>
                           <input
                             type="text"
-                            required
                             value={formData.approximateArea}
                             onChange={(e) => setFormData({ ...formData, approximateArea: e.target.value })}
-                            placeholder="e.g. 6,500 sq.ft or 2,400 sq.ft plot"
+                            placeholder="e.g. 4BHK Villa / 2,400 sq.ft Plot / 10,000 sq.ft Office"
                             className="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-600 text-sm focus:outline-none focus:border-amber-500"
                           />
                         </div>
@@ -354,12 +339,12 @@ export const GetAQuotePage: React.FC = () => {
                   </div>
                 )}
 
-                {/* STEP 3: BUDGET */}
+                {/* STEP 3: BUDGET & TIMELINE */}
                 {currentStep === 3 && (
                   <div className="space-y-6 animate-in fade-in duration-200">
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-1">Step 3 — Budget Framework</h3>
-                      <p className="text-xs text-stone-400">Select your intended investment range or project tier.</p>
+                      <h3 className="text-2xl font-bold text-white mb-1">Step 3 — Budget & Timeline</h3>
+                      <p className="text-xs text-stone-400">Select your intended budget framework to match with suitable inventory.</p>
                     </div>
 
                     <div className="space-y-3">
@@ -367,173 +352,130 @@ export const GetAQuotePage: React.FC = () => {
                         <div
                           key={opt.id}
                           onClick={() => setFormData({ ...formData, budgetTier: opt.title })}
-                          className={`p-4 rounded-2xl border cursor-pointer transition-all flex items-center justify-between ${
+                          className={`p-4 rounded-xl border cursor-pointer transition-all ${
                             formData.budgetTier === opt.title
-                              ? 'bg-amber-500/10 border-amber-500 text-white shadow-lg'
-                              : 'bg-stone-950 border-stone-800 text-stone-300 hover:border-stone-700'
+                              ? 'bg-amber-500/10 border-amber-500 text-white'
+                              : 'bg-stone-950 border-stone-800 hover:border-stone-700 text-stone-300'
                           }`}
                         >
-                          <div>
-                            <h4 className="text-sm font-bold text-white">{opt.title}</h4>
-                            <p className="text-xs text-stone-400 mt-0.5">{opt.desc}</p>
+                          <div className="flex items-center justify-between">
+                            <span className="font-bold text-sm text-white">{opt.title}</span>
+                            <div
+                              className={`w-4 h-4 rounded-full border flex items-center justify-center ${
+                                formData.budgetTier === opt.title
+                                  ? 'border-amber-500 bg-amber-500'
+                                  : 'border-stone-600'
+                              }`}
+                            >
+                              {formData.budgetTier === opt.title && (
+                                <div className="w-1.5 h-1.5 rounded-full bg-stone-950" />
+                              )}
+                            </div>
                           </div>
-                          <div
-                            className={`w-5 h-5 rounded-full border flex items-center justify-center ${
-                              formData.budgetTier === opt.title
-                                ? 'border-amber-500 bg-amber-500 text-stone-950'
-                                : 'border-stone-700'
-                            }`}
-                          >
-                            {formData.budgetTier === opt.title && <span className="text-xs font-bold">✓</span>}
-                          </div>
+                          <p className="text-xs text-stone-400 mt-1">{opt.desc}</p>
                         </div>
                       ))}
                     </div>
 
-                    <div>
+                    <div className="pt-2">
                       <label className="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-1.5">
-                        Anticipated Construction Start Timeline
+                        Purchase / Possession Timeline
                       </label>
                       <select
                         value={formData.timelinePreference}
                         onChange={(e) => setFormData({ ...formData, timelinePreference: e.target.value })}
                         className="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white text-sm focus:outline-none focus:border-amber-500"
                       >
-                        <option value="Immediate (Within 30 Days)">Immediate (Within 30 Days)</option>
-                        <option value="1 to 3 Months">1 to 3 Months</option>
-                        <option value="3 to 6 Months">3 to 6 Months</option>
-                        <option value="Planning / Concept Stage (6+ Months)">Planning / Concept Stage (6+ Months)</option>
+                        <option value="Immediate (Ready to Move / 30 Days)">Immediate (Ready to Move / 30 Days)</option>
+                        <option value="1 – 3 Months">1 – 3 Months</option>
+                        <option value="3 – 6 Months">3 – 6 Months</option>
+                        <option value="Exploring & Market Evaluation">Exploring & Market Evaluation</option>
                       </select>
                     </div>
                   </div>
                 )}
 
-                {/* STEP 4: REQUIREMENTS */}
+                {/* STEP 4: SPECIFIC REQUIREMENTS */}
                 {currentStep === 4 && (
-                  <div className="space-y-6 animate-in fade-in duration-200">
+                  <form onSubmit={handleFinalSubmit} className="space-y-6 animate-in fade-in duration-200">
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-1">Step 4 — Requirements & Scope</h3>
-                      <p className="text-xs text-stone-400">Describe any unique architectural or structural expectations.</p>
+                      <h3 className="text-2xl font-bold text-white mb-1">Step 4 — Specific Preferences</h3>
+                      <p className="text-xs text-stone-400">Share any specific amenities, road width, Vastu preferences, or deal parameters.</p>
                     </div>
 
                     <div className="space-y-4">
                       <div>
                         <label className="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-1.5">
-                          Do you already have architectural blueprints?
-                        </label>
-                        <select
-                          value={formData.hasArchitecturalDrawings}
-                          onChange={(e) => setFormData({ ...formData, hasArchitecturalDrawings: e.target.value })}
-                          className="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white text-sm focus:outline-none focus:border-amber-500"
-                        >
-                          <option value="No / Need PK Architects">No — Need PK Developers Turnkey Architecture & Civil</option>
-                          <option value="Yes / Independent Architect Drawings Ready">Yes — Working with Independent Architect, Need Civil Execution</option>
-                          <option value="Have Preliminary Concept Sketches">Have preliminary sketches / rough floor plans</option>
-                        </select>
-                      </div>
-
-                      <div>
-                        <label className="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-1.5">
-                          Detailed Project Brief & Specific Features *
+                          Specific Requirements / Remarks
                         </label>
                         <textarea
-                          rows={5}
-                          required
+                          rows={4}
                           value={formData.requirements}
                           onChange={(e) => setFormData({ ...formData, requirements: e.target.value })}
-                          placeholder="Describe specific features: e.g. swimming pool, basement home theatre, solar micro-inverter grid, specific marble finishes, timeline constraints..."
+                          placeholder="e.g. Prefer east-facing villa with private garden, minimum 40ft road width, gated community with clubhouse, or pre-leased office with 9% ROI..."
                           className="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-600 text-sm focus:outline-none focus:border-amber-500"
                         />
                       </div>
-                    </div>
-                  </div>
-                )}
 
-                {/* STEP 5: SUBMISSION REVIEW */}
-                {currentStep === 5 && (
-                  <div className="space-y-6 animate-in fade-in duration-200">
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-1">Step 5 — Submission & Verification</h3>
-                      <p className="text-xs text-stone-400">Please review your submission summary before finalizing.</p>
-                    </div>
-
-                    <div className="p-6 rounded-2xl bg-stone-950 border border-stone-800 space-y-3 text-sm">
-                      <div className="grid grid-cols-2 gap-2 text-xs">
-                        <span className="text-stone-400">Client Name:</span>
-                        <span className="text-white font-semibold text-right">{formData.fullName}</span>
-
-                        <span className="text-stone-400">Phone:</span>
-                        <span className="text-white font-semibold text-right">{formData.phone}</span>
-
-                        <span className="text-stone-400">Email:</span>
-                        <span className="text-white font-semibold text-right">{formData.email}</span>
-
-                        <span className="text-stone-400">Project Type:</span>
-                        <span className="text-amber-400 font-semibold text-right">{formData.projectType}</span>
-
-                        <span className="text-stone-400">Nature:</span>
-                        <span className="text-white font-semibold text-right">{formData.constructionNature}</span>
-
-                        <span className="text-stone-400">Location:</span>
-                        <span className="text-white font-semibold text-right">{formData.location}</span>
-
-                        <span className="text-stone-400">Approx. Area:</span>
-                        <span className="text-white font-semibold text-right">{formData.approximateArea}</span>
-
-                        <span className="text-stone-400">Selected Budget Tier:</span>
-                        <span className="text-amber-400 font-semibold text-right">{formData.budgetTier}</span>
-                      </div>
-
-                      <div className="pt-3 border-t border-stone-800">
-                        <span className="text-stone-400 text-xs block mb-1">Scope Brief:</span>
-                        <p className="text-xs text-stone-300 italic bg-stone-900 p-3 rounded-lg">
-                          "{formData.requirements || 'No extra notes provided.'}"
+                      <div className="p-4 rounded-xl bg-stone-950/80 border border-stone-800 space-y-2">
+                        <div className="flex items-center gap-2 text-xs font-bold text-amber-400">
+                          <ShieldCheck className="w-4 h-4" />
+                          <span>PK Properties Fiduciary Pledge</span>
+                        </div>
+                        <p className="text-xs text-stone-400 leading-relaxed">
+                          Your contact information and requirements remain 100% confidential. We only share verified clear-title properties directly from authentic owners and institutional builders with zero spam.
                         </p>
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-2 text-xs text-stone-400">
-                      <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-                      <span>All inquiries are kept strictly confidential and covered under our non-disclosure policy.</span>
+                    {/* Step Navigation Controls */}
+                    <div className="pt-4 flex items-center justify-between border-t border-stone-800">
+                      <button
+                        type="button"
+                        onClick={prevStep}
+                        className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-white text-sm font-semibold transition-all"
+                      >
+                        <ArrowLeft className="w-4 h-4" />
+                        <span>Back</span>
+                      </button>
+
+                      <button
+                        type="submit"
+                        className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm shadow-xl shadow-amber-500/20 transition-all hover:scale-105 active:scale-95"
+                      >
+                        <span>Submit Property Inquiry</span>
+                        <Send className="w-4 h-4" />
+                      </button>
                     </div>
-                  </div>
+                  </form>
                 )}
 
-                {/* FORM CONTROLS: NEXT, PREV, SUBMIT */}
-                <div className="mt-8 pt-6 border-t border-stone-800/80 flex items-center justify-between">
-                  {currentStep > 1 ? (
-                    <button
-                      type="button"
-                      onClick={prevStep}
-                      className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-300 text-xs font-bold uppercase tracking-wider transition-colors"
-                    >
-                      <ArrowLeft className="w-4 h-4" />
-                      <span>Back</span>
-                    </button>
-                  ) : (
-                    <div />
-                  )}
+                {/* Steps 1-3 Navigation Controls */}
+                {currentStep < 4 && (
+                  <div className="pt-6 mt-6 flex items-center justify-between border-t border-stone-800">
+                    {currentStep > 1 ? (
+                      <button
+                        type="button"
+                        onClick={prevStep}
+                        className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-white text-sm font-semibold transition-all"
+                      >
+                        <ArrowLeft className="w-4 h-4" />
+                        <span>Back</span>
+                      </button>
+                    ) : (
+                      <div />
+                    )}
 
-                  {currentStep < 5 ? (
                     <button
                       type="button"
                       onClick={nextStep}
-                      className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-xs uppercase tracking-wider shadow-lg shadow-amber-500/20 transition-all"
+                      className="inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm shadow-xl shadow-amber-500/20 transition-all hover:scale-105 active:scale-95 ml-auto"
                     >
-                      <span>Continue to Step 0{currentStep + 1}</span>
+                      <span>Continue</span>
                       <ArrowRight className="w-4 h-4" />
                     </button>
-                  ) : (
-                    <button
-                      type="button"
-                      onClick={handleFinalSubmit}
-                      className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-stone-950 font-bold text-xs uppercase tracking-wider shadow-xl shadow-emerald-500/20 transition-all"
-                    >
-                      <Send className="w-4 h-4" />
-                      <span>Submit Project Enquiry</span>
-                    </button>
-                  )}
-                </div>
+                  </div>
+                )}
               </div>
             )}
           </div>

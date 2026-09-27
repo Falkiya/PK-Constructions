@@ -43,8 +43,8 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             PK
           </div>
           <div>
-            <span className="font-bold tracking-tight text-white text-base">PK DEVELOPERS</span>
-            <span className="block text-[9px] uppercase tracking-widest text-stone-400">Construction</span>
+            <span className="font-bold tracking-tight text-white text-base">PK PROPERTIES</span>
+            <span className="block text-[9px] uppercase tracking-widest text-stone-400">Real Estate</span>
           </div>
         </Link>
         <button
@@ -67,7 +67,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-stone-950 font-bold text-sm shadow-xl shadow-amber-500/20"
           >
             <Sparkles className="w-4 h-4" />
-            <span>Get a Quote / Estimate</span>
+            <span>Inquire About Properties</span>
             <ArrowRight className="w-4 h-4 ml-1" />
           </Link>
         </div>
@@ -101,7 +101,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
               onClick={() => setServicesExpanded(!servicesExpanded)}
               className="w-full flex items-center justify-between px-2 py-2 text-stone-200 font-semibold text-sm"
             >
-              <span>Services</span>
+              <span>Property Services</span>
               <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${servicesExpanded ? 'rotate-180 text-amber-400' : ''}`} />
             </button>
             {servicesExpanded && (
@@ -119,7 +119,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                   className="flex items-center gap-2 px-2 py-1.5 text-xs text-stone-300 hover:text-amber-400"
                 >
                   <Home className="w-3.5 h-3.5 text-amber-400" />
-                  Residential Construction
+                  Residential Property Dealing
                 </Link>
                 <Link
                   to="/services/commercial-construction"
@@ -127,15 +127,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                   className="flex items-center gap-2 px-2 py-1.5 text-xs text-stone-300 hover:text-amber-400"
                 >
                   <Building2 className="w-3.5 h-3.5 text-amber-400" />
-                  Commercial Construction
-                </Link>
-                <Link
-                  to="/services/renovation-remodeling"
-                  onClick={onClose}
-                  className="flex items-center gap-2 px-2 py-1.5 text-xs text-stone-300 hover:text-amber-400"
-                >
-                  <Hammer className="w-3.5 h-3.5 text-amber-400" />
-                  Renovation & Remodeling
+                  Commercial Real Estate & Leasing
                 </Link>
                 <Link
                   to="/services/architecture-planning"
@@ -143,7 +135,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                   className="flex items-center gap-2 px-2 py-1.5 text-xs text-stone-300 hover:text-amber-400"
                 >
                   <Compass className="w-3.5 h-3.5 text-amber-400" />
-                  Architecture & Planning
+                  Plots & Land Acquisition
                 </Link>
                 <Link
                   to="/services/project-management"
@@ -151,20 +143,28 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                   className="flex items-center gap-2 px-2 py-1.5 text-xs text-stone-300 hover:text-amber-400"
                 >
                   <ClipboardCheck className="w-3.5 h-3.5 text-amber-400" />
-                  Project Management
+                  Real Estate Investment Advisory
+                </Link>
+                <Link
+                  to="/services/renovation-remodeling"
+                  onClick={onClose}
+                  className="flex items-center gap-2 px-2 py-1.5 text-xs text-stone-300 hover:text-amber-400"
+                >
+                  <Hammer className="w-3.5 h-3.5 text-amber-400" />
+                  Turnkey Villa Development
                 </Link>
               </div>
             )}
           </div>
 
-          {/* Projects Accordion */}
+          {/* Properties Accordion */}
           <div className="rounded-xl bg-stone-900/40 border border-stone-800/60 p-2">
             <button
               type="button"
               onClick={() => setProjectsExpanded(!projectsExpanded)}
               className="w-full flex items-center justify-between px-2 py-2 text-stone-200 font-semibold text-sm"
             >
-              <span>Projects</span>
+              <span>Properties & Deals</span>
               <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${projectsExpanded ? 'rotate-180 text-amber-400' : ''}`} />
             </button>
             {projectsExpanded && (
@@ -175,7 +175,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                   className="flex items-center gap-2 px-2 py-1.5 text-xs text-stone-300 hover:text-amber-400"
                 >
                   <Layers className="w-3.5 h-3.5 text-amber-400" />
-                  All Projects
+                  All Properties & Deals
                 </Link>
                 <Link
                   to="/projects/residential"
@@ -183,7 +183,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                   className="flex items-center gap-2 px-2 py-1.5 text-xs text-stone-300 hover:text-amber-400"
                 >
                   <Home className="w-3.5 h-3.5 text-amber-400" />
-                  Residential Projects
+                  Luxury Residential
                 </Link>
                 <Link
                   to="/projects/commercial"
@@ -191,7 +191,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                   className="flex items-center gap-2 px-2 py-1.5 text-xs text-stone-300 hover:text-amber-400"
                 >
                   <Building2 className="w-3.5 h-3.5 text-amber-400" />
-                  Commercial Projects
+                  Commercial Spaces
                 </Link>
               </div>
             )}

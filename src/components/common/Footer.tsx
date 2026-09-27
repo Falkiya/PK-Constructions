@@ -25,13 +25,13 @@ export const Footer: React.FC = () => {
             <div>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs font-semibold mb-2">
                 <Award className="w-3.5 h-3.5" />
-                Premier Construction & Development Partner
+                Premier Real Estate & Property Dealing Partner
               </span>
               <h3 className="text-xl md:text-2xl font-bold text-white">
-                Planning your next landmark residential or commercial project?
+                Looking to Buy, Sell, or Invest in Verified Premium Properties?
               </h3>
               <p className="text-sm text-stone-400 mt-1">
-                Consult with our senior structural engineers and architects today.
+                Connect with our senior property specialists and investment consultants today.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
@@ -39,14 +39,14 @@ export const Footer: React.FC = () => {
                 to="/get-a-quote"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm shadow-xl shadow-amber-500/20 transition-all duration-200"
               >
-                <span>Request a Quote</span>
+                <span>Inquire Property</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 to="/contact"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-white font-medium text-sm transition-all duration-200"
               >
-                <span>Book Site Consultation</span>
+                <span>Book Property Visit</span>
               </Link>
             </div>
           </div>
@@ -64,16 +64,16 @@ export const Footer: React.FC = () => {
               </div>
               <div>
                 <span className="text-xl font-bold tracking-tight text-white">
-                  PK DEVELOPERS
+                  PK PROPERTIES
                 </span>
                 <p className="text-[10px] tracking-widest uppercase text-stone-400 font-medium">
-                  Construction & Development
+                  Real Estate & Property Dealing
                 </p>
               </div>
             </Link>
 
             <p className="text-sm text-stone-400 leading-relaxed max-w-sm">
-              PK Developers is a premier civil infrastructure and luxury development company. We deliver landmark residential villas, high-rise commercial complexes, and bespoke renovations built with structural integrity, absolute transparency, and modern architectural vision.
+              PK Properties & Developers is Bengaluru's premier real estate consultancy, property dealer, and investment advisory firm. We specialize in verified residential villas, prime commercial leases, approved layout plots, and strategic land acquisitions with 100% clear titles and full legal vetting.
             </p>
 
             <div className="flex items-center gap-3 pt-2">
@@ -108,39 +108,39 @@ export const Footer: React.FC = () => {
 
             <div className="pt-2 text-xs text-stone-500 flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-emerald-500" />
-              <span>RERA Registered & ISO 9001:2015 Compliant</span>
+              <span>RERA Registered & 100% Clear Title Verification Guarantee</span>
             </div>
           </div>
 
           {/* Col 2: Services */}
           <div className="space-y-4">
             <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
-              Construction Services
+              Property Services
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link to="/services/residential-construction" className="text-stone-400 hover:text-amber-400 transition-colors">
-                  Residential Construction
+                  Residential Property Dealing
                 </Link>
               </li>
               <li>
                 <Link to="/services/commercial-construction" className="text-stone-400 hover:text-amber-400 transition-colors">
-                  Commercial Construction
+                  Commercial Leasing & Sales
                 </Link>
               </li>
               <li>
                 <Link to="/services/renovation-remodeling" className="text-stone-400 hover:text-amber-400 transition-colors">
-                  Renovation & Remodeling
+                  Plots & Land Acquisition
                 </Link>
               </li>
               <li>
                 <Link to="/services/architecture-planning" className="text-stone-400 hover:text-amber-400 transition-colors">
-                  Architecture & Planning
+                  Real Estate Investment Advisory
                 </Link>
               </li>
               <li>
                 <Link to="/services/project-management" className="text-stone-400 hover:text-amber-400 transition-colors">
-                  Project Management (PMC)
+                  Turnkey Villa Development
                 </Link>
               </li>
               <li>
@@ -155,47 +155,47 @@ export const Footer: React.FC = () => {
           {/* Col 3: Navigation & Portfolios */}
           <div className="space-y-4">
             <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
-              Portfolios & Company
+              Properties & Company
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link to="/projects" className="text-stone-400 hover:text-amber-400 transition-colors">
-                  All Projects Portfolio
+                  Verified Properties Inventory
                 </Link>
               </li>
               <li>
                 <Link to="/projects/residential" className="text-stone-400 hover:text-amber-400 transition-colors">
-                  Residential Projects
+                  Residential Villas & Flats
                 </Link>
               </li>
               <li>
                 <Link to="/projects/commercial" className="text-stone-400 hover:text-amber-400 transition-colors">
-                  Commercial Projects
+                  Commercial & Office Spaces
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="text-stone-400 hover:text-amber-400 transition-colors">
-                  About PK Developers
+                  About PK Properties
                 </Link>
               </li>
               <li>
                 <Link to="/process" className="text-stone-400 hover:text-amber-400 transition-colors">
-                  9-Step Construction Process
+                  6-Step Transaction Process
                 </Link>
               </li>
               <li>
                 <Link to="/gallery" className="text-stone-400 hover:text-amber-400 transition-colors">
-                  Media & Site Gallery
+                  Property Gallery & Media
                 </Link>
               </li>
               <li>
                 <Link to="/why-choose-us" className="text-stone-400 hover:text-amber-400 transition-colors">
-                  Why Choose Us
+                  Why Choose PK Properties
                 </Link>
               </li>
               <li>
                 <Link to="/testimonials" className="text-stone-400 hover:text-amber-400 transition-colors">
-                  Client Testimonials
+                  Client Reviews & Success
                 </Link>
               </li>
             </ul>
@@ -241,7 +241,7 @@ export const Footer: React.FC = () => {
       <div className="border-t border-stone-800/80 bg-stone-950 py-6 text-xs text-stone-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p>
-            © {new Date().getFullYear()} PK Developers. All Rights Reserved. Engineered with precision.
+            © {new Date().getFullYear()} PK Properties & Developers. All Rights Reserved. 100% Clear Titles & Verified Real Estate.
           </p>
           <div className="flex items-center gap-6">
             <Link to="/privacy-policy" className="hover:text-stone-300 transition-colors">

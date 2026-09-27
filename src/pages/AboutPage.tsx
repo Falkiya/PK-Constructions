@@ -22,8 +22,8 @@ export const AboutPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="About Us | Building With Purpose | PK Developers"
-        description="Learn the story, mission, core values, and engineering discipline that define PK Developers. Transforming architectural dreams into enduring structures."
+        title="About Us | Property Dealing & Real Estate Advisory | PK Properties"
+        description="Learn the story, mission, core values, and legal integrity that define PK Properties & Developers. Transforming real estate transactions with 100% verified titles and complete transparency."
         canonicalPath="/about"
       />
 
@@ -32,7 +32,7 @@ export const AboutPage: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=2000&q=80"
-            alt="PK Developers Construction Team"
+            alt="PK Properties Team"
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-stone-950/90" />
@@ -40,13 +40,13 @@ export const AboutPage: React.FC = () => {
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-6">
-            About PK Developers
+            About PK Properties
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
-            “Building With Purpose.”
+            “Integrity in Every Transaction.”
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-stone-300 max-w-3xl mx-auto leading-relaxed">
-            We are dedicated to building structures that combine architectural elegance, structural longevity, and radical transparency.
+            We are dedicated to real estate advisory and property dealing rooted in 100% clear legal titles, accurate market valuations, and radical transparency.
           </p>
         </div>
       </section>
@@ -60,22 +60,22 @@ export const AboutPage: React.FC = () => {
                 Our Heritage & Philosophy
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                Crafting Spaces Where Legacy & Structural Mastery Meet
+                Redefining Real Estate Dealing Through Institutional Due Diligence
               </h2>
               <p className="text-base text-stone-300 leading-relaxed">
-                PK Developers was established with a singular conviction: that the construction process should inspire confidence rather than anxiety. Too often in the building industry, clients face ambiguous cost estimates, timeline drift, and compromises in material grade.
+                PK Properties was established with a singular conviction: that acquiring or selling real estate should inspire confidence rather than anxiety. Too often in the property sector, buyers and investors face opaque title records, hidden brokerage layers, and unvetted land boundaries.
               </p>
               <p className="text-base text-stone-400 leading-relaxed">
-                We rebuilt the paradigm from the ground up. By fusing advanced digital project management (CPM scheduling, BIM modeling) with rigorous on-site civil discipline, PK Developers delivers turnkey residential villas and commercial hubs on schedule, within fixed budgets, and built to withstand seismic and environmental tests for a century.
+                We rebuilt the paradigm from the ground up. By combining comprehensive legal title searches (30-year Encumbrance Certificates, BDA/BBMP khata checks) with disciplined micro-market valuation, PK Properties helps families, high-net-worth investors, and corporates acquire verified residential villas, commercial assets, and approved layout plots with zero litigation risk.
               </p>
               <div className="pt-2 grid grid-cols-2 gap-4">
                 <div className="p-4 rounded-xl bg-stone-900 border border-stone-800">
                   <h4 className="text-2xl font-bold text-amber-400 font-mono">100%</h4>
-                  <p className="text-xs text-stone-400 font-medium mt-1">Itemized BOQ & Rate Transparency</p>
+                  <p className="text-xs text-stone-400 font-medium mt-1">Clear Title Guarantee</p>
                 </div>
                 <div className="p-4 rounded-xl bg-stone-900 border border-stone-800">
-                  <h4 className="text-2xl font-bold text-white font-mono">10 Yrs</h4>
-                  <p className="text-xs text-stone-400 font-medium mt-1">Comprehensive Structural Warranty</p>
+                  <h4 className="text-2xl font-bold text-white font-mono">₹650 Cr+</h4>
+                  <p className="text-xs text-stone-400 font-medium mt-1">Real Estate Transacted</p>
                 </div>
               </div>
             </div>
@@ -84,16 +84,16 @@ export const AboutPage: React.FC = () => {
               <div className="relative rounded-2xl overflow-hidden border border-stone-800 shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80"
-                  alt="Architectural Planning Studio"
+                  alt="Real Estate Advisory Studio"
                   className="w-full h-[450px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-stone-900/90 border border-stone-800 backdrop-blur-md">
                   <p className="text-xs text-stone-300 italic">
-                    "A structure is only as enduring as the integrity of the people who pour its foundation."
+                    "True value in property is not merely square footage—it is pristine title deed integrity and enduring market appreciation."
                   </p>
                   <p className="text-[11px] text-amber-400 font-semibold mt-1">
-                    — PK Developers Engineering Manifesto
+                    — PK Properties Advisory Charter
                   </p>
                 </div>
               </div>
@@ -113,7 +113,7 @@ export const AboutPage: React.FC = () => {
               </div>
               <h3 className="text-2xl font-extrabold text-white mb-3">Our Mission</h3>
               <p className="text-base text-stone-300 leading-relaxed">
-                Build quality spaces that combine functionality, durability and modern design. We transform blueprints into durable realities through engineering precision, certified high-grade materials, and an ethical code of conduct that respects our clients’ investments.
+                Deliver verified, high-value real estate opportunities that protect capital and maximize growth. We facilitate seamless property transactions through rigorous legal diligence, market-tested valuations, and an ethical code of conduct that respects our clients’ investments.
               </p>
             </div>
 
@@ -124,7 +124,7 @@ export const AboutPage: React.FC = () => {
               </div>
               <h3 className="text-2xl font-extrabold text-white mb-3">Our Vision</h3>
               <p className="text-base text-stone-300 leading-relaxed">
-                Become a trusted construction and development brand known for quality and professionalism across every sector we touch. We aim to set the benchmark in South India for sustainable building, zero-defect execution, and lifelong customer trust.
+                Become South India’s most trusted real estate dealership and property consultancy, celebrated for zero-litigation records, transparent dealing, and lifelong client relationships.
               </p>
             </div>
           </div>
@@ -163,18 +163,18 @@ export const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* OUR TEAM (PLACEHOLDERS AS REQUESTED) */}
+      {/* OUR TEAM */}
       <section className="py-24 bg-stone-900/40 border-t border-stone-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-3">
-              Leadership & Engineering
+              Leadership & Advisory
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-              Our Core Team
+              Our Leadership & Advisory Team
             </h2>
             <p className="mt-3 text-sm text-stone-400">
-              Experienced professionals driving structural design, project management, and site supervision.
+              Experienced real estate professionals, property transaction consultants, and legal specialists driving deals across Bengaluru.
             </p>
           </div>
 
@@ -218,19 +218,19 @@ export const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* QUALITY COMMITMENT */}
+      {/* QUALITY & DUE DILIGENCE COMMITMENT */}
       <section className="py-24 bg-stone-950 border-t border-stone-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 text-amber-400 text-xs font-semibold uppercase tracking-wider">
-                Uncompromising Standards
+                Uncompromising Due Diligence
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                Our Absolute Commitment to Quality
+                Our Absolute Commitment to Clean Titles
               </h2>
               <p className="text-base text-stone-300 leading-relaxed">
-                Quality is not an afterthought at PK Developers; it is engineered into our processes. Every project is subjected to rigorous multi-tiered quality control protocols at every milestone.
+                Trust is our currency at PK Properties. Every transaction is subjected to rigorous multi-tiered legal and regulatory protocols before any agreement is signed.
               </p>
 
               <div className="space-y-4 pt-2">
@@ -239,9 +239,9 @@ export const AboutPage: React.FC = () => {
                     <ShieldCheck className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-white">Certified Materials Only</h4>
+                    <h4 className="text-sm font-bold text-white">30-Year Title Search & EC Audit</h4>
                     <p className="text-xs text-stone-400 mt-1">
-                      Batch testing of Fe 550D TMT rebar, 53-grade OPC cement, and ready-mix concrete with slump and cube compressive records.
+                      Comprehensive verification of Nil-Encumbrance certificates, flow of title deeds, and lineage trace over three decades.
                     </p>
                   </div>
                 </div>
@@ -251,9 +251,9 @@ export const AboutPage: React.FC = () => {
                     <HardHat className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-white">Full-Time Site Engineers</h4>
+                    <h4 className="text-sm font-bold text-white">Physical Survey & Boundary Demarcation</h4>
                     <p className="text-xs text-stone-400 mt-1">
-                      Dedicated civil engineers on site every single hour to supervise casting, shuttering, MEP conduit routing, and worker safety.
+                      On-site DGPS and total station surveys to verify physical land boundaries against municipal village maps and approved layouts.
                     </p>
                   </div>
                 </div>
@@ -263,9 +263,9 @@ export const AboutPage: React.FC = () => {
                     <Award className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-white">250+ Point Pre-Delivery Audit</h4>
+                    <h4 className="text-sm font-bold text-white">Direct & Zero-Brokerage Transparency</h4>
                     <p className="text-xs text-stone-400 mt-1">
-                      Exhaustive snag list rectification covering acoustic seals, thermal imaging, plumbing pressure drop tests, and marble leveling.
+                      Clear transaction terms with no hidden escalation, no layered intermediaries, and transparent statutory fee calculations.
                     </p>
                   </div>
                 </div>
@@ -276,14 +276,14 @@ export const AboutPage: React.FC = () => {
               <div className="rounded-2xl overflow-hidden border border-stone-800 h-64">
                 <img
                   src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80"
-                  alt="Material Batch Testing"
+                  alt="Legal Document Audit"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="rounded-2xl overflow-hidden border border-stone-800 h-64 translate-y-6">
                 <img
                   src="https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=800&q=80"
-                  alt="Site Quality Supervision"
+                  alt="Property Site Inspection"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -294,11 +294,11 @@ export const AboutPage: React.FC = () => {
 
       {/* CTA */}
       <CTASection
-        title="Work With PK Developers"
-        subtitle="Partner with a construction and development team that values your vision, your investment, and the durability of the spaces you inhabit."
-        primaryButtonText="Work With PK Developers"
+        title="Partner With PK Properties"
+        subtitle="Connect with a property consultancy that values your capital, eliminates litigation risk, and delivers high-appreciation real estate."
+        primaryButtonText="Inquire About Properties"
         primaryButtonLink="/get-a-quote"
-        secondaryButtonText="Explore Our Work"
+        secondaryButtonText="Explore Verified Inventory"
         secondaryButtonLink="/projects"
       />
     </>

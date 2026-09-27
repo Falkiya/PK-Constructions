@@ -53,13 +53,13 @@ export const HomePage: React.FC = () => {
                 Who We Are
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
-                Pioneering Modern Construction With Unwavering Integrity.
+                Bengaluru's Trusted Real Estate Consultants & Property Dealers.
               </h2>
               <p className="text-base text-stone-300 leading-relaxed">
-                At PK Developers, we do not simply pour concrete and erect steel frames; we engineer environments where businesses flourish and families thrive. Founded on the tenets of radical transparency, uncompromising material specifications, and architectural ingenuity, we have established ourselves as one of the most reliable construction partners in South India.
+                At PK Properties, we connect individuals, families, and corporate enterprises with verified, clear-title real estate assets. Founded on the tenets of radical transparency, accurate fair-market valuation, and zero hidden brokerage confusion, we have established ourselves as one of the most reliable property dealing firms in South India.
               </p>
               <p className="text-base text-stone-400 leading-relaxed">
-                Our interdisciplinary team of certified civil engineers, master architects, and Project Management Consultants (PMC) coordinates every facet of your build—from geotechnical soil audits and municipal permits to intricate bespoke millwork and final zero-defect handover.
+                Our in-house team of experienced property consultants, legal advocates, and technical valuation experts oversees every dimension of your deal—from 30-year mother deed title searches and RERA compliance to sub-registrar deed execution and turnkey villa construction on acquired plots.
               </p>
 
               <div className="pt-4 flex flex-wrap items-center gap-4">
@@ -67,7 +67,7 @@ export const HomePage: React.FC = () => {
                   to="/about"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-amber-400 hover:text-amber-300"
                 >
-                  <span>Learn more about our philosophy & team</span>
+                  <span>Learn more about our advisory philosophy & team</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -78,7 +78,7 @@ export const HomePage: React.FC = () => {
               <div className="relative rounded-2xl overflow-hidden border border-stone-800 shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80"
-                  alt="PK Developers Signature Estate"
+                  alt="PK Properties Signature Villa"
                   className="w-full h-[440px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent" />
@@ -88,12 +88,12 @@ export const HomePage: React.FC = () => {
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="text-2xl font-extrabold text-amber-400 font-mono">15+</div>
-                      <div className="text-xs text-stone-300 font-medium">Years of Construction Mastery</div>
+                      <div className="text-xs text-stone-300 font-medium">Years in Real Estate</div>
                     </div>
                     <div className="h-8 w-px bg-stone-800" />
                     <div>
-                      <div className="text-2xl font-extrabold text-white font-mono">180+</div>
-                      <div className="text-xs text-stone-300 font-medium">Delivered Structures</div>
+                      <div className="text-2xl font-extrabold text-white font-mono">500+</div>
+                      <div className="text-xs text-stone-300 font-medium">Closed Property Deals</div>
                     </div>
                   </div>
                 </div>
@@ -130,17 +130,17 @@ export const HomePage: React.FC = () => {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                What We Build
+                Our Advisory Scope
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                Our Construction Services
+                Property & Real Estate Services
               </h2>
             </div>
             <Link
               to="/services"
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-400 hover:text-amber-300"
             >
-              <span>View All 8 Specializations</span>
+              <span>View All 5 Services</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -197,16 +197,16 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* SECTION 5: FEATURED PROJECTS */}
+      {/* SECTION 5: FEATURED PROPERTIES */}
       <section className="py-24 bg-stone-900/50 border-t border-stone-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                Featured Portfolio
+                Featured Inventory
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                Landmarks Engineered by PK Developers
+                Featured Properties & Prime Deals
               </h2>
             </div>
             <div className="flex items-center gap-3">
@@ -214,7 +214,7 @@ export const HomePage: React.FC = () => {
                 to="/projects"
                 className="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-400 hover:text-amber-300"
               >
-                <span>View Full Portfolio</span>
+                <span>View Full Property Showcase</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -231,14 +231,14 @@ export const HomePage: React.FC = () => {
               to="/projects"
               className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-stone-800 hover:bg-stone-700 text-white font-semibold text-sm transition-all"
             >
-              <span>Explore All Residential & Commercial Projects</span>
+              <span>Explore All Residential, Commercial & Plot Listings</span>
               <ArrowRight className="w-4 h-4 text-amber-400" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* SECTION 6: WHY CHOOSE PK DEVELOPERS */}
+      {/* SECTION 6: WHY CHOOSE PK PROPERTIES */}
       <section className="py-24 bg-stone-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -246,10 +246,10 @@ export const HomePage: React.FC = () => {
               Our Differentiators
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-              Why Discerning Clients Choose PK Developers
+              Why Buyers & Investors Choose PK Properties
             </h2>
             <p className="mt-4 text-base text-stone-400">
-              We stand apart through structured engineering rigor, radical cost clarity, and an obsession with lasting architectural beauty.
+              We stand apart through 30-year legal due diligence, transparent market pricing, and an unwavering commitment to dispute-free property acquisition.
             </p>
           </div>
 
@@ -277,23 +277,23 @@ export const HomePage: React.FC = () => {
               to="/why-choose-us"
               className="inline-flex items-center gap-2 text-sm font-semibold text-amber-400 hover:text-amber-300"
             >
-              <span>Explore our complete quality commitment & standards</span>
+              <span>Explore our legal verification standards & guarantees</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* SECTION 7: CONSTRUCTION PROCESS */}
+      {/* SECTION 7: PROPERTY TRANSACTION PROCESS */}
       <section className="py-24 bg-stone-900/40 border-t border-stone-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                Predictable Excellence
+                Dispute-Free Experience
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                Our 9-Step Construction Journey
+                Our 6-Step Property Transaction Journey
               </h2>
             </div>
             <Link
