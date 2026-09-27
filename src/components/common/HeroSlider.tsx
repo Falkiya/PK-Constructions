@@ -192,14 +192,14 @@ export const HeroSlider: React.FC = () => {
 
   return (
     <section 
-      className="relative min-h-[92vh] flex items-center justify-center overflow-hidden pt-20 pb-16 lg:py-24 select-none"
+      className="relative min-h-[70vh] md:min-h-[82vh] flex flex-col justify-end overflow-hidden pt-24 pb-12 select-none"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
       aria-roledescription="carousel"
-      aria-label="PK Developers Featured Capabilities"
+      aria-label="PK Properties Sliding Showcase"
     >
       {/* Background Slides with Crossfade and Subtle Zoom */}
       <div className="absolute inset-0 z-0">
@@ -215,7 +215,7 @@ export const HeroSlider: React.FC = () => {
               <img
                 src={slide.image}
                 alt={slide.badge}
-                className={`w-full h-full object-cover object-center filter brightness-[0.38] transition-transform duration-[7000ms] ease-out ${
+                className={`w-full h-full object-cover object-center filter brightness-[0.80] transition-transform duration-[7000ms] ease-out ${
                   isActive ? 'scale-105' : 'scale-100'
                 }`}
               />
@@ -223,55 +223,44 @@ export const HeroSlider: React.FC = () => {
           );
         })}
 
-        {/* Cinematic Gradient Overlays */}
-        <div className="absolute inset-0 z-20 bg-gradient-to-t from-stone-950 via-stone-950/70 to-stone-950/60 pointer-events-none" />
-        <div className="absolute inset-0 z-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent pointer-events-none" />
+        {/* Cinematic Gradient Overlays - Soft so images are crisp and visible */}
+        <div className="absolute inset-0 z-20 bg-gradient-to-t from-stone-950 via-stone-950/30 to-stone-950/40 pointer-events-none" />
+        <div className="absolute inset-0 z-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-500/5 via-transparent to-transparent pointer-events-none" />
       </div>
 
-      {/* Main Slide Content */}
-      <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-6 sm:pt-10 flex flex-col items-center">
-        {/* Top Badges */}
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-stone-900/90 border border-amber-500/40 text-amber-400 text-xs sm:text-sm font-semibold shadow-xl backdrop-blur-md transition-all duration-300">
-            <span className="w-2 h-2 rounded-full bg-amber-500 animate-ping" />
+      {/* Screen Reader H1 for SEO */}
+      <h1 className="sr-only">
+        PK Properties - Premier Real Estate, Luxury Villas & Commercial Property Dealing
+      </h1>
+
+      {/* Slide Navigation & Controls Overlay */}
+      <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center w-full">
+        {/* Category Badge & Stat Badge */}
+        <div className="flex flex-wrap items-center justify-center gap-2.5 mb-5">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-stone-900/80 border border-amber-500/40 text-amber-400 text-xs sm:text-sm font-semibold shadow-xl backdrop-blur-md transition-all duration-300">
+            <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping" />
             <span>{activeSlide.badge}</span>
           </div>
 
-          <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-stone-800/80 border border-stone-700 text-stone-300 text-xs font-medium backdrop-blur-md">
+          <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-stone-900/70 border border-stone-700/80 text-stone-300 text-xs font-medium backdrop-blur-md">
             <Sparkles className="w-3.5 h-3.5 text-amber-400" />
             <span>{activeSlide.statBadge}</span>
           </div>
         </div>
 
-        {/* Dynamic Animated Headline */}
-        <div key={`title-${currentSlide}`} className="transition-all duration-500">
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.15] sm:leading-[1.1] max-w-5xl mx-auto font-display">
-            {activeSlide.titlePrefix}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-amber-500">
-              {activeSlide.titleHighlight}
-            </span>
-            {activeSlide.titleSuffix}
-          </h1>
-
-          {/* Subtitle */}
-          <p className="mt-5 sm:mt-6 text-sm sm:text-lg md:text-xl text-stone-300 max-w-3xl mx-auto leading-relaxed font-normal">
-            {activeSlide.subtitle}
-          </p>
-        </div>
-
-        {/* CTAs */}
-        <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+        {/* Quick Action CTAs */}
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
           <Link
             to={activeSlide.primaryCta.path}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-base shadow-2xl shadow-amber-500/30 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
+            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm shadow-xl shadow-amber-500/25 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
           >
             <span>{activeSlide.primaryCta.label}</span>
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-4 h-4" />
           </Link>
 
           <Link
             to={activeSlide.secondaryCta.path}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-stone-900/80 hover:bg-stone-800 text-stone-100 hover:text-white border border-stone-700 font-semibold text-base backdrop-blur-md transition-all duration-200"
+            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-stone-900/80 hover:bg-stone-800 text-stone-200 hover:text-white border border-stone-700/80 font-medium text-sm backdrop-blur-md transition-all duration-200"
           >
             <span>{activeSlide.secondaryCta.label}</span>
             <ChevronRight className="w-4 h-4 text-stone-400" />
@@ -279,7 +268,7 @@ export const HeroSlider: React.FC = () => {
         </div>
 
         {/* Interactive Slide Tabs / Indicators */}
-        <div className="mt-12 sm:mt-14 w-full max-w-3xl">
+        <div className="w-full max-w-3xl">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
             {slides.map((slide, idx) => {
               const isSelected = idx === currentSlide;
