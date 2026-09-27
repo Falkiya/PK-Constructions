@@ -35,8 +35,8 @@ export const ContactPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Contact Us | Real Estate & Property Advisory | PK Properties"
-        description="Get in touch with PK Properties. Speak with senior real estate consultants, schedule a private property inspection, or visit our advisory office in Bengaluru."
+        title="Contact Us | Real Estate & Property Advisory | PK Developers"
+        description="Get in touch with PK Developers. Speak with senior real estate consultants, schedule a private property inspection, or visit our advisory office in Bengaluru."
         canonicalPath="/contact"
       />
 
@@ -45,7 +45,7 @@ export const ContactPage: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80"
-            alt="Contact PK Properties"
+            alt="Contact PK Developers"
             className="w-full h-full object-cover opacity-25"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-stone-950/90" />
@@ -256,7 +256,7 @@ export const ContactPage: React.FC = () => {
                           <option value="Commercial Office Space">Lease Commercial Office Space</option>
                           <option value="Retail Facility">Buy Commercial Showroom / Retail</option>
                           <option value="Plots & Land">Buy Approved Plot / Land Parcel</option>
-                          <option value="Sell Property">Sell My Property With PK Properties</option>
+                          <option value="Sell Property">Sell My Property With PK Developers</option>
                           <option value="Real Estate Investment">Real Estate Investment / Pre-Leased</option>
                           <option value="Turnkey Construction">Turnkey Villa Construction on My Plot</option>
                         </select>

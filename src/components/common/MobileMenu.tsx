@@ -43,8 +43,8 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             PK
           </div>
           <div>
-            <span className="font-bold tracking-tight text-white text-base">PK PROPERTIES</span>
-            <span className="block text-[9px] uppercase tracking-widest text-stone-400">Real Estate</span>
+            <span className="font-bold tracking-tight text-white text-base">PK DEVELOPERS</span>
+            <span className="block text-[9px] uppercase tracking-widest text-stone-400">Properties & Real Estate</span>
           </div>
         </Link>
         <button

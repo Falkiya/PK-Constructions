@@ -56,7 +56,7 @@ export const HomePage: React.FC = () => {
                 Bengaluru's Trusted Real Estate Consultants & Property Dealers.
               </h2>
               <p className="text-base text-stone-300 leading-relaxed">
-                At PK Properties, we connect individuals, families, and corporate enterprises with verified, clear-title real estate assets. Founded on the tenets of radical transparency, accurate fair-market valuation, and zero hidden brokerage confusion, we have established ourselves as one of the most reliable property dealing firms in South India.
+                At PK Developers, we connect individuals, families, and corporate enterprises with verified, clear-title real estate assets. Founded on the tenets of radical transparency, accurate fair-market valuation, and zero hidden brokerage confusion, we have established ourselves as one of the most reliable property dealing firms in South India.
               </p>
               <p className="text-base text-stone-400 leading-relaxed">
                 Our in-house team of experienced property consultants, legal advocates, and technical valuation experts oversees every dimension of your deal—from 30-year mother deed title searches and RERA compliance to sub-registrar deed execution and turnkey villa construction on acquired plots.
@@ -78,7 +78,7 @@ export const HomePage: React.FC = () => {
               <div className="relative rounded-2xl overflow-hidden border border-stone-800 shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80"
-                  alt="PK Properties Signature Villa"
+                  alt="PK Developers Signature Villa"
                   className="w-full h-[440px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent" />
@@ -238,7 +238,7 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* SECTION 6: WHY CHOOSE PK PROPERTIES */}
+      {/* SECTION 6: WHY CHOOSE PK DEVELOPERS */}
       <section className="py-24 bg-stone-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -246,7 +246,7 @@ export const HomePage: React.FC = () => {
               Our Differentiators
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-              Why Buyers & Investors Choose PK Properties
+              Why Buyers & Investors Choose PK Developers
             </h2>
             <p className="mt-4 text-base text-stone-400">
               We stand apart through 30-year legal due diligence, transparent market pricing, and an unwavering commitment to dispute-free property acquisition.

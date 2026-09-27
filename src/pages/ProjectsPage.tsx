@@ -75,7 +75,7 @@ export const ProjectsPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Verified Properties & Deals | Real Estate Inventory | PK Properties"
+        title="Verified Properties & Deals | Real Estate Inventory | PK Developers"
         description="Browse our curated inventory of verified residential luxury villas, Grade-A commercial towers, approved plotted developments, and high-yield real estate investments."
         canonicalPath="/projects"
       />
@@ -85,7 +85,7 @@ export const ProjectsPage: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80"
-            alt="PK Properties Real Estate Portfolio"
+            alt="PK Developers Real Estate Portfolio"
             className="w-full h-full object-cover opacity-25"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-stone-950/90" />

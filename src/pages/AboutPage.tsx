@@ -22,8 +22,8 @@ export const AboutPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="About Us | Property Dealing & Real Estate Advisory | PK Properties"
-        description="Learn the story, mission, core values, and legal integrity that define PK Properties & Developers. Transforming real estate transactions with 100% verified titles and complete transparency."
+        title="About Us | Property Dealing & Real Estate Advisory | PK Developers"
+        description="Learn the story, mission, core values, and legal integrity that define PK Developers. Transforming real estate transactions with 100% verified titles and complete transparency."
         canonicalPath="/about"
       />
 
@@ -32,7 +32,7 @@ export const AboutPage: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=2000&q=80"
-            alt="PK Properties Team"
+            alt="PK Developers Team"
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-stone-950/90" />
@@ -40,7 +40,7 @@ export const AboutPage: React.FC = () => {
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-6">
-            About PK Properties
+            About PK Developers
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
             “Integrity in Every Transaction.”
@@ -63,10 +63,10 @@ export const AboutPage: React.FC = () => {
                 Redefining Real Estate Dealing Through Institutional Due Diligence
               </h2>
               <p className="text-base text-stone-300 leading-relaxed">
-                PK Properties was established with a singular conviction: that acquiring or selling real estate should inspire confidence rather than anxiety. Too often in the property sector, buyers and investors face opaque title records, hidden brokerage layers, and unvetted land boundaries.
+                PK Developers was established with a singular conviction: that acquiring or selling real estate should inspire confidence rather than anxiety. Too often in the property sector, buyers and investors face opaque title records, hidden brokerage layers, and unvetted land boundaries.
               </p>
               <p className="text-base text-stone-400 leading-relaxed">
-                We rebuilt the paradigm from the ground up. By combining comprehensive legal title searches (30-year Encumbrance Certificates, BDA/BBMP khata checks) with disciplined micro-market valuation, PK Properties helps families, high-net-worth investors, and corporates acquire verified residential villas, commercial assets, and approved layout plots with zero litigation risk.
+                We rebuilt the paradigm from the ground up. By combining comprehensive legal title searches (30-year Encumbrance Certificates, BDA/BBMP khata checks) with disciplined micro-market valuation, PK Developers helps families, high-net-worth investors, and corporates acquire verified residential villas, commercial assets, and approved layout plots with zero litigation risk.
               </p>
               <div className="pt-2 grid grid-cols-2 gap-4">
                 <div className="p-4 rounded-xl bg-stone-900 border border-stone-800">
@@ -93,7 +93,7 @@ export const AboutPage: React.FC = () => {
                     "True value in property is not merely square footage—it is pristine title deed integrity and enduring market appreciation."
                   </p>
                   <p className="text-[11px] text-amber-400 font-semibold mt-1">
-                    — PK Properties Advisory Charter
+                    — PK Developers Advisory Charter
                   </p>
                 </div>
               </div>
@@ -230,7 +230,7 @@ export const AboutPage: React.FC = () => {
                 Our Absolute Commitment to Clean Titles
               </h2>
               <p className="text-base text-stone-300 leading-relaxed">
-                Trust is our currency at PK Properties. Every transaction is subjected to rigorous multi-tiered legal and regulatory protocols before any agreement is signed.
+                Trust is our currency at PK Developers. Every transaction is subjected to rigorous multi-tiered legal and regulatory protocols before any agreement is signed.
               </p>
 
               <div className="space-y-4 pt-2">
@@ -294,7 +294,7 @@ export const AboutPage: React.FC = () => {
 
       {/* CTA */}
       <CTASection
-        title="Partner With PK Properties"
+        title="Partner With PK Developers"
         subtitle="Connect with a property consultancy that values your capital, eliminates litigation risk, and delivers high-appreciation real estate."
         primaryButtonText="Inquire About Properties"
         primaryButtonLink="/get-a-quote"

@@ -40,7 +40,7 @@ export const CommercialProjectsPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Commercial Real Estate & Office Spaces | For Lease & Sale | PK Properties"
+        title="Commercial Real Estate & Office Spaces | For Lease & Sale | PK Developers"
         description="Explore Grade-A commercial tech parks, corporate office headquarters, and high-footfall retail destinations across Bengaluru available for lease and institutional investment."
         canonicalPath="/projects/commercial"
       />

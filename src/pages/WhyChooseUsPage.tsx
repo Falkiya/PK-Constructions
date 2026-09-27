@@ -64,8 +64,8 @@ export const WhyChooseUsPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Why Choose PK Properties | Verified Real Estate & Clear Title Assurance"
-        description="Discover why discerning homebuyers, commercial tenants, and high-net-worth investors choose PK Properties as their trusted real estate dealers and property consultants."
+        title="Why Choose PK Developers | Verified Real Estate & Clear Title Assurance"
+        description="Discover why discerning homebuyers, commercial tenants, and high-net-worth investors choose PK Developers as their trusted real estate dealers and property consultants."
         canonicalPath="/why-choose-us"
       />
 
@@ -74,7 +74,7 @@ export const WhyChooseUsPage: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=2000&q=80"
-            alt="PK Properties Quality Real Estate"
+            alt="PK Developers Quality Real Estate"
             className="w-full h-full object-cover opacity-25"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-stone-950/90" />
@@ -85,10 +85,10 @@ export const WhyChooseUsPage: React.FC = () => {
             The PK Advantage
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
-            Why Choose PK Properties
+            Why Choose PK Developers
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-stone-300 max-w-3xl mx-auto leading-relaxed">
-            Acquiring real estate or selling high-value property requires absolute legal certainty, accurate market valuation, and ethical representation. Here is why clients rely on PK Properties.
+            Acquiring real estate or selling high-value property requires absolute legal certainty, accurate market valuation, and ethical representation. Here is why clients rely on PK Developers.
           </p>
         </div>
       </section>
@@ -133,7 +133,7 @@ export const WhyChooseUsPage: React.FC = () => {
                 “100% Clear Titles. Zero Compromises.”
               </h2>
               <p className="text-base sm:text-lg text-stone-300 leading-relaxed">
-                When you partner with PK Properties, you gain more than a property broker; you gain an institutional real estate advisor committed to protecting your capital. We examine every survey number, verify every parent deed, and ensure every transaction is completely secure.
+                When you partner with PK Developers, you gain more than a property broker; you gain an institutional real estate advisor committed to protecting your capital. We examine every survey number, verify every parent deed, and ensure every transaction is completely secure.
               </p>
 
               <div className="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -167,7 +167,7 @@ export const WhyChooseUsPage: React.FC = () => {
 
       {/* CTA */}
       <CTASection
-        title="Experience The PK Properties Difference"
+        title="Experience The PK Developers Difference"
         subtitle="Let’s discuss your property acquisition, plot investment, or commercial requirement with our senior real estate consultants."
         primaryButtonText="Inquire About Properties"
         primaryButtonLink="/get-a-quote"

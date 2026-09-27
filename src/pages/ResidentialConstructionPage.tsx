@@ -72,8 +72,8 @@ export const ResidentialConstructionPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Residential Property Dealing & Acquisition | Luxury Villas | PK Properties"
-        description="Acquire verified luxury residential properties, independent villas, and penthouses in Bengaluru with PK Properties. 100% clear titles and expert real estate advisory."
+        title="Residential Property Dealing & Acquisition | Luxury Villas | PK Developers"
+        description="Acquire verified luxury residential properties, independent villas, and penthouses in Bengaluru with PK Developers. 100% clear titles and expert real estate advisory."
         canonicalPath="/services/residential-construction"
       />
 
@@ -129,7 +129,7 @@ export const ResidentialConstructionPage: React.FC = () => {
                 Homes Verified For Generational Peace of Mind
               </h2>
               <p className="text-base text-stone-300 leading-relaxed">
-                Acquiring a luxury residence is one of life’s most profound milestones. At PK Properties, we treat every transaction with institutional due diligence. Our advisory model integrates 30-year title searches, RERA compliance checks, encumbrance verification, and fair-market valuation.
+                Acquiring a luxury residence is one of life’s most profound milestones. At PK Developers, we treat every transaction with institutional due diligence. Our advisory model integrates 30-year title searches, RERA compliance checks, encumbrance verification, and fair-market valuation.
               </p>
               <p className="text-base text-stone-400 leading-relaxed">
                 Whether purchasing a cantilevered modernist sanctuary in Whitefield, an exclusive manor in Sadashivanagar, or a gated golf estate, our team manages the entire transaction lifecycle—from title deed vetting to registrar office execution.

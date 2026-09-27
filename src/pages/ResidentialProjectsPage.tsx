@@ -47,7 +47,7 @@ export const ResidentialProjectsPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Residential Properties & Luxury Villas | Buy & Invest | PK Properties"
+        title="Residential Properties & Luxury Villas | Buy & Invest | PK Developers"
         description="Explore our verified residential portfolio of luxury villas, independent bungalows, and premium gated estates across Bengaluru with 100% clear titles."
         canonicalPath="/projects/residential"
       />

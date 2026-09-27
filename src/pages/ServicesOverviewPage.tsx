@@ -36,8 +36,8 @@ export const ServicesOverviewPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Real Estate & Property Dealing Services | PK Properties"
-        description="Explore PK Properties full suite of property dealing services: residential villas, commercial leasing, approved layout plots, real estate investment advisory, and turnkey villa development."
+        title="Real Estate & Property Dealing Services | PK Developers"
+        description="Explore PK Developers full suite of property dealing services: residential villas, commercial leasing, approved layout plots, real estate investment advisory, and turnkey villa development."
         canonicalPath="/services"
       />
 
@@ -46,7 +46,7 @@ export const ServicesOverviewPage: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=2000&q=80"
-            alt="PK Properties Real Estate Services"
+            alt="PK Developers Real Estate Services"
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-stone-950/90" />
@@ -143,7 +143,7 @@ export const ServicesOverviewPage: React.FC = () => {
             100% Clear Titles & Institutional Due Diligence
           </h2>
           <p className="mt-4 text-base text-stone-300 leading-relaxed">
-            By unifying property sourcing, 30-year title legal verification, direct owner negotiation, and registrar paperwork under one roof, PK Properties eliminates hidden middlemen, prevents fraud, and delivers verified real estate assets with peace of mind.
+            By unifying property sourcing, 30-year title legal verification, direct owner negotiation, and registrar paperwork under one roof, PK Developers eliminates hidden middlemen, prevents fraud, and delivers verified real estate assets with peace of mind.
           </p>
           <div className="mt-8">
             <Link

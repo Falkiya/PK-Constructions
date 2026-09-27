@@ -39,8 +39,8 @@ export const ProcessPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Our 6-Step Property Transaction Process | Clean Titles & Registration | PK Properties"
-        description="Discover how PK Properties guarantees 100% clear titles, transparent valuation, and effortless registration through our disciplined 6-step property transaction roadmap."
+        title="Our 6-Step Property Transaction Process | Clean Titles & Registration | PK Developers"
+        description="Discover how PK Developers guarantees 100% clear titles, transparent valuation, and effortless registration through our disciplined 6-step property transaction roadmap."
         canonicalPath="/process"
       />
 
@@ -49,7 +49,7 @@ export const ProcessPage: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=2000&q=80"
-            alt="PK Properties Transaction Process"
+            alt="PK Developers Transaction Process"
             className="w-full h-full object-cover opacity-25"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-stone-950/90" />

@@ -19,7 +19,7 @@ export const projectsData: Project[] = [
     reraId: 'PRM/KA/RERA/1251/310/PR/240218/006412',
     description: 'An exclusive clear-title luxury modern residence featuring cantilevered architectural volumes, private basalt reflection pool, double-height atrium, and fully automated European fittings in a prime Whitefield enclave.',
     challenge: 'Securing a clear, unencumbered 12,000 sq.ft plot with 30-year mother title verification in high-demand Whitefield while coordinating customized structural engineering approvals with BBMP.',
-    solution: 'PK Properties conducted rigorous title due diligence, obtained nil-encumbrance clearance, negotiated direct pricing from the estate owner, and managed the complete legal deed execution.',
+    solution: 'PK Developers conducted rigorous title due diligence, obtained nil-encumbrance clearance, negotiated direct pricing from the estate owner, and managed the complete legal deed execution.',
     features: [
       {
         category: 'Architecture',
@@ -112,7 +112,7 @@ export const projectsData: Project[] = [
     reraId: 'PRM/KA/RERA/1251/310/PR/230911/005210',
     description: 'A pre-leased IGBC Platinum-certified commercial office complex occupied by Fortune 500 tech firms, providing an immediate 9.2% net rental yield with long-term 9-year institutional leases.',
     challenge: 'Structuring a complex cross-border commercial acquisition involving multiple international corporate leases, escrow mechanisms, and statutory environmental clearances.',
-    solution: 'PK Properties structured the commercial deal, audited tenant covenants, verified fire NOC and occupancy certifications, and closed the transaction within 45 days.',
+    solution: 'PK Developers structured the commercial deal, audited tenant covenants, verified fire NOC and occupancy certifications, and closed the transaction within 45 days.',
     features: [
       {
         category: 'Architecture',
@@ -190,7 +190,7 @@ export const projectsData: Project[] = [
     reraId: 'PRM/KA/RERA/1251/310/PR/231105/005844',
     description: 'An expansive traditional-contemporary courtyard manor that reinterprets heritage veranda architecture on a private 24,000 sq.ft wooded plot with private lap pool and subterranean wine cellar.',
     challenge: 'High-value private resale requiring confidential representation, buyer qualification, and comprehensive municipal khata consolidation across two adjacent land parcels.',
-    solution: 'PK Properties handled the exclusive private mandate, consolidated the E-Khata documentation, and represented both buyer and seller with complete fiduciary integrity.',
+    solution: 'PK Developers handled the exclusive private mandate, consolidated the E-Khata documentation, and represented both buyer and seller with complete fiduciary integrity.',
     features: [
       {
         category: 'Architecture',
@@ -264,7 +264,7 @@ export const projectsData: Project[] = [
     reraId: 'PRM/KA/RERA/1251/310/PR/240112/006122',
     description: 'A landmark 16-storey commercial corporate tower in the heart of Bengaluru Central CBD, offering column-free floor plates, 100% DG backup, and 3 levels of subterranean parking.',
     challenge: 'Coordinating high-profile corporate lease negotiations for multiple financial banking suites with tailored lock-in terms and parking bay allocations.',
-    solution: 'PK Properties structured multi-floor corporate leases with multinational banks and consulting firms, maximizing occupancy and achieving record rental yields.',
+    solution: 'PK Developers structured multi-floor corporate leases with multinational banks and consulting firms, maximizing occupancy and achieving record rental yields.',
     features: [
       {
         category: 'Architecture',
@@ -402,7 +402,7 @@ export const projectsData: Project[] = [
     reraId: 'PRM/KA/RERA/1251/310/PR/240502/006811',
     description: 'An open-air experiential shopping, dining, and retail plaza on the high-density Outer Ring Road corridor, offering pre-leased anchor retail spaces with projected 8.8% rental yields.',
     challenge: 'Investor allocation for individual commercial showroom units while securing national retail brand anchor commitments in advance.',
-    solution: 'PK Properties structured early investor purchase options backed by guaranteed pre-lease agreements with national F&B and fashion brands.',
+    solution: 'PK Developers structured early investor purchase options backed by guaranteed pre-lease agreements with national F&B and fashion brands.',
     features: [
       {
         category: 'Architecture',
@@ -467,7 +467,7 @@ export const projectsData: Project[] = [
     reraId: 'PRM/KA/RERA/1251/310/PR/230815/005520',
     description: 'An ultra-exclusive boutique residence with just 12 full-floor homes in prime 100 Feet Road Indiranagar, featuring private elevator lobbies, wrap-around balconies, and Italian marble finishes.',
     challenge: 'Very high demand with low inventory requiring quick verification of high-net-worth buyers and streamlined legal execution.',
-    solution: 'PK Properties conducted private viewings, managed seller negotiations, and facilitated instant clear-title registration with 100% bank loan approval coordination.',
+    solution: 'PK Developers conducted private viewings, managed seller negotiations, and facilitated instant clear-title registration with 100% bank loan approval coordination.',
     features: [
       {
         category: 'Architecture',
@@ -532,7 +532,7 @@ export const projectsData: Project[] = [
     reraId: 'PRM/KA/RERA/1251/310/PR/240320/006619',
     description: 'Premium RERA and BDA approved residential layout plots in a master-planned 28-acre gated community featuring underground electricity, wide asphalt roads, clubhouse, and landscaped parks.',
     challenge: 'Ensuring 100% legal compliance including conversion orders, layout sanctions, and individual E-Khata issuance for all 160 individual plot parcels.',
-    solution: 'PK Properties vetted the layout master plan, verified all municipal conversion sanctions, and provides end-to-end plot registration and turnkey construction support.',
+    solution: 'PK Developers vetted the layout master plan, verified all municipal conversion sanctions, and provides end-to-end plot registration and turnkey construction support.',
     features: [
       {
         category: 'Architecture',

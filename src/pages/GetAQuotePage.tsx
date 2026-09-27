@@ -82,8 +82,8 @@ export const GetAQuotePage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Property Inquiry & Real Estate Advisory | PK Properties"
-        description="Submit your property requirements to receive verified clear-title listings, market valuation reports, and personalized real estate guidance from PK Properties."
+        title="Property Inquiry & Real Estate Advisory | PK Developers"
+        description="Submit your property requirements to receive verified clear-title listings, market valuation reports, and personalized real estate guidance from PK Developers."
         canonicalPath="/get-a-quote"
       />
 
@@ -92,7 +92,7 @@ export const GetAQuotePage: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80"
-            alt="Property Inquiry PK Properties"
+            alt="Property Inquiry PK Developers"
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-stone-950/90" />
@@ -270,7 +270,7 @@ export const GetAQuotePage: React.FC = () => {
                             <option value="Lease Commercial Office Space">Lease Commercial Office Space</option>
                             <option value="Buy Commercial Showroom / Retail Space">Buy Commercial Showroom / Retail</option>
                             <option value="Buy Approved Plot / Land Parcel">Buy Approved Plot / Land Parcel</option>
-                            <option value="Sell My Property">Sell My Property With PK Properties</option>
+                            <option value="Sell My Property">Sell My Property With PK Developers</option>
                             <option value="Real Estate Investment / Pre-Leased">Real Estate Investment / Pre-Leased Asset</option>
                             <option value="Turnkey Villa Construction on My Plot">Turnkey Villa Construction on My Plot</option>
                           </select>
@@ -420,7 +420,7 @@ export const GetAQuotePage: React.FC = () => {
                       <div className="p-4 rounded-xl bg-stone-950/80 border border-stone-800 space-y-2">
                         <div className="flex items-center gap-2 text-xs font-bold text-amber-400">
                           <ShieldCheck className="w-4 h-4" />
-                          <span>PK Properties Fiduciary Pledge</span>
+                          <span>PK Developers Fiduciary Pledge</span>
                         </div>
                         <p className="text-xs text-stone-400 leading-relaxed">
                           Your contact information and requirements remain 100% confidential. We only share verified clear-title properties directly from authentic owners and institutional builders with zero spam.

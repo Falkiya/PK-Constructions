@@ -6,7 +6,7 @@ export const servicesData: ServiceItem[] = [
     slug: 'residential-construction',
     title: 'Residential Property Dealing & Sales',
     shortDescription: 'Buying, selling, and resale of luxury architectural villas, premium penthouses, and gated community residences.',
-    fullDescription: 'PK Properties represents discerning buyers and sellers in high-value residential property transactions. We offer a curated inventory of verified luxury villas, duplex penthouses, and prime residential apartments across Bengaluru with 100% legal title verification, fair-market valuation, and transparent closing.',
+    fullDescription: 'PK Developers represents discerning buyers and sellers in high-value residential property transactions. We offer a curated inventory of verified luxury villas, duplex penthouses, and prime residential apartments across Bengaluru with 100% legal title verification, fair-market valuation, and transparent closing.',
     icon: 'Home',
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
     keyBenefits: [
@@ -90,7 +90,7 @@ export const servicesData: ServiceItem[] = [
     slug: 'project-management',
     title: 'Real Estate Investment Advisory & High-Yield Assets',
     shortDescription: 'Data-driven investment strategies, pre-leased commercial acquisitions, and high-ROI property portfolio management.',
-    fullDescription: 'PK Properties guides high-net-worth individuals, NRIs, and institutional investors toward high-performing real estate assets. We analyze micro-market infrastructure developments, metro extensions, and rental demand trends to maximize capital growth and steady cashflows.',
+    fullDescription: 'PK Developers guides high-net-worth individuals, NRIs, and institutional investors toward high-performing real estate assets. We analyze micro-market infrastructure developments, metro extensions, and rental demand trends to maximize capital growth and steady cashflows.',
     icon: 'ClipboardCheck',
     image: 'https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=1200&q=80',
     keyBenefits: [

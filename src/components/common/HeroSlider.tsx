@@ -39,7 +39,7 @@ const slides: SlideData[] = [
     titlePrefix: 'Connecting You With ',
     titleHighlight: 'Verified,',
     titleSuffix: ' Prime Properties.',
-    subtitle: 'PK Properties specializes in high-value residential villas, Grade-A commercial tech hubs, and high-appreciation investment plots with 100% legal title verification.',
+    subtitle: 'PK Developers specializes in high-value residential villas, Grade-A commercial tech hubs, and high-appreciation investment plots with 100% legal title verification.',
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80',
     primaryCta: {
       label: 'Explore Properties',
@@ -199,7 +199,7 @@ export const HeroSlider: React.FC = () => {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
       aria-roledescription="carousel"
-      aria-label="PK Properties Sliding Showcase"
+      aria-label="PK Developers Sliding Showcase"
     >
       {/* Background Slides with Crossfade and Subtle Zoom */}
       <div className="absolute inset-0 z-0">
@@ -230,7 +230,7 @@ export const HeroSlider: React.FC = () => {
 
       {/* Screen Reader H1 for SEO */}
       <h1 className="sr-only">
-        PK Properties - Premier Real Estate, Luxury Villas & Commercial Property Dealing
+        PK Developers - Premier Real Estate, Luxury Villas & Commercial Property Dealing
       </h1>
 
       {/* Slide Navigation & Controls Overlay */}

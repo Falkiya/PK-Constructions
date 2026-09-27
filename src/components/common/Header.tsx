@@ -113,11 +113,11 @@ export const Header: React.FC = () => {
             <div>
               <div className="flex items-center gap-1">
                 <span className="text-xl font-bold tracking-tight text-white group-hover:text-amber-400 transition-colors">
-                  PK PROPERTIES
+                  PK DEVELOPERS
                 </span>
               </div>
               <p className="text-[10px] tracking-widest uppercase text-stone-400 font-medium">
-                Real Estate & Property Dealing
+                Properties & Real Estate
               </p>
             </div>
           </Link>

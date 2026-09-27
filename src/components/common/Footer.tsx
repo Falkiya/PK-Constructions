@@ -64,16 +64,16 @@ export const Footer: React.FC = () => {
               </div>
               <div>
                 <span className="text-xl font-bold tracking-tight text-white">
-                  PK PROPERTIES
+                  PK DEVELOPERS
                 </span>
                 <p className="text-[10px] tracking-widest uppercase text-stone-400 font-medium">
-                  Real Estate & Property Dealing
+                  Properties & Real Estate
                 </p>
               </div>
             </Link>
 
             <p className="text-sm text-stone-400 leading-relaxed max-w-sm">
-              PK Properties & Developers is Bengaluru's premier real estate consultancy, property dealer, and investment advisory firm. We specialize in verified residential villas, prime commercial leases, approved layout plots, and strategic land acquisitions with 100% clear titles and full legal vetting.
+              PK Developers is Bengaluru's premier real estate consultancy, property dealer, and investment advisory firm. We specialize in verified residential villas, prime commercial leases, approved layout plots, and strategic land acquisitions with 100% clear titles and full legal vetting.
             </p>
 
             <div className="flex items-center gap-3 pt-2">
@@ -175,7 +175,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link to="/about" className="text-stone-400 hover:text-amber-400 transition-colors">
-                  About PK Properties
+                  About PK Developers
                 </Link>
               </li>
               <li>
@@ -190,7 +190,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link to="/why-choose-us" className="text-stone-400 hover:text-amber-400 transition-colors">
-                  Why Choose PK Properties
+                  Why Choose PK Developers
                 </Link>
               </li>
               <li>
@@ -241,7 +241,7 @@ export const Footer: React.FC = () => {
       <div className="border-t border-stone-800/80 bg-stone-950 py-6 text-xs text-stone-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p>
-            © {new Date().getFullYear()} PK Properties & Developers. All Rights Reserved. 100% Clear Titles & Verified Real Estate.
+            © {new Date().getFullYear()} PK Developers. All Rights Reserved. 100% Clear Titles & Verified Real Estate.
           </p>
           <div className="flex items-center gap-6">
             <Link to="/privacy-policy" className="hover:text-stone-300 transition-colors">

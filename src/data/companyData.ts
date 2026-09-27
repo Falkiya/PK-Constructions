@@ -104,7 +104,7 @@ export const teamMembers: TeamMember[] = [
     name: 'P. K. Verma',
     role: 'Founder & Principal Real Estate Advisor',
     experience: '22+ Years in Real Estate & Property Dealing',
-    bio: 'Founded PK Properties with a mission to deliver radical transparency, verified clear-title transactions, and premier investment advisory across South India.',
+    bio: 'Founded PK Developers with a mission to deliver radical transparency, verified clear-title transactions, and premier investment advisory across South India.',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
     specialization: 'High-Value Property Deals, Land Acquisition & Real Estate Investment'
   },
@@ -145,7 +145,7 @@ export const testimonialsData: Testimonial[] = [
     projectName: 'The Lumina Modern Villa',
     projectType: 'Luxury Villa Purchase (₹6.8 Cr)',
     rating: 5,
-    comment: 'Finding an authentic clear-title luxury villa in Whitefield was daunting until we met PK Properties. Their legal team inspected 30 years of documentation, negotiated a stellar deal with the seller, and coordinated registration effortlessly.',
+    comment: 'Finding an authentic clear-title luxury villa in Whitefield was daunting until we met PK Developers. Their legal team inspected 30 years of documentation, negotiated a stellar deal with the seller, and coordinated registration effortlessly.',
     image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
     date: 'February 2025'
   },
@@ -156,7 +156,7 @@ export const testimonialsData: Testimonial[] = [
     projectName: 'Vertex Corporate Tech Hub',
     projectType: 'Commercial Office Space Lease (45,000 sq.ft)',
     rating: 5,
-    comment: 'PK Properties secured prime commercial floor-plates for our tech headquarters on the Outer Ring Road with flexible lease terms and pre-fitted infrastructure. Truly professional commercial property dealers.',
+    comment: 'PK Developers secured prime commercial floor-plates for our tech headquarters on the Outer Ring Road with flexible lease terms and pre-fitted infrastructure. Truly professional commercial property dealers.',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
     date: 'November 2024'
   },
@@ -167,7 +167,7 @@ export const testimonialsData: Testimonial[] = [
     projectName: 'Serenity Palms Gated Villa Plots',
     projectType: 'RERA Villa Plot Investment (2 Plots)',
     rating: 5,
-    comment: 'Being overseas, we needed complete trust and clear titles. PK Properties facilitated video walkthroughs, shared verified RERA approvals, and managed the entire power of attorney registration seamlessly. Highly recommended!',
+    comment: 'Being overseas, we needed complete trust and clear titles. PK Developers facilitated video walkthroughs, shared verified RERA approvals, and managed the entire power of attorney registration seamlessly. Highly recommended!',
     image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=80',
     date: 'August 2024'
   }
@@ -176,8 +176,8 @@ export const testimonialsData: Testimonial[] = [
 export const contactInfo = {
   phone: '+91 (080) 4567-8900',
   phoneAlt: '+91 98765-43210',
-  email: 'info@pkproperties.com',
-  emailSales: 'deals@pkproperties.com',
+  email: 'info@pkdevelopers.com',
+  emailSales: 'deals@pkdevelopers.com',
   whatsapp: '+919876543210',
   whatsappDisplay: '+91 98765-43210',
   address: 'PK Business Towers, 4th Floor, 100 Feet Road, Indiranagar, Bengaluru, Karnataka 560038',
