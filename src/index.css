@@ -33,3 +33,22 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #d97706;
 }
+
+/* Hero Slider Progress Animation */
+@keyframes slideProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.animate-slide-progress {
+  animation: slideProgress 6.5s linear forwards;
+}
+
+.animate-slide-progress.paused {
+  animation-play-state: paused;
+}
+

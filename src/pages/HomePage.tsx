@@ -20,6 +20,7 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { SEOHead } from '../components/common/SEOHead';
+import { HeroSlider } from '../components/common/HeroSlider';
 import { ProjectCard } from '../components/common/ProjectCard';
 import { CTASection } from '../components/common/CTASection';
 import { projectsData } from '../data/projectsData';
@@ -39,76 +40,8 @@ export const HomePage: React.FC = () => {
         canonicalPath="/"
       />
 
-      {/* SECTION 1: HERO */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-24">
-        {/* Background Image with dark architectural overlay */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=2000&q=80"
-            alt="PK Developers Construction Project"
-            className="w-full h-full object-cover object-center brightness-40 filter"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/60 to-stone-950/70" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-900/90 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-semibold mb-6 shadow-xl backdrop-blur-md">
-            <span className="w-2 h-2 rounded-full bg-amber-500 animate-ping" />
-            <span>Excellence in Civil Infrastructure & Luxury Architecture</span>
-          </div>
-
-          {/* Main H1 */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] max-w-5xl mx-auto">
-            Building With <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-amber-500">Purpose,</span> Precision & Permanence.
-          </h1>
-
-          {/* Subtitle */}
-          <p className="mt-6 text-base sm:text-lg md:text-xl text-stone-300 max-w-3xl mx-auto leading-relaxed font-normal">
-            PK Developers crafts bespoke residential villas, high-performance commercial hubs, and architectural marvels engineered to stand the test of time.
-          </p>
-
-          {/* CTAs */}
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              to="/get-a-quote"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-base shadow-2xl shadow-amber-500/30 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
-            >
-              <span>Start Your Project</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-
-            <Link
-              to="/projects"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-stone-900/80 hover:bg-stone-800 text-stone-100 hover:text-white border border-stone-700 font-semibold text-base backdrop-blur-md transition-all duration-200"
-            >
-              <span>Explore Projects</span>
-              <ChevronRight className="w-4 h-4 text-stone-400" />
-            </Link>
-          </div>
-
-          {/* Trust Highlights */}
-          <div className="mt-16 pt-8 border-t border-stone-800/80 max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
-            <div className="flex items-center gap-2.5">
-              <ShieldCheck className="w-5 h-5 text-amber-500 shrink-0" />
-              <span className="text-xs sm:text-sm text-stone-300 font-medium">10-Year Structural Guarantee</span>
-            </div>
-            <div className="flex items-center gap-2.5">
-              <Award className="w-5 h-5 text-amber-500 shrink-0" />
-              <span className="text-xs sm:text-sm text-stone-300 font-medium">ISO 9001:2015 Certified QA</span>
-            </div>
-            <div className="flex items-center gap-2.5">
-              <CheckCircle className="w-5 h-5 text-amber-500 shrink-0" />
-              <span className="text-xs sm:text-sm text-stone-300 font-medium">Transparent Itemized BOQ</span>
-            </div>
-            <div className="flex items-center gap-2.5">
-              <Sparkles className="w-5 h-5 text-amber-500 shrink-0" />
-              <span className="text-xs sm:text-sm text-stone-300 font-medium">Turnkey Civil Delivery</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* SECTION 1: HERO SLIDER */}
+      <HeroSlider />
 
       {/* SECTION 2: COMPANY INTRODUCTION */}
       <section className="py-20 bg-stone-950">
