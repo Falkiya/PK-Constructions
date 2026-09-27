@@ -142,12 +142,12 @@ export const WhyChooseUsPage: React.FC = () => {
                   <p className="text-xs text-stone-400 mt-1 font-medium">Clear Title Guarantee</p>
                 </div>
                 <div className="p-4 rounded-xl bg-stone-950/80 border border-stone-800">
-                  <h4 className="text-xl font-bold text-white font-mono">₹650 Cr+</h4>
-                  <p className="text-xs text-stone-400 mt-1 font-medium">Real Estate Transacted</p>
+                  <h4 className="text-xl font-bold text-white font-mono">30-Year</h4>
+                  <p className="text-xs text-stone-400 mt-1 font-medium">Title & EC Verification</p>
                 </div>
                 <div className="p-4 rounded-xl bg-stone-950/80 border border-stone-800">
-                  <h4 className="text-xl font-bold text-emerald-400 font-mono">500+</h4>
-                  <p className="text-xs text-stone-400 mt-1 font-medium">Deals Successfully Closed</p>
+                  <h4 className="text-xl font-bold text-emerald-400 font-mono">Direct</h4>
+                  <p className="text-xs text-stone-400 mt-1 font-medium">Verified Owner Deals</p>
                 </div>
               </div>
 

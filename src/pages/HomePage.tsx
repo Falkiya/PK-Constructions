@@ -25,7 +25,7 @@ import { ProjectCard } from '../components/common/ProjectCard';
 import { CTASection } from '../components/common/CTASection';
 import { projectsData } from '../data/projectsData';
 import { servicesData } from '../data/servicesData';
-import { companyStats, companyValues, processSteps, testimonialsData, contactInfo } from '../data/companyData';
+import { companyStats, companyValues, processSteps, contactInfo } from '../data/companyData';
 import { galleryItems } from '../data/galleryData';
 
 export const HomePage: React.FC = () => {
@@ -103,10 +103,10 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* SECTION 3: KEY STATISTICS */}
+      {/* SECTION 3: CORE VALUE PILLARS */}
       <section className="py-14 bg-stone-900 border-y border-stone-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {companyStats.map((stat, idx) => (
               <div key={idx} className="space-y-1">
                 <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-amber-400 font-mono tracking-tight">
@@ -378,77 +378,17 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* SECTION 9: TESTIMONIALS */}
-      <section className="py-24 bg-stone-900/60 border-y border-stone-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-3">
-              Client Feedback
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-              What Our Project Partners Say
-            </h2>
-            <p className="mt-3 text-sm text-stone-400">
-              Verified feedback from homeowners, corporate clients, and project trustees.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonialsData.map((test) => (
-              <div
-                key={test.id}
-                className="p-8 rounded-2xl bg-stone-900 border border-stone-800 flex flex-col justify-between space-y-6 shadow-xl"
-              >
-                <div className="space-y-4">
-                  <div className="flex items-center gap-1 text-amber-400">
-                    {[...Array(test.rating)].map((_, i) => (
-                      <span key={i} className="text-base">★</span>
-                    ))}
-                  </div>
-                  <p className="text-sm text-stone-300 leading-relaxed italic">
-                    "{test.comment}"
-                  </p>
-                </div>
-
-                <div className="pt-4 border-t border-stone-800/80 flex items-center gap-3">
-                  <img
-                    src={test.image}
-                    alt={test.clientName}
-                    className="w-11 h-11 rounded-full object-cover border border-amber-500/30"
-                  />
-                  <div>
-                    <h4 className="text-sm font-bold text-white">{test.clientName}</h4>
-                    <p className="text-xs text-amber-400">{test.clientRole}</p>
-                    <p className="text-[11px] text-stone-500">{test.projectName}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <Link
-              to="/testimonials"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-amber-400 hover:text-amber-300"
-            >
-              <span>Read all verified project references</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 10: CALL-TO-ACTION */}
+      {/* CALL-TO-ACTION */}
       <CTASection
-        title="Start Your Project With PK Developers"
-        subtitle="Book a preliminary technical consultation with our senior project engineers. We review your plot, budget constraints, and provide an initial feasibility assessment."
-        primaryButtonText="Start Your Project"
+        title="Acquire or Sell Verified Properties With PK Developers"
+        subtitle="Book a consultation with our senior real estate advisors. We evaluate your residential, commercial, or plot requirements with 100% legal title assurance."
+        primaryButtonText="Inquire Property"
         primaryButtonLink="/get-a-quote"
-        secondaryButtonText="Explore Projects"
+        secondaryButtonText="Explore Verified Inventory"
         secondaryButtonLink="/projects"
       />
 
-      {/* SECTION 11: CONTACT PREVIEW */}
+      {/* CONTACT PREVIEW */}
       <section className="py-20 bg-stone-950 border-t border-stone-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -457,10 +397,10 @@ export const HomePage: React.FC = () => {
                 Get In Touch
               </div>
               <h2 className="text-3xl font-extrabold text-white">
-                Visit Our Engineering Studio or Schedule a Site Audit
+                Visit Our Property Advisory Desk or Schedule a Private Inspection
               </h2>
               <p className="text-sm text-stone-400 leading-relaxed">
-                Whether you have an architectural drawing ready for tender or are evaluating land for development, our team is at your disposal.
+                Whether you are acquiring a luxury villa, leasing commercial office space, or looking to sell prime real estate with verified clear titles, our advisory team is at your service.
               </p>
 
               <div className="space-y-3 pt-2 text-sm">

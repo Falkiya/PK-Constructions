@@ -328,7 +328,7 @@ export const ContactPage: React.FC = () => {
                       className="w-full py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm uppercase tracking-wider shadow-xl shadow-amber-500/20 transition-all flex items-center justify-center gap-2"
                     >
                       <Send className="w-4 h-4" />
-                      <span>Submit Project Enquiry</span>
+                      <span>Submit Property Enquiry</span>
                     </button>
                   </form>
                 )}
@@ -348,9 +348,9 @@ export const ContactPage: React.FC = () => {
               <div className="w-14 h-14 rounded-2xl bg-amber-500/20 text-amber-400 border border-amber-500/40 flex items-center justify-center mx-auto animate-bounce">
                 <MapPin className="w-7 h-7" />
               </div>
-              <h3 className="text-xl font-bold text-white">PK Developers Engineering Headquarters</h3>
+              <h3 className="text-xl font-bold text-white">PK Developers Advisory Headquarters</h3>
               <p className="text-sm text-stone-400 max-w-md mx-auto">
-                PK Business Towers, 4th Floor, 100 Feet Road, Indiranagar, Bengaluru, Karnataka 560038
+                {contactInfo.address}
               </p>
               <div className="pt-2">
                 <a

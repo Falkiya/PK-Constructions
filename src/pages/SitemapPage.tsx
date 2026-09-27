@@ -80,12 +80,7 @@ export const SitemapPage: React.FC = () => {
                     <span className="text-xs font-mono text-stone-600">/gallery</span>
                   </Link>
                 </li>
-                <li>
-                  <Link to="/testimonials" className="text-stone-300 hover:text-amber-400 transition-colors flex items-center justify-between">
-                    <span>Client Testimonials</span>
-                    <span className="text-xs font-mono text-stone-600">/testimonials</span>
-                  </Link>
-                </li>
+
                 <li>
                   <Link to="/contact" className="text-stone-300 hover:text-amber-400 transition-colors flex items-center justify-between">
                     <span>Contact Information</span>

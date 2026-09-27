@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 import { SEOHead } from '../components/common/SEOHead';
 import { CTASection } from '../components/common/CTASection';
-import { companyValues, teamMembers } from '../data/companyData';
+import { companyValues } from '../data/companyData';
 
 export const AboutPage: React.FC = () => {
   return (
@@ -74,8 +74,8 @@ export const AboutPage: React.FC = () => {
                   <p className="text-xs text-stone-400 font-medium mt-1">Clear Title Guarantee</p>
                 </div>
                 <div className="p-4 rounded-xl bg-stone-900 border border-stone-800">
-                  <h4 className="text-2xl font-bold text-white font-mono">₹650 Cr+</h4>
-                  <p className="text-xs text-stone-400 font-medium mt-1">Real Estate Transacted</p>
+                  <h4 className="text-2xl font-bold text-white font-mono">30-Year</h4>
+                  <p className="text-xs text-stone-400 font-medium mt-1">Title & EC Legal Audit</p>
                 </div>
               </div>
             </div>
@@ -142,7 +142,7 @@ export const AboutPage: React.FC = () => {
               Our Core Values
             </h2>
             <p className="mt-3 text-sm text-stone-400">
-              The fundamental standards that govern every conversation, site decision, and structural pour.
+              The fundamental standards that govern every client consultation, property verification, and deed execution.
             </p>
           </div>
 
@@ -157,61 +157,6 @@ export const AboutPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{val.title}</h3>
                 <p className="text-sm text-stone-400 leading-relaxed">{val.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* OUR TEAM */}
-      <section className="py-24 bg-stone-900/40 border-t border-stone-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-3">
-              Leadership & Advisory
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-              Our Leadership & Advisory Team
-            </h2>
-            <p className="mt-3 text-sm text-stone-400">
-              Experienced real estate professionals, property transaction consultants, and legal specialists driving deals across Bengaluru.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member) => (
-              <div
-                key={member.id}
-                className="group rounded-2xl overflow-hidden bg-stone-900 border border-stone-800 hover:border-amber-500/40 transition-all"
-              >
-                <div className="relative h-64 overflow-hidden bg-stone-800">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent" />
-                  <div className="absolute bottom-3 left-3 right-3">
-                    <span className="text-[10px] text-amber-400 font-mono font-medium">
-                      {member.experience}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="p-5 space-y-2">
-                  <h3 className="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">
-                    {member.name}
-                  </h3>
-                  <p className="text-xs font-semibold text-amber-400">
-                    {member.role}
-                  </p>
-                  <p className="text-xs text-stone-400 leading-relaxed pt-1">
-                    {member.bio}
-                  </p>
-                  <div className="pt-2 border-t border-stone-800 text-[11px] text-stone-500">
-                    <span className="text-stone-400 font-medium">Focus:</span> {member.specialization}
-                  </div>
-                </div>
               </div>
             ))}
           </div>

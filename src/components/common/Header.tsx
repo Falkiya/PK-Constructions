@@ -369,16 +369,6 @@ export const Header: React.FC = () => {
               Why Choose Us
             </Link>
 
-            <Link
-              to="/testimonials"
-              className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
-                isActive('/testimonials')
-                  ? 'text-amber-400 bg-stone-900/60'
-                  : 'text-stone-300 hover:text-white hover:bg-stone-900/40'
-              }`}
-            >
-              Reviews
-            </Link>
 
             <Link
               to="/contact"

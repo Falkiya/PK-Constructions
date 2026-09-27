@@ -137,7 +137,7 @@ export const ProcessPage: React.FC = () => {
             “From First Consultation to Registered Deed Handover.”
           </h2>
           <p className="mt-4 text-base text-stone-300 leading-relaxed">
-            Our 6-step framework is proven across 500+ closed deals and ₹650 Cr+ transacted volume. It protects your capital, eliminates legal uncertainty, and delivers verified real estate assets.
+            Our 6-step framework protects your capital, eliminates legal uncertainty, and ensures every transaction is backed by 100% clear titles and authentic documentation.
           </p>
           <div className="mt-8">
             <Link

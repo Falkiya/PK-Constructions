@@ -227,15 +227,6 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             <span>Why Choose Us</span>
           </Link>
 
-          <Link
-            to="/testimonials"
-            onClick={onClose}
-            className={`flex items-center justify-between px-3 py-2.5 rounded-lg ${
-              isActive('/testimonials') ? 'text-amber-400 bg-stone-900' : 'text-stone-200 hover:bg-stone-900/60'
-            }`}
-          >
-            <span>Testimonials</span>
-          </Link>
 
           <Link
             to="/contact"

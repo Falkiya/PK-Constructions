@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Header } from './components/common/Header';
 import { Footer } from './components/common/Footer';
 import { FloatingActions } from './components/common/FloatingActions';
@@ -60,7 +60,7 @@ export const App: React.FC = () => {
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/process" element={<ProcessPage />} />
             <Route path="/why-choose-us" element={<WhyChooseUsPage />} />
-            <Route path="/testimonials" element={<TestimonialsPage />} />
+            <Route path="/testimonials" element={<Navigate to="/why-choose-us" replace />} />
 
             {/* Contact & Lead Gen */}
             <Route path="/contact" element={<ContactPage />} />

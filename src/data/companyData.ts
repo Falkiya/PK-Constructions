@@ -1,11 +1,10 @@
 import { ProcessStep, TeamMember, Testimonial, ValueItem } from '../types';
 
 export const companyStats = [
-  { value: '500+', label: 'Property Deals Closed', description: 'Proven track record in prime residential, commercial & land transactions' },
-  { value: '15+', label: 'Years in Real Estate', description: 'Expert property dealing, market valuation & legal advisory' },
-  { value: '₹650 Cr+', label: 'Property Transacted', description: 'High-value villas, corporate tech parks, retail spaces & plots' },
   { value: '100%', label: 'Clear Title Guarantee', description: 'Rigorous 30-year legal search, encumbrance check & municipal verification' },
-  { value: '98.5%', label: 'Client Referral Rate', description: 'Trusted by families, high-net-worth investors & corporate enterprises' }
+  { value: 'Direct', label: 'Owner Representation', description: 'Direct seller negotiation with zero hidden brokerage or markups' },
+  { value: 'RERA', label: 'Compliant & Approved', description: 'Vetted layout plots, residential developments & commercial properties' },
+  { value: 'End-to-End', label: 'Legal & Registration', description: 'Complete sub-registrar execution, deed conveyance & Khata transfer' }
 ];
 
 export const companyValues: ValueItem[] = [
@@ -98,88 +97,17 @@ export const processSteps: ProcessStep[] = [
   }
 ];
 
-export const teamMembers: TeamMember[] = [
-  {
-    id: 'team-1',
-    name: 'P. K. Verma',
-    role: 'Founder & Principal Real Estate Advisor',
-    experience: '22+ Years in Real Estate & Property Dealing',
-    bio: 'Founded PK Developers with a mission to deliver radical transparency, verified clear-title transactions, and premier investment advisory across South India.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
-    specialization: 'High-Value Property Deals, Land Acquisition & Real Estate Investment'
-  },
-  {
-    id: 'team-2',
-    name: 'Sarah Mathew',
-    role: 'Director — Luxury Residential Dealing',
-    experience: '16+ Years in Premium Real Estate Sales',
-    bio: 'Leads our luxury residential division, specializing in bespoke villas, penthouses, and gated community estates for high-net-worth clients.',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80',
-    specialization: 'Luxury Villas, Penthouses, Resale Advisory & Client Representation'
-  },
-  {
-    id: 'team-3',
-    name: 'Rajesh K. Nambiar',
-    role: 'VP — Commercial Properties & Corporate Leasing',
-    experience: '18+ Years in Commercial Real Estate',
-    bio: 'Manages Grade-A IT park office acquisitions, high-street retail spaces, and pre-leased investment assets with institutional tenants.',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80',
-    specialization: 'Commercial Leasing, Pre-Leased High-Yield Assets & Retail Deals'
-  },
-  {
-    id: 'team-4',
-    name: 'Ananya Deshmukh',
-    role: 'Head of Legal Due Diligence & Property Documentation',
-    experience: '12+ Years in Real Estate Law & RERA Compliance',
-    bio: 'Oversees 30-year title verifications, encumbrance audits, RERA compliance, and sub-registrar deed execution for 100% dispute-free transactions.',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80',
-    specialization: 'Property Title Verification, RERA Approvals, Khata Transfers & Deed Conveyance'
-  }
-];
+export const teamMembers: TeamMember[] = [];
 
-export const testimonialsData: Testimonial[] = [
-  {
-    id: 'test-1',
-    clientName: 'Dr. Vikramaditya Rao',
-    clientRole: 'Private Homeowner, Whitefield',
-    projectName: 'The Lumina Modern Villa',
-    projectType: 'Luxury Villa Purchase (₹6.8 Cr)',
-    rating: 5,
-    comment: 'Finding an authentic clear-title luxury villa in Whitefield was daunting until we met PK Developers. Their legal team inspected 30 years of documentation, negotiated a stellar deal with the seller, and coordinated registration effortlessly.',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
-    date: 'February 2025'
-  },
-  {
-    id: 'test-2',
-    clientName: 'Sanjay Krishnaswamy',
-    clientRole: 'Managing Director, Fintech Venture',
-    projectName: 'Vertex Corporate Tech Hub',
-    projectType: 'Commercial Office Space Lease (45,000 sq.ft)',
-    rating: 5,
-    comment: 'PK Developers secured prime commercial floor-plates for our tech headquarters on the Outer Ring Road with flexible lease terms and pre-fitted infrastructure. Truly professional commercial property dealers.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
-    date: 'November 2024'
-  },
-  {
-    id: 'test-3',
-    clientName: 'Meera & Arvind Shenoy',
-    clientRole: 'NRI Investors, Singapore',
-    projectName: 'Serenity Palms Gated Villa Plots',
-    projectType: 'RERA Villa Plot Investment (2 Plots)',
-    rating: 5,
-    comment: 'Being overseas, we needed complete trust and clear titles. PK Developers facilitated video walkthroughs, shared verified RERA approvals, and managed the entire power of attorney registration seamlessly. Highly recommended!',
-    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=80',
-    date: 'August 2024'
-  }
-];
+export const testimonialsData: Testimonial[] = [];
 
 export const contactInfo = {
-  phone: '+91 (080) 4567-8900',
-  phoneAlt: '+91 98765-43210',
+  phone: '+91 98765-43210',
+  phoneAlt: '+91 98765-43211',
   email: 'info@pkdevelopers.com',
   emailSales: 'deals@pkdevelopers.com',
   whatsapp: '+919876543210',
   whatsappDisplay: '+91 98765-43210',
-  address: 'PK Business Towers, 4th Floor, 100 Feet Road, Indiranagar, Bengaluru, Karnataka 560038',
+  address: 'Indiranagar, Bengaluru, Karnataka 560038',
   businessHours: 'Monday – Saturday: 9:00 AM – 7:30 PM | Sunday: By Appointment (Site Visits)'
 };
