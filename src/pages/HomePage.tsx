@@ -127,15 +127,14 @@ export const HomePage: React.FC = () => {
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="w-full h-full object-cover object-center scale-105 transition-transform duration-7000 ease-out"
+                className="w-full h-full object-cover object-center scale-100 transition-transform duration-7000 ease-out"
               />
             </div>
           ))}
 
-          {/* Sophisticated dark gradient overlays for perfect text legibility while showcasing buildings */}
-          <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#091527] via-[#091527]/85 to-[#091527]/30 sm:to-transparent" />
-          <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#091527] via-transparent to-black/35" />
-          <div className="absolute inset-0 z-10 bg-black/20" />
+          {/* Light, refined cover overlay so the photo slides are clearly visible while text is crisp */}
+          <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/75 via-black/45 to-black/15" />
+          <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#091527]/70 via-transparent to-black/25" />
         </div>
 
         {/* Foreground Content */}
@@ -143,19 +142,19 @@ export const HomePage: React.FC = () => {
           <div className="max-w-2xl text-left space-y-6">
             
             {/* Eyebrow */}
-            <div className="text-xs font-semibold tracking-[0.22em] uppercase text-[#c59b6d]">
+            <div className="text-xs font-semibold tracking-[0.22em] uppercase text-[#c59b6d] drop-shadow-sm">
               PREMIUM LIVING SPACES ——
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[58px] font-serif font-bold text-white tracking-tight leading-[1.12] drop-shadow-md">
+            <h1 className="text-4xl sm:text-5xl lg:text-[58px] font-serif font-bold text-white tracking-tight leading-[1.12] drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]">
               A Brighter <br />
               <span className="italic font-normal text-[#c59b6d]">Tomorrow</span> <br />
               <span className="text-[#c59b6d]">Starts Here</span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-slate-200 text-sm sm:text-base max-w-lg font-normal leading-relaxed drop-shadow">
+            <p className="text-slate-100 text-sm sm:text-base max-w-lg font-normal leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.85)]">
               Thoughtfully designed homes for a better,<br className="hidden sm:inline" /> more meaningful life.
             </p>
 
@@ -163,7 +162,7 @@ export const HomePage: React.FC = () => {
             <div className="flex flex-wrap items-center gap-4 pt-1 pb-4">
               <a
                 href={`tel:${contactInfo.phone}`}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-[#b68a5c] hover:bg-[#a67c4e] text-white font-medium text-sm transition-colors shadow-lg shadow-black/30"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-[#b68a5c] hover:bg-[#a67c4e] text-white font-medium text-sm transition-colors shadow-xl shadow-black/40"
               >
                 <Phone className="w-4 h-4 fill-white" />
                 <span>Call Now</span>
@@ -173,7 +172,7 @@ export const HomePage: React.FC = () => {
                 href="https://wa.me/919876543210"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-black/40 hover:bg-black/60 text-white font-medium text-sm border border-white/40 backdrop-blur-sm transition-colors shadow-lg"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-black/50 hover:bg-black/70 text-white font-medium text-sm border border-white/50 backdrop-blur-sm transition-colors shadow-xl"
               >
                 <MessageCircle className="w-4 h-4 text-white" />
                 <span>WhatsApp</span>
@@ -181,26 +180,26 @@ export const HomePage: React.FC = () => {
             </div>
 
             {/* Bottom 3 Badges with sleek gold outline icons */}
-            <div className="pt-6 border-t border-white/15 flex flex-wrap items-center gap-6 sm:gap-10">
+            <div className="pt-6 border-t border-white/20 flex flex-wrap items-center gap-6 sm:gap-10">
               <div className="flex items-center gap-3">
-                <HomeIcon className="w-5 h-5 text-[#c59b6d] shrink-0" strokeWidth={2} />
-                <div className="text-xs text-white leading-tight font-medium drop-shadow-sm">
+                <HomeIcon className="w-5 h-5 text-[#c59b6d] shrink-0 drop-shadow" strokeWidth={2} />
+                <div className="text-xs text-white leading-tight font-medium drop-shadow-[0_1px_6px_rgba(0,0,0,0.9)]">
                   <div>Quality</div>
                   <div>Construction</div>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
-                <Leaf className="w-5 h-5 text-[#c59b6d] shrink-0" strokeWidth={2} />
-                <div className="text-xs text-white leading-tight font-medium drop-shadow-sm">
+                <Leaf className="w-5 h-5 text-[#c59b6d] shrink-0 drop-shadow" strokeWidth={2} />
+                <div className="text-xs text-white leading-tight font-medium drop-shadow-[0_1px_6px_rgba(0,0,0,0.9)]">
                   <div>Prime</div>
                   <div>Locations</div>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
-                <Users className="w-5 h-5 text-[#c59b6d] shrink-0" strokeWidth={2} />
-                <div className="text-xs text-white leading-tight font-medium drop-shadow-sm">
+                <Users className="w-5 h-5 text-[#c59b6d] shrink-0 drop-shadow" strokeWidth={2} />
+                <div className="text-xs text-white leading-tight font-medium drop-shadow-[0_1px_6px_rgba(0,0,0,0.9)]">
                   <div>Trusted</div>
                   <div>by Families</div>
                 </div>
@@ -211,10 +210,10 @@ export const HomePage: React.FC = () => {
 
         {/* Script Watermark Overlay: "More Than Just Buildings" positioned on bottom-right of hero banner */}
         <div className="hidden sm:block absolute bottom-12 right-8 lg:right-16 z-20 pointer-events-none select-none text-right transform -rotate-3">
-          <span className="font-script text-4xl sm:text-5xl lg:text-6xl text-white/95 drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)] leading-none block font-bold">
+          <span className="font-script text-4xl sm:text-5xl lg:text-6xl text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)] leading-none block font-bold">
             More Than
           </span>
-          <span className="font-script text-4xl sm:text-5xl lg:text-6xl text-white/95 drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)] leading-none block mt-1 font-bold">
+          <span className="font-script text-4xl sm:text-5xl lg:text-6xl text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)] leading-none block mt-1 font-bold">
             Just Buildings
           </span>
         </div>
@@ -224,7 +223,7 @@ export const HomePage: React.FC = () => {
           type="button"
           onClick={prevSlide}
           aria-label="Previous Slide"
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-2.5 rounded-full bg-black/35 hover:bg-black/60 text-white backdrop-blur-md transition-all border border-white/10 hidden sm:flex items-center justify-center"
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-2.5 rounded-full bg-black/40 hover:bg-black/70 text-white backdrop-blur-md transition-all border border-white/20 hidden sm:flex items-center justify-center shadow-lg"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
@@ -232,7 +231,7 @@ export const HomePage: React.FC = () => {
           type="button"
           onClick={nextSlide}
           aria-label="Next Slide"
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-2.5 rounded-full bg-black/35 hover:bg-black/60 text-white backdrop-blur-md transition-all border border-white/10 hidden sm:flex items-center justify-center"
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-2.5 rounded-full bg-black/40 hover:bg-black/70 text-white backdrop-blur-md transition-all border border-white/20 hidden sm:flex items-center justify-center shadow-lg"
         >
           <ChevronRight className="w-5 h-5" />
         </button>
@@ -245,10 +244,10 @@ export const HomePage: React.FC = () => {
               type="button"
               onClick={() => setCurrentSlide(dotIndex)}
               aria-label={`Go to slide ${dotIndex + 1}`}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
+              className={`h-2 rounded-full transition-all duration-300 shadow-md ${
                 dotIndex === currentSlide
-                  ? 'w-7 bg-[#c59b6d]'
-                  : 'w-1.5 bg-white/40 hover:bg-white/80'
+                  ? 'w-8 bg-[#c59b6d]'
+                  : 'w-2 bg-white/50 hover:bg-white'
               }`}
             />
           ))}
