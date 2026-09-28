@@ -110,38 +110,38 @@ export const ProjectManagementPage: React.FC = () => {
       />
 
       {/* HERO */}
-      <section className="relative py-28 bg-stone-950 overflow-hidden border-b border-stone-800">
+      <section className="relative py-28 bg-slate-900 overflow-hidden border-b border-slate-800">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=2000&q=80"
             alt="Project Management and Site Supervision"
             className="w-full h-full object-cover opacity-25"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-stone-950/90" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/90" />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-6">
             Project Management Consultancy (PMC)
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
             Disciplined Project Management
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-stone-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="mt-6 text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
             Eliminating construction delays, budget overruns, and quality compromises through structured site supervision and engineering oversight.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/get-a-quote"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-base shadow-xl shadow-amber-500/25 transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-base shadow-xl shadow-blue-500/25 transition-all"
             >
               <span>Inquire About PMC Services</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               to="/process"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-stone-900 border border-stone-700 text-stone-200 hover:text-white font-medium text-base transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-slate-800 border border-slate-700 text-slate-200 hover:text-white font-medium text-base transition-all"
             >
               <span>Explore 9-Step Process</span>
             </Link>
@@ -150,16 +150,16 @@ export const ProjectManagementPage: React.FC = () => {
       </section>
 
       {/* 8 CORE MANAGEMENT PILLARS */}
-      <section className="py-24 bg-stone-950">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-50 text-blue-600 text-xs font-semibold uppercase tracking-wider mb-3">
               Total Site Control
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
               How PK Developers Manages Your Construction
             </h2>
-            <p className="mt-3 text-sm text-stone-400">
+            <p className="mt-3 text-sm text-slate-600">
               Eight institutional safeguards that protect your capital, your timeline, and your architectural legacy.
             </p>
           </div>
@@ -170,14 +170,14 @@ export const ProjectManagementPage: React.FC = () => {
               return (
                 <div
                   key={idx}
-                  className="p-6 rounded-2xl bg-stone-900/60 border border-stone-800 hover:border-amber-500/40 transition-colors flex flex-col justify-between"
+                  className="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all flex flex-col justify-between"
                 >
                   <div>
-                    <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
                       <IconComponent className="w-5 h-5" />
                     </div>
-                    <h3 className="text-base font-bold text-white mb-2">{p.title}</h3>
-                    <p className="text-xs text-stone-400 leading-relaxed">{p.description}</p>
+                    <h3 className="text-base font-bold text-slate-900 mb-2">{p.title}</h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">{p.description}</p>
                   </div>
                 </div>
               );
@@ -187,16 +187,16 @@ export const ProjectManagementPage: React.FC = () => {
       </section>
 
       {/* INTERACTIVE PROJECT-MANAGEMENT TIMELINE */}
-      <section className="py-24 bg-stone-900/40 border-t border-stone-800">
+      <section className="py-24 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-50 text-blue-600 text-xs font-semibold uppercase tracking-wider mb-3">
               Interactive Roadmap
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
               Interactive Project Management Timeline
             </h2>
-            <p className="mt-3 text-sm text-stone-400">
+            <p className="mt-3 text-sm text-slate-600">
               Click on any phase below to inspect the engineering oversight protocols, focus areas, and milestone KPIs.
             </p>
           </div>
@@ -210,17 +210,17 @@ export const ProjectManagementPage: React.FC = () => {
                 onClick={() => setActiveTimelineStep(idx)}
                 className={`p-4 rounded-xl text-left border transition-all ${
                   activeTimelineStep === idx
-                    ? 'bg-amber-500 text-stone-950 border-amber-400 shadow-xl shadow-amber-500/20'
-                    : 'bg-stone-900 text-stone-300 border-stone-800 hover:border-stone-700'
+                    ? 'bg-blue-600 text-white border-blue-600 shadow-lg shadow-blue-500/20'
+                    : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 shadow-sm'
                 }`}
               >
-                <span className={`block text-[11px] font-mono uppercase font-semibold ${activeTimelineStep === idx ? 'text-stone-950 font-bold' : 'text-amber-400'}`}>
+                <span className={`block text-[11px] font-mono uppercase font-semibold ${activeTimelineStep === idx ? 'text-white font-bold' : 'text-blue-600'}`}>
                   Phase 0{idx + 1}
                 </span>
                 <span className="block text-xs font-bold mt-1 line-clamp-1">
                   {item.stage.split(':')[1] || item.stage}
                 </span>
-                <span className={`block text-[10px] mt-1 ${activeTimelineStep === idx ? 'text-stone-900 font-medium' : 'text-stone-500'}`}>
+                <span className={`block text-[10px] mt-1 ${activeTimelineStep === idx ? 'text-blue-100 font-medium' : 'text-slate-500'}`}>
                   {item.timeframe}
                 </span>
               </button>
@@ -228,36 +228,36 @@ export const ProjectManagementPage: React.FC = () => {
           </div>
 
           {/* Active Phase Card Display */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-stone-900 border border-amber-500/30 shadow-2xl relative overflow-hidden">
+          <div className="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 shadow-xl relative overflow-hidden">
             <div className="flex flex-col lg:flex-row justify-between gap-8">
               <div className="space-y-4 max-w-2xl">
                 <div className="flex items-center gap-3">
-                  <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-mono font-bold">
+                  <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-mono font-bold">
                     {interactiveTimeline[activeTimelineStep].timeframe}
                   </span>
-                  <span className="text-xs text-stone-400">
+                  <span className="text-xs text-slate-500">
                     Focus: {interactiveTimeline[activeTimelineStep].focus}
                   </span>
                 </div>
 
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
                   {interactiveTimeline[activeTimelineStep].stage}
                 </h3>
 
-                <p className="text-base text-stone-300 leading-relaxed">
+                <p className="text-base text-slate-600 leading-relaxed">
                   {interactiveTimeline[activeTimelineStep].details}
                 </p>
               </div>
 
               {/* KPIs & Sign-offs */}
-              <div className="lg:w-80 p-6 rounded-2xl bg-stone-950 border border-stone-800 space-y-3 shrink-0">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-amber-400">
+              <div className="lg:w-80 p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 shrink-0">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-blue-700">
                   Mandatory Milestone Checkpoints
                 </h4>
                 <ul className="space-y-2.5 pt-1">
                   {interactiveTimeline[activeTimelineStep].kpis.map((kpi, kIdx) => (
-                    <li key={kIdx} className="flex items-center gap-2.5 text-xs text-stone-300">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <li key={kIdx} className="flex items-center gap-2.5 text-xs text-slate-700">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                       <span>{kpi}</span>
                     </li>
                   ))}

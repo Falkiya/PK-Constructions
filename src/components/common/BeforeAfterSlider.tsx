@@ -44,9 +44,9 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
   return (
     <div className="w-full">
       {title && (
-        <h4 className="text-lg font-bold text-white mb-3 flex items-center justify-between">
+        <h4 className="text-lg font-bold text-slate-900 mb-3 flex items-center justify-between">
           <span>{title}</span>
-          <span className="text-xs text-amber-400 font-normal">Drag slider to compare</span>
+          <span className="text-xs text-blue-600 font-medium">Drag slider to compare</span>
         </h4>
       )}
       <div
@@ -55,7 +55,7 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
         onTouchMove={handleTouchMove}
-        className="relative w-full h-[400px] md:h-[520px] rounded-2xl overflow-hidden select-none cursor-ew-resize border border-stone-800 shadow-2xl bg-stone-900"
+        className="relative w-full h-[400px] md:h-[520px] rounded-2xl overflow-hidden select-none cursor-ew-resize border border-slate-200 shadow-xl bg-slate-100"
       >
         {/* AFTER Image (Full background) */}
         <img
@@ -79,12 +79,12 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
 
         {/* Labels */}
         <div className="absolute top-4 left-4 z-20 pointer-events-none">
-          <span className="px-3 py-1 rounded-md bg-stone-950/80 backdrop-blur-md text-stone-200 text-xs font-semibold tracking-wide border border-stone-800">
+          <span className="px-3 py-1 rounded-md bg-slate-900/80 backdrop-blur-md text-white text-xs font-semibold tracking-wide border border-slate-700">
             {beforeLabel}
           </span>
         </div>
         <div className="absolute top-4 right-4 z-20 pointer-events-none">
-          <span className="px-3 py-1 rounded-md bg-amber-500/90 backdrop-blur-md text-stone-950 text-xs font-bold tracking-wide border border-amber-400">
+          <span className="px-3 py-1 rounded-md bg-blue-600/90 backdrop-blur-md text-white text-xs font-bold tracking-wide border border-blue-400">
             {afterLabel}
           </span>
         </div>
@@ -94,16 +94,16 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
           className="absolute top-0 bottom-0 z-30 flex items-center justify-center -translate-x-1/2 pointer-events-none"
           style={{ left: `${sliderPosition}%` }}
         >
-          <div className="w-0.5 h-full bg-amber-400 shadow-[0_0_10px_rgba(245,158,11,0.8)]" />
+          <div className="w-0.5 h-full bg-blue-500 shadow-[0_0_10px_rgba(37,99,235,0.8)]" />
           <div
             onMouseDown={handleMouseDown}
             onTouchStart={() => setIsDragging(true)}
             onTouchEnd={() => setIsDragging(false)}
-            className="pointer-events-auto absolute w-10 h-10 rounded-full bg-amber-500 text-stone-950 flex items-center justify-center shadow-xl border-2 border-stone-900 cursor-ew-resize hover:scale-110 active:scale-95 transition-transform"
+            className="pointer-events-auto absolute w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-xl border-2 border-white cursor-ew-resize hover:scale-110 active:scale-95 transition-transform"
           >
             <div className="flex items-center gap-1">
-              <div className="w-1 h-3 bg-stone-950 rounded-full" />
-              <div className="w-1 h-3 bg-stone-950 rounded-full" />
+              <div className="w-1 h-3 bg-white rounded-full" />
+              <div className="w-1 h-3 bg-white rounded-full" />
             </div>
           </div>
         </div>

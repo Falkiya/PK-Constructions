@@ -35,22 +35,22 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 lg:hidden flex flex-col bg-stone-950/98 backdrop-blur-xl animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 lg:hidden flex flex-col bg-white/98 backdrop-blur-xl animate-in fade-in duration-200">
       {/* Drawer Header */}
-      <div className="flex items-center justify-between px-5 py-4 border-b border-stone-800/80">
+      <div className="flex items-center justify-between px-5 py-4 border-b border-slate-200">
         <Link to="/" onClick={onClose} className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center font-bold text-stone-950 text-sm">
+          <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white text-sm shadow-md">
             PK
           </div>
           <div>
-            <span className="font-bold tracking-tight text-white text-base">PK DEVELOPERS</span>
-            <span className="block text-[9px] uppercase tracking-widest text-stone-400">Properties & Real Estate</span>
+            <span className="font-bold tracking-tight text-slate-900 text-base">PK DEVELOPERS</span>
+            <span className="block text-[9px] uppercase tracking-widest text-slate-500 font-semibold">Properties & Real Estate</span>
           </div>
         </Link>
         <button
           type="button"
           onClick={onClose}
-          className="p-2 rounded-xl bg-stone-900 border border-stone-800 text-stone-300 hover:text-white"
+          className="p-2 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 hover:text-slate-900"
           aria-label="Close menu"
         >
           <X className="w-5 h-5" />
@@ -64,7 +64,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           <Link
             to="/get-a-quote"
             onClick={onClose}
-            className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-stone-950 font-bold text-sm shadow-xl shadow-amber-500/20"
+            className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-xl shadow-blue-500/20 transition-colors"
           >
             <Sparkles className="w-4 h-4" />
             <span>Inquire About Properties</span>
@@ -73,12 +73,12 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         </div>
 
         {/* Navigation Links */}
-        <nav className="space-y-1 text-sm font-medium">
+        <nav className="space-y-1 text-sm font-semibold">
           <Link
             to="/"
             onClick={onClose}
             className={`flex items-center justify-between px-3 py-2.5 rounded-lg ${
-              location.pathname === '/' ? 'text-amber-400 bg-stone-900' : 'text-stone-200 hover:bg-stone-900/60'
+              location.pathname === '/' ? 'text-blue-600 bg-blue-50' : 'text-slate-700 hover:bg-slate-100'
             }`}
           >
             <span>Home</span>
@@ -88,69 +88,69 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             to="/about"
             onClick={onClose}
             className={`flex items-center justify-between px-3 py-2.5 rounded-lg ${
-              isActive('/about') ? 'text-amber-400 bg-stone-900' : 'text-stone-200 hover:bg-stone-900/60'
+              isActive('/about') ? 'text-blue-600 bg-blue-50' : 'text-slate-700 hover:bg-slate-100'
             }`}
           >
             <span>About Us</span>
           </Link>
 
           {/* Services Accordion */}
-          <div className="rounded-xl bg-stone-900/40 border border-stone-800/60 p-2">
+          <div className="rounded-xl bg-slate-50 border border-slate-200 p-2">
             <button
               type="button"
               onClick={() => setServicesExpanded(!servicesExpanded)}
-              className="w-full flex items-center justify-between px-2 py-2 text-stone-200 font-semibold text-sm"
+              className="w-full flex items-center justify-between px-2 py-2 text-slate-800 font-semibold text-sm"
             >
               <span>Property Services</span>
-              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${servicesExpanded ? 'rotate-180 text-amber-400' : ''}`} />
+              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${servicesExpanded ? 'rotate-180 text-blue-600' : ''}`} />
             </button>
             {servicesExpanded && (
-              <div className="mt-1 space-y-1 pl-2 border-l-2 border-stone-800 ml-2">
+              <div className="mt-1 space-y-1 pl-2 border-l-2 border-blue-200 ml-2">
                 <Link
                   to="/services"
                   onClick={onClose}
-                  className="block px-2 py-1.5 text-xs text-stone-400 hover:text-amber-400"
+                  className="block px-2 py-1.5 text-xs text-slate-600 hover:text-blue-600 font-medium"
                 >
                   All Services Overview
                 </Link>
                 <Link
                   to="/services/residential-construction"
                   onClick={onClose}
-                  className="flex items-center gap-2 px-2 py-1.5 text-xs text-stone-300 hover:text-amber-400"
+                  className="flex items-center gap-2 px-2 py-1.5 text-xs text-slate-700 hover:text-blue-600 font-medium"
                 >
-                  <Home className="w-3.5 h-3.5 text-amber-400" />
+                  <Home className="w-3.5 h-3.5 text-blue-600" />
                   Residential Property Dealing
                 </Link>
                 <Link
                   to="/services/commercial-construction"
                   onClick={onClose}
-                  className="flex items-center gap-2 px-2 py-1.5 text-xs text-stone-300 hover:text-amber-400"
+                  className="flex items-center gap-2 px-2 py-1.5 text-xs text-slate-700 hover:text-blue-600 font-medium"
                 >
-                  <Building2 className="w-3.5 h-3.5 text-amber-400" />
+                  <Building2 className="w-3.5 h-3.5 text-blue-600" />
                   Commercial Real Estate & Leasing
                 </Link>
                 <Link
                   to="/services/architecture-planning"
                   onClick={onClose}
-                  className="flex items-center gap-2 px-2 py-1.5 text-xs text-stone-300 hover:text-amber-400"
+                  className="flex items-center gap-2 px-2 py-1.5 text-xs text-slate-700 hover:text-blue-600 font-medium"
                 >
-                  <Compass className="w-3.5 h-3.5 text-amber-400" />
+                  <Compass className="w-3.5 h-3.5 text-blue-600" />
                   Plots & Land Acquisition
                 </Link>
                 <Link
                   to="/services/project-management"
                   onClick={onClose}
-                  className="flex items-center gap-2 px-2 py-1.5 text-xs text-stone-300 hover:text-amber-400"
+                  className="flex items-center gap-2 px-2 py-1.5 text-xs text-slate-700 hover:text-blue-600 font-medium"
                 >
-                  <ClipboardCheck className="w-3.5 h-3.5 text-amber-400" />
+                  <ClipboardCheck className="w-3.5 h-3.5 text-blue-600" />
                   Real Estate Investment Advisory
                 </Link>
                 <Link
                   to="/services/renovation-remodeling"
                   onClick={onClose}
-                  className="flex items-center gap-2 px-2 py-1.5 text-xs text-stone-300 hover:text-amber-400"
+                  className="flex items-center gap-2 px-2 py-1.5 text-xs text-slate-700 hover:text-blue-600 font-medium"
                 >
-                  <Hammer className="w-3.5 h-3.5 text-amber-400" />
+                  <Hammer className="w-3.5 h-3.5 text-blue-600" />
                   Turnkey Villa Development
                 </Link>
               </div>
@@ -158,39 +158,39 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* Properties Accordion */}
-          <div className="rounded-xl bg-stone-900/40 border border-stone-800/60 p-2">
+          <div className="rounded-xl bg-slate-50 border border-slate-200 p-2">
             <button
               type="button"
               onClick={() => setProjectsExpanded(!projectsExpanded)}
-              className="w-full flex items-center justify-between px-2 py-2 text-stone-200 font-semibold text-sm"
+              className="w-full flex items-center justify-between px-2 py-2 text-slate-800 font-semibold text-sm"
             >
               <span>Properties & Deals</span>
-              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${projectsExpanded ? 'rotate-180 text-amber-400' : ''}`} />
+              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${projectsExpanded ? 'rotate-180 text-blue-600' : ''}`} />
             </button>
             {projectsExpanded && (
-              <div className="mt-1 space-y-1 pl-2 border-l-2 border-stone-800 ml-2">
+              <div className="mt-1 space-y-1 pl-2 border-l-2 border-blue-200 ml-2">
                 <Link
                   to="/projects"
                   onClick={onClose}
-                  className="flex items-center gap-2 px-2 py-1.5 text-xs text-stone-300 hover:text-amber-400"
+                  className="flex items-center gap-2 px-2 py-1.5 text-xs text-slate-700 hover:text-blue-600 font-medium"
                 >
-                  <Layers className="w-3.5 h-3.5 text-amber-400" />
+                  <Layers className="w-3.5 h-3.5 text-blue-600" />
                   All Properties & Deals
                 </Link>
                 <Link
                   to="/projects/residential"
                   onClick={onClose}
-                  className="flex items-center gap-2 px-2 py-1.5 text-xs text-stone-300 hover:text-amber-400"
+                  className="flex items-center gap-2 px-2 py-1.5 text-xs text-slate-700 hover:text-blue-600 font-medium"
                 >
-                  <Home className="w-3.5 h-3.5 text-amber-400" />
+                  <Home className="w-3.5 h-3.5 text-blue-600" />
                   Luxury Residential
                 </Link>
                 <Link
                   to="/projects/commercial"
                   onClick={onClose}
-                  className="flex items-center gap-2 px-2 py-1.5 text-xs text-stone-300 hover:text-amber-400"
+                  className="flex items-center gap-2 px-2 py-1.5 text-xs text-slate-700 hover:text-blue-600 font-medium"
                 >
-                  <Building2 className="w-3.5 h-3.5 text-amber-400" />
+                  <Building2 className="w-3.5 h-3.5 text-blue-600" />
                   Commercial Spaces
                 </Link>
               </div>
@@ -201,7 +201,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             to="/process"
             onClick={onClose}
             className={`flex items-center justify-between px-3 py-2.5 rounded-lg ${
-              isActive('/process') ? 'text-amber-400 bg-stone-900' : 'text-stone-200 hover:bg-stone-900/60'
+              isActive('/process') ? 'text-blue-600 bg-blue-50' : 'text-slate-700 hover:bg-slate-100'
             }`}
           >
             <span>Our Process</span>
@@ -211,7 +211,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             to="/gallery"
             onClick={onClose}
             className={`flex items-center justify-between px-3 py-2.5 rounded-lg ${
-              isActive('/gallery') ? 'text-amber-400 bg-stone-900' : 'text-stone-200 hover:bg-stone-900/60'
+              isActive('/gallery') ? 'text-blue-600 bg-blue-50' : 'text-slate-700 hover:bg-slate-100'
             }`}
           >
             <span>Gallery</span>
@@ -221,18 +221,17 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             to="/why-choose-us"
             onClick={onClose}
             className={`flex items-center justify-between px-3 py-2.5 rounded-lg ${
-              isActive('/why-choose-us') ? 'text-amber-400 bg-stone-900' : 'text-stone-200 hover:bg-stone-900/60'
+              isActive('/why-choose-us') ? 'text-blue-600 bg-blue-50' : 'text-slate-700 hover:bg-slate-100'
             }`}
           >
             <span>Why Choose Us</span>
           </Link>
 
-
           <Link
             to="/contact"
             onClick={onClose}
             className={`flex items-center justify-between px-3 py-2.5 rounded-lg ${
-              isActive('/contact') ? 'text-amber-400 bg-stone-900' : 'text-stone-200 hover:bg-stone-900/60'
+              isActive('/contact') ? 'text-blue-600 bg-blue-50' : 'text-slate-700 hover:bg-slate-100'
             }`}
           >
             <span>Contact</span>
@@ -240,17 +239,17 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         </nav>
 
         {/* Quick Contact & Details */}
-        <div className="pt-4 border-t border-stone-800 space-y-3 text-xs text-stone-400">
-          <a href={`tel:${contactInfo.phone}`} className="flex items-center gap-2.5 text-stone-300 hover:text-amber-400">
-            <Phone className="w-4 h-4 text-amber-500" />
+        <div className="pt-4 border-t border-slate-200 space-y-3 text-xs text-slate-600">
+          <a href={`tel:${contactInfo.phone}`} className="flex items-center gap-2.5 text-slate-800 hover:text-blue-600 font-medium">
+            <Phone className="w-4 h-4 text-blue-600" />
             <span>{contactInfo.phone}</span>
           </a>
-          <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-2.5 text-stone-300 hover:text-amber-400">
-            <Mail className="w-4 h-4 text-amber-500" />
+          <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-2.5 text-slate-800 hover:text-blue-600 font-medium">
+            <Mail className="w-4 h-4 text-blue-600" />
             <span>{contactInfo.email}</span>
           </a>
-          <div className="flex items-start gap-2.5 text-stone-400">
-            <MapPin className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+          <div className="flex items-start gap-2.5 text-slate-600">
+            <MapPin className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
             <span>{contactInfo.address}</span>
           </div>
         </div>

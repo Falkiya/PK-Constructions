@@ -31,7 +31,7 @@ export const FloatingActions: React.FC = () => {
         <button
           type="button"
           onClick={scrollToTop}
-          className="pointer-events-auto p-3 rounded-full bg-stone-900 border border-stone-700 text-stone-200 hover:text-amber-400 hover:border-amber-500 shadow-xl transition-all duration-300 hover:scale-110 focus:outline-none"
+          className="pointer-events-auto p-3 rounded-full bg-white border border-slate-300 text-slate-700 hover:text-blue-600 hover:border-blue-500 shadow-xl transition-all duration-300 hover:scale-110 focus:outline-none"
           aria-label="Back to Top"
         >
           <ArrowUp className="w-5 h-5" />
@@ -41,9 +41,9 @@ export const FloatingActions: React.FC = () => {
       {/* Mobile-only Call Now button */}
       <a
         href={`tel:${contactInfo.phone}`}
-        className="pointer-events-auto md:hidden flex items-center gap-2 px-4 py-2.5 rounded-full bg-stone-900 border border-amber-500/40 text-amber-400 text-xs font-semibold shadow-2xl hover:bg-stone-800 transition-all active:scale-95"
+        className="pointer-events-auto md:hidden flex items-center gap-2 px-4 py-2.5 rounded-full bg-blue-600 border border-blue-500 text-white text-xs font-semibold shadow-2xl hover:bg-blue-700 transition-all active:scale-95"
       >
-        <Phone className="w-4 h-4 text-amber-500 fill-amber-500/20" />
+        <Phone className="w-4 h-4 text-white" />
         <span>Call Expert</span>
       </a>
 

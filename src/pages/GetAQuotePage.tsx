@@ -88,31 +88,31 @@ export const GetAQuotePage: React.FC = () => {
       />
 
       {/* HERO */}
-      <section className="relative py-24 bg-stone-950 overflow-hidden border-b border-stone-800">
+      <section className="relative py-24 bg-slate-900 overflow-hidden border-b border-slate-800">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80"
             alt="Property Inquiry PK Developers"
             className="w-full h-full object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-stone-950/90" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/90" />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-6">
             Property Consultation & Inquiry
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
             “Find Your Ideal Property.”
           </h1>
-          <p className="mt-4 text-base sm:text-lg text-stone-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
             Share your property buying, selling, leasing, or investment requirements below to receive a curated portfolio of verified, clear-title properties.
           </p>
         </div>
       </section>
 
       {/* MULTI-STEP FORM CONTAINER */}
-      <section className="py-20 bg-stone-950">
+      <section className="py-20 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* STEP PROGRESS INDICATOR */}
@@ -124,15 +124,15 @@ export const GetAQuotePage: React.FC = () => {
                     <div
                       className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm transition-all ${
                         currentStep === step
-                          ? 'bg-amber-500 text-stone-950 ring-4 ring-amber-500/20 shadow-lg shadow-amber-500/30'
+                          ? 'bg-blue-600 text-white ring-4 ring-blue-500/20 shadow-lg shadow-blue-500/30'
                           : currentStep > step
-                          ? 'bg-emerald-500 text-stone-950'
-                          : 'bg-stone-900 border border-stone-800 text-stone-500'
+                          ? 'bg-emerald-600 text-white'
+                          : 'bg-white border border-slate-300 text-slate-400 shadow-sm'
                       }`}
                     >
                       {currentStep > step ? <CheckCircle2 className="w-5 h-5" /> : step}
                     </div>
-                    <span className="text-[11px] font-medium text-stone-400 mt-2">
+                    <span className="text-[11px] font-medium text-slate-500 mt-2">
                       {step === 1 && 'Contact'}
                       {step === 2 && 'Property'}
                       {step === 3 && 'Budget'}
@@ -145,44 +145,44 @@ export const GetAQuotePage: React.FC = () => {
           )}
 
           {/* FORM CARD */}
-          <div className="p-8 sm:p-12 rounded-3xl bg-stone-900/60 border border-stone-800 shadow-2xl backdrop-blur-md">
+          <div className="p-8 sm:p-12 rounded-3xl bg-white border border-slate-200 shadow-xl">
             {submitted ? (
               <div className="text-center py-12 space-y-6 animate-in zoom-in-95 duration-300">
-                <div className="w-20 h-20 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mx-auto">
+                <div className="w-20 h-20 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 flex items-center justify-center mx-auto">
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
-                <h2 className="text-3xl font-extrabold text-white">
+                <h2 className="text-3xl font-extrabold text-slate-900">
                   Property Inquiry Received!
                 </h2>
-                <p className="text-base text-stone-300 max-w-xl mx-auto leading-relaxed">
-                  Thank you, <strong className="text-white">{formData.fullName}</strong>. Our senior real estate advisor has received your property request and will contact you within <strong>2 business hours</strong> with verified property options.
+                <p className="text-base text-slate-600 max-w-xl mx-auto leading-relaxed">
+                  Thank you, <strong className="text-slate-900">{formData.fullName}</strong>. Our senior real estate advisor has received your property request and will contact you within <strong>2 business hours</strong> with verified property options.
                 </p>
 
-                <div className="max-w-md mx-auto p-4 rounded-xl bg-stone-950 border border-stone-800 text-left text-xs space-y-2">
-                  <div className="flex justify-between text-stone-400">
+                <div className="max-w-md mx-auto p-4 rounded-xl bg-slate-50 border border-slate-200 text-left text-xs space-y-2">
+                  <div className="flex justify-between text-slate-500">
                     <span>Requirement:</span>
-                    <span className="text-white font-medium">{formData.requirementType}</span>
+                    <span className="text-slate-900 font-medium">{formData.requirementType}</span>
                   </div>
-                  <div className="flex justify-between text-stone-400">
+                  <div className="flex justify-between text-slate-500">
                     <span>Target Location:</span>
-                    <span className="text-white font-medium">{formData.location}</span>
+                    <span className="text-slate-900 font-medium">{formData.location}</span>
                   </div>
-                  <div className="flex justify-between text-stone-400">
+                  <div className="flex justify-between text-slate-500">
                     <span>Budget Tier:</span>
-                    <span className="text-amber-400 font-medium">{formData.budgetTier}</span>
+                    <span className="text-blue-600 font-semibold">{formData.budgetTier}</span>
                   </div>
                 </div>
 
                 <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
                   <Link
                     to="/"
-                    className="px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm transition-all"
+                    className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-md transition-all"
                   >
                     Back to Home
                   </Link>
                   <Link
                     to="/projects"
-                    className="px-6 py-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-white font-medium text-sm transition-all"
+                    className="px-6 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-medium text-sm border border-slate-200 transition-all"
                   >
                     Explore Properties
                   </Link>
@@ -194,13 +194,13 @@ export const GetAQuotePage: React.FC = () => {
                 {currentStep === 1 && (
                   <div className="space-y-6 animate-in fade-in duration-200">
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-1">Step 1 — Your Details</h3>
-                      <p className="text-xs text-stone-400">Provide your contact coordinates for customized property recommendations.</p>
+                      <h3 className="text-2xl font-bold text-slate-900 mb-1">Step 1 — Your Details</h3>
+                      <p className="text-xs text-slate-500">Provide your contact coordinates for customized property recommendations.</p>
                     </div>
 
                     <div className="space-y-4">
                       <div>
-                        <label className="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-1.5">
+                        <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
                           Full Name *
                         </label>
                         <input
@@ -209,13 +209,13 @@ export const GetAQuotePage: React.FC = () => {
                           value={formData.fullName}
                           onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                           placeholder="e.g. Anand Murthy"
-                          className="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-600 text-sm focus:outline-none focus:border-amber-500"
+                          className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/20 transition-all"
                         />
                       </div>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                          <label className="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-1.5">
+                          <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
                             Phone Number *
                           </label>
                           <input
@@ -224,12 +224,12 @@ export const GetAQuotePage: React.FC = () => {
                             value={formData.phone}
                             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                             placeholder="+91 98765 43210"
-                            className="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-600 text-sm focus:outline-none focus:border-amber-500"
+                            className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/20 transition-all"
                           />
                         </div>
 
                         <div>
-                          <label className="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-1.5">
+                          <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
                             Email Address *
                           </label>
                           <input
@@ -238,7 +238,7 @@ export const GetAQuotePage: React.FC = () => {
                             value={formData.email}
                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                             placeholder="anand@example.com"
-                            className="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-600 text-sm focus:outline-none focus:border-amber-500"
+                            className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/20 transition-all"
                           />
                         </div>
                       </div>
@@ -250,20 +250,20 @@ export const GetAQuotePage: React.FC = () => {
                 {currentStep === 2 && (
                   <div className="space-y-6 animate-in fade-in duration-200">
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-1">Step 2 — Property Requirement</h3>
-                      <p className="text-xs text-stone-400">Tell us what type of property you are looking for.</p>
+                      <h3 className="text-2xl font-bold text-slate-900 mb-1">Step 2 — Property Requirement</h3>
+                      <p className="text-xs text-slate-500">Tell us what type of property you are looking for.</p>
                     </div>
 
                     <div className="space-y-4">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                          <label className="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-1.5">
+                          <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
                             Property Category *
                           </label>
                           <select
                             value={formData.requirementType}
                             onChange={(e) => setFormData({ ...formData, requirementType: e.target.value })}
-                            className="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white text-sm focus:outline-none focus:border-amber-500"
+                            className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/20 transition-all"
                           >
                             <option value="Buy Luxury Villa / House">Buy Luxury Villa / House</option>
                             <option value="Buy Premium Apartment / Penthouse">Buy Luxury Apartment / Penthouse</option>
@@ -277,7 +277,7 @@ export const GetAQuotePage: React.FC = () => {
                         </div>
 
                         <div>
-                          <label className="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-1.5">
+                          <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
                             Transaction Intent *
                           </label>
                           <div className="grid grid-cols-2 gap-2">
@@ -286,8 +286,8 @@ export const GetAQuotePage: React.FC = () => {
                               onClick={() => setFormData({ ...formData, transactionIntent: 'Buying / Investing' })}
                               className={`py-3 px-3 rounded-xl text-xs font-bold border transition-all ${
                                 formData.transactionIntent === 'Buying / Investing'
-                                  ? 'bg-amber-500 text-stone-950 border-amber-400 shadow-md'
-                                  : 'bg-stone-950 text-stone-300 border-stone-800 hover:border-stone-700'
+                                  ? 'bg-blue-600 text-white border-blue-600 shadow-sm'
+                                  : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-slate-300'
                               }`}
                             >
                               Buying / Investing
@@ -297,8 +297,8 @@ export const GetAQuotePage: React.FC = () => {
                               onClick={() => setFormData({ ...formData, transactionIntent: 'Selling / Listing' })}
                               className={`py-3 px-3 rounded-xl text-xs font-bold border transition-all ${
                                 formData.transactionIntent === 'Selling / Listing'
-                                  ? 'bg-amber-500 text-stone-950 border-amber-400 shadow-md'
-                                  : 'bg-stone-950 text-stone-300 border-stone-800 hover:border-stone-700'
+                                  ? 'bg-blue-600 text-white border-blue-600 shadow-sm'
+                                  : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-slate-300'
                               }`}
                             >
                               Selling / Listing
@@ -309,7 +309,7 @@ export const GetAQuotePage: React.FC = () => {
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                          <label className="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-1.5">
+                          <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
                             Target Location / Pin Code *
                           </label>
                           <input
@@ -318,12 +318,12 @@ export const GetAQuotePage: React.FC = () => {
                             value={formData.location}
                             onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                             placeholder="e.g. Whitefield, Indiranagar, Sarjapur, ORR"
-                            className="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-600 text-sm focus:outline-none focus:border-amber-500"
+                            className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/20 transition-all"
                           />
                         </div>
 
                         <div>
-                          <label className="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-1.5">
+                          <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
                             Approximate Size / Configuration
                           </label>
                           <input
@@ -331,7 +331,7 @@ export const GetAQuotePage: React.FC = () => {
                             value={formData.approximateArea}
                             onChange={(e) => setFormData({ ...formData, approximateArea: e.target.value })}
                             placeholder="e.g. 4BHK Villa / 2,400 sq.ft Plot / 10,000 sq.ft Office"
-                            className="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-600 text-sm focus:outline-none focus:border-amber-500"
+                            className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/20 transition-all"
                           />
                         </div>
                       </div>
@@ -343,8 +343,8 @@ export const GetAQuotePage: React.FC = () => {
                 {currentStep === 3 && (
                   <div className="space-y-6 animate-in fade-in duration-200">
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-1">Step 3 — Budget & Timeline</h3>
-                      <p className="text-xs text-stone-400">Select your intended budget framework to match with suitable inventory.</p>
+                      <h3 className="text-2xl font-bold text-slate-900 mb-1">Step 3 — Budget & Timeline</h3>
+                      <p className="text-xs text-slate-500">Select your intended budget framework to match with suitable inventory.</p>
                     </div>
 
                     <div className="space-y-3">
@@ -354,37 +354,37 @@ export const GetAQuotePage: React.FC = () => {
                           onClick={() => setFormData({ ...formData, budgetTier: opt.title })}
                           className={`p-4 rounded-xl border cursor-pointer transition-all ${
                             formData.budgetTier === opt.title
-                              ? 'bg-amber-500/10 border-amber-500 text-white'
-                              : 'bg-stone-950 border-stone-800 hover:border-stone-700 text-stone-300'
+                              ? 'bg-blue-50 border-blue-500 text-slate-900 shadow-sm'
+                              : 'bg-slate-50 border-slate-200 hover:border-slate-300 text-slate-700'
                           }`}
                         >
                           <div className="flex items-center justify-between">
-                            <span className="font-bold text-sm text-white">{opt.title}</span>
+                            <span className="font-bold text-sm text-slate-900">{opt.title}</span>
                             <div
                               className={`w-4 h-4 rounded-full border flex items-center justify-center ${
                                 formData.budgetTier === opt.title
-                                  ? 'border-amber-500 bg-amber-500'
-                                  : 'border-stone-600'
+                                  ? 'border-blue-600 bg-blue-600'
+                                  : 'border-slate-300'
                               }`}
                             >
                               {formData.budgetTier === opt.title && (
-                                <div className="w-1.5 h-1.5 rounded-full bg-stone-950" />
+                                <div className="w-1.5 h-1.5 rounded-full bg-white" />
                               )}
                             </div>
                           </div>
-                          <p className="text-xs text-stone-400 mt-1">{opt.desc}</p>
+                          <p className="text-xs text-slate-500 mt-1">{opt.desc}</p>
                         </div>
                       ))}
                     </div>
 
                     <div className="pt-2">
-                      <label className="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-1.5">
+                      <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
                         Purchase / Possession Timeline
                       </label>
                       <select
                         value={formData.timelinePreference}
                         onChange={(e) => setFormData({ ...formData, timelinePreference: e.target.value })}
-                        className="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white text-sm focus:outline-none focus:border-amber-500"
+                        className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/20 transition-all"
                       >
                         <option value="Immediate (Ready to Move / 30 Days)">Immediate (Ready to Move / 30 Days)</option>
                         <option value="1 – 3 Months">1 – 3 Months</option>
@@ -399,13 +399,13 @@ export const GetAQuotePage: React.FC = () => {
                 {currentStep === 4 && (
                   <form onSubmit={handleFinalSubmit} className="space-y-6 animate-in fade-in duration-200">
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-1">Step 4 — Specific Preferences</h3>
-                      <p className="text-xs text-stone-400">Share any specific amenities, road width, Vastu preferences, or deal parameters.</p>
+                      <h3 className="text-2xl font-bold text-slate-900 mb-1">Step 4 — Specific Preferences</h3>
+                      <p className="text-xs text-slate-500">Share any specific amenities, road width, Vastu preferences, or deal parameters.</p>
                     </div>
 
                     <div className="space-y-4">
                       <div>
-                        <label className="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-1.5">
+                        <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
                           Specific Requirements / Remarks
                         </label>
                         <textarea
@@ -413,27 +413,27 @@ export const GetAQuotePage: React.FC = () => {
                           value={formData.requirements}
                           onChange={(e) => setFormData({ ...formData, requirements: e.target.value })}
                           placeholder="e.g. Prefer east-facing villa with private garden, minimum 40ft road width, gated community with clubhouse, or pre-leased office with 9% ROI..."
-                          className="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-600 text-sm focus:outline-none focus:border-amber-500"
+                          className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/20 transition-all"
                         />
                       </div>
 
-                      <div className="p-4 rounded-xl bg-stone-950/80 border border-stone-800 space-y-2">
-                        <div className="flex items-center gap-2 text-xs font-bold text-amber-400">
-                          <ShieldCheck className="w-4 h-4" />
+                      <div className="p-4 rounded-xl bg-blue-50/60 border border-blue-100 space-y-2">
+                        <div className="flex items-center gap-2 text-xs font-bold text-blue-700">
+                          <ShieldCheck className="w-4 h-4 text-blue-600" />
                           <span>PK Developers Fiduciary Pledge</span>
                         </div>
-                        <p className="text-xs text-stone-400 leading-relaxed">
+                        <p className="text-xs text-slate-600 leading-relaxed">
                           Your contact information and requirements remain 100% confidential. We only share verified clear-title properties directly from authentic owners and institutional builders with zero spam.
                         </p>
                       </div>
                     </div>
 
                     {/* Step Navigation Controls */}
-                    <div className="pt-4 flex items-center justify-between border-t border-stone-800">
+                    <div className="pt-4 flex items-center justify-between border-t border-slate-200">
                       <button
                         type="button"
                         onClick={prevStep}
-                        className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-white text-sm font-semibold transition-all"
+                        className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-semibold border border-slate-200 transition-all"
                       >
                         <ArrowLeft className="w-4 h-4" />
                         <span>Back</span>
@@ -441,7 +441,7 @@ export const GetAQuotePage: React.FC = () => {
 
                       <button
                         type="submit"
-                        className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm shadow-xl shadow-amber-500/20 transition-all hover:scale-105 active:scale-95"
+                        className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-xl shadow-blue-500/20 transition-all hover:scale-105 active:scale-95"
                       >
                         <span>Submit Property Inquiry</span>
                         <Send className="w-4 h-4" />
@@ -452,12 +452,12 @@ export const GetAQuotePage: React.FC = () => {
 
                 {/* Steps 1-3 Navigation Controls */}
                 {currentStep < 4 && (
-                  <div className="pt-6 mt-6 flex items-center justify-between border-t border-stone-800">
+                  <div className="pt-6 mt-6 flex items-center justify-between border-t border-slate-200">
                     {currentStep > 1 ? (
                       <button
                         type="button"
                         onClick={prevStep}
-                        className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-white text-sm font-semibold transition-all"
+                        className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-semibold border border-slate-200 transition-all"
                       >
                         <ArrowLeft className="w-4 h-4" />
                         <span>Back</span>
@@ -469,7 +469,7 @@ export const GetAQuotePage: React.FC = () => {
                     <button
                       type="button"
                       onClick={nextStep}
-                      className="inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm shadow-xl shadow-amber-500/20 transition-all hover:scale-105 active:scale-95 ml-auto"
+                      className="inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-xl shadow-blue-500/20 transition-all hover:scale-105 active:scale-95 ml-auto"
                     >
                       <span>Continue</span>
                       <ArrowRight className="w-4 h-4" />

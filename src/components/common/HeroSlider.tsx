@@ -215,7 +215,7 @@ export const HeroSlider: React.FC = () => {
               <img
                 src={slide.image}
                 alt={slide.badge}
-                className={`w-full h-full object-cover object-center filter brightness-[0.80] transition-transform duration-[7000ms] ease-out ${
+                className={`w-full h-full object-cover object-center filter brightness-[0.75] transition-transform duration-[7000ms] ease-out ${
                   isActive ? 'scale-105' : 'scale-100'
                 }`}
               />
@@ -223,9 +223,9 @@ export const HeroSlider: React.FC = () => {
           );
         })}
 
-        {/* Cinematic Gradient Overlays - Soft so images are crisp and visible */}
-        <div className="absolute inset-0 z-20 bg-gradient-to-t from-stone-950 via-stone-950/30 to-stone-950/40 pointer-events-none" />
-        <div className="absolute inset-0 z-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-500/5 via-transparent to-transparent pointer-events-none" />
+        {/* Cinematic Gradient Overlays - Deep Navy & Blue Tint */}
+        <div className="absolute inset-0 z-20 bg-gradient-to-t from-slate-950 via-slate-950/40 to-slate-950/50 pointer-events-none" />
+        <div className="absolute inset-0 z-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-600/10 via-transparent to-transparent pointer-events-none" />
       </div>
 
       {/* Screen Reader H1 for SEO */}
@@ -237,13 +237,13 @@ export const HeroSlider: React.FC = () => {
       <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center w-full">
         {/* Category Badge & Stat Badge */}
         <div className="flex flex-wrap items-center justify-center gap-2.5 mb-5">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-stone-900/80 border border-amber-500/40 text-amber-400 text-xs sm:text-sm font-semibold shadow-xl backdrop-blur-md transition-all duration-300">
-            <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-900/60 border border-blue-400/50 text-blue-200 text-xs sm:text-sm font-semibold shadow-xl backdrop-blur-md transition-all duration-300">
+            <span className="w-2 h-2 rounded-full bg-blue-400 animate-ping" />
             <span>{activeSlide.badge}</span>
           </div>
 
-          <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-stone-900/70 border border-stone-700/80 text-stone-300 text-xs font-medium backdrop-blur-md">
-            <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+          <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/80 border border-slate-700/80 text-white text-xs font-medium backdrop-blur-md">
+            <Sparkles className="w-3.5 h-3.5 text-blue-400" />
             <span>{activeSlide.statBadge}</span>
           </div>
         </div>
@@ -252,7 +252,7 @@ export const HeroSlider: React.FC = () => {
         <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
           <Link
             to={activeSlide.primaryCta.path}
-            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm shadow-xl shadow-amber-500/25 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
+            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm shadow-xl shadow-blue-600/30 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
           >
             <span>{activeSlide.primaryCta.label}</span>
             <ArrowRight className="w-4 h-4" />
@@ -260,10 +260,10 @@ export const HeroSlider: React.FC = () => {
 
           <Link
             to={activeSlide.secondaryCta.path}
-            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-stone-900/80 hover:bg-stone-800 text-stone-200 hover:text-white border border-stone-700/80 font-medium text-sm backdrop-blur-md transition-all duration-200"
+            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/25 font-semibold text-sm backdrop-blur-md transition-all duration-200"
           >
             <span>{activeSlide.secondaryCta.label}</span>
-            <ChevronRight className="w-4 h-4 text-stone-400" />
+            <ChevronRight className="w-4 h-4 text-slate-300" />
           </Link>
         </div>
 
@@ -278,35 +278,35 @@ export const HeroSlider: React.FC = () => {
                   onClick={() => goToSlide(idx)}
                   className={`group relative text-left p-2.5 sm:p-3 rounded-xl border transition-all duration-300 backdrop-blur-md ${
                     isSelected
-                      ? 'bg-stone-900/90 border-amber-500/60 shadow-lg shadow-amber-500/10'
-                      : 'bg-stone-950/60 border-stone-800/80 hover:bg-stone-900/60 hover:border-stone-700 text-stone-400'
+                      ? 'bg-slate-900/90 border-blue-500 shadow-lg shadow-blue-500/20'
+                      : 'bg-slate-950/60 border-slate-800/80 hover:bg-slate-900/60 hover:border-slate-700 text-slate-400'
                   }`}
                   aria-label={`Go to slide ${idx + 1}: ${slide.category}`}
                   aria-current={isSelected ? 'true' : 'false'}
                 >
                   <div className="flex items-center justify-between text-[11px] sm:text-xs font-semibold mb-1">
-                    <span className={isSelected ? 'text-amber-400 font-mono' : 'text-stone-500 font-mono'}>
+                    <span className={isSelected ? 'text-blue-400 font-mono' : 'text-slate-500 font-mono'}>
                       0{idx + 1}
                     </span>
                     {isSelected && (
-                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
                     )}
                   </div>
                   <div className={`text-xs sm:text-sm font-semibold truncate ${
-                    isSelected ? 'text-white' : 'text-stone-300 group-hover:text-stone-200'
+                    isSelected ? 'text-white' : 'text-slate-300 group-hover:text-white'
                   }`}>
                     {slide.category}
                   </div>
 
                   {/* Active Slide Progress Line */}
-                  <div className="mt-2 w-full bg-stone-800 h-1 rounded-full overflow-hidden">
+                  <div className="mt-2 w-full bg-slate-800 h-1 rounded-full overflow-hidden">
                     {isSelected ? (
                       <div
                         key={`prog-${currentSlide}`}
-                        className={`h-full bg-amber-500 animate-slide-progress ${isPaused ? 'paused' : ''}`}
+                        className={`h-full bg-blue-500 animate-slide-progress ${isPaused ? 'paused' : ''}`}
                       />
                     ) : (
-                      <div className="h-full w-0 bg-stone-800" />
+                      <div className="h-full w-0 bg-slate-800" />
                     )}
                   </div>
                 </button>
@@ -316,46 +316,46 @@ export const HeroSlider: React.FC = () => {
         </div>
 
         {/* Slide Counter & Play/Pause Controls */}
-        <div className="mt-6 flex items-center justify-center gap-4 text-xs text-stone-400 font-mono">
+        <div className="mt-6 flex items-center justify-center gap-4 text-xs text-slate-400 font-mono">
           <button
             onClick={() => setIsPaused(!isPaused)}
-            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-stone-900/80 border border-stone-800 hover:border-stone-700 hover:text-stone-200 transition-colors"
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-900/80 border border-slate-800 hover:border-slate-700 hover:text-white transition-colors"
             title={isPaused ? 'Resume auto-play' : 'Pause auto-play'}
           >
             {isPaused ? (
               <>
-                <Play className="w-3 h-3 text-amber-400 fill-amber-400" />
+                <Play className="w-3 h-3 text-blue-400 fill-blue-400" />
                 <span>Play</span>
               </>
             ) : (
               <>
-                <Pause className="w-3 h-3 text-amber-400" />
+                <Pause className="w-3 h-3 text-blue-400" />
                 <span>Pause</span>
               </>
             )}
           </button>
           <span>
-            <strong className="text-amber-400">0{currentSlide + 1}</strong> / 0{slides.length}
+            <strong className="text-blue-400">0{currentSlide + 1}</strong> / 0{slides.length}
           </span>
         </div>
 
         {/* Trust Highlights */}
-        <div className="mt-10 sm:mt-12 pt-8 border-t border-stone-800/80 max-w-4xl w-full grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-left">
+        <div className="mt-10 sm:mt-12 pt-8 border-t border-slate-800/80 max-w-4xl w-full grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-left">
           <div className="flex items-center gap-2.5">
-            <ShieldCheck className="w-5 h-5 text-amber-500 shrink-0" />
-            <span className="text-xs sm:text-sm text-stone-300 font-medium">100% Clear Title Guarantee</span>
+            <ShieldCheck className="w-5 h-5 text-blue-400 shrink-0" />
+            <span className="text-xs sm:text-sm text-slate-200 font-medium">100% Clear Title Guarantee</span>
           </div>
           <div className="flex items-center gap-2.5">
-            <Award className="w-5 h-5 text-amber-500 shrink-0" />
-            <span className="text-xs sm:text-sm text-stone-300 font-medium">RERA & Legal Due-Diligence</span>
+            <Award className="w-5 h-5 text-blue-400 shrink-0" />
+            <span className="text-xs sm:text-sm text-slate-200 font-medium">RERA & Legal Due-Diligence</span>
           </div>
           <div className="flex items-center gap-2.5">
-            <CheckCircle className="w-5 h-5 text-amber-500 shrink-0" />
-            <span className="text-xs sm:text-sm text-stone-300 font-medium">Zero Hidden Brokerage</span>
+            <CheckCircle className="w-5 h-5 text-blue-400 shrink-0" />
+            <span className="text-xs sm:text-sm text-slate-200 font-medium">Zero Hidden Brokerage</span>
           </div>
           <div className="flex items-center gap-2.5">
-            <Sparkles className="w-5 h-5 text-amber-500 shrink-0" />
-            <span className="text-xs sm:text-sm text-stone-300 font-medium">500+ Deals Successfully Closed</span>
+            <Sparkles className="w-5 h-5 text-blue-400 shrink-0" />
+            <span className="text-xs sm:text-sm text-slate-200 font-medium">500+ Deals Successfully Closed</span>
           </div>
         </div>
       </div>
@@ -363,7 +363,7 @@ export const HeroSlider: React.FC = () => {
       {/* Floating Left / Right Navigation Chevrons */}
       <button
         onClick={prevSlide}
-        className="hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-stone-900/70 hover:bg-stone-900 border border-stone-700/80 hover:border-amber-500/80 text-stone-300 hover:text-amber-400 backdrop-blur-md shadow-2xl transition-all duration-200 hover:scale-105 active:scale-95"
+        className="hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-slate-900/70 hover:bg-blue-600 border border-slate-700/80 hover:border-blue-500 text-white backdrop-blur-md shadow-2xl transition-all duration-200 hover:scale-105 active:scale-95"
         aria-label="Previous Slide"
       >
         <ChevronLeft className="w-6 h-6" />
@@ -371,7 +371,7 @@ export const HeroSlider: React.FC = () => {
 
       <button
         onClick={nextSlide}
-        className="hidden md:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-stone-900/70 hover:bg-stone-900 border border-stone-700/80 hover:border-amber-500/80 text-stone-300 hover:text-amber-400 backdrop-blur-md shadow-2xl transition-all duration-200 hover:scale-105 active:scale-95"
+        className="hidden md:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full items-center justify-center bg-slate-900/70 hover:bg-blue-600 border border-slate-700/80 hover:border-blue-500 text-white backdrop-blur-md shadow-2xl transition-all duration-200 hover:scale-105 active:scale-95"
         aria-label="Next Slide"
       >
         <ChevronRight className="w-6 h-6" />

@@ -41,12 +41,12 @@ export const Lightbox: React.FC<LightboxProps> = ({
   const currentItem = images[currentIndex];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-stone-950/95 backdrop-blur-xl animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/95 backdrop-blur-xl animate-in fade-in duration-200">
       {/* Close button */}
       <button
         type="button"
         onClick={onClose}
-        className="absolute top-5 right-5 z-50 p-2.5 rounded-full bg-stone-900/80 border border-stone-700 text-stone-300 hover:text-white hover:bg-stone-800 transition-colors"
+        className="absolute top-5 right-5 z-50 p-2.5 rounded-full bg-slate-900/80 border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
         aria-label="Close Lightbox"
       >
         <X className="w-6 h-6" />
@@ -57,7 +57,7 @@ export const Lightbox: React.FC<LightboxProps> = ({
         <button
           type="button"
           onClick={onPrev}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-50 p-3 rounded-full bg-stone-900/80 border border-stone-700 text-stone-300 hover:text-white hover:bg-stone-800 transition-colors"
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-50 p-3 rounded-full bg-slate-900/80 border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
           aria-label="Previous Image"
         >
           <ChevronLeft className="w-6 h-6" />
@@ -69,7 +69,7 @@ export const Lightbox: React.FC<LightboxProps> = ({
         <button
           type="button"
           onClick={onNext}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-50 p-3 rounded-full bg-stone-900/80 border border-stone-700 text-stone-300 hover:text-white hover:bg-stone-800 transition-colors"
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-50 p-3 rounded-full bg-slate-900/80 border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
           aria-label="Next Image"
         >
           <ChevronRight className="w-6 h-6" />
@@ -78,7 +78,7 @@ export const Lightbox: React.FC<LightboxProps> = ({
 
       {/* Main Image Display */}
       <div className="max-w-5xl max-h-[85vh] p-4 flex flex-col items-center">
-        <div className="relative overflow-hidden rounded-2xl border border-stone-800 bg-stone-900 shadow-2xl">
+        <div className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-2xl">
           <img
             src={currentItem.url}
             alt={currentItem.caption || currentItem.title || 'Project Image'}
@@ -93,9 +93,9 @@ export const Lightbox: React.FC<LightboxProps> = ({
               <h4 className="text-white font-semibold text-base mb-1">{currentItem.title}</h4>
             )}
             {currentItem.caption && (
-              <p className="text-sm text-stone-400">{currentItem.caption}</p>
+              <p className="text-sm text-slate-400">{currentItem.caption}</p>
             )}
-            <span className="text-xs text-amber-500 font-mono mt-1 inline-block">
+            <span className="text-xs text-blue-400 font-mono mt-1 inline-block">
               {currentIndex + 1} of {images.length}
             </span>
           </div>
