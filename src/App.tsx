@@ -31,7 +31,7 @@ import { SitemapPage } from './pages/SitemapPage';
 export const App: React.FC = () => {
   return (
     <Router>
-      <div className="flex min-h-screen flex-col bg-slate-50 text-slate-900 selection:bg-blue-600 selection:text-white font-sans">
+      <div className="flex min-h-screen flex-col bg-white text-slate-900 selection:bg-[#c59b6d] selection:text-white font-sans">
         {/* Global Navigation Header with desktop mega-menus & mobile drawer */}
         <Header />
 

@@ -3,55 +3,50 @@ import { Project } from '../types';
 export const projectsData: Project[] = [
   {
     id: 'proj-1',
-    slug: 'the-lumina-modern-villa',
-    name: 'The Lumina Modern Villa',
+    slug: 'pk-heights',
+    name: 'PK Heights',
     category: 'residential',
-    subCategory: 'Villas',
-    location: 'Whitefield, Bengaluru',
-    status: 'Completed',
+    subCategory: 'Apartments',
+    location: 'Mandya, Karnataka',
+    status: 'Ongoing',
     completionDate: '2025',
-    area: '9,200 sq.ft (Plot: 12,000 sq.ft)',
-    clientType: 'Private Homeowner Deal',
-    price: '₹6.80 Cr',
-    propertyType: '4BHK Ultra-Luxury Designer Villa',
+    area: '2 & 3 BHK Luxury Apartments',
+    clientType: 'Residential Living',
+    price: '₹55 Lakhs - ₹95 Lakhs',
+    propertyType: 'Spacious 2 & 3 BHK Apartments',
     transactionType: 'For Sale',
-    possession: 'Ready to Move',
+    possession: 'Possession 2025',
     reraId: 'PRM/KA/RERA/1251/310/PR/240218/006412',
-    description: 'An exclusive clear-title luxury modern residence featuring cantilevered architectural volumes, private basalt reflection pool, double-height atrium, and fully automated European fittings in a prime Whitefield enclave.',
-    challenge: 'Securing a clear, unencumbered 12,000 sq.ft plot with 30-year mother title verification in high-demand Whitefield while coordinating customized structural engineering approvals with BBMP.',
-    solution: 'PK Developers conducted rigorous title due diligence, obtained nil-encumbrance clearance, negotiated direct pricing from the estate owner, and managed the complete legal deed execution.',
+    description: 'Spacious 2 & 3 BHK apartments designed for modern living with lifestyle amenities, excellent ventilation, and prime connectivity in Mandya.',
+    challenge: 'Creating a high-rise landmark with integrated recreational green spaces and 24/7 security while preserving peaceful neighborhood serenity.',
+    solution: 'Engineered with premium Mivan construction, dedicated parking levels, rainwater harvesting, and lush landscaped gardens.',
     features: [
       {
         category: 'Architecture',
-        title: 'Cantilevered Volumetric Form',
-        description: 'Striking geometric projections providing passive solar shading across both upper levels.'
+        title: 'Modern High-Rise Living',
+        description: 'Vastu-compliant spacious 2 & 3 BHK apartments with private balconies.'
       },
       {
-        category: 'Materials',
-        title: 'Travertine & Fair-Faced Concrete',
-        description: 'Premium imported Italian silver travertine contrasted with exposed architectural concrete.'
+        category: 'Amenities',
+        title: 'Complete Lifestyle Facilities',
+        description: 'Power backup, clubhouse, dedicated car parking, and children play area.'
       },
       {
-        category: 'Interior',
-        title: 'Double-Height Atrium',
-        description: 'Soaring 7.2-meter ceiling with custom fluted timber accents and integrated ambient lighting.'
-      },
-      {
-        category: 'Landscaping',
-        title: 'Reflective Water Basin & Flora',
-        description: 'Native drought-tolerant flora and a cascading basalt infinity water element.'
+        category: 'Security',
+        title: '24/7 CCTV & Manned Security',
+        description: 'Round-the-clock gated security with intercom and RFID boom barriers.'
       },
       {
         category: 'Sustainability',
-        title: '15kW Solar & Rainwater Harvesting',
-        description: 'Rooftop micro-inverter solar grid combined with 40,000L subterranean rainwater filtration.'
+        title: 'Rainwater Harvesting & Solar',
+        description: 'Eco-conscious rainwater harvesting and solar corridor illumination.'
       }
     ],
-    coverImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
     galleryImages: [
       {
-        url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80',
-        caption: 'South-facing exterior showing post-tensioned cantilevers and ambient mood lighting.'
+        url: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=80',
+        caption: 'PK Heights architectural elevation at twilight.'
       },
       {
         url: 'https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=1600&q=80',
@@ -60,188 +55,164 @@ export const projectsData: Project[] = [
       {
         url: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80',
         caption: 'State-of-the-art minimalist chef kitchen with integrated quartz waterfall island.'
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Master suite opening into private elevated timber terrace and plunge pool.'
       }
     ],
     timeline: [
       {
-        stage: 'Title Due Diligence & Sourcing',
-        duration: 'Week 1 - 2',
+        stage: 'Architectural Design & Approvals',
+        duration: 'Phase 1',
         status: 'completed',
-        description: '30-year mother deed audit, encumbrance check, and zoning compliance verification.'
+        description: 'RERA registration, municipal clearances, and soil testing.'
       },
       {
-        stage: 'Direct Seller Negotiation & ATS',
-        duration: 'Week 3',
-        status: 'completed',
-        description: 'Commercial price negotiation and drafting of the formal Agreement to Sell (ATS).'
+        stage: 'Superstructure Construction',
+        duration: 'Phase 2',
+        status: 'in-progress',
+        description: 'RCC framing and masonry works across all residential levels.'
       },
       {
-        stage: 'Architectural Review & Handover Audit',
-        duration: 'Week 4',
-        status: 'completed',
-        description: 'Comprehensive 200-point structural, MEP, and finish quality audit prior to registration.'
-      },
-      {
-        stage: 'Sub-Registrar Registration & Handover',
-        duration: 'Closing Day',
-        status: 'completed',
-        description: 'Stamp duty payment, registered sale deed execution, Khata mutation, and key handover.'
+        stage: 'Finishing & Handover',
+        duration: 'Phase 3',
+        status: 'upcoming',
+        description: 'Interior fittings, amenity commissioning, and handover.'
       }
     ],
     featured: true
   },
   {
     id: 'proj-2',
-    slug: 'vertex-corporate-tech-hub',
-    name: 'Vertex Corporate Tech Hub',
-    category: 'commercial',
-    subCategory: 'Offices',
-    location: 'Electronic City, Phase 1',
-    status: 'Completed',
+    slug: 'pk-enclave',
+    name: 'PK Enclave',
+    category: 'residential',
+    subCategory: 'Plots & Villas',
+    location: 'Mysuru, Karnataka',
+    status: 'Featured',
     completionDate: '2024',
-    area: '185,000 sq.ft (Floor-plate: 32,000 sq.ft)',
-    clientType: 'Institutional Corporate Deal',
-    price: '₹140 Cr (Yield: 9.2%)',
-    propertyType: 'Grade-A Commercial IT Campus',
-    transactionType: 'Investment',
-    possession: 'Pre-Leased Asset',
+    area: '1,200 - 2,400 sq.ft Plots',
+    clientType: 'Gated Community Plots',
+    price: '₹38 Lakhs - ₹75 Lakhs',
+    propertyType: 'Premium Residential Plots',
+    transactionType: 'For Sale',
+    possession: 'Immediate Registration',
     reraId: 'PRM/KA/RERA/1251/310/PR/230911/005210',
-    description: 'A pre-leased IGBC Platinum-certified commercial office complex occupied by Fortune 500 tech firms, providing an immediate 9.2% net rental yield with long-term 9-year institutional leases.',
-    challenge: 'Structuring a complex cross-border commercial acquisition involving multiple international corporate leases, escrow mechanisms, and statutory environmental clearances.',
-    solution: 'PK Developers structured the commercial deal, audited tenant covenants, verified fire NOC and occupancy certifications, and closed the transaction within 45 days.',
+    description: 'Premium residential plots in a peaceful and well-connected location in Mysuru, featuring wide asphalted roads, avenue plantations, and MUDA approval.',
+    challenge: 'Delivering a peaceful gated community layout with all underground utilities ready for immediate villa construction.',
+    solution: 'Engineered with underground power cabling, underground drainage, central water reservoir, and landscaped parks.',
     features: [
       {
-        category: 'Architecture',
-        title: 'High-Efficiency Floor Plates',
-        description: 'Core-centric structural layout offering 89% net usable space per floor.'
+        category: 'Layout',
+        title: 'MUDA Approved Gated Community',
+        description: 'Clear marketable titles, 40-foot wide asphalt roads, and street lighting.'
       },
       {
-        category: 'Materials',
-        title: 'Unitized Curtain Wall Glazing',
-        description: 'Acoustic-damped double silver Low-E thermal unitized facade with shading louvers.'
+        category: 'Utilities',
+        title: 'Underground Infrastructure',
+        description: 'Concealed power lines, individual water connections, and underground drainage.'
       },
       {
-        category: 'Interior',
-        title: 'Biophilic Collaboration Atrium',
-        description: 'Internal living green walls spanning 4 stories with circulating purified airflow.'
-      },
-      {
-        category: 'Sustainability',
-        title: 'IGBC Platinum & Net Zero Ready',
-        description: 'Variable Refrigerant Flow (VRF) HVAC system with energy heat recovery wheels.'
+        category: 'Greenery',
+        title: 'Landscaped Parks & Walking Trails',
+        description: 'Over 30% open green space with native shade trees and kids play zone.'
       }
     ],
-    coverImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
     galleryImages: [
       {
-        url: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Tower exterior showcasing high-performance unitized curtain wall glazing.'
+        url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80',
+        caption: 'PK Enclave luxury villa model home.'
       },
       {
-        url: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Grand reception and security turnstile concourse with Italian terrazzo.'
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Executive boardroom and hybrid collaborative conference facilities.'
+        url: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80',
+        caption: 'Lush avenue trees and broad internal roads.'
       }
     ],
     timeline: [
       {
-        stage: 'Institutional Deal Structuring',
-        duration: 'Month 1',
+        stage: 'Layout Planning & Clearances',
+        duration: 'Phase 1',
         status: 'completed',
-        description: 'Auditing 9-year corporate tenant lease covenants and rental cashflow histories.'
+        description: 'Statutory approvals, boundary demarcation, and zoning sanction.'
       },
       {
-        stage: 'Statutory & Technical Due Diligence',
-        duration: 'Month 2',
+        stage: 'Civil Infrastructure & Utilities',
+        duration: 'Phase 2',
         status: 'completed',
-        description: 'Verifying Occupancy Certificate (OC), Fire NOC, and environmental compliance.'
+        description: 'Roads, kerbing, drainage, transformer installation, and park landscaping.'
       },
       {
-        stage: 'Commercial Conveyance & Closing',
-        duration: 'Month 3',
+        stage: 'Registration & Villa Construction',
+        duration: 'Phase 3',
         status: 'completed',
-        description: 'Escrow payment settlement, sub-registrar lease assignment, and seamless yield transfer.'
+        description: 'Clear title deed registrations and custom villa execution.'
       }
     ],
     featured: true
   },
   {
     id: 'proj-3',
-    slug: 'the-grand-courtyard-estate',
-    name: 'The Grand Courtyard Estate',
+    slug: 'pk-residency',
+    name: 'PK Residency',
     category: 'residential',
     subCategory: 'Luxury Homes',
-    location: 'Sarjapur Hills, Bengaluru',
-    status: 'Completed',
-    completionDate: '2024',
-    area: '14,500 sq.ft (Plot: 24,000 sq.ft)',
-    clientType: 'Private Family Office',
-    price: '₹12.50 Cr',
-    propertyType: '6BHK Heritage Courtyard Manor',
+    location: 'Bengaluru, Karnataka',
+    status: 'Upcoming',
+    completionDate: '2026',
+    area: '1,450 - 3,200 sq.ft',
+    clientType: 'Modern Living',
+    price: '₹85 Lakhs - ₹1.85 Cr',
+    propertyType: 'Modern Homes & Penthouses',
     transactionType: 'Exclusive Listing',
-    possession: 'Immediate Registration',
+    possession: 'Pre-Booking Open',
     reraId: 'PRM/KA/RERA/1251/310/PR/231105/005844',
-    description: 'An expansive traditional-contemporary courtyard manor that reinterprets heritage veranda architecture on a private 24,000 sq.ft wooded plot with private lap pool and subterranean wine cellar.',
-    challenge: 'High-value private resale requiring confidential representation, buyer qualification, and comprehensive municipal khata consolidation across two adjacent land parcels.',
-    solution: 'PK Developers handled the exclusive private mandate, consolidated the E-Khata documentation, and represented both buyer and seller with complete fiduciary integrity.',
+    description: 'Modern homes with world-class amenities for a better lifestyle, offering expansive layouts, smart home automation, and clubhouse privileges.',
+    challenge: 'Designing high-efficiency modern homes in a prime Bengaluru growth corridor with sustainable architecture.',
+    solution: 'PK Developers crafted an eco-sensitive master plan featuring rooftop recreation, co-working lounges, and EV charging points.',
     features: [
       {
-        category: 'Architecture',
-        title: 'Centred Microclimate Courtyard',
-        description: 'Central open-to-sky atrium creates passive cooling convection currents throughout.'
+        category: 'Lifestyle',
+        title: 'World-Class Amenities',
+        description: 'Swimming pool, gymnasium, multi-purpose hall, and jogging tracks.'
       },
       {
-        category: 'Materials',
-        title: 'Chiseled Granite & Teakwood',
-        description: 'Hand-dressed local Sadahalli granite paired with sustainably sourced Burma teak.'
+        category: 'Smart Living',
+        title: 'Home Automation & Fiber Internet',
+        description: 'Keyless entry, automated lighting controls, and high-speed FTTH.'
       },
       {
-        category: 'Landscaping',
-        title: 'Conservation Arboretum',
-        description: 'Landscape integrated seamlessly with 40-year-old preserved native trees and rain swales.'
-      },
-      {
-        category: 'Interior',
-        title: 'Bespoke Art Deco Millwork',
-        description: 'Custom fluted brass partitions, marble inlaid entry halls, and artisan timber ceilings.'
+        category: 'Location',
+        title: 'Prime Connectivity',
+        description: 'Close proximity to metro stations, tech parks, and top international schools.'
       }
     ],
-    coverImage: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
     galleryImages: [
       {
-        url: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Rear terrace view featuring the natural stone lap pool and heritage pergola.'
+        url: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80',
+        caption: 'PK Residency architectural facade.'
       },
       {
-        url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Daylight view of the central open courtyard connector.'
+        url: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80',
+        caption: 'Master suite opening to scenic city view terrace.'
       }
     ],
     timeline: [
       {
-        stage: 'Private Mandate & Valuation',
-        duration: 'Week 1',
+        stage: 'Master Planning & Sanctions',
+        duration: 'Phase 1',
         status: 'completed',
-        description: 'Valuation appraisal, title check, and confidential buyer matching.'
+        description: 'Architectural drafting, structural engineering, and statutory filings.'
       },
       {
-        stage: 'Khata Consolidation & Vetting',
-        duration: 'Week 2 - 3',
-        status: 'completed',
-        description: 'BBMP E-Khata consolidation and boundary survey verification.'
+        stage: 'Groundbreaking & Pre-Launch',
+        duration: 'Phase 2',
+        status: 'in-progress',
+        description: 'Site leveling, foundation piling, and VIP investor pre-allocations.'
       },
       {
-        stage: 'Registration & Handover',
-        duration: 'Week 4',
-        status: 'completed',
-        description: 'Deed execution at sub-registrar and formal physical estate handover.'
+        stage: 'Main Structure & Delivery',
+        duration: 'Phase 3',
+        status: 'upcoming',
+        description: 'Full tower structural completion and possession.'
       }
     ],
     featured: true

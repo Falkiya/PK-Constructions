@@ -1,419 +1,187 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  ChevronDown, 
-  Menu, 
-  Phone, 
-  ArrowRight, 
-  Home, 
-  Building2, 
-  Hammer, 
-  Compass, 
-  ClipboardCheck, 
-  Layers
-} from 'lucide-react';
+import { Phone, Menu } from 'lucide-react';
 import { contactInfo } from '../../data/companyData';
 import { MobileMenu } from './MobileMenu';
+
+export const GoldenTowersLogo: React.FC<{ className?: string }> = ({ className = "w-9 h-9" }) => (
+  <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    {/* Left Tower */}
+    <rect x="6" y="16" width="7" height="20" rx="1" fill="#c59b6d" />
+    <rect x="8" y="19" width="3" height="3" fill="#ffffff" fillOpacity="0.85" />
+    <rect x="8" y="24" width="3" height="3" fill="#ffffff" fillOpacity="0.85" />
+    <rect x="8" y="29" width="3" height="3" fill="#ffffff" fillOpacity="0.85" />
+    <path d="M6 16L9.5 12L13 16H6Z" fill="#b68a5c" />
+
+    {/* Center Tall Tower */}
+    <rect x="15" y="8" width="10" height="28" rx="1.5" fill="#c59b6d" />
+    <rect x="18" y="12" width="4" height="4" fill="#ffffff" fillOpacity="0.85" />
+    <rect x="18" y="18" width="4" height="4" fill="#ffffff" fillOpacity="0.85" />
+    <rect x="18" y="24" width="4" height="4" fill="#ffffff" fillOpacity="0.85" />
+    <rect x="18" y="30" width="4" height="4" fill="#ffffff" fillOpacity="0.85" />
+    <path d="M15 8L20 3L25 8H15Z" fill="#a87c4f" />
+
+    {/* Right Tower */}
+    <rect x="27" y="13" width="7" height="23" rx="1" fill="#c59b6d" />
+    <rect x="29" y="16" width="3" height="3" fill="#ffffff" fillOpacity="0.85" />
+    <rect x="29" y="21" width="3" height="3" fill="#ffffff" fillOpacity="0.85" />
+    <rect x="29" y="26" width="3" height="3" fill="#ffffff" fillOpacity="0.85" />
+    <rect x="29" y="31" width="3" height="3" fill="#ffffff" fillOpacity="0.85" />
+    <path d="M27 13L30.5 9L34 13H27Z" fill="#b68a5c" />
+
+    {/* Base line */}
+    <line x1="4" y1="37" x2="36" y2="37" stroke="#c59b6d" strokeWidth="2" strokeLinecap="round" />
+  </svg>
+);
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const [projectsDropdownOpen, setProjectsDropdownOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
   const location = useLocation();
-
-  const servicesTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const projectsTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
+      setIsScrolled(window.scrollY > 20);
+
+      if (location.pathname === '/') {
+        const sections = ['enquiry', 'location', 'amenities', 'projects', 'about', 'hero'];
+        for (const sectionId of sections) {
+          const el = document.getElementById(sectionId);
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            if (rect.top <= 140) {
+              setActiveSection(sectionId === 'hero' ? 'home' : sectionId);
+              break;
+            }
+          }
+        }
       }
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Close menus on route change
-  useEffect(() => {
-    setMobileMenuOpen(false);
-    setServicesDropdownOpen(false);
-    setProjectsDropdownOpen(false);
   }, [location.pathname]);
 
-  const handleServicesEnter = () => {
-    if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
-    setServicesDropdownOpen(true);
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        setActiveSection(id === 'hero' ? 'home' : id);
+      }
+    }
   };
 
-  const handleServicesLeave = () => {
-    servicesTimeoutRef.current = setTimeout(() => {
-      setServicesDropdownOpen(false);
-    }, 150);
-  };
-
-  const handleProjectsEnter = () => {
-    if (projectsTimeoutRef.current) clearTimeout(projectsTimeoutRef.current);
-    setProjectsDropdownOpen(true);
-  };
-
-  const handleProjectsLeave = () => {
-    projectsTimeoutRef.current = setTimeout(() => {
-      setProjectsDropdownOpen(false);
-    }, 150);
-  };
-
-  const isActive = (path: string) => {
-    if (path === '/') return location.pathname === '/';
-    return location.pathname.startsWith(path);
-  };
+  const navLinks = [
+    { label: 'Home', href: '/', id: 'hero' },
+    { label: 'About', href: '/#about', id: 'about' },
+    { label: 'Projects', href: '/#projects', id: 'projects' },
+    { label: 'Amenities', href: '/#amenities', id: 'amenities' },
+    { label: 'Location', href: '/#location', id: 'location' },
+    { label: 'Enquiry', href: '/#enquiry', id: 'enquiry' },
+  ];
 
   return (
     <>
-      {/* Top micro-bar for quick contact */}
-      <div className="bg-slate-900 border-b border-slate-800 text-slate-300 text-xs py-1.5 px-4 hidden md:block">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-6">
-            <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              RERA Registered Property Dealers & Real Estate Consultants
-            </span>
-            <span className="text-slate-600">|</span>
-            <span>Bengaluru & South India</span>
-          </div>
-          <div className="flex items-center gap-6">
-            <a href={`tel:${contactInfo.phone}`} className="flex items-center gap-1.5 hover:text-blue-400 transition-colors">
-              <Phone className="w-3.5 h-3.5 text-blue-400" />
-              <span>{contactInfo.phone}</span>
-            </a>
-            <Link to="/contact" className="hover:text-blue-400 transition-colors">
-              Property Consultation Desk
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Navigation Header */}
       <header
-        className={`sticky top-0 z-40 transition-all duration-300 ${
+        className={`sticky top-0 z-50 transition-all duration-300 bg-white ${
           isScrolled
-            ? 'bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-md py-3.5'
-            : 'bg-white/90 backdrop-blur-sm border-b border-slate-200/50 py-4'
+            ? 'shadow-sm border-b border-gray-100 py-3'
+            : 'border-b border-gray-100 py-3.5'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Brand Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform duration-300">
-              <span className="text-lg tracking-wider font-extrabold text-white">PK</span>
-            </div>
-            <div>
-              <div className="flex items-center gap-1">
-                <span className="text-xl font-bold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors">
-                  PK DEVELOPERS
-                </span>
-              </div>
-              <p className="text-[10px] tracking-widest uppercase text-slate-500 font-semibold">
-                Properties & Real Estate
-              </p>
+          <Link
+            to="/"
+            onClick={(e) => scrollToSection(e, 'hero')}
+            className="flex items-center gap-3 group"
+          >
+            <GoldenTowersLogo className="w-9 h-9 transition-transform duration-200 group-hover:scale-105" />
+            <div className="flex flex-col">
+              <span className="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                PK DEVELOPERS
+              </span>
+              <span className="text-[9px] sm:text-[10px] tracking-[0.22em] uppercase font-bold text-[#c59b6d] leading-none mt-0.5">
+                BUILDING BETTER TOMORROWS
+              </span>
             </div>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
-            <Link
-              to="/"
-              className={`px-3 py-2 text-sm font-semibold rounded-lg transition-colors ${
-                isActive('/') && location.pathname === '/'
-                  ? 'text-blue-600 bg-blue-50'
-                  : 'text-slate-700 hover:text-blue-600 hover:bg-slate-100/70'
-              }`}
-            >
-              Home
-            </Link>
-
-            <Link
-              to="/about"
-              className={`px-3 py-2 text-sm font-semibold rounded-lg transition-colors ${
-                isActive('/about')
-                  ? 'text-blue-600 bg-blue-50'
-                  : 'text-slate-700 hover:text-blue-600 hover:bg-slate-100/70'
-              }`}
-            >
-              About
-            </Link>
-
-            {/* Services Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={handleServicesEnter}
-              onMouseLeave={handleServicesLeave}
-            >
-              <Link
-                to="/services"
-                className={`px-3 py-2 text-sm font-semibold rounded-lg inline-flex items-center gap-1 transition-colors ${
-                  isActive('/services')
-                    ? 'text-blue-600 bg-blue-50'
-                    : 'text-slate-700 hover:text-blue-600 hover:bg-slate-100/70'
-                }`}
-              >
-                Services
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180 text-blue-600' : ''}`} />
-              </Link>
-
-              {/* Services Mega Dropdown */}
-              {servicesDropdownOpen && (
-                <div className="absolute top-full left-0 mt-1 w-80 bg-white border border-slate-200 rounded-xl shadow-2xl p-2.5 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                  <div className="px-3 py-2 border-b border-slate-100 mb-1">
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
-                      Property & Advisory Services
-                    </span>
-                  </div>
-                  <div className="space-y-1">
-                    <Link
-                      to="/services/residential-construction"
-                      className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50/70 transition-colors group"
-                    >
-                      <div className="p-2 rounded-md bg-blue-50 group-hover:bg-blue-100 text-blue-600">
-                        <Home className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-semibold text-slate-800 group-hover:text-blue-600">
-                          Residential Property Dealing
-                        </div>
-                        <div className="text-xs text-slate-500">Villas, penthouses & luxury resale</div>
-                      </div>
-                    </Link>
-
-                    <Link
-                      to="/services/commercial-construction"
-                      className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50/70 transition-colors group"
-                    >
-                      <div className="p-2 rounded-md bg-blue-50 group-hover:bg-blue-100 text-blue-600">
-                        <Building2 className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-semibold text-slate-800 group-hover:text-blue-600">
-                          Commercial Real Estate & Leasing
-                        </div>
-                        <div className="text-xs text-slate-500">Offices, retail & tech towers</div>
-                      </div>
-                    </Link>
-
-                    <Link
-                      to="/services/architecture-planning"
-                      className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50/70 transition-colors group"
-                    >
-                      <div className="p-2 rounded-md bg-blue-50 group-hover:bg-blue-100 text-blue-600">
-                        <Compass className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-semibold text-slate-800 group-hover:text-blue-600">
-                          Plots & Land Acquisition
-                        </div>
-                        <div className="text-xs text-slate-500">RERA & BDA approved layout plots</div>
-                      </div>
-                    </Link>
-
-                    <Link
-                      to="/services/project-management"
-                      className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50/70 transition-colors group"
-                    >
-                      <div className="p-2 rounded-md bg-blue-50 group-hover:bg-blue-100 text-blue-600">
-                        <ClipboardCheck className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-semibold text-slate-800 group-hover:text-blue-600">
-                          Real Estate Investment Advisory
-                        </div>
-                        <div className="text-xs text-slate-500">High-yield & pre-leased assets</div>
-                      </div>
-                    </Link>
-
-                    <Link
-                      to="/services/renovation-remodeling"
-                      className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50/70 transition-colors group"
-                    >
-                      <div className="p-2 rounded-md bg-blue-50 group-hover:bg-blue-100 text-blue-600">
-                        <Hammer className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-semibold text-slate-800 group-hover:text-blue-600">
-                          Turnkey Property Development
-                        </div>
-                        <div className="text-xs text-slate-500">Custom villa build on your plot</div>
-                      </div>
-                    </Link>
-                  </div>
-                  <div className="pt-2 border-t border-slate-100 mt-1">
-                    <Link
-                      to="/services"
-                      className="flex items-center justify-between p-2 text-xs font-semibold text-blue-600 hover:text-blue-800 rounded-lg hover:bg-blue-50/60"
-                    >
-                      <span>Explore All Services Overview</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Projects Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={handleProjectsEnter}
-              onMouseLeave={handleProjectsLeave}
-            >
-              <Link
-                to="/projects"
-                className={`px-3 py-2 text-sm font-semibold rounded-lg inline-flex items-center gap-1 transition-colors ${
-                  isActive('/projects')
-                    ? 'text-blue-600 bg-blue-50'
-                    : 'text-slate-700 hover:text-blue-600 hover:bg-slate-100/70'
-                }`}
-              >
-                Properties
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${projectsDropdownOpen ? 'rotate-180 text-blue-600' : ''}`} />
-              </Link>
-
-              {projectsDropdownOpen && (
-                <div className="absolute top-full left-0 mt-1 w-64 bg-white border border-slate-200 rounded-xl shadow-2xl p-2.5 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                  <div className="px-3 py-2 border-b border-slate-100 mb-1">
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
-                      Property Portals
-                    </span>
-                  </div>
-                  <div className="space-y-1">
-                    <Link
-                      to="/projects"
-                      className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50/70 transition-colors group"
-                    >
-                      <div className="p-2 rounded-md bg-blue-50 text-blue-600">
-                        <Layers className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-semibold text-slate-800 group-hover:text-blue-600">
-                          All Properties
-                        </div>
-                        <div className="text-xs text-slate-500">Verified deals & listings</div>
-                      </div>
-                    </Link>
-
-                    <Link
-                      to="/projects/residential"
-                      className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50/70 transition-colors group"
-                    >
-                      <div className="p-2 rounded-md bg-blue-50 text-blue-600">
-                        <Home className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-semibold text-slate-800 group-hover:text-blue-600">
-                          Luxury Residential
-                        </div>
-                        <div className="text-xs text-slate-500">Villas, penthouses & houses</div>
-                      </div>
-                    </Link>
-
-                    <Link
-                      to="/projects/commercial"
-                      className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50/70 transition-colors group"
-                    >
-                      <div className="p-2 rounded-md bg-blue-50 text-blue-600">
-                        <Building2 className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-semibold text-slate-800 group-hover:text-blue-600">
-                          Commercial Spaces
-                        </div>
-                        <div className="text-xs text-slate-500">Corporate & retail assets</div>
-                      </div>
-                    </Link>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <Link
-              to="/process"
-              className={`px-3 py-2 text-sm font-semibold rounded-lg transition-colors ${
-                isActive('/process')
-                  ? 'text-blue-600 bg-blue-50'
-                  : 'text-slate-700 hover:text-blue-600 hover:bg-slate-100/70'
-              }`}
-            >
-              Process
-            </Link>
-
-            <Link
-              to="/gallery"
-              className={`px-3 py-2 text-sm font-semibold rounded-lg transition-colors ${
-                isActive('/gallery')
-                  ? 'text-blue-600 bg-blue-50'
-                  : 'text-slate-700 hover:text-blue-600 hover:bg-slate-100/70'
-              }`}
-            >
-              Gallery
-            </Link>
-
-            <Link
-              to="/why-choose-us"
-              className={`px-3 py-2 text-sm font-semibold rounded-lg transition-colors ${
-                isActive('/why-choose-us')
-                  ? 'text-blue-600 bg-blue-50'
-                  : 'text-slate-700 hover:text-blue-600 hover:bg-slate-100/70'
-              }`}
-            >
-              Why Choose Us
-            </Link>
-
-            <Link
-              to="/contact"
-              className={`px-3 py-2 text-sm font-semibold rounded-lg transition-colors ${
-                isActive('/contact')
-                  ? 'text-blue-600 bg-blue-50'
-                  : 'text-slate-700 hover:text-blue-600 hover:bg-slate-100/70'
-              }`}
-            >
-              Contact
-            </Link>
+          <nav className="hidden md:flex items-center gap-7 lg:gap-9">
+            {navLinks.map((link) => {
+              const isActive =
+                location.pathname === '/' && activeSection === (link.id === 'hero' ? 'home' : link.id);
+              return (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={(e) => scrollToSection(e, link.id)}
+                  className={`text-[15px] transition-colors relative py-1 ${
+                    isActive
+                      ? 'text-[#c59b6d] font-bold'
+                      : 'text-slate-700 hover:text-[#c59b6d] font-medium'
+                  }`}
+                >
+                  {link.label}
+                  {isActive && (
+                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#c59b6d] rounded-full" />
+                  )}
+                </a>
+              );
+            })}
           </nav>
 
-          {/* Primary CTA Button */}
-          <div className="hidden lg:flex items-center gap-3">
-            <Link
-              to="/get-a-quote"
-              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-lg shadow-blue-500/25 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
+          {/* Right Action: Call Now Gold Button */}
+          <div className="hidden sm:flex items-center">
+            <a
+              href={`tel:${contactInfo.phone}`}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#c59b6d] hover:bg-[#b68a5c] text-white text-sm font-semibold shadow-sm transition-all duration-200 hover:shadow-md"
             >
-              <span>Inquire Property</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+              <Phone className="w-3.5 h-3.5 fill-white" />
+              <span>Call Now</span>
+            </a>
           </div>
 
-          {/* Mobile Menu Hamburger Button */}
-          <div className="flex items-center gap-2 lg:hidden">
-            <Link
-              to="/get-a-quote"
-              className="px-3.5 py-1.5 rounded-lg bg-blue-600 text-white font-semibold text-xs shadow-md"
+          {/* Mobile Menu Button */}
+          <div className="flex items-center gap-2 md:hidden">
+            <a
+              href={`tel:${contactInfo.phone}`}
+              className="p-2 rounded-full bg-[#c59b6d] text-white"
+              aria-label="Call Now"
             >
-              Inquire
-            </Link>
+              <Phone className="w-3.5 h-3.5 fill-white" />
+            </a>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              aria-label="Open Mobile Menu"
+              className="p-2 rounded-lg text-slate-700 hover:bg-slate-100"
+              aria-label="Toggle navigation menu"
             >
-              <Menu className="w-5 h-5" />
+              <Menu className="w-6 h-6" />
             </button>
           </div>
         </div>
       </header>
 
-      {/* Mobile Menu Drawer */}
-      <MobileMenu isOpen={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} />
+      {/* Mobile Drawer */}
+      <MobileMenu
+        isOpen={mobileMenuOpen}
+        onClose={() => setMobileMenuOpen(false)}
+        activeSection={activeSection}
+        onSelectSection={(id) => {
+          setMobileMenuOpen(false);
+          const element = document.getElementById(id);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            setActiveSection(id === 'hero' ? 'home' : id);
+          }
+        }}
+      />
     </>
   );
 };
+export default Header;

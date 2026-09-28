@@ -1,10 +1,10 @@
 export type ProjectCategory = 'residential' | 'commercial' | 'villas' | 'renovation';
-export type ProjectStatus = 'Completed' | 'Ongoing';
+export type ProjectStatus = 'Completed' | 'Ongoing' | 'Upcoming' | 'Featured';
 
 export interface ProjectFeature {
   title: string;
   description: string;
-  category: 'Architecture' | 'Materials' | 'Interior' | 'Landscaping' | 'Sustainability';
+  category: 'Architecture' | 'Materials' | 'Interior' | 'Landscaping' | 'Sustainability' | 'Amenities' | 'Security' | 'Layout' | 'Utilities' | 'Greenery' | 'Lifestyle' | 'Smart Living' | 'Location' | string;
 }
 
 export interface ProjectTimelineStage {
