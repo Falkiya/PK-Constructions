@@ -104,14 +104,14 @@ export const Header: React.FC = () => {
               <span className="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 leading-tight">
                 PK DEVELOPERS
               </span>
-              <span className="text-[9px] sm:text-[10px] tracking-[0.22em] uppercase font-bold text-[#c59b6d] leading-none mt-0.5">
+              <span className="text-[9px] sm:text-[10px] tracking-[0.22em] uppercase font-bold text-[#b68a5c] leading-none mt-0.5">
                 BUILDING BETTER TOMORROWS
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-7 lg:gap-9">
+          <nav className="hidden md:flex items-center gap-7 lg:gap-8">
             {navLinks.map((link) => {
               const isActive =
                 location.pathname === '/' && activeSection === (link.id === 'hero' ? 'home' : link.id);
@@ -120,16 +120,13 @@ export const Header: React.FC = () => {
                   key={link.label}
                   href={link.href}
                   onClick={(e) => scrollToSection(e, link.id)}
-                  className={`text-[15px] transition-colors relative py-1 ${
+                  className={`text-[14px] lg:text-[15px] transition-colors py-1 ${
                     isActive
-                      ? 'text-[#c59b6d] font-bold'
-                      : 'text-slate-700 hover:text-[#c59b6d] font-medium'
+                      ? 'text-[#b68a5c] font-semibold'
+                      : 'text-slate-800 hover:text-[#b68a5c] font-medium'
                   }`}
                 >
                   {link.label}
-                  {isActive && (
-                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#c59b6d] rounded-full" />
-                  )}
                 </a>
               );
             })}
@@ -139,7 +136,7 @@ export const Header: React.FC = () => {
           <div className="hidden sm:flex items-center">
             <a
               href={`tel:${contactInfo.phone}`}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#c59b6d] hover:bg-[#b68a5c] text-white text-sm font-semibold shadow-sm transition-all duration-200 hover:shadow-md"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#b68a5c] hover:bg-[#a67c4e] text-white text-sm font-medium shadow-sm transition-all duration-200"
             >
               <Phone className="w-3.5 h-3.5 fill-white" />
               <span>Call Now</span>
@@ -150,7 +147,7 @@ export const Header: React.FC = () => {
           <div className="flex items-center gap-2 md:hidden">
             <a
               href={`tel:${contactInfo.phone}`}
-              className="p-2 rounded-full bg-[#c59b6d] text-white"
+              className="p-2 rounded-lg bg-[#b68a5c] text-white"
               aria-label="Call Now"
             >
               <Phone className="w-3.5 h-3.5 fill-white" />
