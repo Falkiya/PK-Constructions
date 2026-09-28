@@ -27,36 +27,36 @@ import {
 import { SEOHead } from '../components/common/SEOHead';
 import { contactInfo } from '../data/companyData';
 
-// Hero slides featuring premier architectural residential developments
+// Full background hero slides featuring premier architectural residential developments
 const heroSlides = [
   {
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&q=80',
     title: 'PK Heights — Luxury Apartments',
     location: 'Mandya, Karnataka',
   },
   {
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80',
     title: 'PK Enclave — Gated Community Villas',
     location: 'Mysuru, Karnataka',
   },
   {
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80',
     title: 'PK Residency — Modern Living',
     location: 'Bengaluru, Karnataka',
   },
   {
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80',
     title: 'PK Signature Estates — Premium Plots',
     location: 'Mysuru Expressway Corridor',
   }
 ];
 
 export const HomePage: React.FC = () => {
-  // Hero slide state
+  // Hero background slide state
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
-  // Auto-slide effect
+  // Auto-slide effect every 4.5 seconds
   useEffect(() => {
     if (isPaused) return;
     const interval = setInterval(() => {
@@ -107,157 +107,151 @@ export const HomePage: React.FC = () => {
       />
 
       {/* ========================================================================= */}
-      {/* SECTION 1: HERO SECTION WITH SLIDES */}
+      {/* SECTION 1: FULL BACKGROUND IMAGE SLIDES HERO SECTION */}
       {/* ========================================================================= */}
-      <section id="hero" className="relative bg-[#091527] text-white overflow-hidden py-14 lg:py-20 flex items-center min-h-[620px] lg:min-h-[690px]">
-        {/* Subtle background ambient blur */}
-        <div className="absolute top-0 right-1/3 w-[500px] h-[500px] bg-[#c59b6d]/10 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-950/40 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            
-            {/* Left Content Column */}
-            <div className="lg:col-span-6 space-y-6 text-left">
-              {/* Eyebrow */}
-              <div className="text-xs font-semibold tracking-[0.22em] uppercase text-[#c59b6d]">
-                PREMIUM LIVING SPACES ——
-              </div>
-
-              {/* Main Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-serif font-bold text-white tracking-tight leading-[1.12]">
-                A Brighter <br />
-                <span className="italic font-normal text-[#c59b6d]">Tomorrow</span> <br />
-                <span className="text-[#c59b6d]">Starts Here</span>
-              </h1>
-
-              {/* Subtitle */}
-              <p className="text-slate-300 text-sm sm:text-base max-w-lg font-normal leading-relaxed">
-                Thoughtfully designed homes for a better,<br className="hidden sm:inline" /> more meaningful life.
-              </p>
-
-              {/* Action Buttons */}
-              <div className="flex flex-wrap items-center gap-4 pt-1 pb-4">
-                <a
-                  href={`tel:${contactInfo.phone}`}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#b68a5c] hover:bg-[#a67c4e] text-white font-medium text-sm transition-colors shadow-sm"
-                >
-                  <Phone className="w-4 h-4 fill-white" />
-                  <span>Call Now</span>
-                </a>
-
-                <a
-                  href="https://wa.me/919876543210"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-transparent hover:bg-white/10 text-white font-medium text-sm border border-white/35 transition-colors"
-                >
-                  <MessageCircle className="w-4 h-4 text-white" />
-                  <span>WhatsApp</span>
-                </a>
-              </div>
-
-              {/* Bottom 3 Badges with sleek gold outline icons */}
-              <div className="pt-6 border-t border-white/10 flex flex-wrap items-center gap-6 sm:gap-10">
-                <div className="flex items-center gap-3">
-                  <HomeIcon className="w-5 h-5 text-[#b68a5c] shrink-0" strokeWidth={1.8} />
-                  <div className="text-xs text-white leading-tight font-medium">
-                    <div>Quality</div>
-                    <div>Construction</div>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <Leaf className="w-5 h-5 text-[#b68a5c] shrink-0" strokeWidth={1.8} />
-                  <div className="text-xs text-white leading-tight font-medium">
-                    <div>Prime</div>
-                    <div>Locations</div>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <Users className="w-5 h-5 text-[#b68a5c] shrink-0" strokeWidth={1.8} />
-                  <div className="text-xs text-white leading-tight font-medium">
-                    <div>Trusted</div>
-                    <div>by Families</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Column: Sliding Image Carousel with Watermark */}
-            <div 
-              className="lg:col-span-6 relative"
-              onMouseEnter={() => setIsPaused(true)}
-              onMouseLeave={() => setIsPaused(false)}
+      <section 
+        id="hero" 
+        className="relative bg-[#091527] text-white overflow-hidden min-h-[640px] sm:min-h-[700px] lg:min-h-[760px] flex items-center"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        {/* Full-bleed background image slideshow */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          {heroSlides.map((slide, index) => (
+            <div
+              key={slide.title}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+              }`}
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 group h-[440px] sm:h-[490px] w-full bg-slate-900">
-                {/* Slides */}
-                {heroSlides.map((slide, index) => (
-                  <div
-                    key={slide.title}
-                    className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                      index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
-                    }`}
-                  >
-                    <img
-                      src={slide.image}
-                      alt={slide.title}
-                      className="w-full h-full object-cover transform duration-1000 hover:scale-105"
-                    />
-                    {/* Subtle dusk contrast vignette */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#091527]/80 via-transparent to-black/25" />
-                  </div>
-                ))}
+              <img
+                src={slide.image}
+                alt={slide.title}
+                className="w-full h-full object-cover object-center scale-105 transition-transform duration-7000 ease-out"
+              />
+            </div>
+          ))}
 
-                {/* Script Watermark Overlay: "More Than Just Buildings" */}
-                <div className="absolute bottom-6 right-6 z-20 pointer-events-none select-none text-right transform -rotate-3">
-                  <span className="font-script text-3xl sm:text-4xl text-white/95 drop-shadow-md leading-none block">
-                    More Than
-                  </span>
-                  <span className="font-script text-3xl sm:text-4xl text-white/95 drop-shadow-md leading-none block mt-1">
-                    Just Buildings
-                  </span>
+          {/* Sophisticated dark gradient overlays for perfect text legibility while showcasing buildings */}
+          <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#091527] via-[#091527]/85 to-[#091527]/30 sm:to-transparent" />
+          <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#091527] via-transparent to-black/35" />
+          <div className="absolute inset-0 z-10 bg-black/20" />
+        </div>
+
+        {/* Foreground Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 relative z-20 w-full">
+          <div className="max-w-2xl text-left space-y-6">
+            
+            {/* Eyebrow */}
+            <div className="text-xs font-semibold tracking-[0.22em] uppercase text-[#c59b6d]">
+              PREMIUM LIVING SPACES ——
+            </div>
+
+            {/* Main Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-[58px] font-serif font-bold text-white tracking-tight leading-[1.12] drop-shadow-md">
+              A Brighter <br />
+              <span className="italic font-normal text-[#c59b6d]">Tomorrow</span> <br />
+              <span className="text-[#c59b6d]">Starts Here</span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-slate-200 text-sm sm:text-base max-w-lg font-normal leading-relaxed drop-shadow">
+              Thoughtfully designed homes for a better,<br className="hidden sm:inline" /> more meaningful life.
+            </p>
+
+            {/* Action Buttons */}
+            <div className="flex flex-wrap items-center gap-4 pt-1 pb-4">
+              <a
+                href={`tel:${contactInfo.phone}`}
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-[#b68a5c] hover:bg-[#a67c4e] text-white font-medium text-sm transition-colors shadow-lg shadow-black/30"
+              >
+                <Phone className="w-4 h-4 fill-white" />
+                <span>Call Now</span>
+              </a>
+
+              <a
+                href="https://wa.me/919876543210"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-black/40 hover:bg-black/60 text-white font-medium text-sm border border-white/40 backdrop-blur-sm transition-colors shadow-lg"
+              >
+                <MessageCircle className="w-4 h-4 text-white" />
+                <span>WhatsApp</span>
+              </a>
+            </div>
+
+            {/* Bottom 3 Badges with sleek gold outline icons */}
+            <div className="pt-6 border-t border-white/15 flex flex-wrap items-center gap-6 sm:gap-10">
+              <div className="flex items-center gap-3">
+                <HomeIcon className="w-5 h-5 text-[#c59b6d] shrink-0" strokeWidth={2} />
+                <div className="text-xs text-white leading-tight font-medium drop-shadow-sm">
+                  <div>Quality</div>
+                  <div>Construction</div>
                 </div>
+              </div>
 
-                {/* Slide Navigation Arrows (visible on hover or tap) */}
-                <button
-                  type="button"
-                  onClick={prevSlide}
-                  aria-label="Previous Slide"
-                  className="absolute left-3 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-black/40 hover:bg-black/60 text-white backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                </button>
-                <button
-                  type="button"
-                  onClick={nextSlide}
-                  aria-label="Next Slide"
-                  className="absolute right-3 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-black/40 hover:bg-black/60 text-white backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
+              <div className="flex items-center gap-3">
+                <Leaf className="w-5 h-5 text-[#c59b6d] shrink-0" strokeWidth={2} />
+                <div className="text-xs text-white leading-tight font-medium drop-shadow-sm">
+                  <div>Prime</div>
+                  <div>Locations</div>
+                </div>
+              </div>
 
-                {/* Slide Progress Dots */}
-                <div className="absolute bottom-4 left-6 z-20 flex items-center gap-2">
-                  {heroSlides.map((_, dotIndex) => (
-                    <button
-                      key={dotIndex}
-                      type="button"
-                      onClick={() => setCurrentSlide(dotIndex)}
-                      aria-label={`Go to slide ${dotIndex + 1}`}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${
-                        dotIndex === currentSlide
-                          ? 'w-6 bg-[#c59b6d]'
-                          : 'w-1.5 bg-white/50 hover:bg-white'
-                      }`}
-                    />
-                  ))}
+              <div className="flex items-center gap-3">
+                <Users className="w-5 h-5 text-[#c59b6d] shrink-0" strokeWidth={2} />
+                <div className="text-xs text-white leading-tight font-medium drop-shadow-sm">
+                  <div>Trusted</div>
+                  <div>by Families</div>
                 </div>
               </div>
             </div>
-
           </div>
+        </div>
+
+        {/* Script Watermark Overlay: "More Than Just Buildings" positioned on bottom-right of hero banner */}
+        <div className="hidden sm:block absolute bottom-12 right-8 lg:right-16 z-20 pointer-events-none select-none text-right transform -rotate-3">
+          <span className="font-script text-4xl sm:text-5xl lg:text-6xl text-white/95 drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)] leading-none block font-bold">
+            More Than
+          </span>
+          <span className="font-script text-4xl sm:text-5xl lg:text-6xl text-white/95 drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)] leading-none block mt-1 font-bold">
+            Just Buildings
+          </span>
+        </div>
+
+        {/* Slide Controls: Subtle floating prev/next navigation arrows */}
+        <button
+          type="button"
+          onClick={prevSlide}
+          aria-label="Previous Slide"
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-2.5 rounded-full bg-black/35 hover:bg-black/60 text-white backdrop-blur-md transition-all border border-white/10 hidden sm:flex items-center justify-center"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+        <button
+          type="button"
+          onClick={nextSlide}
+          aria-label="Next Slide"
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-2.5 rounded-full bg-black/35 hover:bg-black/60 text-white backdrop-blur-md transition-all border border-white/10 hidden sm:flex items-center justify-center"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
+
+        {/* Slide Dots at bottom-center */}
+        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2">
+          {heroSlides.map((_, dotIndex) => (
+            <button
+              key={dotIndex}
+              type="button"
+              onClick={() => setCurrentSlide(dotIndex)}
+              aria-label={`Go to slide ${dotIndex + 1}`}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                dotIndex === currentSlide
+                  ? 'w-7 bg-[#c59b6d]'
+                  : 'w-1.5 bg-white/40 hover:bg-white/80'
+              }`}
+            />
+          ))}
         </div>
       </section>
 
@@ -477,7 +471,6 @@ export const HomePage: React.FC = () => {
       {/* SECTION 4: AMENITIES */}
       {/* ========================================================================= */}
       <section id="amenities" className="py-20 lg:py-24 bg-[#091527] text-white relative overflow-hidden">
-        {/* Subtle foliage background texture */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
           {/* Header Row: Title on Left, Subtext on Right */}
