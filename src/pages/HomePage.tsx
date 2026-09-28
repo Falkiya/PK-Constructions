@@ -54,16 +54,14 @@ const heroSlides = [
 export const HomePage: React.FC = () => {
   // Hero background slide state
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
 
-  // Auto-slide effect every 4.5 seconds
+  // Auto-slide effect every 2 seconds (2000ms)
   useEffect(() => {
-    if (isPaused) return;
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 4500);
+    }, 2000);
     return () => clearInterval(interval);
-  }, [isPaused]);
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
@@ -112,15 +110,13 @@ export const HomePage: React.FC = () => {
       <section 
         id="hero" 
         className="relative bg-[#091527] text-white overflow-hidden min-h-[640px] sm:min-h-[700px] lg:min-h-[760px] flex items-center"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
       >
         {/* Full-bleed background image slideshow */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           {heroSlides.map((slide, index) => (
             <div
               key={slide.title}
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
                 index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
               }`}
             >
