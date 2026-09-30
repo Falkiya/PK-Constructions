@@ -22,7 +22,8 @@ import {
   ShoppingBag,
   Bus,
   Navigation,
-  CheckCircle2
+  CheckCircle2,
+  Utensils
 } from 'lucide-react';
 import { SEOHead } from '../components/common/SEOHead';
 import { contactInfo } from '../data/companyData';
@@ -30,24 +31,24 @@ import { contactInfo } from '../data/companyData';
 // Full background hero slides featuring premier architectural residential developments
 const heroSlides = [
   {
+    image: '/images/projects/pk-vip-gallery-masterplan.jpg',
+    title: 'PK VIP Gallery — Luxury Plotted Enclave',
+    location: 'Belvadi, Srirangapatna, Mandya',
+  },
+  {
+    image: '/images/projects/pk-green-town-phase-2-masterplan.jpg',
+    title: 'PK Green Town (Phase-2) — Sy No. 182/1',
+    location: 'Belvadi, Srirangapatna, Mandya',
+  },
+  {
     image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&q=80',
     title: 'PK Heights — Luxury Apartments',
     location: 'Mandya, Karnataka',
   },
   {
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80',
-    title: 'PK Enclave — Gated Community Villas',
-    location: 'Mysuru, Karnataka',
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80',
-    title: 'PK Residency — Modern Living',
-    location: 'Bengaluru, Karnataka',
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80',
-    title: 'PK Signature Estates — Premium Plots',
-    location: 'Mysuru Expressway Corridor',
+    title: 'Turnkey Designer Villas — 20x30, 20x40 & 30x40',
+    location: 'Mandya & Mysuru Region',
   }
 ];
 
@@ -76,7 +77,7 @@ export const HomePage: React.FC = () => {
     name: '',
     phone: '',
     email: '',
-    project: 'PK Heights',
+    project: 'PK Green Town (Phase-2)',
     message: ''
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -90,7 +91,7 @@ export const HomePage: React.FC = () => {
         name: '',
         phone: '',
         email: '',
-        project: 'PK Heights',
+        project: 'PK Green Town (Phase-2)',
         message: ''
       });
     }, 5000);
@@ -368,12 +369,12 @@ export const HomePage: React.FC = () => {
           {/* 3 Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
-            {/* Card 1: PK Heights */}
+            {/* Card 1: PK Green Town (Phase-2) */}
             <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-slate-200 transition-all duration-300 flex flex-col group">
-              <div className="relative h-60 overflow-hidden">
+              <Link to="/projects/pk-green-town-phase-2" className="relative h-60 overflow-hidden bg-slate-100 block">
                 <img
-                  src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80"
-                  alt="PK Heights in Mandya"
+                  src="/images/projects/pk-green-town-phase-2-masterplan.jpg"
+                  alt="PK Green Town Phase-2 Layout"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-3.5 right-3.5">
@@ -382,28 +383,35 @@ export const HomePage: React.FC = () => {
                     Ongoing
                   </span>
                 </div>
-              </div>
+              </Link>
 
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-1">PK Heights</h3>
+                  <Link to="/projects/pk-green-town-phase-2" className="text-xl font-bold text-slate-900 mb-1 hover:text-[#b68a5c] transition-colors block">
+                    PK Green Town (Phase-2)
+                  </Link>
                   <div className="flex items-center gap-1.5 text-xs text-slate-500 mb-3">
                     <MapPin className="w-3.5 h-3.5 text-[#b68a5c]" />
-                    <span>Mandya, Karnataka</span>
+                    <span>Belvadi, Srirangapatna, Mandya</span>
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    Spacious 2 & 3 BHK apartments designed for modern living.
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
+                    Sy No. 182/1. 20x30, 20x40 & 30x40 residential plots with 40ft road, 24x7 water & electricity.
                   </p>
+                  <div className="flex flex-wrap gap-1.5 text-[11px] font-semibold text-slate-700">
+                    <span className="px-2 py-0.5 bg-slate-100 rounded">20x30 : 60 Units</span>
+                    <span className="px-2 py-0.5 bg-slate-100 rounded">30x40 : 17 Units</span>
+                    <span className="px-2 py-0.5 bg-slate-100 rounded">40' Main Road</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Card 2: PK Enclave */}
+            {/* Card 2: PK VIP Gallery */}
             <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-slate-200 transition-all duration-300 flex flex-col group">
-              <div className="relative h-60 overflow-hidden">
+              <Link to="/projects/pk-vip-gallery" className="relative h-60 overflow-hidden bg-slate-100 block">
                 <img
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
-                  alt="PK Enclave in Mysuru"
+                  src="/images/projects/pk-vip-gallery-masterplan.jpg"
+                  alt="PK VIP Gallery 3D Layout"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-3.5 right-3.5">
@@ -412,28 +420,35 @@ export const HomePage: React.FC = () => {
                     Featured
                   </span>
                 </div>
-              </div>
+              </Link>
 
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-1">PK Enclave</h3>
+                  <Link to="/projects/pk-vip-gallery" className="text-xl font-bold text-slate-900 mb-1 hover:text-[#b68a5c] transition-colors block">
+                    PK VIP Gallery
+                  </Link>
                   <div className="flex items-center gap-1.5 text-xs text-slate-500 mb-3">
                     <MapPin className="w-3.5 h-3.5 text-[#b68a5c]" />
-                    <span>Mysuru, Karnataka</span>
+                    <span>Belvadi, Srirangapatna, Mandya</span>
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    Premium residential plots in a peaceful and well-connected location.
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
+                    Boutique gated enclave with 40x60, 30x40 & 20x30 luxury plots, 28ft wide road, and 24x7 utilities.
                   </p>
+                  <div className="flex flex-wrap gap-1.5 text-[11px] font-semibold text-slate-700">
+                    <span className="px-2 py-0.5 bg-slate-100 rounded">40'x60' Plots</span>
+                    <span className="px-2 py-0.5 bg-slate-100 rounded">28' Central Road</span>
+                    <span className="px-2 py-0.5 bg-slate-100 rounded">Clear Titles</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Card 3: PK Residency */}
+            {/* Card 3: PK Heights */}
             <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-slate-200 transition-all duration-300 flex flex-col group">
-              <div className="relative h-60 overflow-hidden">
+              <Link to="/projects/pk-heights" className="relative h-60 overflow-hidden block">
                 <img
-                  src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80"
-                  alt="PK Residency in Bengaluru"
+                  src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80"
+                  alt="PK Heights Apartments"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-3.5 right-3.5">
@@ -442,18 +457,25 @@ export const HomePage: React.FC = () => {
                     Upcoming
                   </span>
                 </div>
-              </div>
+              </Link>
 
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-1">PK Residency</h3>
+                  <Link to="/projects/pk-heights" className="text-xl font-bold text-slate-900 mb-1 hover:text-[#b68a5c] transition-colors block">
+                    PK Heights
+                  </Link>
                   <div className="flex items-center gap-1.5 text-xs text-slate-500 mb-3">
                     <MapPin className="w-3.5 h-3.5 text-[#b68a5c]" />
-                    <span>Bengaluru, Karnataka</span>
+                    <span>Mandya, Karnataka</span>
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    Modern homes with world-class amenities for a better lifestyle.
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
+                    Spacious 2 & 3 BHK luxury residences and turnkey modern villas with world-class amenities.
                   </p>
+                  <div className="flex flex-wrap gap-1.5 text-[11px] font-semibold text-slate-700">
+                    <span className="px-2 py-0.5 bg-slate-100 rounded">2 & 3 BHK</span>
+                    <span className="px-2 py-0.5 bg-slate-100 rounded">Turnkey Build</span>
+                    <span className="px-2 py-0.5 bg-slate-100 rounded">Clubhouse</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -548,25 +570,25 @@ export const HomePage: React.FC = () => {
             {/* Left Column: Connectivity Checklist */}
             <div className="lg:col-span-6 space-y-6 text-left">
               <div className="text-xs font-semibold tracking-[0.2em] uppercase text-[#b68a5c]">
-                —— OUR LOCATION
+                —— OUR LOCATION & CONNECTIVITY
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-serif font-bold text-slate-900 tracking-tight leading-[1.2]">
-                Well Connected.<br />Always Accessible.
+                Well Connected.<br />Prime Strategic Location.
               </h2>
 
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-                Our projects are located in prime areas with easy access to schools, hospitals, shopping centers and major transport hubs.
+                Our layouts in Belvadi Village (Srirangapatna Taluk, Mandya) offer rapid connectivity to Ring Road, top medical centers, prestigious schools, and popular dining destinations.
               </p>
 
-              {/* 5 Checklist Items with round brown icons */}
+              {/* 5 Checklist Items with real document distances */}
               <div className="space-y-3.5 pt-1">
                 <div className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-[#fbf7f2] border border-[#e8dccf] flex items-center justify-center shrink-0">
-                    <GraduationCap className="w-3.5 h-3.5 text-[#b68a5c]" />
+                    <Navigation className="w-3.5 h-3.5 text-[#b68a5c]" />
                   </div>
                   <span className="text-sm font-medium text-slate-800">
-                    Schools & Colleges
+                    3.0 KM Away From Ring Road
                   </span>
                 </div>
 
@@ -575,34 +597,34 @@ export const HomePage: React.FC = () => {
                     <Building2 className="w-3.5 h-3.5 text-[#b68a5c]" />
                   </div>
                   <span className="text-sm font-medium text-slate-800">
-                    Hospitals
+                    2.0 KM Away From Prajwal Hospital
                   </span>
                 </div>
 
                 <div className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-[#fbf7f2] border border-[#e8dccf] flex items-center justify-center shrink-0">
-                    <ShoppingBag className="w-3.5 h-3.5 text-[#b68a5c]" />
+                    <GraduationCap className="w-3.5 h-3.5 text-[#b68a5c]" />
                   </div>
                   <span className="text-sm font-medium text-slate-800">
-                    Shopping Centers
+                    1.5 KM Away From Presentation School
                   </span>
                 </div>
 
                 <div className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-[#fbf7f2] border border-[#e8dccf] flex items-center justify-center shrink-0">
-                    <Bus className="w-3.5 h-3.5 text-[#b68a5c]" />
+                    <Utensils className="w-3.5 h-3.5 text-[#b68a5c]" />
                   </div>
                   <span className="text-sm font-medium text-slate-800">
-                    Public Transport
+                    2.0 KM Away From Lekenzi Restaurant
                   </span>
                 </div>
 
                 <div className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-[#fbf7f2] border border-[#e8dccf] flex items-center justify-center shrink-0">
-                    <Navigation className="w-3.5 h-3.5 text-[#b68a5c]" />
+                    <MapPin className="w-3.5 h-3.5 text-[#b68a5c]" />
                   </div>
                   <span className="text-sm font-medium text-slate-800">
-                    Easy Highway Access
+                    Kasaba Hobli, Belvadi Village, Srirangapatna Taluk, Mandya
                   </span>
                 </div>
               </div>
@@ -610,7 +632,7 @@ export const HomePage: React.FC = () => {
               {/* Get Directions Button */}
               <div className="pt-2">
                 <a
-                  href="https://maps.google.com/?q=Mandya,Karnataka,India"
+                  href="https://maps.google.com/?q=Belvadi,Srirangapatna,Mandya"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#b68a5c] hover:bg-[#a67c4e] text-white text-sm font-medium transition-colors"
@@ -638,10 +660,10 @@ export const HomePage: React.FC = () => {
 
                 {/* Floating location info badge matching mockup */}
                 <div className="absolute top-4 left-4 p-3.5 rounded-lg bg-white/95 backdrop-blur-md shadow border border-slate-100 text-left">
-                  <div className="text-sm font-bold text-slate-900">PK Developers</div>
-                  <div className="text-xs text-slate-500">Mandya, Karnataka</div>
+                  <div className="text-sm font-bold text-slate-900">PK Developers & Projects</div>
+                  <div className="text-xs text-slate-500">Belvadi, Srirangapatna, Mandya</div>
                   <a
-                    href="https://maps.google.com/?q=Mandya,Karnataka,India"
+                    href="https://maps.google.com/?q=Belvadi,Srirangapatna,Mandya"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs text-blue-600 hover:underline font-medium block mt-1"
@@ -724,9 +746,9 @@ export const HomePage: React.FC = () => {
                       onChange={(e) => setFormData({ ...formData, project: e.target.value })}
                       className="w-full px-4 py-3 rounded-md bg-white text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#b68a5c] text-sm"
                     >
-                      <option value="PK Heights">I'm interested in PK Heights (Mandya)</option>
-                      <option value="PK Enclave">I'm interested in PK Enclave (Mysuru)</option>
-                      <option value="PK Residency">I'm interested in PK Residency (Bengaluru)</option>
+                      <option value="PK Green Town (Phase-2)">I'm interested in PK Green Town (Phase-2) - Mandya</option>
+                      <option value="PK VIP Gallery">I'm interested in PK VIP Gallery - Mandya</option>
+                      <option value="PK Heights">I'm interested in PK Heights - Mandya</option>
                       <option value="General Inquiry">General Inquiry</option>
                     </select>
                   </div>

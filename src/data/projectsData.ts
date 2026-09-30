@@ -3,147 +3,152 @@ import { Project } from '../types';
 export const projectsData: Project[] = [
   {
     id: 'proj-1',
-    slug: 'pk-heights',
-    name: 'PK Heights',
+    slug: 'pk-green-town-phase-2',
+    name: 'PK Green Town (Phase-2)',
     category: 'residential',
-    subCategory: 'Apartments',
-    location: 'Mandya, Karnataka',
+    subCategory: 'Residential Plots & Layouts',
+    location: 'Belvadi Village, Srirangapatna, Mandya',
     status: 'Ongoing',
     completionDate: '2025',
-    area: '2 & 3 BHK Luxury Apartments',
-    clientType: 'Residential Living',
-    price: '₹55 Lakhs - ₹95 Lakhs',
-    propertyType: 'Spacious 2 & 3 BHK Apartments',
+    area: '20x30, 20x40 & 30x40 Plots (89+ Units)',
+    clientType: 'Gated Layout & Villa Community',
+    price: 'Affordable & Premium Plots Available',
+    propertyType: 'Master-Planned Plotted Layout',
     transactionType: 'For Sale',
-    possession: 'Possession 2025',
-    reraId: 'PRM/KA/RERA/1251/310/PR/240218/006412',
-    description: 'Spacious 2 & 3 BHK apartments designed for modern living with lifestyle amenities, excellent ventilation, and prime connectivity in Mandya.',
-    challenge: 'Creating a high-rise landmark with integrated recreational green spaces and 24/7 security while preserving peaceful neighborhood serenity.',
-    solution: 'Engineered with premium Mivan construction, dedicated parking levels, rainwater harvesting, and lush landscaped gardens.',
+    possession: 'Immediate Registration Ready',
+    reraId: 'Sy No. 182/1, Kasaba Hobli, Belvadi',
+    description: 'PK Green Town Phase-2 is a premier residential layout situated at Sy No. 182/1, Belvadi Village, Kasaba Hobli, Srirangapatna Taluk, Mandya. Offering 20x30 (60 Units), 20x40 (12 Units), and 30x40 (17 Units) plots with 40-foot main road, 22-foot internal roads, 24x7 water and electricity.',
+    challenge: 'Developing a well-connected gated plotted community with 40ft wide roads, underground utilities, and turnkey villa construction models close to the Ring Road.',
+    solution: 'Constructed wide 40ft & 22ft asphalted roads, integrated 24x7 water and electrical distribution network, avenue tree plantation, and ready-to-build 20x30, 20x40 & 30x40 villa floorplans.',
     features: [
       {
-        category: 'Architecture',
-        title: 'Modern High-Rise Living',
-        description: 'Vastu-compliant spacious 2 & 3 BHK apartments with private balconies.'
+        category: 'Layout',
+        title: '40\' Main Road & 22\' Cross Roads',
+        description: 'Generous 40-foot wide central road and 22-foot cross streets with kerbing and drainage.'
       },
       {
-        category: 'Amenities',
-        title: 'Complete Lifestyle Facilities',
-        description: 'Power backup, clubhouse, dedicated car parking, and children play area.'
+        category: 'Utilities',
+        title: '24x7 Water & Electricity Supply',
+        description: 'Round-the-clock dedicated water supply pipeline and electrical transformer infrastructure.'
       },
       {
-        category: 'Security',
-        title: '24/7 CCTV & Manned Security',
-        description: 'Round-the-clock gated security with intercom and RFID boom barriers.'
+        category: 'Inventory',
+        title: 'Plot Sizes: 20x30, 20x40 & 30x40',
+        description: '20x30 (60 No\'s), 20x40 (12 No\'s), and 30x40 (17 No\'s) with clear individual title deeds.'
       },
       {
-        category: 'Sustainability',
-        title: 'Rainwater Harvesting & Solar',
-        description: 'Eco-conscious rainwater harvesting and solar corridor illumination.'
+        category: 'Connectivity',
+        title: '3.0 KM From Ring Road',
+        description: '2.0 KM from Prajwal Hospital, 1.5 KM from Presentation School, and 2.0 KM from Lekenzi Restaurant.'
       }
     ],
-    coverImage: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
+    coverImage: '/images/projects/pk-green-town-phase-2-masterplan.jpg',
     galleryImages: [
       {
-        url: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=80',
-        caption: 'PK Heights architectural elevation at twilight.'
+        url: '/images/projects/pk-green-town-phase-2-masterplan.jpg',
+        caption: 'PK Green Town Phase-2 Master Layout Plan (89 Plots)'
       },
       {
-        url: 'https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Spacious double-height living room with acoustic glazing overlooking the garden.'
+        url: '/images/projects/pk-green-town-phase-2-layout.jpg',
+        caption: 'PK Green Town Phase-2 Sector 19-Plot Strip Layout'
       },
       {
-        url: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80',
-        caption: 'State-of-the-art minimalist chef kitchen with integrated quartz waterfall island.'
+        url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80',
+        caption: 'Modern 20x30 and 30x40 Duplex Villa Design Options'
       }
     ],
     timeline: [
       {
-        stage: 'Architectural Design & Approvals',
+        stage: 'Layout Planning & Survey Verification',
         duration: 'Phase 1',
         status: 'completed',
-        description: 'RERA registration, municipal clearances, and soil testing.'
+        description: 'Sy No. 182/1 survey demarcation, title vetting, and statutory layout approvals.'
       },
       {
-        stage: 'Superstructure Construction',
+        stage: 'Civil Infrastructure & Utilities',
         duration: 'Phase 2',
-        status: 'in-progress',
-        description: 'RCC framing and masonry works across all residential levels.'
+        status: 'completed',
+        description: '40ft & 22ft road asphalting, water lines, transformer installation, and tree plantation.'
       },
       {
-        stage: 'Finishing & Handover',
+        stage: 'Registration & Villa Construction',
         duration: 'Phase 3',
-        status: 'upcoming',
-        description: 'Interior fittings, amenity commissioning, and handover.'
+        status: 'in-progress',
+        description: 'Plot deed registrations, khata transfers, and turnkey villa execution.'
       }
     ],
     featured: true
   },
   {
     id: 'proj-2',
-    slug: 'pk-enclave',
-    name: 'PK Enclave',
+    slug: 'pk-vip-gallery',
+    name: 'PK VIP Gallery',
     category: 'residential',
-    subCategory: 'Plots & Villas',
-    location: 'Mysuru, Karnataka',
+    subCategory: 'Luxury Villa Plots',
+    location: 'Belvadi Village, Srirangapatna, Mandya',
     status: 'Featured',
     completionDate: '2024',
-    area: '1,200 - 2,400 sq.ft Plots',
-    clientType: 'Gated Community Plots',
-    price: '₹38 Lakhs - ₹75 Lakhs',
-    propertyType: 'Premium Residential Plots',
-    transactionType: 'For Sale',
+    area: '40x60, 30x40 & 20x30 Premium Plots',
+    clientType: 'Boutique Gated Enclave',
+    price: 'Prime Investment Pricing',
+    propertyType: 'Exclusive VIP Plotted Layout',
+    transactionType: 'Exclusive Listing',
     possession: 'Immediate Registration',
-    reraId: 'PRM/KA/RERA/1251/310/PR/230911/005210',
-    description: 'Premium residential plots in a peaceful and well-connected location in Mysuru, featuring wide asphalted roads, avenue plantations, and MUDA approval.',
-    challenge: 'Delivering a peaceful gated community layout with all underground utilities ready for immediate villa construction.',
-    solution: 'Engineered with underground power cabling, underground drainage, central water reservoir, and landscaped parks.',
+    reraId: 'Kasaba Hobli, Belvadi Village, Srirangapatna',
+    description: 'PK VIP Gallery is an ultra-exclusive gated residential enclave in Belvadi Village, Srirangapatna Taluk, Mandya. Featuring premium 40x60 luxury estate plots, 28-foot central avenue, 20-foot access road, and 24x7 water and electricity.',
+    challenge: 'Designing a private, high-security boutique residential enclave for discerning buyers requiring spacious 40x60 parcels with immediate highway connectivity.',
+    solution: 'Executed wide 28ft central asphalt driveway, underground drainage, electrified perimeter, dedicated power connections, and 24x7 water network.',
     features: [
       {
         category: 'Layout',
-        title: 'MUDA Approved Gated Community',
-        description: 'Clear marketable titles, 40-foot wide asphalt roads, and street lighting.'
+        title: '28\' Central Road & 20\' Access Road',
+        description: 'Engineered 28-foot wide internal avenue with smooth turning radius and roadside green berms.'
+      },
+      {
+        category: 'Dimensions',
+        title: '40\' x 60\' Luxury Estate Plots',
+        description: 'Spacious rectangular executive parcels (Plots 1 to 13) ideal for independent villas with private gardens.'
       },
       {
         category: 'Utilities',
-        title: 'Underground Infrastructure',
-        description: 'Concealed power lines, individual water connections, and underground drainage.'
+        title: '24x7 Water & Electricity Supply',
+        description: 'Dedicated water pipeline and high-capacity electrical grid with underground cabling.'
       },
       {
-        category: 'Greenery',
-        title: 'Landscaped Parks & Walking Trails',
-        description: 'Over 30% open green space with native shade trees and kids play zone.'
+        category: 'Connectivity',
+        title: '3.0 KM From Ring Road',
+        description: '2.0 KM from Prajwal Hospital, 1.5 KM from Presentation School, and 2.0 KM from Lekenzi Restaurant.'
       }
     ],
-    coverImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    coverImage: '/images/projects/pk-vip-gallery-masterplan.jpg',
     galleryImages: [
       {
-        url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80',
-        caption: 'PK Enclave luxury villa model home.'
+        url: '/images/projects/pk-vip-gallery-masterplan.jpg',
+        caption: 'PK VIP Gallery 3D Aerial Masterplan & Road Layout'
       },
       {
         url: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Lush avenue trees and broad internal roads.'
+        caption: 'Luxury Villa Concept for 40x60 Plots'
       }
     ],
     timeline: [
       {
-        stage: 'Layout Planning & Clearances',
+        stage: 'Boutique Layout Demarcation',
         duration: 'Phase 1',
         status: 'completed',
-        description: 'Statutory approvals, boundary demarcation, and zoning sanction.'
+        description: 'Plot numbering (1 to 13) and 28ft roadway demarcation.'
       },
       {
-        stage: 'Civil Infrastructure & Utilities',
+        stage: 'Road Formation & Utilities',
         duration: 'Phase 2',
         status: 'completed',
-        description: 'Roads, kerbing, drainage, transformer installation, and park landscaping.'
+        description: 'Asphalt paving, 24x7 water connection, power supply, and streetlights.'
       },
       {
-        stage: 'Registration & Villa Construction',
+        stage: 'VIP Registration & Villa Builds',
         duration: 'Phase 3',
-        status: 'completed',
-        description: 'Clear title deed registrations and custom villa execution.'
+        status: 'in-progress',
+        description: 'Clear title registrations and custom villa architecture.'
       }
     ],
     featured: true
