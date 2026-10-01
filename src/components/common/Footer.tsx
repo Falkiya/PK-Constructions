@@ -84,7 +84,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom bar with copyright and Dream Click Growth Solutions badge */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p>© 2024 PK Developers. All rights reserved.</p>
+          <p>© PK Developers. All rights reserved.</p>
 
           <div className="flex items-center gap-2">
             <span>Designed & Developed by</span>
