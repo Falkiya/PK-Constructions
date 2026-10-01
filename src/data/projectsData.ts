@@ -155,138 +155,152 @@ export const projectsData: Project[] = [
   },
   {
     id: 'proj-3',
-    slug: 'pk-residency',
-    name: 'PK Residency',
+    slug: 'pk-signature-luxury-villa',
+    name: 'PK Signature Luxury Villa',
     category: 'residential',
-    subCategory: 'Luxury Homes',
-    location: 'Bengaluru, Karnataka',
-    status: 'Upcoming',
-    completionDate: '2026',
-    area: '1,450 - 3,200 sq.ft',
-    clientType: 'Modern Living',
-    price: '₹85 Lakhs - ₹1.85 Cr',
-    propertyType: 'Modern Homes & Penthouses',
+    subCategory: 'Turnkey Luxury Villa',
+    location: 'Mandya, Karnataka',
+    status: 'Completed',
+    completionDate: '2024',
+    area: '3,800 sq.ft Duplex Villa',
+    clientType: 'Turnkey Architectural Build',
+    price: 'Custom Turnkey Build',
+    propertyType: 'Contemporary Luxury Villa',
     transactionType: 'Exclusive Listing',
-    possession: 'Pre-Booking Open',
-    reraId: 'PRM/KA/RERA/1251/310/PR/231105/005844',
-    description: 'Modern homes with world-class amenities for a better lifestyle, offering expansive layouts, smart home automation, and clubhouse privileges.',
-    challenge: 'Designing high-efficiency modern homes in a prime Bengaluru growth corridor with sustainable architecture.',
-    solution: 'PK Developers crafted an eco-sensitive master plan featuring rooftop recreation, co-working lounges, and EV charging points.',
+    possession: 'Completed & Delivered',
+    reraId: 'Mandya Urban Planning Approved',
+    description: 'A masterpiece of contemporary residential engineering by PK Developers. This multi-level turnkey luxury villa features modern geometric facade architecture with warm ambient exterior spotlights, glass balustrades, integrated compound wall with security gates, false ceilings with CNC jaali work & blue LED cove lighting, custom floating TV entertainment console, acoustic-fluted master suites, and polished Italian marble flooring.',
+    challenge: 'Executing a high-end turnkey residence requiring seamless synchronization of structural RCC civil work, bespoke interior millwork, ambient multi-circuit LED lighting, and custom architectural elevations.',
+    solution: 'Delivered an end-to-end turnkey solution from foundation to interior handover, featuring designer ceiling trays, illuminated accent walls, motorized gate access, fluted wooden bedroom finishes, and energy-efficient ventilation.',
     features: [
       {
+        category: 'Architecture',
+        title: 'Modern Geometric Facade with Night Illumination',
+        description: 'Multi-tiered elevation with composite wood-finish cladding, recessed exterior spot lighting, and clear glass terrace railings.'
+      },
+      {
+        category: 'Interior',
+        title: 'CNC Laser-Cut False Ceilings with Dual Lighting',
+        description: 'Intricately patterned false ceiling trays equipped with ambient blue cove glow and warm task spot illumination.'
+      },
+      {
         category: 'Lifestyle',
-        title: 'World-Class Amenities',
-        description: 'Swimming pool, gymnasium, multi-purpose hall, and jogging tracks.'
+        title: 'Custom TV Entertainment & Feature Wall',
+        description: 'Spacious main hall with custom-crafted floating TV console, textured decorative accent wall, and mirror wall paneling.'
       },
       {
-        category: 'Smart Living',
-        title: 'Home Automation & Fiber Internet',
-        description: 'Keyless entry, automated lighting controls, and high-speed FTTH.'
-      },
-      {
-        category: 'Location',
-        title: 'Prime Connectivity',
-        description: 'Close proximity to metro stations, tech parks, and top international schools.'
+        category: 'Interior',
+        title: 'Master Suite with Fluted Wood Paneling',
+        description: 'Acoustic vertical fluting, integrated vertical LED profile lights, tray ceiling, luxury vanity station, and ensuite bath.'
       }
     ],
-    coverImage: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
+    coverImage: '/images/projects/pk-luxury-villa-exterior.png',
     galleryImages: [
       {
-        url: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80',
-        caption: 'PK Residency architectural facade.'
+        url: '/images/projects/pk-luxury-villa-exterior.png',
+        caption: 'PK Signature Luxury Villa night architectural elevation and facade lighting'
       },
       {
-        url: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Master suite opening to scenic city view terrace.'
+        url: '/images/projects/pk-luxury-villa-hall.png',
+        caption: 'Grand living room with custom TV console, CNC ceiling, and Italian-finish flooring'
+      },
+      {
+        url: '/images/projects/pk-luxury-villa-foyer.png',
+        caption: 'Decorative foyer and hallway with textured accent wall and blue cove ceiling'
+      },
+      {
+        url: '/images/projects/pk-luxury-villa-bedroom.jpg',
+        caption: 'Executive master bedroom suite with acoustic fluted paneling and profile lighting'
       }
     ],
     timeline: [
       {
-        stage: 'Master Planning & Sanctions',
-        duration: 'Phase 1',
+        stage: 'Architectural Design & 3D Visualization',
+        duration: 'Month 1-2',
         status: 'completed',
-        description: 'Architectural drafting, structural engineering, and statutory filings.'
+        description: 'Complete floorplans, structural engineering, and 3D night elevation rendering.'
       },
       {
-        stage: 'Groundbreaking & Pre-Launch',
-        duration: 'Phase 2',
-        status: 'in-progress',
-        description: 'Site leveling, foundation piling, and VIP investor pre-allocations.'
+        stage: 'Civil Construction & Superstructure',
+        duration: 'Month 3-7',
+        status: 'completed',
+        description: 'RCC framing, brick masonry, concealed electrical conduit plumbing, and exterior plastering.'
       },
       {
-        stage: 'Main Structure & Delivery',
-        duration: 'Phase 3',
-        status: 'upcoming',
-        description: 'Full tower structural completion and possession.'
+        stage: 'Interior Millwork, Ceilings & Handover',
+        duration: 'Month 8-10',
+        status: 'completed',
+        description: 'CNC ceiling installation, LED cove lighting, marble flooring, custom TV unit, and client handover.'
       }
     ],
     featured: true
   },
   {
     id: 'proj-4',
-    slug: 'the-prism-business-tower',
-    name: 'The Prism Business Tower',
+    slug: 'pk-community-hall-events',
+    name: 'PK Community Hall & Events',
     category: 'commercial',
-    subCategory: 'Commercial Buildings',
-    location: 'Central CBD, Bengaluru',
-    status: 'Completed',
+    subCategory: 'Convention & Event Center',
+    location: 'Srirangapatna / Mandya, Karnataka',
+    status: 'Featured',
     completionDate: '2025',
-    area: '240,000 sq.ft (Available: 15,000 - 60,000 sq.ft)',
-    clientType: 'Commercial Real Estate Deal',
-    price: '₹165 / sq.ft (Lease) | ₹210 Cr (Outright)',
-    propertyType: '16-Storey Commercial Corporate Tower',
-    transactionType: 'For Lease',
-    possession: 'Immediate Fit-Out',
-    reraId: 'PRM/KA/RERA/1251/310/PR/240112/006122',
-    description: 'A landmark 16-storey commercial corporate tower in the heart of Bengaluru Central CBD, offering column-free floor plates, 100% DG backup, and 3 levels of subterranean parking.',
-    challenge: 'Coordinating high-profile corporate lease negotiations for multiple financial banking suites with tailored lock-in terms and parking bay allocations.',
-    solution: 'PK Developers structured multi-floor corporate leases with multinational banks and consulting firms, maximizing occupancy and achieving record rental yields.',
+    area: '35,000 sq.ft Built-up + 25,000 sq.ft Event Lawn',
+    clientType: 'Commercial Hospitality & Event Venue',
+    price: 'Event Booking & Venue Reservations Open',
+    propertyType: 'Grand Banquet & Convention Complex',
+    transactionType: 'Exclusive Listing',
+    possession: 'Inauguration & Bookings Open',
+    reraId: 'Commercial Sanction Approved',
+    description: 'PK Community Hall & Events is an iconic multi-level convention, wedding, and social event destination in the Mandya-Srirangapatna corridor. Boasting a striking illuminated bronze and glass facade, expansive open-air celebration lawn with cocktail banquet setup, double-height grand entrance portico, multi-tier banquet halls, rooftop VIP party terraces with open fire pits, and comprehensive catering facilities.',
+    challenge: 'Engineering a world-class hospitality venue capable of hosting large gatherings of 1,500+ attendees while ensuring fluid transitions between indoor AC banquet halls and open-air celebration lawns.',
+    solution: 'Designed expansive column-free banquet floorplates on the ground floor opening directly onto manicured party lawns, dual upper-level viewing galleries, rooftop fire-pit lounges, and high-volume commercial catering infrastructure.',
     features: [
       {
         category: 'Architecture',
-        title: 'Parametric Facade Geometry',
-        description: 'Faceted glass curtain wall creating a prismatic jewel aesthetic on the skyline.'
+        title: 'Illuminated Facade with Grand Entrance Portico',
+        description: 'Signature architectural entrance with vertical fluted bronze panels, ambient perimeter glow, and floor-to-ceiling glass fenestration.'
       },
       {
-        category: 'Sustainability',
-        title: 'LEED Gold Certified',
-        description: 'Smart energy recuperation elevators, daylight harvesting sensors, and rooftop solar canopy.'
+        category: 'Amenities',
+        title: 'Expansive Celebration Lawn & Cocktail Banquet',
+        description: '25,000 sq.ft manicured green lawn equipped with decorative festoon lighting, outdoor cocktail tables, and live banquet counters.'
       },
       {
-        category: 'Materials',
-        title: 'High-Strength Concrete Core',
-        description: 'M70 grade specialized self-compacting concrete engineered for 100+ year durability.'
+        category: 'Lifestyle',
+        title: 'Rooftop Lounges & Fire Pit Viewing Decks',
+        description: 'Exclusive multi-level upper terraces with built-in stone fire pits and panoramic viewing balconies for VIP receptions.'
+      },
+      {
+        category: 'Utilities',
+        title: 'Full Hospitality & High-Capacity Parking',
+        description: 'Commercial event kitchen, dedicated bride/groom green rooms, 100% DG power backup, and extensive valet parking.'
       }
     ],
-    coverImage: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1600&q=80',
+    coverImage: '/images/projects/pk-community-hall-events.png',
     galleryImages: [
       {
-        url: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1600&q=80',
-        caption: 'The dramatic prismatic glass facade soaring against the skyline.'
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Triple-height grand entrance lobby with security turnstiles and natural stone.'
+        url: '/images/projects/pk-community-hall-events.png',
+        caption: 'PK Community Hall & Events illuminated facade, celebration lawn, and rooftop terraces'
       }
     ],
     timeline: [
       {
-        stage: 'Commercial Floor Allocation',
-        duration: 'Month 1',
+        stage: 'Architectural Planning & Site Approvals',
+        duration: 'Phase 1',
         status: 'completed',
-        description: 'Corporate client requirement matching and floor-plate optimization.'
+        description: 'Comprehensive zoning, structural design, and hospitality spatial layout sanction.'
       },
       {
-        stage: 'Commercial Lease Structuring',
-        duration: 'Month 2',
+        stage: 'Superstructure & Facade Engineering',
+        duration: 'Phase 2',
         status: 'completed',
-        description: 'Agreement on lock-in periods, CAM charges, and rent-free fitout duration.'
+        description: 'Multi-level structural framing, glass facade installation, and architectural lighting.'
       },
       {
-        stage: 'Possession for Tenant Fit-Out',
-        duration: 'Month 3',
-        status: 'completed',
-        description: 'Key handover to corporate fit-out contractors and operations kickoff.'
+        stage: 'Banquet Acoustic Fit-Out & Landscape Launch',
+        duration: 'Phase 3',
+        status: 'in-progress',
+        description: 'Acoustic wall paneling, banquet hall commissioning, lawn landscaping, and event reservations.'
       }
     ],
     featured: true

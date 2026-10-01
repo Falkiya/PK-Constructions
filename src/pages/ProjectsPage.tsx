@@ -37,7 +37,7 @@ export const ProjectsPage: React.FC = () => {
       if (selectedFilter === 'All') {
         // keep all
       } else if (selectedFilter === 'For Sale') {
-        if (project.transactionType !== 'For Sale') return false;
+        if (project.transactionType !== 'For Sale' && project.transactionType !== 'Exclusive Listing') return false;
       } else if (selectedFilter === 'For Lease') {
         if (project.transactionType !== 'For Lease') return false;
       } else if (selectedFilter === 'Residential') {
@@ -45,7 +45,7 @@ export const ProjectsPage: React.FC = () => {
       } else if (selectedFilter === 'Commercial') {
         if (project.category !== 'commercial') return false;
       } else if (selectedFilter === 'Plots / Land') {
-        if (project.propertyType !== 'Plot' && project.propertyType !== 'Land' && project.category !== 'renovation') return false;
+        if (!project.propertyType?.toLowerCase().includes('plot') && !project.propertyType?.toLowerCase().includes('land') && project.category !== 'renovation') return false;
       } else if (selectedFilter === 'Investment') {
         if (project.transactionType !== 'Investment' && project.transactionType !== 'Exclusive Listing') return false;
       }

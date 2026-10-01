@@ -16,7 +16,7 @@ export const CommercialProjectsPage: React.FC = () => {
   const [selectedSubtype, setSelectedSubtype] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const subtypes = ['All', 'Offices', 'Commercial Buildings', 'Retail Spaces'];
+  const subtypes = ['All', 'Commercial Buildings', 'Convention & Event Center', 'Offices', 'Retail Spaces'];
 
   const commercialList = useMemo(() => {
     return projectsData
@@ -26,6 +26,7 @@ export const CommercialProjectsPage: React.FC = () => {
           if (selectedSubtype === 'Offices' && p.subCategory !== 'Offices') return false;
           if (selectedSubtype === 'Commercial Buildings' && p.subCategory !== 'Commercial Buildings') return false;
           if (selectedSubtype === 'Retail Spaces' && p.subCategory !== 'Retail Spaces') return false;
+          if (selectedSubtype === 'Convention & Event Center' && p.subCategory !== 'Convention & Event Center') return false;
         }
 
         if (searchQuery.trim() !== '') {

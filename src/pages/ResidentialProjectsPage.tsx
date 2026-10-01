@@ -17,16 +17,16 @@ export const ResidentialProjectsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [sortBy, setSortBy] = useState<string>('all');
 
-  const subtypes = ['All', 'Villas', 'Luxury Homes', 'Apartments', 'Multi-unit Residential Buildings'];
+  const subtypes = ['All', 'Villas', 'Plots & Layouts', 'Apartments', 'Multi-unit Residential Buildings'];
 
   const residentialList = useMemo(() => {
     return projectsData
       .filter((p) => p.category === 'residential' || p.category === 'villas')
       .filter((p) => {
         if (selectedSubtype !== 'All') {
-          if (selectedSubtype === 'Villas' && p.subCategory !== 'Villas') return false;
-          if (selectedSubtype === 'Luxury Homes' && p.subCategory !== 'Luxury Homes') return false;
-          if (selectedSubtype === 'Apartments' && p.subCategory !== 'Apartments') return false;
+          if (selectedSubtype === 'Villas' && !p.subCategory.toLowerCase().includes('villa')) return false;
+          if (selectedSubtype === 'Plots & Layouts' && !p.subCategory.toLowerCase().includes('plot') && !p.subCategory.toLowerCase().includes('layout')) return false;
+          if (selectedSubtype === 'Apartments' && !p.subCategory.toLowerCase().includes('apartment') && !p.subCategory.toLowerCase().includes('home')) return false;
           if (selectedSubtype === 'Multi-unit Residential Buildings' && p.subCategory !== 'Multi-unit Residential Buildings') return false;
         }
 

@@ -28,8 +28,18 @@ import {
 import { SEOHead } from '../components/common/SEOHead';
 import { contactInfo } from '../data/companyData';
 
-// Full background hero slides featuring premier architectural residential developments
+// Full background hero slides featuring authentic PK Developers projects
 const heroSlides = [
+  {
+    image: '/images/projects/pk-community-hall-events.png',
+    title: 'PK Community Hall & Events — Convention & Banquet Center',
+    location: 'Srirangapatna / Mandya, Karnataka',
+  },
+  {
+    image: '/images/projects/pk-luxury-villa-exterior.png',
+    title: 'PK Signature Luxury Villa — Turnkey Architecture',
+    location: 'Mandya, Karnataka',
+  },
   {
     image: '/images/projects/pk-vip-gallery-masterplan.jpg',
     title: 'PK VIP Gallery — Luxury Plotted Enclave',
@@ -41,14 +51,9 @@ const heroSlides = [
     location: 'Belvadi, Srirangapatna, Mandya',
   },
   {
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&q=80',
-    title: 'PK Heights — Luxury Apartments',
+    image: '/images/projects/pk-luxury-villa-hall.png',
+    title: 'Custom Interiors & Designer Ceilings — PK Living Concepts',
     location: 'Mandya, Karnataka',
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80',
-    title: 'Turnkey Designer Villas — 20x30, 20x40 & 30x40',
-    location: 'Mandya & Mysuru Region',
   }
 ];
 
@@ -366,12 +371,12 @@ export const HomePage: React.FC = () => {
             </div>
           </div>
 
-          {/* 3 Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* 4 Cards Responsive Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
             {/* Card 1: PK Green Town (Phase-2) */}
             <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-slate-200 transition-all duration-300 flex flex-col group">
-              <Link to="/projects/pk-green-town-phase-2" className="relative h-60 overflow-hidden bg-slate-100 block">
+              <Link to="/projects/pk-green-town-phase-2" className="relative h-56 overflow-hidden bg-slate-100 block">
                 <img
                   src="/images/projects/pk-green-town-phase-2-masterplan.jpg"
                   alt="PK Green Town Phase-2 Layout"
@@ -385,22 +390,22 @@ export const HomePage: React.FC = () => {
                 </div>
               </Link>
 
-              <div className="p-6 flex-1 flex flex-col justify-between">
+              <div className="p-5 flex-1 flex flex-col justify-between">
                 <div>
-                  <Link to="/projects/pk-green-town-phase-2" className="text-xl font-bold text-slate-900 mb-1 hover:text-[#b68a5c] transition-colors block">
+                  <Link to="/projects/pk-green-town-phase-2" className="text-lg font-bold text-slate-900 mb-1 hover:text-[#b68a5c] transition-colors block">
                     PK Green Town (Phase-2)
                   </Link>
-                  <div className="flex items-center gap-1.5 text-xs text-slate-500 mb-3">
+                  <div className="flex items-center gap-1.5 text-xs text-slate-500 mb-2.5">
                     <MapPin className="w-3.5 h-3.5 text-[#b68a5c]" />
                     <span>Belvadi, Srirangapatna, Mandya</span>
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
+                  <p className="text-xs text-slate-600 leading-relaxed mb-3">
                     Sy No. 182/1. 20x30, 20x40 & 30x40 residential plots with 40ft road, 24x7 water & electricity.
                   </p>
-                  <div className="flex flex-wrap gap-1.5 text-[11px] font-semibold text-slate-700">
+                  <div className="flex flex-wrap gap-1 text-[10px] font-semibold text-slate-700">
                     <span className="px-2 py-0.5 bg-slate-100 rounded">20x30 : 60 Units</span>
                     <span className="px-2 py-0.5 bg-slate-100 rounded">30x40 : 17 Units</span>
-                    <span className="px-2 py-0.5 bg-slate-100 rounded">40' Main Road</span>
+                    <span className="px-2 py-0.5 bg-slate-100 rounded">40' Road</span>
                   </div>
                 </div>
               </div>
@@ -408,7 +413,7 @@ export const HomePage: React.FC = () => {
 
             {/* Card 2: PK VIP Gallery */}
             <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-slate-200 transition-all duration-300 flex flex-col group">
-              <Link to="/projects/pk-vip-gallery" className="relative h-60 overflow-hidden bg-slate-100 block">
+              <Link to="/projects/pk-vip-gallery" className="relative h-56 overflow-hidden bg-slate-100 block">
                 <img
                   src="/images/projects/pk-vip-gallery-masterplan.jpg"
                   alt="PK VIP Gallery 3D Layout"
@@ -422,59 +427,96 @@ export const HomePage: React.FC = () => {
                 </div>
               </Link>
 
-              <div className="p-6 flex-1 flex flex-col justify-between">
+              <div className="p-5 flex-1 flex flex-col justify-between">
                 <div>
-                  <Link to="/projects/pk-vip-gallery" className="text-xl font-bold text-slate-900 mb-1 hover:text-[#b68a5c] transition-colors block">
+                  <Link to="/projects/pk-vip-gallery" className="text-lg font-bold text-slate-900 mb-1 hover:text-[#b68a5c] transition-colors block">
                     PK VIP Gallery
                   </Link>
-                  <div className="flex items-center gap-1.5 text-xs text-slate-500 mb-3">
+                  <div className="flex items-center gap-1.5 text-xs text-slate-500 mb-2.5">
                     <MapPin className="w-3.5 h-3.5 text-[#b68a5c]" />
                     <span>Belvadi, Srirangapatna, Mandya</span>
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
+                  <p className="text-xs text-slate-600 leading-relaxed mb-3">
                     Boutique gated enclave with 40x60, 30x40 & 20x30 luxury plots, 28ft wide road, and 24x7 utilities.
                   </p>
-                  <div className="flex flex-wrap gap-1.5 text-[11px] font-semibold text-slate-700">
+                  <div className="flex flex-wrap gap-1 text-[10px] font-semibold text-slate-700">
                     <span className="px-2 py-0.5 bg-slate-100 rounded">40'x60' Plots</span>
-                    <span className="px-2 py-0.5 bg-slate-100 rounded">28' Central Road</span>
+                    <span className="px-2 py-0.5 bg-slate-100 rounded">28' Road</span>
                     <span className="px-2 py-0.5 bg-slate-100 rounded">Clear Titles</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Card 3: PK Heights */}
+            {/* Card 3: PK Signature Luxury Villa */}
             <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-slate-200 transition-all duration-300 flex flex-col group">
-              <Link to="/projects/pk-heights" className="relative h-60 overflow-hidden block">
+              <Link to="/projects/pk-signature-luxury-villa" className="relative h-56 overflow-hidden bg-slate-900 block">
                 <img
-                  src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80"
-                  alt="PK Heights Apartments"
+                  src="/images/projects/pk-luxury-villa-exterior.png"
+                  alt="PK Signature Luxury Villa"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-3.5 right-3.5">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#0284c7] text-white shadow">
-                    <span className="w-1.5 h-1.5 rounded-full bg-sky-200"></span>
-                    Upcoming
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-700 text-white shadow">
+                    <CheckCircle2 className="w-3 h-3 text-emerald-200" />
+                    Completed
                   </span>
                 </div>
               </Link>
 
-              <div className="p-6 flex-1 flex flex-col justify-between">
+              <div className="p-5 flex-1 flex flex-col justify-between">
                 <div>
-                  <Link to="/projects/pk-heights" className="text-xl font-bold text-slate-900 mb-1 hover:text-[#b68a5c] transition-colors block">
-                    PK Heights
+                  <Link to="/projects/pk-signature-luxury-villa" className="text-lg font-bold text-slate-900 mb-1 hover:text-[#b68a5c] transition-colors block">
+                    PK Signature Luxury Villa
                   </Link>
-                  <div className="flex items-center gap-1.5 text-xs text-slate-500 mb-3">
+                  <div className="flex items-center gap-1.5 text-xs text-slate-500 mb-2.5">
                     <MapPin className="w-3.5 h-3.5 text-[#b68a5c]" />
                     <span>Mandya, Karnataka</span>
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
-                    Spacious 2 & 3 BHK luxury residences and turnkey modern villas with world-class amenities.
+                  <p className="text-xs text-slate-600 leading-relaxed mb-3">
+                    Completed turnkey duplex villa featuring modern night facade lighting, CNC false ceilings, and luxury interiors.
                   </p>
-                  <div className="flex flex-wrap gap-1.5 text-[11px] font-semibold text-slate-700">
-                    <span className="px-2 py-0.5 bg-slate-100 rounded">2 & 3 BHK</span>
+                  <div className="flex flex-wrap gap-1 text-[10px] font-semibold text-slate-700">
                     <span className="px-2 py-0.5 bg-slate-100 rounded">Turnkey Build</span>
-                    <span className="px-2 py-0.5 bg-slate-100 rounded">Clubhouse</span>
+                    <span className="px-2 py-0.5 bg-slate-100 rounded">CNC Ceilings</span>
+                    <span className="px-2 py-0.5 bg-slate-100 rounded">Marble Flooring</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 4: PK Community Hall & Events */}
+            <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-slate-200 transition-all duration-300 flex flex-col group">
+              <Link to="/projects/pk-community-hall-events" className="relative h-56 overflow-hidden bg-slate-900 block">
+                <img
+                  src="/images/projects/pk-community-hall-events.png"
+                  alt="PK Community Hall & Events"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute top-3.5 right-3.5">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#b68a5c] text-white shadow">
+                    <Star className="w-3 h-3 text-white fill-white" />
+                    Featured
+                  </span>
+                </div>
+              </Link>
+
+              <div className="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <Link to="/projects/pk-community-hall-events" className="text-lg font-bold text-slate-900 mb-1 hover:text-[#b68a5c] transition-colors block">
+                    PK Community Hall & Events
+                  </Link>
+                  <div className="flex items-center gap-1.5 text-xs text-slate-500 mb-2.5">
+                    <MapPin className="w-3.5 h-3.5 text-[#b68a5c]" />
+                    <span>Srirangapatna / Mandya</span>
+                  </div>
+                  <p className="text-xs text-slate-600 leading-relaxed mb-3">
+                    Grand multi-level event complex with illuminated facade, open-air celebration lawn, and rooftop fire-pit lounges.
+                  </p>
+                  <div className="flex flex-wrap gap-1 text-[10px] font-semibold text-slate-700">
+                    <span className="px-2 py-0.5 bg-slate-100 rounded">Event Lawn</span>
+                    <span className="px-2 py-0.5 bg-slate-100 rounded">Banquet Hall</span>
+                    <span className="px-2 py-0.5 bg-slate-100 rounded">Fire Pit Terrace</span>
                   </div>
                 </div>
               </div>
@@ -748,7 +790,8 @@ export const HomePage: React.FC = () => {
                     >
                       <option value="PK Green Town (Phase-2)">I'm interested in PK Green Town (Phase-2) - Mandya</option>
                       <option value="PK VIP Gallery">I'm interested in PK VIP Gallery - Mandya</option>
-                      <option value="PK Heights">I'm interested in PK Heights - Mandya</option>
+                      <option value="PK Signature Luxury Villa">I'm interested in PK Signature Luxury Villa (Turnkey Build)</option>
+                      <option value="PK Community Hall & Events">I'm interested in PK Community Hall & Events (Venue Booking)</option>
                       <option value="General Inquiry">General Inquiry</option>
                     </select>
                   </div>
