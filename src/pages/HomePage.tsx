@@ -105,7 +105,7 @@ export const HomePage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="PK Developers | Building Better Tomorrows"
+        title="PK Developers | Building Spaces • Creating Futures"
         description="Thoughtfully designed homes for a better, more meaningful life. Premium residential apartments, plots, and gated communities in Mandya, Mysuru, and Bengaluru."
         canonicalPath="/"
       />

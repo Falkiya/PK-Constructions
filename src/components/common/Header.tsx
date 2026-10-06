@@ -5,33 +5,11 @@ import { contactInfo } from '../../data/companyData';
 import { MobileMenu } from './MobileMenu';
 
 export const GoldenTowersLogo: React.FC<{ className?: string }> = ({ className = "w-9 h-9" }) => (
-  <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-    {/* Left Tower */}
-    <rect x="6" y="16" width="7" height="20" rx="1" fill="#c59b6d" />
-    <rect x="8" y="19" width="3" height="3" fill="#ffffff" fillOpacity="0.85" />
-    <rect x="8" y="24" width="3" height="3" fill="#ffffff" fillOpacity="0.85" />
-    <rect x="8" y="29" width="3" height="3" fill="#ffffff" fillOpacity="0.85" />
-    <path d="M6 16L9.5 12L13 16H6Z" fill="#b68a5c" />
-
-    {/* Center Tall Tower */}
-    <rect x="15" y="8" width="10" height="28" rx="1.5" fill="#c59b6d" />
-    <rect x="18" y="12" width="4" height="4" fill="#ffffff" fillOpacity="0.85" />
-    <rect x="18" y="18" width="4" height="4" fill="#ffffff" fillOpacity="0.85" />
-    <rect x="18" y="24" width="4" height="4" fill="#ffffff" fillOpacity="0.85" />
-    <rect x="18" y="30" width="4" height="4" fill="#ffffff" fillOpacity="0.85" />
-    <path d="M15 8L20 3L25 8H15Z" fill="#a87c4f" />
-
-    {/* Right Tower */}
-    <rect x="27" y="13" width="7" height="23" rx="1" fill="#c59b6d" />
-    <rect x="29" y="16" width="3" height="3" fill="#ffffff" fillOpacity="0.85" />
-    <rect x="29" y="21" width="3" height="3" fill="#ffffff" fillOpacity="0.85" />
-    <rect x="29" y="26" width="3" height="3" fill="#ffffff" fillOpacity="0.85" />
-    <rect x="29" y="31" width="3" height="3" fill="#ffffff" fillOpacity="0.85" />
-    <path d="M27 13L30.5 9L34 13H27Z" fill="#b68a5c" />
-
-    {/* Base line */}
-    <line x1="4" y1="37" x2="36" y2="37" stroke="#c59b6d" strokeWidth="2" strokeLinecap="round" />
-  </svg>
+  <img
+    src="/images/pk-logo-mark.png"
+    alt="PK Developers"
+    className={`${className} object-contain`}
+  />
 );
 
 export const Header: React.FC = () => {
@@ -97,17 +75,13 @@ export const Header: React.FC = () => {
           <Link
             to="/"
             onClick={(e) => scrollToSection(e, 'hero')}
-            className="flex items-center gap-3 group"
+            className="flex items-center gap-2 group py-0.5"
           >
-            <GoldenTowersLogo className="w-9 h-9 transition-transform duration-200 group-hover:scale-105" />
-            <div className="flex flex-col">
-              <span className="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 leading-tight">
-                PK DEVELOPERS
-              </span>
-              <span className="text-[9px] sm:text-[10px] tracking-[0.22em] uppercase font-bold text-[#b68a5c] leading-none mt-0.5">
-                BUILDING BETTER TOMORROWS
-              </span>
-            </div>
+            <img
+              src="/images/pk-developers-logo-horizontal.png"
+              alt="PK Developers — Building Spaces • Creating Futures"
+              className="h-10 sm:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Navigation Links */}

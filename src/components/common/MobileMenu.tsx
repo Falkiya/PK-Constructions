@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { X, Phone, MessageCircle, MapPin, Mail, ArrowRight } from 'lucide-react';
 import { contactInfo } from '../../data/companyData';
-import { GoldenTowersLogo } from './Header';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -43,16 +42,12 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
     <div className="fixed inset-0 z-50 md:hidden flex flex-col bg-white/98 backdrop-blur-xl animate-in fade-in duration-200">
       {/* Drawer Header */}
       <div className="flex items-center justify-between px-5 py-4 border-b border-slate-100">
-        <Link to="/" onClick={onClose} className="flex items-center gap-2.5">
-          <GoldenTowersLogo className="w-8 h-8" />
-          <div className="flex flex-col">
-            <span className="font-extrabold tracking-tight text-slate-900 text-base leading-tight">
-              PK DEVELOPERS
-            </span>
-            <span className="text-[8px] tracking-[0.2em] uppercase font-bold text-[#c59b6d]">
-              BUILDING BETTER TOMORROWS
-            </span>
-          </div>
+        <Link to="/" onClick={onClose} className="flex items-center gap-2">
+          <img
+            src="/images/pk-developers-logo-horizontal.png"
+            alt="PK Developers — Building Spaces • Creating Futures"
+            className="h-9 w-auto object-contain"
+          />
         </Link>
         <button
           type="button"

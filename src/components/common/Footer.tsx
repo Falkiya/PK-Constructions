@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Phone, MessageCircle } from 'lucide-react';
 import { contactInfo } from '../../data/companyData';
-import { GoldenTowersLogo } from './Header';
 
 export const Footer: React.FC = () => {
   const location = useLocation();
@@ -36,14 +35,12 @@ export const Footer: React.FC = () => {
             onClick={(e) => scrollToSection(e, 'hero')}
             className="flex items-center gap-3 group text-left"
           >
-            <GoldenTowersLogo className="w-9 h-9 transition-transform duration-200 group-hover:scale-105" />
-            <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-white leading-tight">
-                PK DEVELOPERS
-              </span>
-              <span className="text-[9px] tracking-[0.22em] uppercase font-semibold text-[#b68a5c] mt-0.5">
-                BUILDING BETTER TOMORROWS
-              </span>
+            <div className="bg-white px-3.5 py-2 rounded-xl shadow-sm border border-[#b68a5c]/30 hover:border-[#b68a5c] transition-all duration-200">
+              <img
+                src="/images/pk-developers-logo-horizontal.png"
+                alt="PK Developers — Building Spaces • Creating Futures"
+                className="h-9 sm:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+              />
             </div>
           </Link>
 
