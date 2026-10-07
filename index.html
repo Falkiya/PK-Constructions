@@ -2,77 +2,95 @@
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="144x144" href="/favicon-144x144.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/images/pk-logo-mark.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#07111e" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PK Developers | Premium Construction & Real Estate Development</title>
-    <meta name="description" content="PK Developers is a premier construction and development company delivering excellence in residential, commercial, and renovation projects with superior craftsmanship and integrity." />
-    <meta name="keywords" content="construction company, PK Developers, residential construction, commercial construction, luxury villas, renovation, architectural planning, project management" />
-    
+    <title>PK Developers | Building Spaces • Creating Futures</title>
+    <meta name="description" content="PK Developers is a premier construction and real estate development company in Mandya, Mysuru & Karnataka. Turnkey modern villas, approved plotted layouts, and event venues." />
+    <meta name="keywords" content="PK Developers, PK Developers Mandya, construction company Mandya, PK Green Town, PK VIP Gallery, residential plots Mandya, luxury villas Mandya, turnkey construction Karnataka" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="PK Developers" />
     <meta property="og:url" content="https://pkdevelopers.com/" />
-    <meta property="og:title" content="PK Developers | Premium Construction & Development" />
-    <meta property="og:description" content="Building with purpose. Leading residential and commercial construction with unmatched quality, transparent execution, and modern design." />
-    <meta property="og:image" content="/images/pk-developers-logo-white.png" />
+    <meta property="og:title" content="PK Developers | Building Spaces • Creating Futures" />
+    <meta property="og:description" content="Premier construction and development company in Mandya & Mysuru. Approved plotted layouts, turnkey luxury villas, and commercial complexes." />
+    <meta property="og:image" content="https://pkdevelopers.com/images/pk-developers-logo-white.png" />
+    <meta property="og:image:alt" content="PK Developers Official Logo" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://pkdevelopers.com/" />
-    <meta property="twitter:title" content="PK Developers | Premium Construction & Development" />
-    <meta property="twitter:description" content="Building with purpose. Leading residential and commercial construction with unmatched quality, transparent execution, and modern design." />
-    <meta property="twitter:image" content="https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=1200&q=80" />
+    <meta property="twitter:title" content="PK Developers | Building Spaces • Creating Futures" />
+    <meta property="twitter:description" content="Premier construction and development company in Mandya & Mysuru. Approved plotted layouts, turnkey luxury villas, and commercial complexes." />
+    <meta property="twitter:image" content="https://pkdevelopers.com/images/pk-developers-logo-white.png" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Schema.org JSON-LD Structured Data -->
+    <!-- Schema.org JSON-LD Structured Data for Google Indexing & Logo Display -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "GeneralContractor",
-      "name": "PK Developers",
-      "image": "https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=1200&q=80",
-      "description": "Premier construction and development company delivering excellence in residential, commercial, and renovation projects.",
-      "url": "https://pkdevelopers.com",
-      "telephone": "+91-98765-43210",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "PK Business Towers, 4th Floor, Development Corridor",
-        "addressLocality": "Bengaluru",
-        "addressRegion": "Karnataka",
-        "postalCode": "560001",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "12.9716",
-        "longitude": "77.5946"
-      },
-      "openingHoursSpecification": [
+      "@graph": [
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"
-          ],
-          "opens": "09:00",
-          "closes": "19:00"
+          "@type": ["Organization", "GeneralContractor", "RealEstateAgent"],
+          "@id": "https://pkdevelopers.com/#organization",
+          "name": "PK Developers",
+          "alternateName": ["PK Developers & Constructions", "PK Constructions", "PK Group"],
+          "url": "https://pkdevelopers.com",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://pkdevelopers.com/#logo",
+            "url": "https://pkdevelopers.com/images/pk-developers-logo-white.png",
+            "contentUrl": "https://pkdevelopers.com/images/pk-developers-logo-white.png",
+            "caption": "PK Developers Official Logo",
+            "width": "805",
+            "height": "482"
+          },
+          "image": "https://pkdevelopers.com/images/pk-developers-logo-white.png",
+          "description": "Leading construction and real estate development company in Mandya, Mysuru & Karnataka. Turnkey modern villas, approved plotted layouts, and event venues.",
+          "telephone": "+91-98765-43210",
+          "priceRange": "₹₹",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Belvadi, Srirangapatna Taluk",
+            "addressLocality": "Mandya",
+            "addressRegion": "Karnataka",
+            "postalCode": "571438",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "12.5255",
+            "longitude": "76.8950"
+          },
+          "sameAs": [
+            "https://www.facebook.com/pkdevelopers",
+            "https://www.instagram.com/pkdevelopers"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pkdevelopers.com/#website",
+          "url": "https://pkdevelopers.com",
+          "name": "PK Developers",
+          "alternateName": ["PK Developers & Constructions", "PK Constructions"],
+          "publisher": {
+            "@id": "https://pkdevelopers.com/#organization"
+          }
         }
-      ],
-      "sameAs": [
-        "https://www.facebook.com/pkdevelopers",
-        "https://www.instagram.com/pkdevelopers",
-        "https://www.linkedin.com/company/pkdevelopers"
       ]
     }
     </script>

@@ -1,0 +1,13 @@
+# Robots.txt for PK Developers
+User-agent: *
+Allow: /
+
+# Googlebot-specific crawler access
+User-agent: Googlebot
+Allow: /
+Allow: /images/
+Allow: /favicon*
+Allow: /site.webmanifest
+
+# Canonical XML Sitemap
+Sitemap: https://pkdevelopers.com/sitemap.xml
