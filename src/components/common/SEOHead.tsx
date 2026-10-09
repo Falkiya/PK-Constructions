@@ -44,7 +44,7 @@ export const SEOHead: React.FC<SEOProps> = ({
       linkCanonical.setAttribute('rel', 'canonical');
       document.head.appendChild(linkCanonical);
     }
-    linkCanonical.setAttribute('href', `https://pkdevelopers.com${canonicalPath}`);
+    linkCanonical.setAttribute('href', `https://www.pkdevelopers.co.in${canonicalPath}`);
 
     // Scroll to top on route change
     window.scrollTo({ top: 0, behavior: 'smooth' });

@@ -50,7 +50,7 @@ export const PrivacyPolicyPage: React.FC = () => {
 
             <h3 className="text-lg font-bold text-slate-900 pt-4">4. Contact For Privacy Matters</h3>
             <p>
-              For inquiries regarding your personal data or to request data deletion, contact our privacy desk at <span className="text-blue-600 font-mono font-medium">privacy@pkdevelopers.com</span>.
+              For inquiries regarding your personal data or to request data deletion, contact our privacy desk at <span className="text-blue-600 font-mono font-medium">privacy@pkdevelopers.co.in</span>.
             </p>
           </div>
         </div>

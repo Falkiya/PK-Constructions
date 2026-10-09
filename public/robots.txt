@@ -10,4 +10,4 @@ Allow: /favicon*
 Allow: /site.webmanifest
 
 # Canonical XML Sitemap
-Sitemap: https://pkdevelopers.com/sitemap.xml
+Sitemap: https://www.pkdevelopers.co.in/sitemap.xml
