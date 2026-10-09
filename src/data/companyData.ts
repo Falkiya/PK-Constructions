@@ -102,12 +102,13 @@ export const teamMembers: TeamMember[] = [];
 export const testimonialsData: Testimonial[] = [];
 
 export const contactInfo = {
-  phone: '+91 98765-43210',
-  phoneAlt: '+91 98765-43211',
+  phone: '+91 91080 81321',
+  phoneRaw: '+919108081321',
+  phoneAlt: '+91 91080 81321',
   email: 'info@pkdevelopers.com',
   emailSales: 'deals@pkdevelopers.com',
-  whatsapp: '+919876543210',
-  whatsappDisplay: '+91 98765-43210',
+  whatsapp: '919108081321',
+  whatsappDisplay: '+91 91080 81321',
   address: 'Indiranagar, Bengaluru, Karnataka 560038',
   businessHours: 'Monday – Saturday: 9:00 AM – 7:30 PM | Sunday: By Appointment (Site Visits)'
 };

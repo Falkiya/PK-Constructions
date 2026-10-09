@@ -109,7 +109,7 @@ export const Header: React.FC = () => {
           {/* Right Action: Call Now Gold Button */}
           <div className="hidden sm:flex items-center">
             <a
-              href={`tel:${contactInfo.phone}`}
+              href={`tel:${contactInfo.phoneRaw}`}
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#b68a5c] hover:bg-[#a67c4e] text-white text-sm font-medium shadow-sm transition-all duration-200"
             >
               <Phone className="w-3.5 h-3.5 fill-white" />
@@ -120,7 +120,7 @@ export const Header: React.FC = () => {
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-2 md:hidden">
             <a
-              href={`tel:${contactInfo.phone}`}
+              href={`tel:${contactInfo.phoneRaw}`}
               className="p-2 rounded-lg bg-[#b68a5c] text-white"
               aria-label="Call Now"
             >

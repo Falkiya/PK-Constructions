@@ -61,7 +61,7 @@ export const Footer: React.FC = () => {
           {/* Social / Direct Action Circular Buttons */}
           <div className="flex items-center gap-3">
             <a
-              href="https://wa.me/919876543210"
+              href={`https://wa.me/${contactInfo.whatsapp}?text=Hello%20PK%20Developers,%20I%20would%20like%20to%20inquire%20about%20your%20properties.`}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp Us"
@@ -70,7 +70,7 @@ export const Footer: React.FC = () => {
               <MessageCircle className="w-5 h-5" />
             </a>
             <a
-              href={`tel:${contactInfo.phone}`}
+              href={`tel:${contactInfo.phoneRaw}`}
               aria-label="Call Us"
               className="w-10 h-10 rounded-full border border-[#b68a5c]/60 hover:border-[#b68a5c] bg-transparent flex items-center justify-center text-[#b68a5c] hover:scale-105 transition-all duration-200"
             >

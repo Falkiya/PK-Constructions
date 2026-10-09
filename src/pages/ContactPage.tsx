@@ -91,8 +91,8 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-sm font-bold text-slate-900">Telephone Inquiries</h3>
-                    <p className="text-xs text-slate-600 mt-1">General: <a href={`tel:${contactInfo.phone}`} className="text-blue-600 font-medium hover:underline">{contactInfo.phone}</a></p>
-                    <p className="text-xs text-slate-600">Direct Desk: <a href={`tel:${contactInfo.phoneAlt}`} className="text-blue-600 font-medium hover:underline">{contactInfo.phoneAlt}</a></p>
+                    <p className="text-xs text-slate-600 mt-1">General: <a href={`tel:${contactInfo.phoneRaw}`} className="text-blue-600 font-medium hover:underline">{contactInfo.phone}</a></p>
+                    <p className="text-xs text-slate-600">Direct Desk: <a href={`tel:${contactInfo.phoneRaw}`} className="text-blue-600 font-medium hover:underline">{contactInfo.phoneAlt}</a></p>
                   </div>
                 </div>
 
@@ -205,7 +205,7 @@ export const ContactPage: React.FC = () => {
                           required
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          placeholder="+91 98765 43210"
+                          placeholder="+91 91080 81321"
                           className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/20 transition-all"
                         />
                       </div>

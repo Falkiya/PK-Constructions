@@ -163,7 +163,7 @@ export const HomePage: React.FC = () => {
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-1 pb-4">
               <a
-                href={`tel:${contactInfo.phone}`}
+                href={`tel:${contactInfo.phoneRaw}`}
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-[#b68a5c] hover:bg-[#a67c4e] text-white font-medium text-sm transition-colors shadow-xl shadow-black/40"
               >
                 <Phone className="w-4 h-4 fill-white" />
@@ -171,7 +171,7 @@ export const HomePage: React.FC = () => {
               </a>
 
               <a
-                href="https://wa.me/919876543210"
+                href={`https://wa.me/${contactInfo.whatsapp}?text=Hello%20PK%20Developers,%20I%20would%20like%20to%20inquire%20about%20your%20properties.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-black/50 hover:bg-black/70 text-white font-medium text-sm border border-white/50 backdrop-blur-sm transition-colors shadow-xl"

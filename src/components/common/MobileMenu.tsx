@@ -64,14 +64,14 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
         {/* Quick CTA Buttons */}
         <div className="grid grid-cols-2 gap-3">
           <a
-            href={`tel:${contactInfo.phone}`}
+            href={`tel:${contactInfo.phoneRaw}`}
             className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#c59b6d] hover:bg-[#b68a5c] text-white font-bold text-sm shadow-md transition-colors"
           >
             <Phone className="w-4 h-4 fill-white" />
             <span>Call Now</span>
           </a>
           <a
-            href="https://wa.me/919876543210"
+            href={`https://wa.me/${contactInfo.whatsapp}?text=Hello%20PK%20Developers,%20I%20would%20like%20to%20inquire%20about%20your%20properties.`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition-colors"
@@ -107,7 +107,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
         {/* Contact Info Footer */}
         <div className="pt-6 border-t border-slate-100 space-y-3 text-xs text-slate-600">
           <a
-            href={`tel:${contactInfo.phone}`}
+            href={`tel:${contactInfo.phoneRaw}`}
             className="flex items-center gap-2.5 text-slate-800 hover:text-[#c59b6d] font-semibold"
           >
             <Phone className="w-4 h-4 text-[#c59b6d]" />
