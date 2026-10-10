@@ -11,7 +11,10 @@ import {
   ShieldCheck, 
   Phone, 
   FileText,
-  ArrowRight
+  ArrowRight,
+  MapPin,
+  Globe,
+  Sparkles
 } from 'lucide-react';
 import { SEOHead } from '../components/common/SEOHead';
 import { projectsData } from '../data/projectsData';
@@ -212,6 +215,92 @@ export const SitemapPage: React.FC = () => {
               </ul>
             </div>
           </div>
+
+          {/* Regional Hubs & NRI Desks Directory */}
+          <div className="mt-12 p-8 rounded-2xl bg-white border border-slate-200 shadow-sm text-left">
+            <div className="flex items-center gap-2.5 text-blue-600 font-bold text-base mb-3">
+              <MapPin className="w-5 h-5" />
+              <span>Target Regional Hubs &amp; Dedicated Global NRI Desks</span>
+            </div>
+            <p className="text-xs sm:text-sm text-slate-600 mb-6">
+              PK Developers is actively engaged in plotted developments, turnkey villa construction, and property investments across Karnataka and key Gulf NRI markets:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+              <div className="space-y-2 bg-slate-50 p-4 rounded-xl border border-slate-200">
+                <span className="font-bold text-slate-900 block text-sm">Karnataka Target Locations:</span>
+                <div className="flex flex-wrap gap-2 text-slate-700">
+                  <span className="px-2.5 py-1 bg-white rounded border border-slate-200 font-medium">Mysuru (Hebbal, Vijayanagar, JP Nagar, Bogadi, Bannur Rd)</span>
+                  <span className="px-2.5 py-1 bg-white rounded border border-slate-200 font-medium">Mandya &amp; Srirangapatna</span>
+                  <span className="px-2.5 py-1 bg-white rounded border border-slate-200 font-medium">Bangalore (Bengaluru)</span>
+                  <span className="px-2.5 py-1 bg-white rounded border border-slate-200 font-medium">Dakshina Kannada (Mangaluru)</span>
+                  <span className="px-2.5 py-1 bg-white rounded border border-slate-200 font-medium">Madikeri (Coorg)</span>
+                  <span className="px-2.5 py-1 bg-white rounded border border-slate-200 font-medium">Tumkur</span>
+                  <span className="px-2.5 py-1 bg-white rounded border border-slate-200 font-medium">Saligram</span>
+                  <span className="px-2.5 py-1 bg-white rounded border border-slate-200 font-medium">Chamarajanagar</span>
+                  <span className="px-2.5 py-1 bg-white rounded border border-slate-200 font-medium">Kollegal</span>
+                </div>
+              </div>
+
+              <div className="space-y-2 bg-slate-50 p-4 rounded-xl border border-slate-200">
+                <span className="font-bold text-slate-900 block text-sm flex items-center gap-1.5">
+                  <Globe className="w-4 h-4 text-blue-600" />
+                  <span>Global NRI Desks (Middle East &amp; GCC):</span>
+                </span>
+                <div className="flex flex-wrap gap-2 text-slate-700">
+                  <span className="px-2.5 py-1 bg-white rounded border border-slate-200 font-medium">UAE (Dubai, Abu Dhabi, Sharjah)</span>
+                  <span className="px-2.5 py-1 bg-white rounded border border-slate-200 font-medium">Saudi Arabia (Riyadh, Jeddah, Dammam)</span>
+                  <span className="px-2.5 py-1 bg-white rounded border border-slate-200 font-medium">Bahrain</span>
+                  <span className="px-2.5 py-1 bg-white rounded border border-slate-200 font-medium">Oman (Muscat)</span>
+                  <span className="px-2.5 py-1 bg-white rounded border border-slate-200 font-medium">Kuwait</span>
+                  <span className="px-2.5 py-1 bg-white rounded border border-slate-200 font-medium">Qatar (Doha)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Popular Search Keywords Directory */}
+          <div className="mt-8 p-8 rounded-2xl bg-white border border-slate-200 shadow-sm text-left">
+            <div className="flex items-center gap-2 text-blue-600 font-bold text-base mb-4">
+              <Sparkles className="w-4 h-4" />
+              <span>Popular Property Searches in Mysuru &amp; Karnataka</span>
+            </div>
+            <div className="flex flex-wrap gap-2 text-xs">
+              {[
+                { label: 'PK Developers Mysuru', link: '/projects' },
+                { label: 'Real Estate Developers in Mysuru', link: '/projects' },
+                { label: 'Builders in Mysuru', link: '/residential-construction' },
+                { label: 'Villas for Sale in Mysuru', link: '/projects/pk-signature-luxury-villa' },
+                { label: 'Residential Plots in Mysuru', link: '/projects/pk-green-town-phase-2' },
+                { label: 'Apartments in Mysuru', link: '/projects' },
+                { label: 'Flats for Sale in Mysuru', link: '/projects' },
+                { label: 'Gated Community Projects in Mysuru', link: '/projects/pk-vip-gallery' },
+                { label: 'Independent Houses for Sale in Mysuru', link: '/residential-construction' },
+                { label: 'Property in Hebbal Mysuru', link: '/projects' },
+                { label: 'Flats in Vijayanagar Mysuru', link: '/projects' },
+                { label: 'Property in JP Nagar Mysuru', link: '/projects' },
+                { label: 'Property in Bogadi Mysuru', link: '/projects' },
+                { label: 'Property in Bannur Road Mysuru', link: '/projects' },
+                { label: 'Property in Hootagalli Mysuru', link: '/projects' },
+                { label: 'Property in Dattagalli Mysuru', link: '/projects' },
+                { label: 'New Residential Projects in Mysuru', link: '/projects' },
+                { label: 'Trusted Builders in Mysuru', link: '/about' },
+                { label: 'Buy Property in Mysuru', link: '/projects' },
+                { label: 'PK Green Town Mandya', link: '/projects/pk-green-town-phase-2' },
+                { label: 'PK VIP Gallery Mandya', link: '/projects/pk-vip-gallery' },
+                { label: 'PK Signature Luxury Villa', link: '/projects/pk-signature-luxury-villa' },
+                { label: 'PK Community Hall & Events', link: '/projects/pk-community-hall-events' }
+              ].map((item, idx) => (
+                <Link
+                  key={idx}
+                  to={item.link}
+                  className="px-3 py-1.5 rounded-lg bg-slate-50 hover:bg-blue-50 text-slate-700 hover:text-blue-600 border border-slate-200 transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
         </div>
       </section>
     </>

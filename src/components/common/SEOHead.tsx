@@ -5,6 +5,7 @@ interface SEOProps {
   description: string;
   canonicalPath?: string;
   ogType?: string;
+  keywords?: string[] | string;
 }
 
 export const SEOHead: React.FC<SEOProps> = ({
@@ -12,6 +13,7 @@ export const SEOHead: React.FC<SEOProps> = ({
   description,
   canonicalPath = '',
   ogType = 'website',
+  keywords,
 }) => {
   useEffect(() => {
     // Update Title
@@ -26,6 +28,18 @@ export const SEOHead: React.FC<SEOProps> = ({
       document.head.appendChild(metaDesc);
     }
     metaDesc.setAttribute('content', description);
+
+    // Update Meta Keywords
+    if (keywords) {
+      const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
+      let metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (!metaKeywords) {
+        metaKeywords = document.createElement('meta');
+        metaKeywords.setAttribute('name', 'keywords');
+        document.head.appendChild(metaKeywords);
+      }
+      metaKeywords.setAttribute('content', keywordsString);
+    }
 
     // Update Open Graph
     let ogTitle = document.querySelector('meta[property="og:title"]');

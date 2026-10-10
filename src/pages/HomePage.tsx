@@ -23,7 +23,14 @@ import {
   Bus,
   Navigation,
   CheckCircle2,
-  Utensils
+  Utensils,
+  Globe,
+  ChevronDown,
+  Sparkles,
+  ShieldCheck,
+  Compass,
+  Plane,
+  Award
 } from 'lucide-react';
 import { SEOHead } from '../components/common/SEOHead';
 import { contactInfo } from '../data/companyData';
@@ -102,12 +109,47 @@ export const HomePage: React.FC = () => {
     }, 5000);
   };
 
+  // Location tab & FAQ state for SEO sections
+  const [activeLocationTab, setActiveLocationTab] = useState<'karnataka' | 'nri'>('karnataka');
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
+
   return (
     <>
       <SEOHead
-        title="PK Developers | Building Spaces • Creating Futures"
-        description="Thoughtfully designed homes for a better, more meaningful life. Premium residential apartments, plots, and gated communities in Mandya, Mysuru, and Bengaluru."
+        title="PK Developers | Best Builders & Real Estate Developers in Mysuru & Karnataka"
+        description="PK Developers is a premier real estate developer & builder in Mysuru & Karnataka. Luxury villas, residential plots, apartments, and gated community projects across Mysuru, Mandya, Bangalore, Dakshina Kannada, Madikeri, and NRI investment desk for UAE, Saudi Arabia, Qatar, Bahrain, Kuwait, Oman."
         canonicalPath="/"
+        keywords={[
+          'PK Developers Mysuru',
+          'PK Developers Mysore',
+          'real estate developers in Mysuru',
+          'property developers in Mysuru',
+          'builders in Mysuru',
+          'real estate company in Mysuru',
+          'villas for sale in Mysuru',
+          'residential plots in Mysuru',
+          'luxury apartments in Mysuru',
+          'flats for sale in Mysuru',
+          'property in Hebbal Mysuru',
+          'flats in Vijayanagar Mysuru',
+          'property in JP Nagar Mysuru',
+          'property in Bogadi Mysuru',
+          'property in Bannur Road Mysuru',
+          'Dakshina Kannada',
+          'Madikeri',
+          'Bangalore',
+          'Mandya',
+          'Tumkur',
+          'Saligram',
+          'Chamarajanagar',
+          'Kollegal',
+          'NRI real estate UAE',
+          'Saudi Arabia',
+          'Bahrain',
+          'Oman',
+          'Kuwait',
+          'Qatar'
+        ]}
       />
 
       {/* ========================================================================= */}
@@ -717,6 +759,508 @@ export const HomePage: React.FC = () => {
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* SECTION 5B: STRATEGIC LOCATIONS & NRI INVESTMENT DESK */}
+      {/* ========================================================================= */}
+      <section id="locations-footprint" className="py-20 lg:py-24 bg-[#fafaf9] border-t border-slate-200/70 text-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Section Header */}
+          <div className="max-w-3xl mb-12 text-left">
+            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#b68a5c] block mb-2">
+              —— STRATEGIC FOOTPRINT &amp; GLOBAL NRI DESK
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-serif font-bold text-slate-900 tracking-tight leading-[1.2]">
+              Building Across Prime Karnataka &amp; Serving Global NRI Investors
+            </h2>
+            <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+              From cultural living in Mysuru and coastal estates in Dakshina Kannada to prime townships in Bangalore and Mandya — PK Developers delivers clear-title gated layouts, luxury turnkey villas, and dedicated advisory for domestic buyers and Gulf NRIs.
+            </p>
+
+            {/* Toggle Tabs */}
+            <div className="mt-6 inline-flex p-1 rounded-xl bg-slate-200/80 border border-slate-300/50">
+              <button
+                type="button"
+                onClick={() => setActiveLocationTab('karnataka')}
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs font-semibold tracking-wide transition-all ${
+                  activeLocationTab === 'karnataka'
+                    ? 'bg-[#b68a5c] text-white shadow-md'
+                    : 'text-slate-700 hover:text-slate-900'
+                }`}
+              >
+                <Compass className="w-4 h-4" />
+                <span>Karnataka Target Hubs</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setActiveLocationTab('nri')}
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs font-semibold tracking-wide transition-all ${
+                  activeLocationTab === 'nri'
+                    ? 'bg-[#b68a5c] text-white shadow-md'
+                    : 'text-slate-700 hover:text-slate-900'
+                }`}
+              >
+                <Globe className="w-4 h-4" />
+                <span>Global NRI Desk (GCC / Middle East)</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Tab 1: Karnataka Priority Hubs */}
+          {activeLocationTab === 'karnataka' && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn">
+              {/* Mysuru / Mysore */}
+              <div className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow text-left group">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-[#fbf7f2] border border-[#e8dccf] flex items-center justify-center text-[#b68a5c]">
+                    <Building2 className="w-5 h-5" />
+                  </div>
+                  <span className="text-[11px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/60">
+                    Flagship Hub
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-1.5 group-hover:text-[#b68a5c] transition-colors">
+                  Mysuru (Mysore)
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                  Premier villas, approved residential plots, and modern apartments across Hebbal, Vijayanagar, JP Nagar, Bogadi, Hootagalli, Dattagalli, and Bannur Road.
+                </p>
+                <div className="flex flex-wrap gap-1.5 text-[11px] text-slate-600">
+                  <span className="px-2 py-0.5 rounded bg-slate-100">Hebbal</span>
+                  <span className="px-2 py-0.5 rounded bg-slate-100">Vijayanagar</span>
+                  <span className="px-2 py-0.5 rounded bg-slate-100">JP Nagar</span>
+                  <span className="px-2 py-0.5 rounded bg-slate-100">Bogadi</span>
+                  <span className="px-2 py-0.5 rounded bg-slate-100">Bannur Road</span>
+                </div>
+              </div>
+
+              {/* Mandya & Srirangapatna */}
+              <div className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow text-left group">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-[#fbf7f2] border border-[#e8dccf] flex items-center justify-center text-[#b68a5c]">
+                    <HomeIcon className="w-5 h-5" />
+                  </div>
+                  <span className="text-[11px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-full bg-[#fbf7f2] text-[#b68a5c] border border-[#e8dccf]">
+                    Active Projects
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-1.5 group-hover:text-[#b68a5c] transition-colors">
+                  Mandya &amp; Srirangapatna
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                  Flagship gated plotted townships with ready infrastructure: PK Green Town Phase-2, PK VIP Gallery, and grand convention destinations.
+                </p>
+                <div className="flex flex-wrap gap-1.5 text-[11px] text-slate-600">
+                  <span className="px-2 py-0.5 rounded bg-slate-100">PK Green Town</span>
+                  <span className="px-2 py-0.5 rounded bg-slate-100">PK VIP Gallery</span>
+                  <span className="px-2 py-0.5 rounded bg-slate-100">Belvadi</span>
+                </div>
+              </div>
+
+              {/* Bangalore (Bengaluru) */}
+              <div className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow text-left group">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-[#fbf7f2] border border-[#e8dccf] flex items-center justify-center text-[#b68a5c]">
+                    <Sparkles className="w-5 h-5" />
+                  </div>
+                  <span className="text-[11px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200/60">
+                    High Appreciation
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-1.5 group-hover:text-[#b68a5c] transition-colors">
+                  Bangalore (Bengaluru)
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                  Turnkey architectural villa construction, capital city real estate investments, and expressway connectivity to South Karnataka hubs.
+                </p>
+                <div className="flex flex-wrap gap-1.5 text-[11px] text-slate-600">
+                  <span className="px-2 py-0.5 rounded bg-slate-100">Expressway Corridor</span>
+                  <span className="px-2 py-0.5 rounded bg-slate-100">Luxury Villas</span>
+                </div>
+              </div>
+
+              {/* Dakshina Kannada */}
+              <div className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow text-left group">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-[#fbf7f2] border border-[#e8dccf] flex items-center justify-center text-[#b68a5c]">
+                    <Trees className="w-5 h-5" />
+                  </div>
+                  <span className="text-[11px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-full bg-slate-100 text-slate-700">
+                    Coastal Belt
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-1.5 group-hover:text-[#b68a5c] transition-colors">
+                  Dakshina Kannada (Mangaluru)
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                  Coastal residential plots, premium custom residential estates, and turnkey house construction with coastal-grade engineering.
+                </p>
+                <div className="flex flex-wrap gap-1.5 text-[11px] text-slate-600">
+                  <span className="px-2 py-0.5 rounded bg-slate-100">Coastal Estates</span>
+                  <span className="px-2 py-0.5 rounded bg-slate-100">Turnkey Homes</span>
+                </div>
+              </div>
+
+              {/* Madikeri (Coorg) */}
+              <div className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow text-left group">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-[#fbf7f2] border border-[#e8dccf] flex items-center justify-center text-[#b68a5c]">
+                    <Leaf className="w-5 h-5" />
+                  </div>
+                  <span className="text-[11px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700">
+                    Scenic Living
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-1.5 group-hover:text-[#b68a5c] transition-colors">
+                  Madikeri (Coorg)
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                  Coffee estate holiday homes, hillside luxury villas, and tranquil residential layouts built for discerning lifestyle investors.
+                </p>
+                <div className="flex flex-wrap gap-1.5 text-[11px] text-slate-600">
+                  <span className="px-2 py-0.5 rounded bg-slate-100">Holiday Villas</span>
+                  <span className="px-2 py-0.5 rounded bg-slate-100">Estate Land</span>
+                </div>
+              </div>
+
+              {/* Tumkur, Saligram, Chamarajanagar & Kollegal */}
+              <div className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow text-left group">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-[#fbf7f2] border border-[#e8dccf] flex items-center justify-center text-[#b68a5c]">
+                    <MapPin className="w-5 h-5" />
+                  </div>
+                  <span className="text-[11px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-full bg-amber-50 text-amber-700">
+                    Emerging Corridors
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-1.5 group-hover:text-[#b68a5c] transition-colors">
+                  Tumkur, Saligram, Chamarajanagar &amp; Kollegal
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                  Fast-appreciating plotted developments and residential land along South Karnataka’s industrial and regional express corridors.
+                </p>
+                <div className="flex flex-wrap gap-1.5 text-[11px] text-slate-600">
+                  <span className="px-2 py-0.5 rounded bg-slate-100">Tumkur</span>
+                  <span className="px-2 py-0.5 rounded bg-slate-100">Saligram</span>
+                  <span className="px-2 py-0.5 rounded bg-slate-100">Chamarajanagar</span>
+                  <span className="px-2 py-0.5 rounded bg-slate-100">Kollegal</span>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Tab 2: Global NRI Desk (Middle East & GCC) */}
+          {activeLocationTab === 'nri' && (
+            <div className="p-8 sm:p-10 rounded-3xl bg-[#091527] text-white border border-white/10 shadow-xl animate-fadeIn text-left">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div className="lg:col-span-7 space-y-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#b68a5c]/20 border border-[#b68a5c]/40 text-[#c59b6d] text-xs font-semibold">
+                    <Plane className="w-3.5 h-3.5" />
+                    <span>Specialized NRI Investor Concierge</span>
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white">
+                    Seamless Real Estate Investments for NRIs in the GCC &amp; Middle East
+                  </h3>
+                  <p className="text-sm text-slate-300 leading-relaxed">
+                    We assist Non-Resident Indians residing in the Gulf region to safely purchase, build, and register premium properties across Mysuru, Mandya, Bangalore, and Karnataka without traveling back and forth.
+                  </p>
+                  
+                  {/* Supported Gulf Countries */}
+                  <div className="pt-2">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#c59b6d] block mb-2">
+                      Active Investor Desks By Country:
+                    </span>
+                    <div className="flex flex-wrap gap-2 text-xs">
+                      {['UAE (Dubai & Abu Dhabi)', 'Saudi Arabia (Riyadh & Jeddah)', 'Bahrain', 'Oman (Muscat)', 'Kuwait', 'Qatar (Doha)'].map((country) => (
+                        <span key={country} className="px-3 py-1.5 rounded-lg bg-white/10 border border-white/15 text-slate-200 font-medium">
+                          {country}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* 4 Pillars of NRI Security */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3 text-xs text-slate-300">
+                    <div className="flex items-center gap-2">
+                      <ShieldCheck className="w-4 h-4 text-[#c59b6d] shrink-0" />
+                      <span>100% Clear Legal Titles &amp; Encumbrance Free</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <ShieldCheck className="w-4 h-4 text-[#c59b6d] shrink-0" />
+                      <span>Remote Video &amp; Drone Site Inspections</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <ShieldCheck className="w-4 h-4 text-[#c59b6d] shrink-0" />
+                      <span>Power of Attorney (POA) Registration Support</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <ShieldCheck className="w-4 h-4 text-[#c59b6d] shrink-0" />
+                      <span>Direct WhatsApp Concierge &amp; Live Updates</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Side: Quick Action Box */}
+                <div className="lg:col-span-5 bg-white/5 border border-white/10 p-6 sm:p-8 rounded-2xl text-center space-y-4 backdrop-blur-sm">
+                  <div className="w-12 h-12 rounded-full bg-[#b68a5c]/20 text-[#c59b6d] flex items-center justify-center mx-auto">
+                    <MessageCircle className="w-6 h-6" />
+                  </div>
+                  <h4 className="text-lg font-bold text-white">Connect with Our Global NRI Desk</h4>
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    Chat directly with our senior property advisors on WhatsApp to receive project masterplans, title documents, and customized pricing.
+                  </p>
+                  <div className="space-y-2.5 pt-1">
+                    <a
+                      href={`https://wa.me/${contactInfo.whatsapp}?text=Hello%20PK%20Developers,%20I%20am%20an%20NRI%20investor%20interested%20in%20property%20opportunities%20in%20Karnataka.`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider shadow-md transition-all"
+                    >
+                      <MessageCircle className="w-4 h-4 fill-white" />
+                      <span>WhatsApp NRI Advisory</span>
+                    </a>
+                    <a
+                      href={`tel:${contactInfo.phoneRaw}`}
+                      className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-wider transition-all border border-white/20"
+                    >
+                      <Phone className="w-4 h-4 fill-white" />
+                      <span>Call +91 91080 81321</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* SECTION 5C: MYSURU REAL ESTATE DIRECTORY & FAQ (SEO & INTERNAL LINKING) */}
+      {/* ========================================================================= */}
+      <section id="mysuru-property-guide" className="py-20 lg:py-24 bg-white text-slate-900 border-t border-slate-200/70">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Header */}
+          <div className="max-w-3xl mb-14 text-left">
+            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#b68a5c] block mb-2">
+              —— MYSURU PROPERTY GUIDE &amp; INSIGHTS
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-serif font-bold text-slate-900 tracking-tight leading-[1.2]">
+              Real Estate Developers, Luxury Villas &amp; Plots in Mysuru
+            </h2>
+            <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+              Whether you are looking to buy property in Mysuru, invest in high-yield residential plots, or commission a custom architect-designed villa, PK Developers is your trusted partner for enduring craftsmanship and legal peace of mind.
+            </p>
+          </div>
+
+          {/* 3 Core Highlights Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mb-16">
+            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80">
+              <div className="w-10 h-10 rounded-xl bg-[#b68a5c] text-white flex items-center justify-center mb-4">
+                <HomeIcon className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">
+                Villas &amp; Independent Houses in Mysuru
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                Explore signature independent houses and luxury villas for sale in Mysuru with private garden lawns, premium Italian marble, Vastu-compliant architecture, and turnkey handover.
+              </p>
+              <Link to="/projects/pk-signature-luxury-villa" className="text-xs font-bold text-[#b68a5c] hover:underline inline-flex items-center gap-1">
+                <span>View Luxury Villa Projects</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80">
+              <div className="w-10 h-10 rounded-xl bg-[#b68a5c] text-white flex items-center justify-center mb-4">
+                <Compass className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">
+                Approved Residential Plots &amp; Layouts
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                Sanctioned gated community projects and residential plots in Mysuru and Mandya featuring asphalt roads, underground drainage, storm water systems, and 24/7 security.
+              </p>
+              <Link to="/projects/pk-green-town-phase-2" className="text-xs font-bold text-[#b68a5c] hover:underline inline-flex items-center gap-1">
+                <span>Explore Plotted Layouts</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80">
+              <div className="w-10 h-10 rounded-xl bg-[#b68a5c] text-white flex items-center justify-center mb-4">
+                <Award className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">
+                Trusted Builders &amp; Turnkey Execution
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                Ranked among the trusted builders and property developers in Mysuru with end-to-end civil construction, municipal sanctions, structural guarantees, and clear-title registration.
+              </p>
+              <Link to="/residential-construction" className="text-xs font-bold text-[#b68a5c] hover:underline inline-flex items-center gap-1">
+                <span>Construction Services</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Prime Neighbourhoods Strip */}
+          <div className="p-6 sm:p-8 rounded-2xl bg-[#fafaf9] border border-slate-200 mb-16 text-left">
+            <h3 className="text-base font-bold text-slate-900 mb-2 flex items-center gap-2">
+              <MapPin className="w-4 h-4 text-[#b68a5c]" />
+              <span>Prime Residential Areas &amp; Property Hotspots in Mysuru</span>
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              We monitor and develop properties across Mysuru’s highest-appreciating localities:
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 text-xs">
+              <div className="p-3 bg-white rounded-xl border border-slate-200">
+                <div className="font-bold text-slate-900">Hebbal, Mysuru</div>
+                <div className="text-[11px] text-slate-500 mt-0.5">IT park, apartments &amp; modern villas</div>
+              </div>
+              <div className="p-3 bg-white rounded-xl border border-slate-200">
+                <div className="font-bold text-slate-900">Vijayanagar, Mysuru</div>
+                <div className="text-[11px] text-slate-500 mt-0.5">Established premium residential plots</div>
+              </div>
+              <div className="p-3 bg-white rounded-xl border border-slate-200">
+                <div className="font-bold text-slate-900">JP Nagar, Mysuru</div>
+                <div className="text-[11px] text-slate-500 mt-0.5">Peaceful family living &amp; prime villas</div>
+              </div>
+              <div className="p-3 bg-white rounded-xl border border-slate-200">
+                <div className="font-bold text-slate-900">Bogadi, Mysuru</div>
+                <div className="text-[11px] text-slate-500 mt-0.5">High-appreciation gated layouts</div>
+              </div>
+              <div className="p-3 bg-white rounded-xl border border-slate-200">
+                <div className="font-bold text-slate-900">Hootagalli, Mysuru</div>
+                <div className="text-[11px] text-slate-500 mt-0.5">Rapidly growing ring road corridor</div>
+              </div>
+              <div className="p-3 bg-white rounded-xl border border-slate-200">
+                <div className="font-bold text-slate-900">Dattagalli, Mysuru</div>
+                <div className="text-[11px] text-slate-500 mt-0.5">Premium residential pockets</div>
+              </div>
+              <div className="p-3 bg-white rounded-xl border border-slate-200">
+                <div className="font-bold text-slate-900">Bannur Road, Mysuru</div>
+                <div className="text-[11px] text-slate-500 mt-0.5">Plotted expansion &amp; strategic growth</div>
+              </div>
+              <div className="p-3 bg-white rounded-xl border border-slate-200">
+                <div className="font-bold text-slate-900">Kasaba Hobli / Mandya</div>
+                <div className="text-[11px] text-slate-500 mt-0.5">PK Green Town &amp; VIP Gallery</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Interactive Collapsible FAQ */}
+          <div className="mb-16 text-left max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#b68a5c] block mb-1">
+                FREQUENTLY ASKED QUESTIONS
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900">
+                Things to Consider Before Buying Property in Mysuru
+              </h3>
+            </div>
+
+            <div className="space-y-3">
+              {[
+                {
+                  q: 'Why invest in Mysuru real estate and residential property?',
+                  a: 'Mysuru offers outstanding long-term investment potential due to the 10-lane Bengaluru-Mysuru Expressway (reducing travel time to 75 minutes), expanding IT parks in Hebbal, abundant civic infrastructure, pristine air quality, and consistently rising land values that make it South India’s most attractive alternative to Bengaluru.'
+                },
+                {
+                  q: 'What are the best residential areas to buy property or flats in Mysuru?',
+                  a: 'Prime areas in Mysuru include Hebbal (for IT corridor proximity and apartments), Vijayanagar (prime gated enclaves), JP Nagar & Bogadi (peaceful residential developments), Hootagalli & Dattagalli (connectivity along Ring Road), and Bannur Road (rapidly growing plotted townships).'
+                },
+                {
+                  q: 'How does PK Developers support NRI property buyers from UAE, Saudi Arabia, Bahrain, Oman, Kuwait, and Qatar?',
+                  a: 'We provide an end-to-end NRI Investor Concierge: complete legal title verification, virtual video walkthroughs, drone masterplan aerial scans, Power of Attorney (POA) registration assistance, direct bank loan coordination, and transparent registration directly in your name.'
+                },
+                {
+                  q: 'What types of residential projects are available with PK Developers?',
+                  a: 'PK Developers offers fully developed, approved residential plotted layouts (such as PK Green Town Phase-2 and PK VIP Gallery), turnkey custom luxury villas (PK Signature Luxury Villa), commercial and event venues (PK Community Hall & Events), and independent home construction across Mysuru and Mandya.'
+                },
+                {
+                  q: 'How do I choose the right property developer and builder in Mysuru?',
+                  a: 'Always verify: (1) 100% clear legal title deeds with local authority sanctions (MUDA/DTCP/RERA), (2) Quality of on-ground infrastructure (wide asphalt roads, drainage, water, electricity), (3) Past track record and transparent contracts, and (4) Turnkey accountability. PK Developers guarantees full documentation transparency for every property sold.'
+                }
+              ].map((item, idx) => (
+                <div key={idx} className="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm">
+                  <button
+                    type="button"
+                    onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                    className="w-full flex items-center justify-between p-4 sm:p-5 text-left font-semibold text-slate-900 hover:text-[#b68a5c] transition-colors"
+                  >
+                    <span className="text-sm sm:text-base pr-4">{item.q}</span>
+                    <ChevronDown className={`w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200 ${openFaq === idx ? 'rotate-180 text-[#b68a5c]' : ''}`} />
+                  </button>
+                  {openFaq === idx && (
+                    <div className="px-4 pb-5 sm:px-5 sm:pb-6 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                      {item.a}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Popular Search Keyword Anchor Cloud (Internal Backlinks Matrix) */}
+          <div className="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 text-left">
+            <div className="flex items-center gap-2 mb-4">
+              <Sparkles className="w-4 h-4 text-[#b68a5c]" />
+              <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900">
+                Popular Property Searches &amp; Regional Directory:
+              </h4>
+            </div>
+            <div className="flex flex-wrap gap-2 text-xs">
+              {[
+                { label: 'PK Developers Mysuru', link: '/projects' },
+                { label: 'Real Estate Developers in Mysuru', link: '/projects' },
+                { label: 'Builders in Mysuru', link: '/residential-construction' },
+                { label: 'Villas for Sale in Mysuru', link: '/projects/pk-signature-luxury-villa' },
+                { label: 'Residential Plots in Mysuru', link: '/projects/pk-green-town-phase-2' },
+                { label: 'Luxury Apartments in Mysuru', link: '/projects' },
+                { label: 'Flats for Sale in Mysuru', link: '/projects' },
+                { label: 'Gated Community Projects in Mysuru', link: '/projects/pk-vip-gallery' },
+                { label: 'Independent Houses for Sale in Mysuru', link: '/residential-construction' },
+                { label: 'Property in Hebbal Mysuru', link: '/projects' },
+                { label: 'Flats in Vijayanagar Mysuru', link: '/projects' },
+                { label: 'Property in JP Nagar Mysuru', link: '/projects' },
+                { label: 'Property in Bogadi Mysuru', link: '/projects' },
+                { label: 'Property in Bannur Road Mysuru', link: '/projects' },
+                { label: 'Property in Hootagalli Mysuru', link: '/projects' },
+                { label: 'Property in Dattagalli Mysuru', link: '/projects' },
+                { label: 'Builders in Karnataka', link: '/residential-construction' },
+                { label: 'Buy Property in Mysuru', link: '/projects' },
+                { label: 'PK Green Town Mandya', link: '/projects/pk-green-town-phase-2' },
+                { label: 'PK VIP Gallery Mandya', link: '/projects/pk-vip-gallery' },
+                { label: 'PK Signature Luxury Villa', link: '/projects/pk-signature-luxury-villa' },
+                { label: 'PK Community Hall & Events', link: '/projects/pk-community-hall-events' },
+                { label: 'Property in Bangalore', link: '/residential-construction' },
+                { label: 'Real Estate Dakshina Kannada', link: '/contact' },
+                { label: 'Villas in Madikeri Coorg', link: '/projects/pk-signature-luxury-villa' },
+                { label: 'Plots in Tumkur', link: '/projects' },
+                { label: 'Real Estate Saligram', link: '/projects' },
+                { label: 'Plots in Chamarajanagar', link: '/projects' },
+                { label: 'Property in Kollegal', link: '/projects' },
+                { label: 'NRI Property UAE & Dubai', link: '/contact' },
+                { label: 'NRI Property Saudi Arabia', link: '/contact' },
+                { label: 'NRI Property Qatar & Kuwait', link: '/contact' },
+                { label: 'NRI Property Bahrain & Oman', link: '/contact' }
+              ].map((pill, i) => (
+                <Link
+                  key={i}
+                  to={pill.link}
+                  className="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:text-[#b68a5c] hover:border-[#b68a5c] transition-colors shadow-2xs font-medium"
+                >
+                  {pill.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
         </div>
       </section>
 
