@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { X, Phone, MessageCircle, MapPin, Mail, ArrowRight } from 'lucide-react';
+import { X, Phone, MessageCircle, MapPin, Mail, ArrowRight, Clock } from 'lucide-react';
 import { contactInfo } from '../../data/companyData';
 
 interface MobileMenuProps {
@@ -123,6 +123,10 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
           <div className="flex items-start gap-2.5 text-slate-600">
             <MapPin className="w-4 h-4 text-[#c59b6d] shrink-0 mt-0.5" />
             <span>{contactInfo.address}</span>
+          </div>
+          <div className="flex items-center gap-2.5 text-slate-600">
+            <Clock className="w-4 h-4 text-[#c59b6d] shrink-0" />
+            <span>{contactInfo.businessHours}</span>
           </div>
         </div>
       </div>

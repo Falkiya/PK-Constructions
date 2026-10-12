@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Phone, MessageCircle } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, Clock } from 'lucide-react';
 import { contactInfo } from '../../data/companyData';
 
 export const Footer: React.FC = () => {
@@ -76,6 +76,24 @@ export const Footer: React.FC = () => {
             >
               <Phone className="w-4 h-4" />
             </a>
+          </div>
+        </div>
+
+        {/* Office Address & Timings Strip */}
+        <div className="py-6 border-b border-slate-800/80 grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-300">
+          <div className="flex items-start gap-3">
+            <MapPin className="w-4 h-4 text-[#b68a5c] shrink-0 mt-0.5" />
+            <div>
+              <span className="font-semibold text-white block mb-0.5">Corporate Office</span>
+              <span className="text-slate-300">{contactInfo.address}</span>
+            </div>
+          </div>
+          <div className="flex items-start gap-3">
+            <Clock className="w-4 h-4 text-[#b68a5c] shrink-0 mt-0.5" />
+            <div>
+              <span className="font-semibold text-white block mb-0.5">Office Timings</span>
+              <span className="text-slate-300">{contactInfo.businessHours}</span>
+            </div>
           </div>
         </div>
 

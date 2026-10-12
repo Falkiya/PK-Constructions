@@ -30,7 +30,8 @@ import {
   ShieldCheck,
   Compass,
   Plane,
-  Award
+  Award,
+  Clock
 } from 'lucide-react';
 import { SEOHead } from '../components/common/SEOHead';
 import { contactInfo } from '../data/companyData';
@@ -647,32 +648,65 @@ export const HomePage: React.FC = () => {
       {/* ========================================================================= */}
       {/* SECTION 5: OUR LOCATION */}
       {/* ========================================================================= */}
+      {/* SECTION 5: OUR OFFICE LOCATION & VISITING HOURS */}
+      {/* ========================================================================= */}
       <section id="location" className="py-20 lg:py-24 bg-white text-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
-            {/* Left Column: Connectivity Checklist */}
+            {/* Left Column: Office Address, Timings & Highlights */}
             <div className="lg:col-span-6 space-y-6 text-left">
               <div className="text-xs font-semibold tracking-[0.2em] uppercase text-[#b68a5c]">
-                —— OUR LOCATION & CONNECTIVITY
+                —— OUR OFFICE LOCATION &amp; VISITING HOURS
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-serif font-bold text-slate-900 tracking-tight leading-[1.2]">
-                Well Connected.<br />Prime Strategic Location.
+                Visit Our Office.<br />Prime Strategic Location.
               </h2>
 
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-                Our layouts in Belvadi Village (Srirangapatna Taluk, Mandya) offer rapid connectivity to Ring Road, top medical centers, prestigious schools, and popular dining destinations.
+                Visit our head office in Rajiv Nagar, Mysuru to meet our property consultants, review verified layout masterplans, and discuss your dream home or commercial real estate investment.
               </p>
 
-              {/* 5 Checklist Items with real document distances */}
-              <div className="space-y-3.5 pt-1">
+              {/* Office Address Card */}
+              <div className="p-4 sm:p-5 rounded-2xl bg-[#faf7f2] border border-[#e8dccf] space-y-1">
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-[#b68a5c] shrink-0 mt-0.5" />
+                  <div>
+                    <div className="text-xs font-bold uppercase tracking-wider text-[#b68a5c]">Head Office Address</div>
+                    <div className="text-sm sm:text-base font-bold text-slate-900 mt-0.5 leading-snug">
+                      No 39, Opp to Al Badar Circle, 1st Floor, 2nd Stage, Rajiv Nagar, Mysuru – 570019, Karnataka
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Office Timings Card */}
+              <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-1">
+                <div className="flex items-start gap-3">
+                  <Clock className="w-5 h-5 text-[#b68a5c] shrink-0 mt-0.5" />
+                  <div>
+                    <div className="text-xs font-bold uppercase tracking-wider text-[#b68a5c]">Office Timings</div>
+                    <div className="text-sm sm:text-base font-bold text-slate-900 mt-0.5 flex flex-wrap items-center gap-2">
+                      <span className="px-2.5 py-1 rounded-md bg-[#faf7f2] border border-[#e8dccf] text-[#a07447]">10:00 AM – 3:00 PM</span>
+                      <span className="text-slate-400">&amp;</span>
+                      <span className="px-2.5 py-1 rounded-md bg-[#faf7f2] border border-[#e8dccf] text-[#a07447]">7:00 PM – 10:00 PM</span>
+                    </div>
+                    <div className="text-xs text-slate-500 mt-1">
+                      Morning &amp; Evening Consultation Desks Open (Monday – Sunday)
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Strategic Connectivity Points */}
+              <div className="space-y-3 pt-1">
                 <div className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-[#fbf7f2] border border-[#e8dccf] flex items-center justify-center shrink-0">
                     <Navigation className="w-3.5 h-3.5 text-[#b68a5c]" />
                   </div>
                   <span className="text-sm font-medium text-slate-800">
-                    3.0 KM Away From Ring Road
+                    Opposite to Al Badar Circle (Prominent Mysuru Landmark)
                   </span>
                 </div>
 
@@ -681,34 +715,16 @@ export const HomePage: React.FC = () => {
                     <Building2 className="w-3.5 h-3.5 text-[#b68a5c]" />
                   </div>
                   <span className="text-sm font-medium text-slate-800">
-                    2.0 KM Away From Prajwal Hospital
+                    1st Floor, 2nd Stage, Rajiv Nagar, Mysuru
                   </span>
                 </div>
 
                 <div className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-[#fbf7f2] border border-[#e8dccf] flex items-center justify-center shrink-0">
-                    <GraduationCap className="w-3.5 h-3.5 text-[#b68a5c]" />
+                    <Compass className="w-3.5 h-3.5 text-[#b68a5c]" />
                   </div>
                   <span className="text-sm font-medium text-slate-800">
-                    1.5 KM Away From Presentation School
-                  </span>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 rounded-full bg-[#fbf7f2] border border-[#e8dccf] flex items-center justify-center shrink-0">
-                    <Utensils className="w-3.5 h-3.5 text-[#b68a5c]" />
-                  </div>
-                  <span className="text-sm font-medium text-slate-800">
-                    2.0 KM Away From Lekenzi Restaurant
-                  </span>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 rounded-full bg-[#fbf7f2] border border-[#e8dccf] flex items-center justify-center shrink-0">
-                    <MapPin className="w-3.5 h-3.5 text-[#b68a5c]" />
-                  </div>
-                  <span className="text-sm font-medium text-slate-800">
-                    Kasaba Hobli, Belvadi Village, Srirangapatna Taluk, Mandya
+                    Direct access from Bengaluru-Mysuru Expressway &amp; Ring Road
                   </span>
                 </div>
               </div>
@@ -716,12 +732,13 @@ export const HomePage: React.FC = () => {
               {/* Get Directions Button */}
               <div className="pt-2">
                 <a
-                  href="https://maps.google.com/?q=Belvadi,Srirangapatna,Mandya"
+                  href="https://maps.google.com/?q=Al+Badar+Circle,+Rajiv+Nagar,+Mysuru,+Karnataka+570019"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#b68a5c] hover:bg-[#a67c4e] text-white text-sm font-medium transition-colors"
                 >
-                  <span>Get Directions</span>
+                  <MapPin className="w-4 h-4" />
+                  <span>Get Directions to Office</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
@@ -731,28 +748,34 @@ export const HomePage: React.FC = () => {
             <div className="lg:col-span-6 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200">
                 <iframe
-                  title="PK Developers Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124806.94273397984!2d76.83226955567554!3d12.525545592892955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bafa0ce70845a7d%3A0xc3b8a36ff8a0fae3!2sMandya%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                  title="PK Developers Office Location - Rajiv Nagar Mysuru"
+                  src="https://maps.google.com/maps?q=Al+Badar+Circle,+Rajiv+Nagar,+Mysuru,+Karnataka+570019&t=&z=16&ie=UTF8&iwloc=&output=embed"
                   width="100%"
-                  height="400"
+                  height="450"
                   style={{ border: 0 }}
                   allowFullScreen={false}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full h-[400px] rounded-2xl"
+                  className="w-full h-[450px] rounded-2xl"
                 />
 
                 {/* Floating location info badge matching mockup */}
-                <div className="absolute top-4 left-4 p-3.5 rounded-lg bg-white/95 backdrop-blur-md shadow border border-slate-100 text-left">
-                  <div className="text-sm font-bold text-slate-900">PK Developers & Projects</div>
-                  <div className="text-xs text-slate-500">Belvadi, Srirangapatna, Mandya</div>
+                <div className="absolute top-4 left-4 p-4 rounded-xl bg-white/95 backdrop-blur-md shadow-lg border border-slate-100 text-left max-w-xs">
+                  <div className="text-sm font-bold text-slate-900">PK Developers — Head Office</div>
+                  <div className="text-xs text-slate-600 mt-1 leading-snug">
+                    No 39, Opp to Al Badar Circle, 1st Floor, 2nd Stage, Rajiv Nagar, Mysuru - 570019
+                  </div>
+                  <div className="text-[11px] font-semibold text-[#b68a5c] mt-2 flex items-center gap-1.5">
+                    <Clock className="w-3.5 h-3.5 shrink-0" />
+                    <span>10AM–3PM &nbsp;|&nbsp; 7PM–10PM</span>
+                  </div>
                   <a
-                    href="https://maps.google.com/?q=Belvadi,Srirangapatna,Mandya"
+                    href="https://maps.google.com/?q=Al+Badar+Circle,+Rajiv+Nagar,+Mysuru,+Karnataka+570019"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs text-blue-600 hover:underline font-medium block mt-1"
+                    className="text-xs text-blue-600 hover:underline font-semibold block mt-2"
                   >
-                    View larger map
+                    Open in Google Maps &rarr;
                   </a>
                 </div>
               </div>

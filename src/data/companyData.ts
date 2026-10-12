@@ -109,6 +109,6 @@ export const contactInfo = {
   emailSales: 'deals@pkdevelopers.co.in',
   whatsapp: '919108081321',
   whatsappDisplay: '+91 91080 81321',
-  address: 'Indiranagar, Bengaluru, Karnataka 560038',
-  businessHours: 'Monday – Saturday: 9:00 AM – 7:30 PM | Sunday: By Appointment (Site Visits)'
+  address: 'No 39, Opp to Al Badar Circle, 1st Floor, 2nd Stage, Rajiv Nagar, Mysuru - 570019, Karnataka',
+  businessHours: '10:00 AM – 3:00 PM & 7:00 PM – 10:00 PM'
 };
