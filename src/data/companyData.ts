@@ -1,10 +1,10 @@
 import { ProcessStep, TeamMember, Testimonial, ValueItem } from '../types';
 
 export const companyStats = [
+  { value: '25+', label: 'Years of Experience', description: 'Over two and a half decades of trusted construction & property development' },
+  { value: '500+', label: 'Happy Families', description: 'Delivering dream residential villas, plotted layouts & commercial spaces' },
   { value: '100%', label: 'Clear Title Guarantee', description: 'Rigorous 30-year legal search, encumbrance check & municipal verification' },
-  { value: 'Direct', label: 'Owner Representation', description: 'Direct seller negotiation with zero hidden brokerage or markups' },
-  { value: 'RERA', label: 'Compliant & Approved', description: 'Vetted layout plots, residential developments & commercial properties' },
-  { value: 'End-to-End', label: 'Legal & Registration', description: 'Complete sub-registrar execution, deed conveyance & Khata transfer' }
+  { value: 'RERA', label: 'Compliant & Approved', description: 'Vetted layout plots, residential developments & commercial properties' }
 ];
 
 export const companyValues: ValueItem[] = [

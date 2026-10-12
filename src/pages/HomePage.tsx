@@ -316,7 +316,7 @@ export const HomePage: React.FC = () => {
               </h2>
 
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-                At PK Developers, we believe a home is more than just structure — it's the beginning of new stories, stronger families and brighter futures. With a commitment to quality, transparency and customer satisfaction, we develop spaces that stand the test of time.
+                At PK Developers, we believe a home is more than just structure — it's the beginning of new stories, stronger families and brighter futures. With over 25 years of construction excellence, quality, transparency and customer satisfaction, we develop spaces that stand the test of time.
               </p>
 
               {/* 3 Stats with label on top, bold number on bottom */}
@@ -344,7 +344,7 @@ export const HomePage: React.FC = () => {
                     Years of<br />Experience
                   </div>
                   <div className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-slate-900 mt-1">
-                    10+
+                    25+
                   </div>
                 </div>
               </div>
@@ -1184,7 +1184,7 @@ export const HomePage: React.FC = () => {
                 },
                 {
                   q: 'How do I choose the right property developer and builder in Mysuru?',
-                  a: 'Always verify: (1) 100% clear legal title deeds with local authority sanctions (MUDA/DTCP/RERA), (2) Quality of on-ground infrastructure (wide asphalt roads, drainage, water, electricity), (3) Past track record and transparent contracts, and (4) Turnkey accountability. PK Developers guarantees full documentation transparency for every property sold.'
+                  a: 'Always verify: (1) 100% clear legal title deeds with local authority sanctions (MUDA/DTCP/RERA), (2) Quality of on-ground infrastructure (wide asphalt roads, drainage, water, electricity), (3) Past track record of 25+ years and transparent contracts, and (4) Turnkey accountability. PK Developers guarantees over 25 years of proven excellence and full documentation transparency for every property sold.'
                 }
               ].map((item, idx) => (
                 <div key={idx} className="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm">

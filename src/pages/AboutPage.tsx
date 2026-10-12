@@ -63,19 +63,23 @@ export const AboutPage: React.FC = () => {
                 Redefining Real Estate Dealing Through Institutional Due Diligence
               </h2>
               <p className="text-base text-slate-700 leading-relaxed">
-                PK Developers was established with a singular conviction: that acquiring or selling real estate should inspire confidence rather than anxiety. Too often in the property sector, buyers and investors face opaque title records, hidden brokerage layers, and unvetted land boundaries.
+                With over 25 years of industry experience and trusted civil construction excellence, PK Developers was established with a singular conviction: that acquiring or selling real estate should inspire confidence rather than anxiety. Too often in the property sector, buyers and investors face opaque title records, hidden brokerage layers, and unvetted land boundaries.
               </p>
               <p className="text-base text-slate-600 leading-relaxed">
                 We rebuilt the paradigm from the ground up. By combining comprehensive legal title searches (30-year Encumbrance Certificates, BDA/BBMP khata checks) with disciplined micro-market valuation, PK Developers helps families, high-net-worth investors, and corporates acquire verified residential villas, commercial assets, and approved layout plots with zero litigation risk.
               </p>
-              <div className="pt-2 grid grid-cols-2 gap-4">
+              <div className="pt-2 grid grid-cols-2 sm:grid-cols-3 gap-4">
                 <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-                  <h4 className="text-2xl font-bold text-blue-600 font-mono">100%</h4>
-                  <p className="text-xs text-slate-600 font-semibold mt-1">Clear Title Guarantee</p>
+                  <h4 className="text-2xl font-bold text-blue-600 font-mono">25+</h4>
+                  <p className="text-xs text-slate-600 font-semibold mt-1">Years of Experience</p>
                 </div>
                 <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-                  <h4 className="text-2xl font-bold text-slate-900 font-mono">30-Year</h4>
-                  <p className="text-xs text-slate-600 font-semibold mt-1">Title & EC Legal Audit</p>
+                  <h4 className="text-2xl font-bold text-slate-900 font-mono">100%</h4>
+                  <p className="text-xs text-slate-600 font-semibold mt-1">Clear Title Guarantee</p>
+                </div>
+                <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 col-span-2 sm:col-span-1">
+                  <h4 className="text-2xl font-bold text-slate-900 font-mono">500+</h4>
+                  <p className="text-xs text-slate-600 font-semibold mt-1">Happy Families</p>
                 </div>
               </div>
             </div>
