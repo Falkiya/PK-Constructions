@@ -1,41 +1,41 @@
 import { ProcessStep, TeamMember, Testimonial, ValueItem } from '../types';
 
 export const companyStats = [
-  { value: '25+', label: 'Years of Experience', description: 'Over two and a half decades of trusted construction & property development' },
-  { value: '500+', label: 'Happy Families', description: 'Delivering dream residential villas, plotted layouts & commercial spaces' },
-  { value: '100%', label: 'Clear Title Guarantee', description: 'Rigorous 30-year legal search, encumbrance check & municipal verification' },
-  { value: 'RERA', label: 'Compliant & Approved', description: 'Vetted layout plots, residential developments & commercial properties' }
+  { value: '25+', label: 'Years of Experience', description: 'Company-reported track record in construction and property development [Needs Documentary Confirmation]' },
+  { value: '4', label: 'Featured Projects', description: 'Active plotted townships, luxury turnkey villas & commercial convention venues' },
+  { value: '100%', label: 'Title Transparency', description: 'Commitment to encumbrance verification, survey demarcation, and legal due diligence' },
+  { value: 'Direct', label: 'Developer Pricing', description: 'Direct consultation with the developer with zero intermediary commissions' }
 ];
 
 export const companyValues: ValueItem[] = [
   {
     title: 'Absolute Title Transparency',
-    description: 'Every property listed or transacted undergoes a rigorous 30-year title search, encumbrance check, and RERA/municipal compliance audit before listing.',
+    description: 'We prioritize clear title records, Encumbrance Certificate (EC) scrutiny, and statutory municipal compliance before offering any property.',
     icon: 'ShieldCheck'
   },
   {
     title: 'Fair Market Valuation',
-    description: 'We utilize deep micro-market data and comparative property analyses to ensure buyers and sellers secure the most lucrative, realistic market rates.',
+    description: 'We evaluate local micro-market data and comparative land pricing across Mysuru and Mandya to ensure competitive and realistic rates.',
     icon: 'CheckCircle'
   },
   {
     title: 'Zero Hidden Fees & Clarity',
-    description: 'Completely transparent advisory terms, open legal documentation, and zero surprise commissions throughout your property acquisition or sale.',
+    description: 'Direct and transparent dealings, open project documentation, and zero surprise intermediary fees throughout your purchase.',
     icon: 'Eye'
   },
   {
-    title: 'High-Yield Investment Insights',
-    description: 'We pinpoint high-growth infrastructure corridors, pre-leased commercial assets, and high-appreciation land parcels delivering 8-12% annual returns.',
+    title: 'Strategic Growth Corridors',
+    description: 'Our layouts and developments are selected for high-appreciation connectivity along the Bengaluru-Mysuru Expressway and Mysuru Ring Road.',
     icon: 'Zap'
   },
   {
-    title: 'End-to-End Legal & Registration Support',
-    description: 'From initial offer letters and sale agreements to sub-registrar deed registration and Khata transfer, our legal team manages every single step.',
+    title: 'End-to-End Registration Support',
+    description: 'From initial site visit and agreement to Sub-Registrar execution and Khata facilitation, we assist at each key step.',
     icon: 'Clock'
   },
   {
     title: 'Client-First Advisory',
-    description: 'Whether you are buying your first luxury home, leasing a commercial tech park, or acquiring investment plots, your financial security is our highest priority.',
+    description: 'Whether you are purchasing a residential plot, commissioning a turnkey villa, or booking a venue, your satisfaction and security are our priority.',
     icon: 'HeartHandshake'
   }
 ];
@@ -44,54 +44,45 @@ export const processSteps: ProcessStep[] = [
   {
     number: '01',
     title: 'Requirement Consultation',
-    subtitle: 'Mapping Your Property Goals & Budget',
-    description: 'We begin with a focused consultation to evaluate your specific objectives—whether buying a luxury villa, acquiring commercial space, selling an estate, or investing in approved plots.',
-    deliverables: ['Buyer / Investor Goal Blueprint', 'Location & Micro-Market Analysis', 'Budget & Payment Plan Structuring'],
+    subtitle: 'Understanding Your Property Goals & Budget',
+    description: 'We begin with an in-person or remote consultation to evaluate your specific requirements—whether acquiring a residential plot, custom villa build, or venue reservation.',
+    deliverables: ['Buyer Goal Assessment', 'Project Availability Details', 'Transparent Price Structure'],
     durationEstimate: 'Day 1 - 2',
     iconName: 'MessageSquare'
   },
   {
     number: '02',
-    title: 'Curated Property Sourcing',
-    subtitle: 'Exclusive Off-Market & Verified Listings',
-    description: 'Our property advisors curate a handpicked portfolio of vetted properties meeting your exact layout, size, neighborhood, and return-on-investment parameters.',
-    deliverables: ['Custom Property Dossier', 'High-Res Floor Plans & Photos', 'Comparative Price Analysis Matrix'],
-    durationEstimate: 'Day 3 - 5',
+    title: 'Project & Site Inspection',
+    subtitle: 'Guided On-Site Layout Visit',
+    description: 'We coordinate an on-site visit to inspect the layout, verify plot boundaries, review road infrastructure, water pipelines, and surrounding connectivity.',
+    deliverables: ['Physical Plot Inspection', 'Masterplan Review', 'Location Connectivity Assessment'],
+    durationEstimate: 'Day 2 - 4',
     iconName: 'MapPin'
   },
   {
     number: '03',
     title: 'Legal Due Diligence',
-    subtitle: '30-Year Title Search & RERA Verification',
-    description: 'Our in-house property advocates review all mother deeds, encumbrance certificates (EC), layout approvals (BDA, BMRDA, DTCP), Khata certificates, and tax receipts.',
-    deliverables: ['30-Year Legal Title Search Report', 'Encumbrance Certificate (Nil EC)', 'Statutory Approvals & RERA Check'],
-    durationEstimate: 'Week 1 - 2',
+    subtitle: 'Title Search & Municipal Document Review',
+    description: 'Review of parent title deeds, Nil-Encumbrance Certificates (EC), survey maps, conversion orders, and municipal/panchayat approvals.',
+    deliverables: ['Title Document Copies', 'Nil-Encumbrance Verification', 'Statutory Approval Check'],
+    durationEstimate: 'Week 1',
     iconName: 'FileText'
   },
   {
     number: '04',
-    title: 'Site Inspections & Valuation',
-    subtitle: 'Guided Site Visits & Fair Price Audit',
-    description: 'We escort you on private site inspections, assessing construction quality, neighborhood infrastructure, road connectivity, water availability, and future appreciation potential.',
-    deliverables: ['On-Site Property Inspection', 'Infrastructure & Connectivity Audit', 'Independent Property Valuation'],
-    durationEstimate: 'Week 2',
-    iconName: 'Compass'
-  },
-  {
-    number: '05',
-    title: 'Negotiation & Sale Agreement',
-    subtitle: 'Securing the Best Price & Terms',
-    description: 'We negotiate directly with property owners and institutional builders to secure the most favorable commercial terms, followed by drafting a legally robust Agreement to Sell.',
-    deliverables: ['Negotiated Best Market Price', 'Formal Agreement to Sell (ATS)', 'Bank Loan Approval Coordination'],
-    durationEstimate: 'Week 2 - 3',
+    title: 'Allotment & Agreement',
+    subtitle: 'Formal Agreement to Sell',
+    description: 'Following plot selection, we draft a transparent Agreement to Sell detailing all commercial terms, plot dimensions, and payment schedules.',
+    deliverables: ['Written Agreement to Sell', 'Milestone Payment Schedule', 'Bank Loan Support (if required)'],
+    durationEstimate: 'Week 1 - 2',
     iconName: 'Calculator'
   },
   {
-    number: '06',
-    title: 'Registration & Handover',
-    subtitle: 'Sub-Registrar Execution & Key Handover',
-    description: 'We coordinate all stamp duty payments, slot booking at the sub-registrar office, deed execution, formal possession handover, and post-registration mutation / Khata transfer.',
-    deliverables: ['Registered Sale Deed / Lease Deed', 'Physical Possession & Keys Handover', 'Khata Transfer & Utility Mutation'],
+    number: '05',
+    title: 'Sub-Registrar Deed Execution',
+    subtitle: 'Official Registration & Deed Handover',
+    description: 'We coordinate stamp duty compliance, sub-registrar slot booking, registered deed execution, and physical plot boundary handover.',
+    deliverables: ['Registered Sale Deed', 'Physical Possession & Boundary Markers', 'Khata Transfer Assistance'],
     durationEstimate: 'Closing Day',
     iconName: 'KeyRound'
   }

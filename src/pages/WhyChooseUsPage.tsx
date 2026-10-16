@@ -20,33 +20,33 @@ import { CTASection } from '../components/common/CTASection';
 export const WhyChooseUsPage: React.FC = () => {
   const differentiators = [
     {
-      title: '100% Clear Title Guarantee',
-      description: 'Zero litigation risk. Every property in our inventory undergoes a rigorous 30-year title search, Encumbrance Certificate (EC) scrutiny, and vetting by senior High Court advocates.',
+      title: 'Title Due Diligence & Transparency',
+      description: 'Documentary verification before acquisition. Every layout plot undergoes parent title deed search, Nil-Encumbrance Certificate scrutiny, and local authority verification.',
       icon: ShieldCheck
     },
     {
       title: 'Curated Prime Inventory',
-      description: 'We do not flood you with unverified listings. We curate only premium residential villas, A-grade commercial spaces, and high-appreciation layout plots in Bengaluru’s growth corridors.',
+      description: 'We focus on vetted residential plotted layouts, custom turnkey villas, and commercial venues across Mysuru and Mandya growth corridors.',
       icon: Award
     },
     {
-      title: 'Direct Negotiation & Transparent Pricing',
-      description: 'No inflated brokerage fees, phantom middle-agents, or hidden deal costs. We ensure direct owner/developer negotiations and market-aligned valuations.',
+      title: 'Direct Developer Consultation & Pricing',
+      description: 'No inflated brokerage fees or hidden deal costs. We ensure direct consultation with the developer and clear, transparent pricing.',
       icon: Eye
     },
     {
       title: 'Complete Legal & Documentation Support',
-      description: 'From drafting standard Sale Agreements to stamp duty verification, Khata transfers, and registration representation at the sub-registrar office, we handle everything.',
+      description: 'From drafting standard Sale Agreements to stamp duty guidance, Khata facilitation, and deed execution at the sub-registrar office, we assist throughout.',
       icon: ClipboardCheck
     },
     {
-      title: 'RERA & Master Plan Compliance',
-      description: 'Strict adherence to RERA guidelines, BDA/BMRDA approvals, and master plan zoning norms, ensuring your capital is shielded from municipal violations.',
+      title: 'Statutory & Layout Compliance',
+      description: 'Adherence to applicable Town Planning, MUDA/DTCP and Panchayat zoning norms, ensuring your land ownership is legally secure.',
       icon: Compass
     },
     {
-      title: 'High-Yield Investment Advisory',
-      description: 'Leverage our proprietary micro-market analysis, infrastructure pipeline data (Metro, Peripheral Ring Road), and projected rental yields to maximize ROI.',
+      title: 'Corridor Growth Insights',
+      description: 'Benefit from infrastructure growth along the 10-lane Bengaluru-Mysuru Expressway and Mysuru Outer Ring Road.',
       icon: Users
     },
     {

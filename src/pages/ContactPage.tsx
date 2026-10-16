@@ -74,7 +74,7 @@ export const ContactPage: React.FC = () => {
     <>
       <SEOHead
         title="Contact Us | Real Estate & Property Advisory | PK Developers"
-        description="Get in touch with PK Developers. Speak with senior real estate consultants, schedule a private property inspection, or visit our advisory office in Bengaluru."
+        description="Get in touch with PK Developers. Speak with our property consultants, schedule an on-site layout inspection, or visit our office at Al Badar Circle, Rajiv Nagar, Mysuru."
         canonicalPath="/contact"
       />
 
@@ -97,7 +97,7 @@ export const ContactPage: React.FC = () => {
             “Let’s Find Your Next Property.”
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Looking to buy a luxury villa, lease prime commercial tech space, invest in approved plots, or sell your property? Our property advisors are at your service.
+            Looking to buy a residential plot, build a custom turnkey villa, or reserve a convention venue? Our team is at your service.
           </p>
         </div>
       </section>
@@ -278,7 +278,7 @@ export const ContactPage: React.FC = () => {
                           required
                           value={formData.location}
                           onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                          placeholder="e.g. Whitefield, Bengaluru"
+                          placeholder="e.g. Rajiv Nagar, Mysuru or Belvadi, Mandya"
                           className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/20 transition-all"
                         />
                       </div>

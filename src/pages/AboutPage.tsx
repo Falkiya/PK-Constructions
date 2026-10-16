@@ -63,23 +63,23 @@ export const AboutPage: React.FC = () => {
                 Redefining Real Estate Dealing Through Institutional Due Diligence
               </h2>
               <p className="text-base text-slate-700 leading-relaxed">
-                With over 25 years of industry experience and trusted civil construction excellence, PK Developers was established with a singular conviction: that acquiring or selling real estate should inspire confidence rather than anxiety. Too often in the property sector, buyers and investors face opaque title records, hidden brokerage layers, and unvetted land boundaries.
+                With a company-reported track record of over 25 years in construction and property development [Needs Documentary Confirmation], PK Developers was established with a singular conviction: that acquiring or developing real estate should inspire confidence rather than anxiety.
               </p>
               <p className="text-base text-slate-600 leading-relaxed">
-                We rebuilt the paradigm from the ground up. By combining comprehensive legal title searches (30-year Encumbrance Certificates, BDA/BBMP khata checks) with disciplined micro-market valuation, PK Developers helps families, high-net-worth investors, and corporates acquire verified residential villas, commercial assets, and approved layout plots with zero litigation risk.
+                By combining comprehensive title deed verification, Nil-Encumbrance certification, and local statutory approval reviews (MUDA, DTCP, and Gram Panchayat) with disciplined ground execution, PK Developers assists families and investors in acquiring verified residential plots, luxury custom villas, and commercial venues with complete peace of mind.
               </p>
               <div className="pt-2 grid grid-cols-2 sm:grid-cols-3 gap-4">
                 <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-                  <h4 className="text-2xl font-bold text-blue-600 font-mono">25+</h4>
-                  <p className="text-xs text-slate-600 font-semibold mt-1">Years of Experience</p>
+                  <h4 className="text-2xl font-bold text-[#b68a5c] font-mono">25+</h4>
+                  <p className="text-xs text-slate-600 font-semibold mt-1">Years Experience <span className="text-[10px] text-slate-400 block">[Company-Reported]</span></p>
                 </div>
                 <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-                  <h4 className="text-2xl font-bold text-slate-900 font-mono">100%</h4>
-                  <p className="text-xs text-slate-600 font-semibold mt-1">Clear Title Guarantee</p>
+                  <h4 className="text-2xl font-bold text-slate-900 font-mono">4</h4>
+                  <p className="text-xs text-slate-600 font-semibold mt-1">Featured Projects</p>
                 </div>
                 <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 col-span-2 sm:col-span-1">
-                  <h4 className="text-2xl font-bold text-slate-900 font-mono">500+</h4>
-                  <p className="text-xs text-slate-600 font-semibold mt-1">Happy Families</p>
+                  <h4 className="text-2xl font-bold text-slate-900 font-mono">100%</h4>
+                  <p className="text-xs text-slate-600 font-semibold mt-1">Title Transparency</p>
                 </div>
               </div>
             </div>

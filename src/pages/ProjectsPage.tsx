@@ -99,7 +99,7 @@ export const ProjectsPage: React.FC = () => {
             Verified Properties & Deals
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed">
-            A premier showcase of verified residential luxury villas, Grade-A commercial spaces, approved layout plots, and strategic investments across Bengaluru with 100% clear legal titles.
+            A portfolio of verified residential plotted layouts, turnkey custom luxury villas, and commercial event spaces across the Mysuru and Mandya corridors with transparent documentation.
           </p>
         </div>
       </section>

@@ -6,70 +6,69 @@ export const servicesData: ServiceItem[] = [
     slug: 'residential-construction',
     title: 'Residential Property Dealing & Sales',
     shortDescription: 'Buying, selling, and resale of luxury architectural villas, premium penthouses, and gated community residences.',
-    fullDescription: 'PK Developers represents discerning buyers and sellers in high-value residential property transactions. We offer a curated inventory of verified luxury villas, duplex penthouses, and prime residential apartments across Bengaluru with 100% legal title verification, fair-market valuation, and transparent closing.',
+    fullDescription: 'PK Developers represents discerning buyers and sellers in residential property transactions. We offer a curated inventory of verified luxury villas and residential plots across the Mysuru and Mandya corridors with legal title verification, fair-market valuation, and transparent closing.',
     icon: 'Home',
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
     keyBenefits: [
-      '100% verified clear-title properties with 30-year search history',
-      'Exclusive off-market luxury villa and penthouse listings',
-      'Transparent fair-market price negotiation directly with verified owners',
+      'Verified clear-title properties with documented search history',
+      'Exclusive residential villa and plotted layout listings',
+      'Transparent fair-market price negotiation directly with the developer',
       'Complete legal documentation, sale agreement drafting & registration assistance'
     ],
     capabilities: [
-      'Ultra-Luxury Independent Villas & Estates',
-      'Gated Community Designer Villas',
-      'High-Rise Luxury Penthouses & Duplexes',
-      'Resale & Secondary Market Premium Properties',
-      'Pre-Launch & Ready-to-Move Builder Inventory'
+      'Independent Custom Villas & Estates',
+      'Gated Community Plotted Layouts',
+      'Turnkey Residential Civil Construction',
+      'Resale & Secondary Market Properties',
+      'Immediate Registration Ready Plots'
     ],
     deliverables: [
-      'Comprehensive Property Title Verification Report',
-      'Market Comparative Pricing & Rental Yield Analysis',
-      'Formulated Agreement to Sell (ATS) & Legal Diligence Dossier',
+      'Property Title Verification Dossier',
+      'Layout Masterplan & Sanction Copies',
+      'Agreement to Sell (ATS) & Diligence Records',
       'Sub-Registrar Slot Booking, Registration & Key Handover'
     ]
   },
   {
     id: 'commercial',
     slug: 'commercial-construction',
-    title: 'Commercial Real Estate & Corporate Leasing',
-    shortDescription: 'Prime office spaces, Grade-A IT park floor-plates, retail lifestyle showrooms, and pre-leased investment assets.',
-    fullDescription: 'Our commercial property division assists enterprises, retail brands, and institutional investors in securing high-visibility commercial spaces. From tech park office leases to high-street retail showrooms and pre-leased bank/corporate spaces offering assured rental yields.',
+    title: 'Commercial Venues & Hospitality Spaces',
+    shortDescription: 'Convention centers, banquet complexes, and commercial event venues along key highway corridors.',
+    fullDescription: 'Our commercial division oversees the planning, construction, and operation of convention destinations and event venues, such as PK Community Hall & Events in the Mandya-Srirangapatna corridor.',
     icon: 'Building2',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
     keyBenefits: [
-      'Direct access to Grade-A commercial tech parks and corporate buildings',
-      'Pre-leased commercial properties delivering 8% - 10% guaranteed rental returns',
-      'Flexible corporate lease structuring with lock-in & escalation clauses',
-      'Complete statutory, zoning, fire NOC, and occupancy certificate (OC) checks'
+      'Large-capacity convention and wedding facilities',
+      'Highway frontage with expansive parking infrastructure',
+      'Flexible indoor banquet halls and landscaped open celebration lawns',
+      'Complete municipal and commercial sanctions'
     ],
     capabilities: [
-      'Grade-A Corporate Office Spaces & IT Campuses',
-      'High-Street Retail Showrooms & Plazas',
-      'Pre-Leased Commercial Investment Assets',
-      'Co-Working & Managed Enterprise Office Floors',
-      'Industrial Warehouses & Logistics Hubs'
+      'Grand Banquet & Convention Complexes',
+      'Open-Air Celebration Lawns & Event Spaces',
+      'Rooftop VIP Viewing Decks & Hospitality Suites',
+      'Commercial Frontage Retail & Office Spaces'
     ],
     deliverables: [
-      'Commercial Space Feasibility & Footfall Density Audit',
-      'Commercial Lease Agreement Drafting & Legal Vetting',
-      'Tenant Verification & Corporate Due Diligence File',
-      'Fit-Out Coordination & Handover Documentation'
+      'Venue Space Planning & Seating Layouts',
+      'Hospitality Infrastructure & Valet Access',
+      'Event Booking Agreements & Terms',
+      'Operational Facility Management'
     ]
   },
   {
     id: 'plots-land',
     slug: 'architecture-planning',
-    title: 'Plots & Land Dealing (Residential & Commercial)',
-    shortDescription: 'RERA, BDA & BMRDA approved villa plots, commercial highway frontage lands, and joint venture development parcels.',
-    fullDescription: 'We specialize in sourcing, verifying, and transacting high-potential land parcels and approved layout plots. Every land parcel undergoes rigorous legal scrutiny to ensure clear titles, unencumbered ownership, and approved zoning for immediate construction or long-term capital appreciation.',
+    title: 'Residential Layout Plots & Land Development',
+    shortDescription: 'Approved residential plotted layouts, villa sites, and highway frontage parcels in Mysuru and Mandya.',
+    fullDescription: 'We specialize in planning, developing, and transacting high-potential residential layouts and plotted land parcels. Every layout undergoes legal scrutiny to ensure clear titles, unencumbered ownership, and approved zoning for immediate construction.',
     icon: 'Compass',
     image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
     keyBenefits: [
-      'BDA, BMRDA, DTCP & RERA sanctioned residential layout plots',
-      'Zero-encumbrance agricultural, conversion & commercial lands',
-      'High-growth corridor locations with immense capital appreciation potential',
-      'Assistance with boundary survey, demarcation & fencing'
+      'MUDA, DTCP & Town Planning compliant plotted layouts',
+      'Zero-encumbrance title deeds with Nil-EC verification',
+      'High-growth corridor locations with expressway connectivity',
+      'On-ground asphalted roads, water pipelines, and power network'
     ],
     capabilities: [
       'Gated Community Villa Plots with Underground Utilities',
