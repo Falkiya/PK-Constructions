@@ -19,10 +19,9 @@ import {
   Building2,
   CheckCircle2,
   Compass,
-  Award,
   Clock,
   FileText,
-  Calendar
+  ChevronDown
 } from 'lucide-react';
 import { SEOHead } from '../components/common/SEOHead';
 import { contactInfo, WEB3FORMS_ACCESS_KEY } from '../data/companyData';
@@ -82,6 +81,7 @@ export const HomePage: React.FC = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -149,7 +149,7 @@ export const HomePage: React.FC = () => {
       />
 
       {/* ========================================================================= */}
-      {/* 1. HERO SECTION */}
+      {/* 1. HERO SECTION (id="hero") */}
       {/* ========================================================================= */}
       <section 
         id="hero" 
@@ -277,7 +277,113 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* ========================================================================= */}
-      {/* 2. FEATURED PROJECTS SECTION */}
+      {/* 2. ABOUT PK DEVELOPERS (id="about") */}
+      {/* ========================================================================= */}
+      <section id="about" className="py-20 bg-white border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-16">
+            {/* Left Story */}
+            <div className="lg:col-span-7 space-y-5 text-left">
+              <span className="text-xs font-semibold tracking-widest uppercase text-[#b68a5c] block">
+                ABOUT PK DEVELOPERS
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 tracking-tight leading-tight">
+                Committed to Reliable Real Estate &amp; Construction
+              </h2>
+              <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                PK Developers focuses on residential plotted layouts, turnkey luxury villa construction, and commercial spaces across the Mysuru and Mandya corridors. With an emphasis on clear title records, transparent project documentation, and direct customer consultation, we provide the information you need before making a property decision.
+              </p>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Whether you are exploring residential plots at PK Green Town and PK VIP Gallery or planning a custom turnkey residence, our team provides straightforward guidance from layout inspection to deed registration.
+              </p>
+
+              <div className="pt-2">
+                <Link
+                  to="/about"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold uppercase tracking-wider transition-colors"
+                >
+                  <span>Know More About Us</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Visual */}
+            <div className="lg:col-span-5">
+              <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+                <img
+                  src="/images/projects/pk-luxury-villa-hall.png"
+                  alt="PK Developers Interior Living Space"
+                  className="w-full h-80 sm:h-96 object-cover"
+                />
+                <div className="p-4 bg-white border-t border-slate-100 text-left">
+                  <div className="text-xs font-bold text-slate-900">End-to-End Civil &amp; Interior Execution</div>
+                  <div className="text-[11px] text-slate-500 mt-0.5">Custom turnkey villa delivered by PK Developers</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 4 Service Principles */}
+          <div className="pt-10 border-t border-slate-100">
+            <div className="text-center max-w-3xl mx-auto mb-10">
+              <span className="text-xs font-semibold tracking-widest uppercase text-[#b68a5c] block mb-1">
+                OUR SERVICE PRINCIPLES
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900">
+                A Clearer Way to Explore Property
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-[#b68a5c]/50 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 text-[#b68a5c] flex items-center justify-center mb-5 shadow-2xs">
+                  <FileText className="w-6 h-6" />
+                </div>
+                <h4 className="text-base font-bold text-slate-900 mb-2">Project Information</h4>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Access relevant project details, master layout maps, survey numbers, and infrastructure specifications before making an enquiry.
+                </p>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-[#b68a5c]/50 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 text-[#b68a5c] flex items-center justify-center mb-5 shadow-2xs">
+                  <CheckCircle2 className="w-6 h-6" />
+                </div>
+                <h4 className="text-base font-bold text-slate-900 mb-2">Transparent Communication</h4>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Receive clear answers about plot dimensions, road widths, available documentation, and transparent pricing terms without middle-agent layers.
+                </p>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-[#b68a5c]/50 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 text-[#b68a5c] flex items-center justify-center mb-5 shadow-2xs">
+                  <Compass className="w-6 h-6" />
+                </div>
+                <h4 className="text-base font-bold text-slate-900 mb-2">Project-Specific Guidance</h4>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Discuss your exact requirements directly with the developer team to select plot sizes and construction models tailored to your family's budget.
+                </p>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-[#b68a5c]/50 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 text-[#b68a5c] flex items-center justify-center mb-5 shadow-2xs">
+                  <ShieldCheck className="w-6 h-6" />
+                </div>
+                <h4 className="text-base font-bold text-slate-900 mb-2">Informed Decisions</h4>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Schedule guided on-site visits to inspect physical ground progress, road formation, utility connections, and surroundings before committing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. FEATURED PROJECTS SECTION (id="projects") */}
       {/* ========================================================================= */}
       <section id="projects" className="py-20 bg-[#fafaf9] border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -289,7 +395,7 @@ export const HomePage: React.FC = () => {
                 OUR DEVELOPMENTS
               </span>
               <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 tracking-tight">
-                Explore Our Projects
+                Ongoing &amp; Featured Projects
               </h2>
               <p className="mt-2 text-sm text-slate-600 max-w-xl">
                 Discover our projects and review the available details to find an option that matches your requirements.
@@ -479,205 +585,131 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* ========================================================================= */}
-      {/* 3. WHY CHOOSE PK DEVELOPERS */}
+      {/* 4. LAYOUT AMENITIES & INFRASTRUCTURE SECTION (id="amenities") */}
       {/* ========================================================================= */}
-      <section id="why-choose-us" className="py-20 bg-white border-t border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="amenities" className="py-20 lg:py-24 bg-[#091527] text-white relative overflow-hidden">
+        {/* Subtle decorative background pattern */}
+        <div className="absolute inset-0 bg-[radial-gradient(#c59b6d_1px,transparent_1px)] [background-size:24px_24px] opacity-10 pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="text-xs font-semibold tracking-widest uppercase text-[#b68a5c] block mb-2">
-              OUR SERVICE PRINCIPLES
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 tracking-tight">
-              A Clearer Way to Explore Property
-            </h2>
-            <p className="mt-3 text-sm text-slate-600 leading-relaxed">
-              We focus on clear documentation, verified site parameters, and direct developer communication to help you evaluate real estate options with confidence.
+          {/* Header Row */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 text-left">
+            <div>
+              <span className="text-xs font-semibold tracking-widest uppercase text-[#c59b6d] block mb-2">
+                PLANNED INFRASTRUCTURE
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">
+                Amenities &amp; Utilities
+              </h2>
+            </div>
+            <p className="text-slate-300 text-sm max-w-md font-light leading-relaxed">
+              Every PK Developers residential plotted layout is delivered with ready on-ground civil infrastructure, wide engineered road corridors, and dedicated utilities.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+          {/* 6 Amenities Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-left">
             
-            {/* Point 1 */}
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-[#b68a5c]/50 transition-all">
-              <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 text-[#b68a5c] flex items-center justify-center mb-5 shadow-2xs">
-                <FileText className="w-6 h-6" />
+            {/* 1. Wide Asphalt Roads */}
+            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#b68a5c]/50 transition-all backdrop-blur-sm group">
+              <div className="w-12 h-12 rounded-xl bg-[#b68a5c]/20 border border-[#b68a5c]/40 text-[#c59b6d] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <Car className="w-6 h-6" />
               </div>
-              <h3 className="text-base font-bold text-slate-900 mb-2">
-                Project Information
+              <h3 className="text-lg font-bold text-white mb-2">
+                40ft &amp; 28ft Asphalt Roads
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Access relevant project details, master layout maps, survey numbers, and infrastructure specifications before making an enquiry.
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Generous 40-foot wide central spine and 28ft / 22ft cross avenues with concrete kerbing, smooth turning radiuses, and pedestrian walkways.
               </p>
             </div>
 
-            {/* Point 2 */}
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-[#b68a5c]/50 transition-all">
-              <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 text-[#b68a5c] flex items-center justify-center mb-5 shadow-2xs">
-                <CheckCircle2 className="w-6 h-6" />
+            {/* 2. 24x7 Water Supply */}
+            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#b68a5c]/50 transition-all backdrop-blur-sm group">
+              <div className="w-12 h-12 rounded-xl bg-[#b68a5c]/20 border border-[#b68a5c]/40 text-[#c59b6d] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <Droplets className="w-6 h-6" />
               </div>
-              <h3 className="text-base font-bold text-slate-900 mb-2">
-                Transparent Communication
+              <h3 className="text-lg font-bold text-white mb-2">
+                24x7 Water Supply Network
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Receive clear answers about plot dimensions, road widths, available documentation, and transparent pricing terms without middle-agent layers.
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Dedicated potable water supply pipeline laid to individual plot boundaries, connected to high-capacity overhead reservoir infrastructure.
               </p>
             </div>
 
-            {/* Point 3 */}
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-[#b68a5c]/50 transition-all">
-              <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 text-[#b68a5c] flex items-center justify-center mb-5 shadow-2xs">
-                <Compass className="w-6 h-6" />
+            {/* 3. Electricity & Transformers */}
+            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#b68a5c]/50 transition-all backdrop-blur-sm group">
+              <div className="w-12 h-12 rounded-xl bg-[#b68a5c]/20 border border-[#b68a5c]/40 text-[#c59b6d] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <Zap className="w-6 h-6" />
               </div>
-              <h3 className="text-base font-bold text-slate-900 mb-2">
-                Project-Specific Guidance
+              <h3 className="text-lg font-bold text-white mb-2">
+                Electrical Grid &amp; Streetlights
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Discuss your exact requirements directly with the developer team to select plot sizes and construction models tailored to your family's budget.
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                High-capacity electrical transformer installations, safe power distribution lines, and illuminated LED streetlights along all layout avenues.
               </p>
             </div>
 
-            {/* Point 4 */}
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-[#b68a5c]/50 transition-all">
-              <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 text-[#b68a5c] flex items-center justify-center mb-5 shadow-2xs">
+            {/* 4. Underground Drainage */}
+            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#b68a5c]/50 transition-all backdrop-blur-sm group">
+              <div className="w-12 h-12 rounded-xl bg-[#b68a5c]/20 border border-[#b68a5c]/40 text-[#c59b6d] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <Building2 className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">
+                Underground Drainage &amp; Rainwater
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Engineered box-drain network and stormwater channels preventing waterlogging and ensuring rapid rainwater runoff during heavy monsoons.
+              </p>
+            </div>
+
+            {/* 5. Gated Perimeter & Demarcation */}
+            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#b68a5c]/50 transition-all backdrop-blur-sm group">
+              <div className="w-12 h-12 rounded-xl bg-[#b68a5c]/20 border border-[#b68a5c]/40 text-[#c59b6d] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="text-base font-bold text-slate-900 mb-2">
-                Informed Decisions
+              <h3 className="text-lg font-bold text-white mb-2">
+                Gated Entry &amp; Boundary Demarcation
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Schedule guided on-site visits to inspect physical ground progress, road formation, utility connections, and surroundings before committing.
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Grand entrance archway with security provisions, perimeter fencing, and concrete boundary markers installed for each individual plot.
               </p>
             </div>
 
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================================================= */}
-      {/* 4. SHORT COMPANY INTRODUCTION */}
-      {/* ========================================================================= */}
-      <section id="about" className="py-20 bg-[#fafaf9] border-t border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            
-            {/* Left Story (Col 7) */}
-            <div className="lg:col-span-7 space-y-5 text-left">
-              <span className="text-xs font-semibold tracking-widest uppercase text-[#b68a5c] block">
-                ABOUT PK DEVELOPERS
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 tracking-tight leading-tight">
-                Committed to Reliable Real Estate &amp; Construction
-              </h2>
-              <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                PK Developers focuses on residential plotted layouts, turnkey luxury villa construction, and commercial spaces across the Mysuru and Mandya corridors. With an emphasis on clear title records, transparent project documentation, and direct customer consultation, we provide the information you need before making a property decision.
-              </p>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Whether you are exploring residential plots at PK Green Town and PK VIP Gallery or planning a custom turnkey residence, our team provides straightforward guidance from layout inspection to deed registration.
-              </p>
-
-              <div className="pt-2">
-                <Link
-                  to="/about"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold uppercase tracking-wider transition-colors"
-                >
-                  <span>Know More About Us</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+            {/* 6. Avenue Greenery */}
+            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#b68a5c]/50 transition-all backdrop-blur-sm group">
+              <div className="w-12 h-12 rounded-xl bg-[#b68a5c]/20 border border-[#b68a5c]/40 text-[#c59b6d] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <Trees className="w-6 h-6" />
               </div>
-            </div>
-
-            {/* Right Visual (Col 5) */}
-            <div className="lg:col-span-5">
-              <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
-                <img
-                  src="/images/projects/pk-luxury-villa-hall.png"
-                  alt="PK Developers Interior Living Space"
-                  className="w-full h-80 sm:h-96 object-cover"
-                />
-                <div className="p-4 bg-white border-t border-slate-100 text-left">
-                  <div className="text-xs font-bold text-slate-900">End-to-End Civil &amp; Interior Execution</div>
-                  <div className="text-[11px] text-slate-500 mt-0.5">Custom turnkey villa delivered by PK Developers</div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================================================= */}
-      {/* 5. CLIENT ASSURANCE & FAQ */}
-      {/* ========================================================================= */}
-      <section id="faq" className="py-20 bg-white border-t border-slate-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
-          
-          <div className="text-center mb-12">
-            <span className="text-xs font-semibold tracking-widest uppercase text-[#b68a5c] block mb-2">
-              CUSTOMER ASSURANCE &amp; ANSWERS
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 tracking-tight">
-              Frequently Asked Questions
-            </h2>
-            <p className="mt-2 text-sm text-slate-600">
-              Clear answers to the most common questions about our layouts, approvals, and site visits.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            
-            <div className="p-6 rounded-xl border border-slate-200 bg-slate-50">
-              <h3 className="text-base font-bold text-slate-900 mb-2">
-                Where are PK Developers' active projects located?
+              <h3 className="text-lg font-bold text-white mb-2">
+                Avenue Plantation &amp; Green Spaces
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Our active plotted developments—PK Green Town Phase-2 and PK VIP Gallery—are located in Belvadi Village, Kasaba Hobli, Srirangapatna Taluk, Mandya district, approximately 3 km from the Ring Road with direct access to the Bengaluru-Mysuru highway corridor.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-xl border border-slate-200 bg-slate-50">
-              <h3 className="text-base font-bold text-slate-900 mb-2">
-                What plot sizes are available?
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                At PK Green Town Phase-2, we offer 20x30 (60 units), 20x40 (12 units), and 30x40 (17 units) plots. At PK VIP Gallery, we offer spacious 40x60 estate parcels designed for executive independent villas.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-xl border border-slate-200 bg-slate-50">
-              <h3 className="text-base font-bold text-slate-900 mb-2">
-                What infrastructure is provided in the layouts?
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Layouts feature wide asphalted roads (40-foot central road and 22-foot cross streets at Green Town; 28-foot internal avenue at VIP Gallery), round-the-clock water pipeline network, electricity connection infrastructure, roadside drainage, and avenue tree plantation.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-xl border border-slate-200 bg-slate-50">
-              <h3 className="text-base font-bold text-slate-900 mb-2">
-                Can I inspect the original title deeds and layout sanction documents?
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Yes. We encourage all interested buyers to visit our office in Rajiv Nagar, Mysuru, to review the survey demarcation plans, Nil-Encumbrance certificates, conversion documentation, and parent deeds in full detail.
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Mature shaded avenue tree plantations lining main corridors, roadside green berms, and reserved open lung spaces for eco-friendly living.
               </p>
             </div>
 
           </div>
 
-          {/* Genuine Review & Privacy Disclosure Note */}
-          <div className="mt-8 p-4 rounded-xl bg-amber-50/70 border border-amber-200/80 text-xs text-amber-900 leading-relaxed flex items-start gap-3">
-            <CheckCircle2 className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
+          {/* Quick Inspection CTA Strip */}
+          <div className="mt-12 p-6 rounded-2xl bg-white/5 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-left">
             <div>
-              <span className="font-bold">Transparent Review Policy: </span>
-              In accordance with our factual standards, we publish verified customer experiences with express client authorization. You can speak directly with our team or meet existing plot owners during organized site visits.
+              <div className="text-sm font-bold text-white">Inspect Layout Amenities On-Site</div>
+              <div className="text-xs text-slate-300 mt-0.5">We arrange guided physical site inspections 7 days a week to review roads, water lines, and plot stones.</div>
             </div>
+            <a
+              href="#enquiry"
+              className="shrink-0 px-6 py-2.5 rounded-lg bg-[#b68a5c] hover:bg-[#a67c4e] text-white text-xs font-bold uppercase tracking-wider transition-colors shadow-sm"
+            >
+              Book Site Visit
+            </a>
           </div>
 
         </div>
       </section>
 
       {/* ========================================================================= */}
-      {/* 6. OFFICE LOCATION & VISITING HOURS */}
+      {/* 5. OFFICE LOCATION & VISITING HOURS (id="location") */}
       {/* ========================================================================= */}
       <section id="location" className="py-20 bg-[#fafaf9] border-t border-slate-200 text-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -779,49 +811,87 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* ========================================================================= */}
-      {/* 7. ENQUIRE NOW SECTION */}
+      {/* 6. ENQUIRE NOW & FAQS SECTION (id="enquiry") */}
       {/* ========================================================================= */}
-      <section id="enquiry" className="py-20 bg-[#091527] text-white relative">
+      <section id="enquiry" className="py-20 bg-white border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             
-            {/* Left Text */}
-            <div className="lg:col-span-5 space-y-4 text-left">
-              <span className="text-xs font-semibold tracking-widest uppercase text-[#b68a5c] block">
-                GET IN TOUCH
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight leading-tight">
-                Looking for the Right Property?
-              </h2>
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-sm">
-                Tell us what you are looking for. Contact PK Developers to discuss your requirements and request information about relevant projects.
-              </p>
-              
-              <div className="pt-4 space-y-3 text-xs text-slate-300">
+            {/* Left Column: Heading & FAQ Accordion */}
+            <div className="lg:col-span-5 space-y-6 text-left">
+              <div>
+                <span className="text-xs font-semibold tracking-widest uppercase text-[#b68a5c] block mb-1">
+                  GET IN TOUCH
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 tracking-tight leading-tight">
+                  Looking for the Right Property?
+                </h2>
+                <p className="text-slate-600 text-sm sm:text-base leading-relaxed mt-2">
+                  Tell us what you are looking for. Contact PK Developers to discuss your requirements and request information about relevant projects.
+                </p>
+              </div>
+
+              {/* Compact FAQ Accordion */}
+              <div className="pt-2 space-y-3">
+                <div className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                  Common Questions
+                </div>
+
+                {[
+                  {
+                    q: 'Where are the active projects located?',
+                    a: 'Our active plotted layouts—PK Green Town Phase-2 and PK VIP Gallery—are located in Belvadi Village, Kasaba Hobli, Srirangapatna Taluk, Mandya, approximately 3 km from the Ring Road.'
+                  },
+                  {
+                    q: 'What plot dimensions are available?',
+                    a: 'We offer 20x30, 20x40, and 30x40 plots at PK Green Town Phase-2 (89 total units), and 40x60 estate parcels at PK VIP Gallery.'
+                  },
+                  {
+                    q: 'Can I review the original title documents?',
+                    a: 'Yes. You are welcome to visit our office in Rajiv Nagar, Mysuru to inspect the parent title deeds, Nil-Encumbrance certificates, conversion orders, and layout maps.'
+                  }
+                ].map((item, idx) => (
+                  <div key={idx} className="border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
+                    <button
+                      type="button"
+                      onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                      className="w-full flex items-center justify-between p-3.5 text-left font-semibold text-slate-900 text-xs sm:text-sm hover:text-[#b68a5c] transition-colors"
+                    >
+                      <span className="pr-2">{item.q}</span>
+                      <ChevronDown className={`w-4 h-4 text-slate-400 shrink-0 transition-transform ${openFaq === idx ? 'rotate-180 text-[#b68a5c]' : ''}`} />
+                    </button>
+                    {openFaq === idx && (
+                      <div className="px-3.5 pb-3.5 text-xs text-slate-600 leading-relaxed border-t border-slate-200/60 pt-2">
+                        {item.a}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              {/* Direct Developer Assurances */}
+              <div className="pt-2 space-y-2 text-xs text-slate-600">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#c59b6d] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#b68a5c] shrink-0" />
                   <span>Direct developer response without broker commissions</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#c59b6d] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#b68a5c] shrink-0" />
                   <span>On-site layout inspections scheduled 7 days a week</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#c59b6d] shrink-0" />
-                  <span>Transparent survey maps and title documentation</span>
                 </div>
               </div>
             </div>
 
-            {/* Right Form */}
+            {/* Right Column: Web3Forms Form */}
             <div className="lg:col-span-7">
               {formSubmitted ? (
-                <div className="py-12 text-center space-y-4 bg-slate-900/70 p-8 rounded-2xl border border-white/20 backdrop-blur-sm">
-                  <div className="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center">
+                <div className="py-12 text-center space-y-4 bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm">
+                  <div className="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h3 className="text-2xl font-serif font-bold text-white">Thank You for Your Enquiry!</h3>
-                  <p className="text-slate-300 text-sm max-w-md mx-auto leading-relaxed">
+                  <h3 className="text-2xl font-serif font-bold text-slate-900">Thank You for Your Enquiry!</h3>
+                  <p className="text-slate-600 text-sm max-w-md mx-auto leading-relaxed">
                     We have received your enquiry and our team will get in touch with you shortly.
                   </p>
                   <button
@@ -835,18 +905,23 @@ export const HomePage: React.FC = () => {
               ) : (
                 <form
                   onSubmit={handleSubmit}
-                  className="bg-slate-900/70 p-6 sm:p-8 rounded-2xl border border-white/15 backdrop-blur-sm space-y-4 text-left shadow-xl"
+                  className="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 space-y-4 text-left shadow-sm"
                 >
+                  <div className="mb-2">
+                    <h3 className="text-xl font-bold text-slate-900">Send an Enquiry</h3>
+                    <p className="text-xs text-slate-500 mt-0.5">Fill out your details to receive project specifications and pricing.</p>
+                  </div>
+
                   {submitError && (
-                    <div className="p-3 rounded-lg bg-red-500/20 border border-red-500/50 text-red-200 text-xs">
+                    <div className="p-3 rounded-lg bg-red-50 border border-red-200 text-red-700 text-xs">
                       {submitError}
                     </div>
                   )}
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-slate-300 mb-1.5">
-                        Your Full Name <span className="text-[#c59b6d]">*</span>
+                      <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                        Your Full Name <span className="text-[#b68a5c]">*</span>
                       </label>
                       <input
                         type="text"
@@ -854,13 +929,13 @@ export const HomePage: React.FC = () => {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="e.g. Ramesh Kumar"
-                        className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-[#b68a5c] transition-colors"
+                        className="w-full px-4 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-[#b68a5c] transition-colors"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-semibold text-slate-300 mb-1.5">
-                        Phone Number <span className="text-[#c59b6d]">*</span>
+                      <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                        Phone Number <span className="text-[#b68a5c]">*</span>
                       </label>
                       <input
                         type="tel"
@@ -868,14 +943,14 @@ export const HomePage: React.FC = () => {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="e.g. +91 98765 43210"
-                        className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-[#b68a5c] transition-colors"
+                        className="w-full px-4 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-[#b68a5c] transition-colors"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                      <label className="block text-xs font-semibold text-slate-700 mb-1.5">
                         Email Address (Optional)
                       </label>
                       <input
@@ -883,18 +958,18 @@ export const HomePage: React.FC = () => {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="e.g. name@example.com"
-                        className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-[#b68a5c] transition-colors"
+                        className="w-full px-4 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-[#b68a5c] transition-colors"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-semibold text-slate-300 mb-1.5">
-                        Project of Interest <span className="text-[#c59b6d]">*</span>
+                      <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                        Project of Interest <span className="text-[#b68a5c]">*</span>
                       </label>
                       <select
                         value={formData.project}
                         onChange={(e) => setFormData({ ...formData, project: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-lg bg-[#0f1d33] border border-white/20 text-white text-sm focus:outline-none focus:border-[#b68a5c] transition-colors"
+                        className="w-full px-4 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-[#b68a5c] transition-colors"
                       >
                         <option value="PK Green Town (Phase-2)">PK Green Town (Phase-2) — Plots</option>
                         <option value="PK VIP Gallery">PK VIP Gallery — 40x60 Plots</option>
@@ -906,7 +981,7 @@ export const HomePage: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
                       Your Message or Requirements (Optional)
                     </label>
                     <textarea
@@ -914,7 +989,7 @@ export const HomePage: React.FC = () => {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Let us know your preferred plot dimensions, budget, or timeline..."
-                      className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-[#b68a5c] transition-colors resize-none"
+                      className="w-full px-4 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-[#b68a5c] transition-colors resize-none"
                     />
                   </div>
 
