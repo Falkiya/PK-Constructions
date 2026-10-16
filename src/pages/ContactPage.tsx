@@ -11,10 +11,12 @@ import {
   Calendar 
 } from 'lucide-react';
 import { SEOHead } from '../components/common/SEOHead';
-import { contactInfo } from '../../src/data/companyData';
+import { contactInfo, WEB3FORMS_ACCESS_KEY } from '../data/companyData';
 
 export const ContactPage: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -27,9 +29,45 @@ export const ContactPage: React.FC = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `Detailed Enquiry from ${formData.name} - ${formData.projectType}`,
+          from_name: 'PK Developers Contact Page',
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          preferred_location: formData.location || 'Not specified',
+          project_type: formData.projectType,
+          plot_built_size: formData.projectSize || 'Not specified',
+          budget_framework: formData.budgetRange,
+          possession_timeline: formData.preferredStartDate || 'Not specified',
+          message: formData.message
+        })
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        setSubmitError(result.message || 'Submission failed. Please try again or WhatsApp us directly.');
+      }
+    } catch (err) {
+      setSubmitError('Unable to send enquiry right now. Please try again or WhatsApp us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -181,6 +219,11 @@ export const ContactPage: React.FC = () => {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
+                    {submitError && (
+                      <div className="p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs leading-relaxed">
+                        {submitError}
+                      </div>
+                    )}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
@@ -325,10 +368,11 @@ export const ContactPage: React.FC = () => {
 
                     <button
                       type="submit"
-                      className="w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm uppercase tracking-wider shadow-xl shadow-blue-500/20 transition-all flex items-center justify-center gap-2"
+                      disabled={isSubmitting}
+                      className="w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white font-bold text-sm uppercase tracking-wider shadow-xl shadow-blue-500/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
                     >
                       <Send className="w-4 h-4" />
-                      <span>Submit Property Enquiry</span>
+                      <span>{isSubmitting ? 'Sending Enquiry...' : 'Submit Property Enquiry'}</span>
                     </button>
                   </form>
                 )}

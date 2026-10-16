@@ -34,7 +34,7 @@ import {
   Clock
 } from 'lucide-react';
 import { SEOHead } from '../components/common/SEOHead';
-import { contactInfo } from '../data/companyData';
+import { contactInfo, WEB3FORMS_ACCESS_KEY } from '../data/companyData';
 
 // Full background hero slides featuring authentic PK Developers projects
 const heroSlides = [
@@ -94,20 +94,51 @@ export const HomePage: React.FC = () => {
     message: ''
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setFormSubmitted(true);
-    setTimeout(() => {
-      setFormSubmitted(false);
-      setFormData({
-        name: '',
-        phone: '',
-        email: '',
-        project: 'PK Green Town (Phase-2)',
-        message: ''
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New Quick Enquiry from ${formData.name} - ${formData.project}`,
+          from_name: 'PK Developers Website (Home Form)',
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email || 'Not provided',
+          project_of_interest: formData.project,
+          message: formData.message || 'No additional message'
+        })
       });
-    }, 5000);
+
+      const result = await response.json();
+      if (result.success) {
+        setFormSubmitted(true);
+        setFormData({
+          name: '',
+          phone: '',
+          email: '',
+          project: 'PK Green Town (Phase-2)',
+          message: ''
+        });
+      } else {
+        setSubmitError(result.message || 'Submission failed. Please try again or reach out on WhatsApp.');
+      }
+    } catch (err) {
+      setSubmitError('Unable to send enquiry right now. Please try again or WhatsApp us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // Location tab & FAQ state for SEO sections
@@ -1310,17 +1341,41 @@ export const HomePage: React.FC = () => {
             {/* Right Column: Clean Form matching mockup */}
             <div className="lg:col-span-7">
               {formSubmitted ? (
-                <div className="py-12 text-center space-y-4 bg-slate-900/60 p-8 rounded-xl border border-white/15">
-                  <div className="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center">
-                    <CheckCircle2 className="w-6 h-6" />
+                <div className="py-10 text-center space-y-4 bg-slate-900/60 p-8 rounded-2xl border border-white/15 backdrop-blur-sm">
+                  <div className="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center">
+                    <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h3 className="text-xl font-serif font-bold text-white">Thank You for Your Enquiry!</h3>
-                  <p className="text-slate-300 text-sm max-w-md mx-auto">
-                    Our team will contact you shortly with full project details.
+                  <h3 className="text-2xl font-serif font-bold text-white">Thank You for Your Enquiry!</h3>
+                  <p className="text-slate-300 text-sm max-w-md mx-auto leading-relaxed">
+                    Your details have been delivered to our advisory team. We will review your property preferences and reach out shortly.
                   </p>
+                  <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
+                    <button
+                      type="button"
+                      onClick={() => setFormSubmitted(false)}
+                      className="px-5 py-2.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold border border-white/20 transition-all"
+                    >
+                      Submit Another Enquiry
+                    </button>
+                    <a
+                      href={`https://wa.me/${contactInfo.whatsapp}?text=Hello%20PK%20Developers,%20I%20just%20submitted%20an%20enquiry%20on%20your%20website.`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-md"
+                    >
+                      <MessageCircle className="w-3.5 h-3.5" />
+                      <span>Chat on WhatsApp</span>
+                    </a>
+                  </div>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  {submitError && (
+                    <div className="p-3.5 rounded-xl bg-rose-500/20 border border-rose-500/40 text-rose-200 text-xs text-left leading-relaxed">
+                      {submitError}
+                    </div>
+                  )}
+
                   {/* Row 1: Your Name* & Phone Number* */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <input
@@ -1378,9 +1433,10 @@ export const HomePage: React.FC = () => {
                   <div className="pt-1 text-left">
                     <button
                       type="submit"
-                      className="inline-flex items-center gap-2 px-8 py-3 rounded-lg bg-[#b68a5c] hover:bg-[#a67c4e] text-white text-sm font-medium transition-colors shadow-sm"
+                      disabled={isSubmitting}
+                      className="inline-flex items-center gap-2 px-8 py-3 rounded-lg bg-[#b68a5c] hover:bg-[#a67c4e] disabled:opacity-60 text-white text-sm font-medium transition-colors shadow-sm cursor-pointer"
                     >
-                      <span>Submit Enquiry</span>
+                      <span>{isSubmitting ? 'Sending Enquiry...' : 'Submit Enquiry'}</span>
                       <ArrowRight className="w-4 h-4" />
                     </button>
                   </div>

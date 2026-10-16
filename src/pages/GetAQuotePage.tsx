@@ -15,11 +15,13 @@ import {
   Tag
 } from 'lucide-react';
 import { SEOHead } from '../components/common/SEOHead';
-import { contactInfo } from '../data/companyData';
+import { contactInfo, WEB3FORMS_ACCESS_KEY } from '../data/companyData';
 
 export const GetAQuotePage: React.FC = () => {
   const [currentStep, setCurrentStep] = useState<number>(1);
   const [submitted, setSubmitted] = useState<boolean>(false);
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [submitError, setSubmitError] = useState<string>('');
 
   // Form State
   const [formData, setFormData] = useState({
@@ -66,9 +68,46 @@ export const GetAQuotePage: React.FC = () => {
     setCurrentStep((prev) => Math.max(prev - 1, 1));
   };
 
-  const handleFinalSubmit = (e: React.FormEvent) => {
+  const handleFinalSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `Detailed Quote / Requirement from ${formData.fullName} (${formData.requirementType})`,
+          from_name: 'PK Developers Website (Quote Form)',
+          name: formData.fullName,
+          phone: formData.phone,
+          email: formData.email,
+          requirement_type: formData.requirementType,
+          preferred_location: formData.location,
+          approximate_area: formData.approximateArea || 'Not specified',
+          transaction_intent: formData.transactionIntent,
+          budget_framework: formData.budgetTier,
+          possession_timeline: formData.timelinePreference,
+          specific_requirements: formData.requirements || 'None specified'
+        })
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        setSubmitError(result.message || 'Submission failed. Please try again or WhatsApp us directly.');
+      }
+    } catch (err) {
+      setSubmitError('Unable to send request right now. Please try again or WhatsApp us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const budgetOptions = [
@@ -403,6 +442,12 @@ export const GetAQuotePage: React.FC = () => {
                       <p className="text-xs text-slate-500">Share any specific amenities, road width, Vastu preferences, or deal parameters.</p>
                     </div>
 
+                    {submitError && (
+                      <div className="p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs leading-relaxed">
+                        {submitError}
+                      </div>
+                    )}
+
                     <div className="space-y-4">
                       <div>
                         <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
@@ -441,9 +486,10 @@ export const GetAQuotePage: React.FC = () => {
 
                       <button
                         type="submit"
-                        className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-xl shadow-blue-500/20 transition-all hover:scale-105 active:scale-95"
+                        disabled={isSubmitting}
+                        className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white font-bold text-sm shadow-xl shadow-blue-500/20 transition-all hover:scale-105 active:scale-95 cursor-pointer"
                       >
-                        <span>Submit Property Inquiry</span>
+                        <span>{isSubmitting ? 'Submitting Inquiry...' : 'Submit Property Inquiry'}</span>
                         <Send className="w-4 h-4" />
                       </button>
                     </div>

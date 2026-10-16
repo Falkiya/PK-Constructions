@@ -112,3 +112,6 @@ export const contactInfo = {
   address: 'No 39, Opp to Al Badar Circle, 1st Floor, 2nd Stage, Rajiv Nagar, Mysuru - 570019, Karnataka',
   businessHours: '10:00 AM – 3:00 PM & 7:00 PM – 10:00 PM'
 };
+
+export const WEB3FORMS_ACCESS_KEY = '489005f5-571f-4a93-a524-79cd6aa51244';
+
