@@ -783,7 +783,7 @@ export const HomePage: React.FC = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium transition-colors"
                 >
-                  <MessageCircle className="w-4 h-4 text-white" />
+                  <img src="/images/social/whatsapp.png" alt="WhatsApp" className="w-4 h-4 object-contain" />
                   <span>WhatsApp</span>
                 </a>
               </div>

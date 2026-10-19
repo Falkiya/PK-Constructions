@@ -169,8 +169,8 @@ export const ContactPage: React.FC = () => {
               {/* Dedicated WhatsApp CTA Card */}
               <div className="p-6 rounded-2xl bg-white border border-emerald-200 shadow-sm space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-emerald-600 text-white">
-                    <MessageCircle className="w-6 h-6 fill-white" />
+                  <div className="w-11 h-11 rounded-xl bg-emerald-50 border border-emerald-200 p-2 flex items-center justify-center">
+                    <img src="/images/social/whatsapp.png" alt="WhatsApp" className="w-full h-full object-contain" />
                   </div>
                   <div>
                     <h3 className="text-base font-bold text-slate-900">Fast-Track On WhatsApp</h3>
@@ -186,7 +186,7 @@ export const ContactPage: React.FC = () => {
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider shadow-md transition-all"
                 >
-                  <MessageCircle className="w-4 h-4 fill-white" />
+                  <img src="/images/social/whatsapp.png" alt="WhatsApp" className="w-4 h-4 object-contain" />
                   <span>Chat With Us on WhatsApp</span>
                 </a>
               </div>
