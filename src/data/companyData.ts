@@ -101,8 +101,55 @@ export const contactInfo = {
   whatsapp: '919108081321',
   whatsappDisplay: '+91 91080 81321',
   address: 'No 39, Opp to Al Badar Circle, 1st Floor, 2nd Stage, Rajiv Nagar, Mysuru - 570019, Karnataka',
-  businessHours: '10:00 AM – 3:00 PM & 7:00 PM – 10:00 PM'
+  businessHours: '10:00 AM – 3:00 PM & 7:00 PM – 10:00 PM',
+  social: {
+    instagram: 'https://www.instagram.com/p.k_devx?psln=MXZtemNqd2ZkejlsMA==',
+    facebook: 'https://www.facebook.com/share/1CBQT34ced/',
+    x: 'https://x.com/home',
+    linkedin: 'https://www.linkedin.com/feed/',
+    whatsapp: 'https://wa.me/919108081321?text=Hello%20PK%20Developers,%20I%20would%20like%20to%20inquire%20about%20your%20properties.'
+  }
 };
+
+export interface SocialLink {
+  name: string;
+  url: string;
+  icon: string;
+  label: string;
+}
+
+export const socialLinks: SocialLink[] = [
+  {
+    name: 'Instagram',
+    url: 'https://www.instagram.com/p.k_devx?psln=MXZtemNqd2ZkejlsMA==',
+    icon: '/images/social/instagram.png',
+    label: 'Follow PK Developers on Instagram'
+  },
+  {
+    name: 'Facebook',
+    url: 'https://www.facebook.com/share/1CBQT34ced/',
+    icon: '/images/social/facebook.png',
+    label: 'Follow PK Developers on Facebook'
+  },
+  {
+    name: 'X (Twitter)',
+    url: 'https://x.com/home',
+    icon: '/images/social/x.png',
+    label: 'Follow PK Developers on X'
+  },
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/feed/',
+    icon: '/images/social/linkedin.png',
+    label: 'Connect with PK Developers on LinkedIn'
+  },
+  {
+    name: 'WhatsApp',
+    url: 'https://wa.me/919108081321?text=Hello%20PK%20Developers,%20I%20would%20like%20to%20inquire%20about%20your%20properties.',
+    icon: '/images/social/whatsapp.png',
+    label: 'Chat with PK Developers on WhatsApp'
+  }
+];
 
 export const WEB3FORMS_ACCESS_KEY = '489005f5-571f-4a93-a524-79cd6aa51244';
 

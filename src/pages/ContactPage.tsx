@@ -11,7 +11,7 @@ import {
   Calendar 
 } from 'lucide-react';
 import { SEOHead } from '../components/common/SEOHead';
-import { contactInfo, WEB3FORMS_ACCESS_KEY } from '../data/companyData';
+import { contactInfo, socialLinks, WEB3FORMS_ACCESS_KEY } from '../data/companyData';
 
 export const ContactPage: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -189,6 +189,33 @@ export const ContactPage: React.FC = () => {
                   <MessageCircle className="w-4 h-4 fill-white" />
                   <span>Chat With Us on WhatsApp</span>
                 </a>
+              </div>
+
+              {/* Official Social Media Card */}
+              <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3">
+                <h3 className="text-sm font-bold text-slate-900">Follow Our Social Channels</h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  Stay updated with new layout releases, plot availability, construction milestones, and event schedules.
+                </p>
+                <div className="flex items-center gap-3 pt-1">
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.name}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.label}
+                      title={social.name}
+                      className="w-10 h-10 rounded-full bg-slate-50 hover:bg-slate-100 p-1.5 flex items-center justify-center border border-slate-200 hover:border-[#b68a5c] hover:scale-110 transition-all duration-200 shadow-2xs group"
+                    >
+                      <img
+                        src={social.icon}
+                        alt={social.name}
+                        className="w-full h-full object-contain rounded-full"
+                      />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
 

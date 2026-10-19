@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { X, Phone, MessageCircle, MapPin, Mail, ArrowRight, Clock } from 'lucide-react';
-import { contactInfo } from '../../data/companyData';
+import { contactInfo, socialLinks } from '../../data/companyData';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -104,8 +104,34 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
           })}
         </nav>
 
+        {/* Social Media Links */}
+        <div className="pt-5 border-t border-slate-100">
+          <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">
+            Connect With Us
+          </div>
+          <div className="flex items-center gap-2.5">
+            {socialLinks.map((social) => (
+              <a
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.label}
+                title={social.name}
+                className="w-9 h-9 rounded-full bg-slate-50 border border-slate-200 hover:border-[#b68a5c] p-1.5 flex items-center justify-center hover:scale-110 transition-all shadow-2xs"
+              >
+                <img
+                  src={social.icon}
+                  alt={social.name}
+                  className="w-full h-full object-contain rounded-full"
+                />
+              </a>
+            ))}
+          </div>
+        </div>
+
         {/* Contact Info Footer */}
-        <div className="pt-6 border-t border-slate-100 space-y-3 text-xs text-slate-600">
+        <div className="pt-5 border-t border-slate-100 space-y-3 text-xs text-slate-600">
           <a
             href={`tel:${contactInfo.phoneRaw}`}
             className="flex items-center gap-2.5 text-slate-800 hover:text-[#c59b6d] font-semibold"

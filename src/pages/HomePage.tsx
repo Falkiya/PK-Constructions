@@ -24,7 +24,7 @@ import {
   ChevronDown
 } from 'lucide-react';
 import { SEOHead } from '../components/common/SEOHead';
-import { contactInfo, WEB3FORMS_ACCESS_KEY } from '../data/companyData';
+import { contactInfo, socialLinks, WEB3FORMS_ACCESS_KEY } from '../data/companyData';
 
 // Authentic project imagery from PK Developers records
 const heroSlides = [
@@ -786,6 +786,32 @@ export const HomePage: React.FC = () => {
                   <MessageCircle className="w-4 h-4 text-white" />
                   <span>WhatsApp</span>
                 </a>
+              </div>
+
+              {/* Social Media Links */}
+              <div className="pt-2">
+                <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-2.5">
+                  Follow PK Developers
+                </span>
+                <div className="flex items-center gap-2.5">
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.name}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.label}
+                      title={social.name}
+                      className="w-10 h-10 rounded-full bg-white border border-slate-200 hover:border-[#b68a5c] p-1.5 flex items-center justify-center hover:scale-110 transition-all shadow-2xs group"
+                    >
+                      <img
+                        src={social.icon}
+                        alt={social.name}
+                        className="w-full h-full object-contain rounded-full"
+                      />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
 

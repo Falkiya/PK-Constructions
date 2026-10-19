@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Phone, MessageCircle, MapPin, Clock } from 'lucide-react';
-import { contactInfo } from '../../data/companyData';
+import { Phone, MapPin, Clock } from 'lucide-react';
+import { contactInfo, socialLinks } from '../../data/companyData';
 
 export const Footer: React.FC = () => {
   const location = useLocation();
@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-[#07111e] text-slate-300 pt-12 pb-8 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 pb-10 border-b border-slate-800/80">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 pb-10 border-b border-slate-800/80">
           {/* Logo & Tagline */}
           <Link
             to="/"
@@ -45,7 +45,7 @@ export const Footer: React.FC = () => {
           </Link>
 
           {/* Navigation Links */}
-          <nav className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 text-sm font-medium">
+          <nav className="flex flex-wrap items-center justify-center gap-5 sm:gap-7 text-sm font-medium">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -58,23 +58,32 @@ export const Footer: React.FC = () => {
             ))}
           </nav>
 
-          {/* Social / Direct Action Circular Buttons */}
-          <div className="flex items-center gap-3">
-            <a
-              href={`https://wa.me/${contactInfo.whatsapp}?text=Hello%20PK%20Developers,%20I%20would%20like%20to%20inquire%20about%20your%20properties.`}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="WhatsApp Us"
-              className="w-10 h-10 rounded-full border border-[#b68a5c]/60 hover:border-[#b68a5c] bg-transparent flex items-center justify-center text-[#b68a5c] hover:scale-105 transition-all duration-200"
-            >
-              <MessageCircle className="w-5 h-5" />
-            </a>
+          {/* Social Media Links & Direct Call */}
+          <div className="flex items-center gap-2.5 sm:gap-3 flex-wrap justify-center">
+            {socialLinks.map((social) => (
+              <a
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.label}
+                title={social.name}
+                className="w-10 h-10 rounded-full bg-slate-900 border border-slate-700/80 hover:border-[#b68a5c] p-1.5 flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-200 group shadow-sm"
+              >
+                <img
+                  src={social.icon}
+                  alt={social.name}
+                  className="w-full h-full object-contain rounded-full group-hover:brightness-110 transition-all"
+                />
+              </a>
+            ))}
             <a
               href={`tel:${contactInfo.phoneRaw}`}
               aria-label="Call Us"
-              className="w-10 h-10 rounded-full border border-[#b68a5c]/60 hover:border-[#b68a5c] bg-transparent flex items-center justify-center text-[#b68a5c] hover:scale-105 transition-all duration-200"
+              title="Call Us Directly"
+              className="w-10 h-10 rounded-full bg-[#b68a5c] hover:bg-[#a67c4e] flex items-center justify-center text-white hover:scale-110 transition-all duration-200 shadow-sm"
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="w-4 h-4 fill-white" />
             </a>
           </div>
         </div>
