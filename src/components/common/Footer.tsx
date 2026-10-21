@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Phone, MapPin, Clock } from 'lucide-react';
+import { MapPin, Clock } from 'lucide-react';
 import { contactInfo } from '../../data/companyData';
 
 export const Footer: React.FC = () => {
@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-[#07111e] text-slate-300 pt-12 pb-8 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 pb-10 border-b border-slate-800/80">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pb-10 border-b border-slate-800/80">
           {/* Logo & Tagline */}
           <Link
             to="/"
@@ -57,32 +57,6 @@ export const Footer: React.FC = () => {
               </a>
             ))}
           </nav>
-
-          {/* Direct Action Circular Buttons: WhatsApp & Call */}
-          <div className="flex items-center gap-3">
-            <a
-              href={`https://wa.me/${contactInfo.whatsapp}?text=Hello%20PK%20Developers,%20I%20would%20like%20to%20inquire%20about%20your%20properties.`}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="WhatsApp Us"
-              title="Chat on WhatsApp"
-              className="w-10 h-10 rounded-full bg-slate-900 border border-slate-700/80 hover:border-[#b68a5c] p-2 flex items-center justify-center hover:scale-110 transition-all duration-200 shadow-sm group"
-            >
-              <img
-                src="/images/social/whatsapp.png"
-                alt="WhatsApp"
-                className="w-full h-full object-contain"
-              />
-            </a>
-            <a
-              href={`tel:${contactInfo.phoneRaw}`}
-              aria-label="Call Us"
-              title="Call Us Directly"
-              className="w-10 h-10 rounded-full bg-[#b68a5c] hover:bg-[#a67c4e] flex items-center justify-center text-white hover:scale-110 transition-all duration-200 shadow-sm"
-            >
-              <Phone className="w-4 h-4 fill-white" />
-            </a>
-          </div>
         </div>
 
         {/* Office Address & Timings Strip */}
