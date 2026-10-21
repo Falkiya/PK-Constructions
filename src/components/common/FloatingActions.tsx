@@ -152,22 +152,21 @@ export const FloatingActions: React.FC = () => {
           )}
         </button>
 
-        {/* Primary WhatsApp Floating Button (Icon Only) */}
+        {/* Primary WhatsApp Floating Button */}
         <a
           href={contactInfo.social.whatsapp}
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-2xl shadow-emerald-950/40 hover:shadow-emerald-600/30 transition-all duration-300 hover:scale-110 active:scale-95 p-2 sm:p-2.5"
+          className="group flex items-center gap-2.5 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-2xl shadow-emerald-950/40 hover:shadow-emerald-600/30 transition-all duration-300 hover:scale-105 active:scale-95"
           aria-label="Chat With Us on WhatsApp"
           title="WhatsApp Us"
         >
           <img
             src="/images/social/whatsapp.png"
             alt="WhatsApp"
-            className="w-full h-full object-contain"
+            className="w-5 h-5 sm:w-5 sm:h-5 object-contain"
           />
-          {/* Tooltip on Desktop hover */}
-          <span className="hidden sm:inline-block absolute right-full mr-3 px-2.5 py-1 bg-slate-900/95 text-white text-xs font-medium rounded-lg whitespace-nowrap shadow-xl opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-200">
+          <span className="font-semibold text-xs tracking-wide">
             WhatsApp Us
           </span>
         </a>
