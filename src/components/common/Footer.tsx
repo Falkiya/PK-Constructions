@@ -81,18 +81,20 @@ export const Footer: React.FC = () => {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <p>© PK Developers. All rights reserved.</p>
 
-          <div className="flex items-center gap-2">
-            <span>Designed & Developed by</span>
+          <div className="flex items-center gap-2.5">
+            <span className="text-slate-400">Website built by</span>
             <a
               href="https://dreamclick.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 font-bold text-white transition-colors"
+              className="group inline-flex items-center bg-white px-2.5 py-1 rounded-lg border border-slate-700/60 hover:border-sky-400 shadow-sm transition-all duration-200"
+              title="Dream Click Growth Solutions — We Build Digital Possibilities"
             >
-              <span className="w-5 h-5 rounded bg-gradient-to-br from-blue-500 to-sky-400 flex items-center justify-center text-[10px] font-black text-white shadow-sm">
-                DC
-              </span>
-              <span className="tracking-wider">DREAM CLICK GROWTH SOLUTIONS</span>
+              <img
+                src="/images/dream-click-logo.png"
+                alt="Dream Click Growth Solutions — We Build Digital Possibilities"
+                className="h-8 sm:h-9 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+              />
             </a>
           </div>
         </div>
