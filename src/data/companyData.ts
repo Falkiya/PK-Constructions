@@ -103,7 +103,7 @@ export const contactInfo = {
   address: 'No 39, Opp to Al Badar Circle, 1st Floor, 2nd Stage, Rajiv Nagar, Mysuru - 570019, Karnataka',
   businessHours: '10:00 AM – 3:00 PM & 7:00 PM – 10:00 PM',
   social: {
-    instagram: 'https://www.instagram.com/p.k_devx?psln=MXZtemNqd2ZkejlsMA==',
+    instagram: 'https://www.instagram.com/teampkdevelopers?rpxt=dXBvaG9jNGlmM2Rp',
     facebook: 'https://www.facebook.com/share/1CBQT34ced/',
     x: 'https://x.com/home',
     linkedin: 'https://www.linkedin.com/feed/',
@@ -121,7 +121,7 @@ export interface SocialLink {
 export const socialLinks: SocialLink[] = [
   {
     name: 'Instagram',
-    url: 'https://www.instagram.com/p.k_devx?psln=MXZtemNqd2ZkejlsMA==',
+    url: 'https://www.instagram.com/teampkdevelopers?rpxt=dXBvaG9jNGlmM2Rp',
     icon: '/images/social/instagram.png',
     label: 'Follow PK Developers on Instagram'
   },
