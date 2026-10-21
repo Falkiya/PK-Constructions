@@ -142,12 +142,6 @@ export const socialLinks: SocialLink[] = [
     url: 'https://www.linkedin.com/in/pk-developers-952b8b442',
     icon: '/images/social/linkedin.png',
     label: 'Connect with PK Developers on LinkedIn'
-  },
-  {
-    name: 'WhatsApp',
-    url: 'https://wa.me/919108081321?text=Hello%20PK%20Developers,%20I%20would%20like%20to%20inquire%20about%20your%20properties.',
-    icon: '/images/social/whatsapp.png',
-    label: 'Chat with PK Developers on WhatsApp'
   }
 ];
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowUp, Phone, ChevronDown, Share2 } from 'lucide-react';
+import { ArrowUp, ChevronDown, Share2 } from 'lucide-react';
 import { contactInfo } from '../../data/companyData';
 
 export const FloatingActions: React.FC = () => {
@@ -27,14 +27,6 @@ export const FloatingActions: React.FC = () => {
 
   // Dedicated config for each floating social action button
   const floatingItems = [
-    {
-      name: 'Call Us',
-      url: `tel:${contactInfo.phoneRaw}`,
-      bgClass: 'bg-[#b68a5c] hover:bg-[#a67c4e] shadow-amber-900/30',
-      iconNode: <Phone className="w-4 h-4 sm:w-5 sm:h-5 fill-white text-white" />,
-      tooltip: `Call: ${contactInfo.phone}`,
-      isExternal: false
-    },
     {
       name: 'Instagram',
       url: contactInfo.social.instagram,
