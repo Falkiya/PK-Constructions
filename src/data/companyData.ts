@@ -105,8 +105,8 @@ export const contactInfo = {
   social: {
     instagram: 'https://www.instagram.com/teampkdevelopers?rpxt=dXBvaG9jNGlmM2Rp',
     facebook: 'https://www.facebook.com/share/1CBQT34ced/',
-    x: 'https://x.com/home',
-    linkedin: 'https://www.linkedin.com/feed/',
+    x: 'https://x.com/PK_Devx',
+    linkedin: 'https://www.linkedin.com/in/pk-developers-952b8b442',
     whatsapp: 'https://wa.me/919108081321?text=Hello%20PK%20Developers,%20I%20would%20like%20to%20inquire%20about%20your%20properties.'
   }
 };
@@ -133,13 +133,13 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: 'X (Twitter)',
-    url: 'https://x.com/home',
+    url: 'https://x.com/PK_Devx',
     icon: '/images/social/x.png',
     label: 'Follow PK Developers on X'
   },
   {
     name: 'LinkedIn',
-    url: 'https://www.linkedin.com/feed/',
+    url: 'https://www.linkedin.com/in/pk-developers-952b8b442',
     icon: '/images/social/linkedin.png',
     label: 'Connect with PK Developers on LinkedIn'
   },
