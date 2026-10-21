@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Phone, MapPin, Clock } from 'lucide-react';
-import { contactInfo, socialLinks } from '../../data/companyData';
+import { contactInfo } from '../../data/companyData';
 
 export const Footer: React.FC = () => {
   const location = useLocation();
@@ -58,25 +58,22 @@ export const Footer: React.FC = () => {
             ))}
           </nav>
 
-          {/* Social Media Links & Direct Call */}
-          <div className="flex items-center gap-2.5 sm:gap-3 flex-wrap justify-center">
-            {socialLinks.map((social) => (
-              <a
-                key={social.name}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={social.label}
-                title={social.name}
-                className="w-10 h-10 rounded-full bg-slate-900 border border-slate-700/80 hover:border-[#b68a5c] p-1.5 flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-200 group shadow-sm"
-              >
-                <img
-                  src={social.icon}
-                  alt={social.name}
-                  className="w-full h-full object-contain rounded-full group-hover:brightness-110 transition-all"
-                />
-              </a>
-            ))}
+          {/* Direct Action Circular Buttons: WhatsApp & Call */}
+          <div className="flex items-center gap-3">
+            <a
+              href={`https://wa.me/${contactInfo.whatsapp}?text=Hello%20PK%20Developers,%20I%20would%20like%20to%20inquire%20about%20your%20properties.`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp Us"
+              title="Chat on WhatsApp"
+              className="w-10 h-10 rounded-full bg-slate-900 border border-slate-700/80 hover:border-[#b68a5c] p-2 flex items-center justify-center hover:scale-110 transition-all duration-200 shadow-sm group"
+            >
+              <img
+                src="/images/social/whatsapp.png"
+                alt="WhatsApp"
+                className="w-full h-full object-contain"
+              />
+            </a>
             <a
               href={`tel:${contactInfo.phoneRaw}`}
               aria-label="Call Us"

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Phone, Menu } from 'lucide-react';
-import { contactInfo, socialLinks } from '../../data/companyData';
+import { contactInfo } from '../../data/companyData';
 import { MobileMenu } from './MobileMenu';
 
 export const GoldenTowersLogo: React.FC<{ className?: string }> = ({ className = "w-9 h-9" }) => (
@@ -106,28 +106,8 @@ export const Header: React.FC = () => {
             })}
           </nav>
 
-          {/* Right Action: Social Media Icons + Call Now Gold Button */}
-          <div className="hidden sm:flex items-center gap-3">
-            <div className="hidden xl:flex items-center gap-1.5 border-r border-slate-200 pr-3">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.label}
-                  title={social.name}
-                  className="w-7 h-7 rounded-full bg-slate-50 border border-slate-200 hover:border-[#b68a5c] p-1 flex items-center justify-center hover:scale-110 transition-all shadow-2xs group"
-                >
-                  <img
-                    src={social.icon}
-                    alt={social.name}
-                    className="w-full h-full object-contain rounded-full"
-                  />
-                </a>
-              ))}
-            </div>
-
+          {/* Right Action: Call Now Gold Button */}
+          <div className="hidden sm:flex items-center">
             <a
               href={`tel:${contactInfo.phoneRaw}`}
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#b68a5c] hover:bg-[#a67c4e] text-white text-sm font-medium shadow-sm transition-all duration-200"
